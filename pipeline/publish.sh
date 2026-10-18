@@ -12,7 +12,9 @@ cd $R
 git add -A posts days
 git -c user.name="Lobe Lessons" -c user.email="jesserbenkhiria911@gmail.com" commit -qm "Day ${NAME#day}: media for $DATE" || true
 git push -q origin HEAD:main
-BASE="https://raw.githubusercontent.com/Jesserbenkhiria/lobelessons-media/main/posts/${DATE}_$NAME"
+SHA=$(git rev-parse HEAD)
+# commit-pinned URLs: never served stale from the CDN cache, even if a file is re-uploaded
+BASE="https://raw.githubusercontent.com/Jesserbenkhiria/lobelessons-media/$SHA/posts/${DATE}_$NAME"
 echo "SHORT=$BASE/short.mp4"
 echo "COVER=$BASE/cover.jpg"
 for f in $(ls $DST/slide_*.jpg | sort); do echo "SLIDE=$BASE/$(basename $f)"; done
