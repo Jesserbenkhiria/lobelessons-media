@@ -1,0 +1,68 @@
+{
+ "day": 2, "date": "2026-10-20", "book": "Rich Dad Poor Dad", "lesson": "The rich don't work for money",
+ "voice": 6, "speed": 1.05,
+ "short": {
+  "label": "RICH DAD POOR DAD · LESSON 2",
+  "lines": [
+   {"id": "hook", "text": "Why do the rich never work for money?"},
+   {"id": "rat",  "text": "Most people work for a paycheck. They get paid, they spend it, and they need the next one. Kiyosaki calls it the rat race.", "say": "Most people work for a paycheck. They get paid, they spend it, and they need the next one. Kiyosaki calls it, the rat race."},
+   {"id": "fear", "text": "Rich dad said two emotions keep you stuck. Fear of not having money, and desire for more things."},
+   {"id": "flip", "text": "The rich flip it. Instead of working for money, they make money work for them."},
+   {"id": "how",  "text": "They own assets. A business. Investments. Ideas that pay them while they sleep."},
+   {"id": "ask",  "text": "So ask yourself: is your money working for you, or are you working for it?"},
+   {"id": "cta",  "text": "Follow Lobe for one book lesson every day."}
+  ],
+  "scenes": [
+   {"line": "hook", "top": 330, "lobe": {"pose": "think", "pos": "br", "size": 560},
+    "els": [{"type": "headline", "size": 124, "html": "Why do the rich<br>never work for<br><y>money</y>?", "at": "+0.1"}]},
+   {"line": "rat", "lobe": {"pose": "shock", "pos": "br", "size": 400},
+    "els": [{"type": "headline", "size": 96, "html": "Most people:", "at": "+0.05"},
+            {"type": "list", "rows": [{"l": "💼 Get paid", "at": "paid"}, {"l": "🛍️ Spend it", "at": "spend"}, {"l": "😩 Need the next one", "at": "next"}]},
+            {"type": "pill", "text": "THE RAT RACE 🐀", "color": "red", "at": "rat"}]},
+   {"line": "fear", "lobe": {"pose": "think", "pos": "bl", "size": 460},
+    "els": [{"type": "headline", "size": 96, "html": "Two emotions<br>keep you stuck:", "at": "+0.05"},
+            {"type": "rule", "items": [{"icon": "😨", "title": "FEAR", "sub": "of not having money", "color": "red", "at": "Fear"},
+                                       {"icon": "🤑", "title": "DESIRE", "sub": "for more things", "color": "gold", "at": "desire"}]}]},
+   {"line": "flip", "lobe": {"pose": "idea", "pos": "br", "size": 480},
+    "els": [{"type": "headline", "size": 110, "html": "The rich<br><g>flip it.</g>", "at": "+0.05"},
+            {"type": "flow", "rows": [{"tag": "MOST PEOPLE", "text": "Work → for money", "color": "muted", "at": "Instead"},
+                                      {"tag": "THE RICH", "text": "Money → works for them", "color": "green", "at": "make"}]}]},
+   {"line": "how", "lobe": {"pose": "explain", "pos": "bl", "size": 480},
+    "els": [{"type": "headline", "size": 104, "html": "They own <g>assets</g>:", "at": "+0.05"},
+            {"type": "list", "rows": [{"l": "🧩 A business", "r": "+ profit", "at": "business"}, {"l": "📈 Investments", "r": "+ returns", "at": "Investments"}, {"l": "💡 Ideas", "r": "+ royalties", "at": "Ideas"}]},
+            {"type": "sub", "html": "Paying them <b>while they sleep</b>.", "at": "sleep"}]},
+   {"line": "ask", "lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "TRY THIS TODAY", "color": "gold", "at": "+0.05"},
+            {"type": "headline", "size": 100, "html": "Ask yourself:", "at": "+0.3"},
+            {"type": "quote", "size": 74, "html": "\"Is my money working for <hl at=\"you#3\" c=\"green\">me</hl>… or am I working for <hl at=\"it\" c=\"red\">it</hl>?\"", "at": "is"}]},
+   {"line": "cta", "cta": true}
+  ]
+ },
+ "carousel": {
+  "label": "RICH DAD POOR DAD · LESSON 2",
+  "slides": [
+   {"top": 200, "lobe": {"pose": "idea", "pos": "br", "size": 600},
+    "els": [{"type": "headline", "size": 140, "html": "The rich<br>don't work<br>for <r>money</r>."}, {"type": "sub", "max": 520, "html": "Rich Dad Poor Dad's most famous lesson."}]},
+   {"lobe": {"pose": "shock", "pos": "br", "size": 460},
+    "els": [{"type": "headline", "size": 90, "html": "Most people:"}, {"type": "list", "rows": [{"l": "💼 Get paid"}, {"l": "🛍️ Spend it"}, {"l": "😩 Need the next paycheck"}]}, {"type": "pill", "text": "THE RAT RACE 🐀", "color": "red"}]},
+   {"lobe": {"pose": "think", "pos": "br", "size": 440},
+    "els": [{"type": "headline", "size": 90, "html": "Why we stay stuck:"}, {"type": "rule", "items": [{"icon": "😨", "title": "FEAR", "sub": "of not having money", "color": "red"}, {"icon": "🤑", "title": "DESIRE", "sub": "for more things", "color": "gold"}]}]},
+   {"lobe": {"pose": "explain", "pos": "br", "size": 480},
+    "els": [{"type": "headline", "size": 96, "html": "The rich <g>flip it</g>:"}, {"type": "flow", "rows": [{"tag": "MOST PEOPLE", "text": "Work → for money", "color": "muted"}, {"tag": "THE RICH", "text": "Money → works for them", "color": "green"}]}]},
+   {"lobe": {"pose": "calm", "pos": "bl", "size": 400},
+    "els": [{"type": "headline", "size": 96, "html": "They own <g>assets</g>:"}, {"type": "list", "rows": [{"l": "🧩 A business", "r": "+ profit"}, {"l": "📈 Investments", "r": "+ returns"}, {"l": "💡 Ideas", "r": "+ royalties"}]}, {"type": "sub", "ml": 400, "html": "They pay you <b>while you sleep</b>."}]},
+   {"lobe": {"pose": "read", "pos": "br", "size": 420},
+    "els": [{"type": "headline", "size": 96, "html": "Start small:"}, {"type": "flow", "rows": [{"tag": "STEP 1", "text": "Learn how money works", "color": "gold"}, {"tag": "STEP 2", "text": "Save before you spend", "color": "gold"}, {"tag": "STEP 3", "text": "Buy or build one asset", "color": "green"}]}]},
+   {"lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "TRY THIS TODAY", "color": "gold"}, {"type": "headline", "size": 90, "html": "Ask yourself:"}, {"type": "quote", "size": 66, "html": "\"Is my money working for <g>me</g>… or am I working for <r>it</r>?\""}]},
+   {"top": 180, "lobe": {"pose": "approve", "pos": "br", "size": 540},
+    "els": [{"type": "headline", "size": 96, "html": "Don't work<br>for money.<br>Make money<br>work for <g>you</g>."}, {"type": "pill", "text": "🔖 Save this for later", "color": "dark"}, {"type": "pill", "text": "💬 Is your money working? Comment below", "color": "muted"}]}
+  ]
+ },
+ "captions": {
+  "youtube_title": "The Rich Don't Work for Money 💰 Rich Dad Poor Dad #shorts",
+  "short": "Why do the rich never work for money? 💰\n\nLesson 2 from Rich Dad Poor Dad by Robert Kiyosaki: most people work for money. The rich make money work for them.\n\n💬 Is your money working for you, or are you working for it?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#richdadpoordad #booklessons #moneytips #financialfreedom #mindset #booksummary #robertkiyosaki #passiveincome #lobelessons",
+  "carousel": "The rich don't work for money. 💰\n\nThat's lesson 2 from Rich Dad Poor Dad. Most people are stuck in the rat race: get paid, spend it, need the next paycheck.\n\nSwipe to see how the rich flip it 👉\n\n🔖 Save this for later.\n💬 Is your money working for you?\n\n#richdadpoordad #booklessons #moneytips #financialfreedom #personalfinance #mindset #booksummary #passiveincome #lobelessons",
+  "youtube_tags": ["rich dad poor dad", "book summary", "money tips", "financial freedom", "passive income", "robert kiyosaki", "book lessons"]
+ }
+}
