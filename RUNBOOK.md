@@ -16,7 +16,7 @@ Every day = **1 Short** (YouTube Shorts + Instagram Reel + TikTok video) + **1 c
 Notion columns: `Lesson` (title), `Day`, `Date`, `Book`, `Hook`, `Status` (Planned/Created/Scheduled/Published/Problem),
 checkboxes `YouTube Short`, `IG Reel`, `IG Carousel`, `TikTok Video`, `TikTok Carousel`, `Done` (formula), `Media` (URL), `Notes`.
 
-## Daily procedure (run once per day, early morning Tunis time)
+## Daily procedure (morning run, about 07:15 Tunis time)
 
 ### 0. Workspace
 1. Attach the repo with push access (`add_repo` owner `Jesserbenkhiria`, repo `lobelessons-media`, access `push`), clone it to `/home/claude/lobelessons-media`.
@@ -27,8 +27,8 @@ checkboxes `YouTube Short`, `IG Reel`, `IG Carousel`, `TikTok Video`, `TikTok Ca
 - For each, call Metricool `getScheduledPosts` (brandId 7506135, that date ±1 day). A post that is no longer in the scheduled list and whose time has passed has been **published**: tick that platform's checkbox. If every platform for the row is ticked, set `Status = Published`.
 - If a post failed or is still pending hours after its time, set `Status = Problem` and say what happened in `Notes`.
 
-### 2. Create today's content
-Find the Notion row where Date = today. If its Status is `Planned`:
+### 2. Create TOMORROW's content (one day ahead, so a failure never leaves a day empty)
+Find the Notion row where Date = tomorrow (also handle today's row first if it's still `Planned`). If its Status is `Planned`:
 1. **Write `days/dayNN.json`** (NN = Day number, two digits), copying the structure of `days/day02.json` exactly.
    - Lesson = the row's `Lesson`, opening line = the row's `Hook`.
    - **Short script:** 6–8 lines, 30–45 seconds total, hook question first, last line exactly `Follow Lobe for one book lesson every day.` (scene `{"line":"cta","cta":true}`).
@@ -38,7 +38,7 @@ Find the Notion row where Date = today. If its Status is `Planned`:
 3. **Preview:** `bash pipeline/build.sh days/dayNN.json stills`, then **look at** `/home/claude/lobe_out/dayNN/short_contact.png` and `carousel_contact.png`. Fix overflow, overlaps (Lobe must never cover text), awkward wraps, or empty slides. Repeat until clean.
 4. **Full build:** `bash pipeline/build.sh days/dayNN.json` → `short.mp4`, `cover.jpg`, `carousel/slide_*.jpg`.
 5. **Publish media:** `bash pipeline/publish.sh days/dayNN.json` → prints public URLs. If the script can't confirm, check one URL with WebFetch before scheduling.
-6. **Schedule in Metricool** with `createScheduledPost` (blogId 7506135, timezone Africa/Tunis, autoPublish true). Use `getBestTimeToPostByNetwork` for today. Default slots:
+6. **Schedule in Metricool** with `createScheduledPost` (blogId 7506135, timezone Africa/Tunis, autoPublish true) on the row's date. Use `getBestTimeToPostByNetwork` for that date. Default slots:
    - Instagram **carousel** (type POST, media = slide URLs in order): 10:00
    - TikTok **photo carousel** (same slide URLs): 12:00
    - YouTube **Short** (type short, madeForKids false, category EDUCATION, title = youtube_title, tags): 16:00
@@ -50,7 +50,7 @@ Find the Notion row where Date = today. If its Status is `Planned`:
 7. **Update Notion:** `Status = Scheduled`, `Media` = the posts folder URL on GitHub, `Notes` = scheduled times plus any errors.
 8. Commit `days/dayNN.json` (publish.sh already does this).
 
-If today's row is already `Scheduled` or `Published`, skip step 2.
+If the row is already `Scheduled` or `Published`, skip step 2. If there is no row for tomorrow, the 30-day plan is over: add 7 new days to the calendar (same format, new books/lessons that fit the channel), then continue.
 
 ### 3. Report
 Finish with a short summary: what was published yesterday (ticked), what's scheduled today (times per platform), and any problems.
@@ -74,3 +74,6 @@ Vary pose and position between scenes and slides. Use `tr` (small, about 300px) 
 
 ## Voice
 Kokoro voice id 6 (`am_michael`), speed 1.05. Spell tricky words phonetically in `"say"` while keeping `"text"` for captions.
+
+## Evening check (about 21:45 Tunis time)
+Only step 1 (tick what was published today). No content creation. One-line report.
