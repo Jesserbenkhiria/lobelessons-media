@@ -44,6 +44,8 @@ Find the Notion row where Date = today. If its Status is `Planned`:
    - YouTube **Short** (type short, madeForKids false, category EDUCATION, title = youtube_title, tags): 16:00
    - Instagram **Reel** (type REEL, media = short.mp4): 18:00
    - TikTok **video** (short.mp4): 18:30
+   - **TikTok always needs `tiktokData.title`** (short hook, ≤ 60 chars), or the call fails.
+   - Media URLs = the public URLs printed by publish.sh. Metricool copies them into its own storage when you schedule.
    If one network errors, still schedule the others and note the error.
 7. **Update Notion:** `Status = Scheduled`, `Media` = the posts folder URL on GitHub, `Notes` = scheduled times plus any errors.
 8. Commit `days/dayNN.json` (publish.sh already does this).
