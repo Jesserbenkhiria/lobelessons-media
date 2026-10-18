@@ -85,6 +85,27 @@ const CSS = `
 
 async function main() {
   const b = await chromium.launch();
+  if (MODE === 'cover') {
+    // Reel/Short cover: hook + Lobe, all key content inside the centre square (y 420-1500) so grid crops stay clean.
+    const sh = spec.short; const cv = sh.cover || {};
+    const first = sh.scenes[0]; const hl = (first.els || []).find(e => e.type === 'headline');
+    const html = cv.html || (hl ? hl.html : spec.lesson);
+    const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+    await p.setContent(`<html><head><meta charset="utf-8"><style>${CSS}
+      .v{width:1080px;height:1920px;background:#F5F1EA;position:relative;overflow:hidden;color:#111}
+      .tag{position:absolute;top:470px;left:0;right:0;text-align:center}
+      .hook{position:absolute;top:560px;left:80px;right:80px;text-align:center}
+      .lobe{position:absolute;left:50%;top:960px;width:${cv.size || 520}px;margin-left:-${(cv.size || 520) / 2}px}
+      .hdl{position:absolute;bottom:250px;left:0;right:0;text-align:center;font:600 32px Inter;color:#a39b8c}
+      </style></head><body><div class="v">
+      <div class="tag"><span class="pill" style="background:#111;color:#F5C84C;font-size:32px">${(sh.label || '').replace('·', '·')}</span></div>
+      <div class="hook"><div class="h" style="font-size:${cv.textSize || 112}px">${mk(html)}</div></div>
+      <div class="lobe">${M(cv.pose || (first.lobe && first.lobe.pose) || 'think')}</div>
+      <div class="hdl">🧠 @lobelessons</div></div></body></html>`);
+    await p.waitForTimeout(150);
+    await p.screenshot({ path: path.join(OUT, 'cover.jpg'), type: 'jpeg', quality: 92 });
+    await b.close(); console.log('cover ok'); return;
+  }
   if (MODE === 'carousel') {
     const car = spec.carousel; const N = car.slides.length;
     const p = await b.newPage({ viewport: { width: 1080, height: 1350 } });

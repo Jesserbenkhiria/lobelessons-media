@@ -12,6 +12,7 @@ if [ "$2" = "stills" ]; then
   TS=$(python3 -c "import json;tl=json.load(open('$OUT/timeline.json'));print(' '.join(str(round(l['end']-0.3,1)) for l in tl['lines']))")
   rm -rf $OUT/stills; node $P/render.js short "$SPEC" $OUT $TS
   node $P/render.js carousel "$SPEC" $OUT/carousel
+  node $P/render.js cover "$SPEC" $OUT
   python3 - "$OUT" <<'PY'
 import sys,glob
 from PIL import Image
@@ -29,5 +30,5 @@ python3 $P/mix.py $OUT
 ffmpeg -loglevel error -y -framerate 30 -i $OUT/frames/f_%05d.jpg -i $OUT/mix.wav -c:v libx264 -preset medium -crf 18 -pix_fmt yuv420p -c:a aac -b:a 192k -af loudnorm=I=-14:TP=-1.5:LRA=11 -shortest -movflags +faststart $OUT/short.mp4
 node $P/render.js carousel "$SPEC" $OUT/carousel
 for f in $OUT/carousel/*.png; do python3 -c "from PIL import Image;Image.open('$f').convert('RGB').save('${f%.png}.jpg',quality=90)"; done
-ffmpeg -loglevel error -y -ss 1.0 -i $OUT/short.mp4 -frames:v 1 $OUT/cover.jpg
+node $P/render.js cover "$SPEC" $OUT
 echo "BUILD OK -> $OUT"; ls -la $OUT/short.mp4 $OUT/carousel/*.jpg

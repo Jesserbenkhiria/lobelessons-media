@@ -36,13 +36,13 @@ Find the Notion row where Date = tomorrow (also handle today's row first if it's
    - **Captions:** `youtube_title` (≤ 90 chars, ends with `#shorts`), `short`, `carousel` (hook line, 2–3 lines of value, a question for comments, "🔖 Save this", hashtags incl. `#lobelessons`), `youtube_tags`.
 2. **Accuracy rules:** state only what the book actually says or widely documented facts. Mark any example numbers "Example". Never reproduce more than a short phrase from a book. Never draw a real book cover: use the `book` element (our neutral white card). No financial "advice" claims; frame things as lessons from the book.
 3. **Preview:** `bash pipeline/build.sh days/dayNN.json stills`, then **look at** `/home/claude/lobe_out/dayNN/short_contact.png` and `carousel_contact.png`. Fix overflow, overlaps (Lobe must never cover text), awkward wraps, or empty slides. Repeat until clean.
-4. **Full build:** `bash pipeline/build.sh days/dayNN.json` → `short.mp4`, `cover.jpg`, `carousel/slide_*.jpg`.
+4. **Full build:** `bash pipeline/build.sh days/dayNN.json` → `short.mp4`, `cover.jpg` (designed Reel cover: hook + Lobe; optional `short.cover` {html, pose, textSize} in the spec, defaults to the first scene's headline), `carousel/slide_*.jpg`. Check `cover.jpg` too: the hook must be fully readable inside the centre square.
 5. **Publish media:** `bash pipeline/publish.sh days/dayNN.json` → prints public URLs. If the script can't confirm, check one URL with WebFetch before scheduling.
 6. **Schedule in Metricool** with `createScheduledPost` (blogId 7506135, timezone Africa/Tunis, autoPublish true) on the row's date. Use `getBestTimeToPostByNetwork` for that date. Default slots:
    - Instagram **carousel** (type POST, media = slide URLs in order): 10:00
    - TikTok **photo carousel** (same slide URLs): 12:00
    - YouTube **Short** (type short, madeForKids false, category EDUCATION, title = youtube_title, tags): 16:00
-   - Instagram **Reel** (type REEL, media = short.mp4): 18:00
+   - Instagram **Reel** (type REEL, media = short.mp4, **`videoThumbnailUrl` = the COVER url** from publish.sh): 18:00
    - TikTok **video** (short.mp4): 18:30
    - **TikTok always needs `tiktokData.title`** (short hook, ≤ 60 chars), or the call fails.
    - Media URLs = the public URLs printed by publish.sh. Metricool copies them into its own storage when you schedule.
