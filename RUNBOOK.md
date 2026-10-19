@@ -2,7 +2,8 @@
 
 This repo is the production pipeline for **Lobe Lessons** (@lobelessons): one book lesson a day,
 starring **Lobe**, a soft pink brain mascot with gold half-moon reading glasses and a gold bookmark ribbon.
-Every day = **1 Short** (YouTube Shorts + Instagram Reel + TikTok video) + **1 carousel** (Instagram + TikTok photo post).
+Every day = **1 Short** (YouTube Shorts + Instagram Reel + TikTok video + Facebook Reel) + **1 carousel** (Instagram + TikTok photo post + Facebook photo post).
+Facebook Page "Lobe Lessons" is connected in Metricool (facebookData 1352883261244641).
 
 ## Fixed IDs
 | What | Value |
@@ -56,6 +57,8 @@ Find the Notion row where Date = tomorrow (also handle today's row first if it's
    **Target audience = US + UK** (English speakers, highest YouTube ad rates). Do NOT use `getBestTimeToPostByNetwork`: it reflects the current (mostly Tunisian) audience. Use these fixed Tunis-time slots (Tunis is UTC+1 all year; UK = Tunis or Tunis-1 in winter; US East = Tunis-5, Tunis-6 from early Nov):
    - Instagram **carousel** (type POST, media = slide URLs in order): **14:00** (UK lunch, US morning)
    - TikTok **photo carousel** (same slide URLs): **15:00**
+   - Facebook **photo post** (facebookData.type POST, same slide URLs, carousel caption): **16:00** (UK afternoon, US late morning)
+   - Facebook **Reel** (facebookData.type REEL, facebookData.title = short title, media = short.mp4, `videoThumbnailUrl` = COVER url, short caption with "Follow Lobe Lessons" instead of @lobelessons): **19:00** (UK evening, US lunch/afternoon)
    - YouTube **Short** (type short, madeForKids false, category EDUCATION, title = youtube_title, tags): **20:00** (UK evening, US afternoon; ramps up into US evening)
    - Instagram **Reel** (type REEL, media = short.mp4, **`videoThumbnailUrl` = the COVER url** from publish.sh): **21:00** (UK prime time)
    - TikTok **video** (short.mp4): **22:00**
