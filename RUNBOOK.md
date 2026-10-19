@@ -27,8 +27,13 @@ checkboxes `YouTube Short`, `IG Reel`, `IG Carousel`, `TikTok Video`, `TikTok Ca
 - For each, call Metricool `getScheduledPosts` (brandId 7506135, that date ±1 day). A post that is no longer in the scheduled list and whose time has passed has been **published**: tick that platform's checkbox. If every platform for the row is ticked, set `Status = Published`.
 - If a post failed or is still pending hours after its time, set `Status = Problem` and say what happened in `Notes`.
 
+### Who does what (usage-optimized)
+- **Weekly script writer** (strong model, Tuesdays ~06:13): writes `days/dayNN.json` for every Notion row dated tomorrow … 8 days ahead that has no spec yet: script, scenes, carousel, captions, following ALL rules in step 2.1–2.3 below (including the stills preview + looking at the contact sheets and fixing problems). Commits the specs and sets each row's Status = `Created`, Notes = "script ready".
+- **Daily run** (light model, 07:13): ticks published posts, then for tomorrow's row: if `days/dayNN.json` already exists (Status `Created`), do NOT rewrite it: go straight to the full build (2.4), check `cover.jpg`, publish, schedule, update Notion. Only if the spec is missing, write it yourself following 2.1–2.3.
+- **Evening check** (light model, 23:13): ticks only.
+
 ### 2. Create TOMORROW's content (one day ahead, so a failure never leaves a day empty)
-Find the Notion row where Date = tomorrow (also handle today's row first if it's still `Planned`). If its Status is `Planned`:
+Find the Notion row where Date = tomorrow (also handle today's row first if it's still `Planned`). If its Status is `Planned` (write the spec) or `Created` (spec already written by the weekly writer, skip to 2.4):
 1. **Write `days/dayNN.json`** (NN = Day number, two digits), copying the structure of `days/day02.json` exactly.
    - Lesson = the row's `Lesson`, opening line = the row's `Hook`.
    - **Short = edutainment, not a lesson.** People in the feed skip anything that feels like homework. Rules:
