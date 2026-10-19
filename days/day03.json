@@ -1,0 +1,67 @@
+{
+ "day": 3, "date": "2026-10-20", "book": "Rich Dad Poor Dad", "lesson": "Pay yourself first",
+ "voice": 6, "speed": 1.05,
+ "short": {
+  "label": "RICH DAD POOR DAD · LESSON 3",
+  "lines": [
+   {"id": "hook",  "text": "When you get paid, who gets paid first?"},
+   {"id": "most",  "text": "For most people, it's everyone else. Rent, bills, shopping. Then they save whatever is left, if anything."},
+   {"id": "flip",  "text": "Rich Dad Poor Dad flips the order. Pay yourself first."},
+   {"id": "asset", "text": "Before the bills, a slice of every paycheck goes into your asset column. Things that bring money in."},
+   {"id": "rule",  "text": "Kiyosaki says this takes self-discipline. And when money is tight, don't dip into it. Use the pressure to find new ways to earn."},
+   {"id": "ask",   "text": "So ask yourself: when your next paycheck lands, who gets paid first?"},
+   {"id": "cta",   "text": "Follow Lobe for one book lesson every day."}
+  ],
+  "scenes": [
+   {"line": "hook", "top": 330, "lobe": {"pose": "think", "pos": "br", "size": 560},
+    "els": [{"type": "headline", "size": 124, "html": "When you get<br>paid, who gets<br>paid <y>first</y>?", "at": "+0.1"}]},
+   {"line": "most", "lobe": {"pose": "shock", "pos": "br", "size": 400},
+    "els": [{"type": "headline", "size": 96, "html": "Most people pay:", "at": "+0.05"},
+            {"type": "list", "rows": [{"l": "🏠 Rent", "at": "Rent"}, {"l": "💡 Bills", "at": "bills"}, {"l": "🛍️ Shopping", "at": "shopping"}, {"l": "💰 Themselves", "r": "if anything's left", "color": "red", "at": "save"}]}]},
+   {"line": "flip", "lobe": {"pose": "idea", "pos": "bl", "size": 480},
+    "els": [{"type": "headline", "size": 104, "html": "The book<br><g>flips the order</g>.", "at": "+0.05"},
+            {"type": "stamp", "text": "PAY YOURSELF FIRST", "color": "green", "size": 72, "at": "Pay"}]},
+   {"line": "asset", "lobe": {"pose": "explain", "pos": "br", "size": 440},
+    "els": [{"type": "headline", "size": 96, "html": "Every paycheck:", "at": "+0.05"},
+            {"type": "flow", "rows": [{"tag": "FIRST", "text": "💰 A slice → your assets", "color": "green", "at": "slice"},
+                                      {"tag": "THEN", "text": "🏠 Bills & spending", "color": "muted", "at": "bills"}]},
+            {"type": "sub", "html": "Assets = things that <b>bring money in</b>.", "at": "Things"}]},
+   {"line": "rule", "lobe": {"pose": "read", "pos": "bl", "size": 420},
+    "els": [{"type": "headline", "size": 96, "html": "Two rules:", "at": "+0.05"},
+            {"type": "rule", "items": [{"icon": "🧠", "title": "SELF-DISCIPLINE", "sub": "the whole lesson", "color": "gold", "at": "self-discipline"},
+                                       {"icon": "🚫", "title": "DON'T DIP IN", "sub": "find new ways to earn", "color": "red", "at": "dip"}]}]},
+   {"line": "ask", "lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "TRY THIS TODAY", "color": "gold", "at": "+0.05"},
+            {"type": "headline", "size": 100, "html": "Ask yourself:", "at": "+0.3"},
+            {"type": "quote", "size": 74, "html": "\"When my next paycheck lands, who gets paid <hl at=\"first\" c=\"green\">first</hl>?\"", "at": "when"}]},
+   {"line": "cta", "cta": true}
+  ]
+ },
+ "carousel": {
+  "label": "RICH DAD POOR DAD · LESSON 3",
+  "slides": [
+   {"top": 200, "lobe": {"pose": "idea", "pos": "br", "size": 600},
+    "els": [{"type": "headline", "size": 140, "html": "Pay<br><g>yourself</g><br>first."}, {"type": "sub", "max": 520, "html": "A Rich Dad Poor Dad lesson most people do backwards."}]},
+   {"lobe": {"pose": "shock", "pos": "br", "size": 400},
+    "els": [{"type": "headline", "size": 90, "html": "Most people pay:"}, {"type": "list", "rows": [{"l": "🏠 Rent"}, {"l": "💡 Bills"}, {"l": "🛍️ Shopping"}, {"l": "💰 Themselves", "r": "if anything's left", "color": "red"}]}]},
+   {"lobe": {"pose": "explain", "pos": "br", "size": 440},
+    "els": [{"type": "headline", "size": 96, "html": "The book <g>flips it</g>:"}, {"type": "flow", "rows": [{"tag": "MOST PEOPLE", "text": "Bills first → save what's left", "color": "muted"}, {"tag": "RICH DAD", "text": "Assets first → then bills", "color": "green"}]}]},
+   {"lobe": {"pose": "calm", "pos": "bl", "size": 380},
+    "els": [{"type": "pill", "text": "EXAMPLE", "color": "muted"}, {"type": "headline", "size": 90, "html": "One paycheck:"}, {"type": "list", "rows": [{"l": "💵 Paycheck", "r": "1,000"}, {"l": "1️⃣ You → assets", "r": "100", "color": "green"}, {"l": "2️⃣ Bills & spending", "r": "900"}]}, {"type": "sub", "ml": 380, "html": "Same money.<br><b>Different order.</b>"}]},
+   {"lobe": {"pose": "read", "pos": "br", "size": 400},
+    "els": [{"type": "headline", "size": 90, "html": "Kiyosaki's rules:"}, {"type": "rule", "items": [{"icon": "🧠", "title": "SELF-DISCIPLINE", "sub": "that's the real lesson", "color": "gold"}, {"icon": "🚫", "title": "DON'T DIP IN", "sub": "use the pressure to earn more", "color": "red"}]}, {"type": "sub", "html": "Even when money is tight."}]},
+   {"lobe": {"pose": "approve", "pos": "br", "size": 400},
+    "els": [{"type": "headline", "size": 96, "html": "Start small:"}, {"type": "flow", "rows": [{"tag": "STEP 1", "text": "Pick a small slice", "color": "gold"}, {"tag": "STEP 2", "text": "Move it the day you're paid", "color": "gold"}, {"tag": "STEP 3", "text": "Put it toward an asset", "color": "green"}]}]},
+   {"lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "TRY THIS TODAY", "color": "gold"}, {"type": "headline", "size": 90, "html": "Ask yourself:"}, {"type": "quote", "size": 66, "html": "\"When my next paycheck lands, who gets paid <g>first</g>?\""}]},
+   {"top": 180, "lobe": {"pose": "approve", "pos": "br", "size": 540},
+    "els": [{"type": "headline", "size": 96, "html": "Pay yourself<br>first.<br>Everyone else<br><g>after</g>."}, {"type": "pill", "text": "🔖 Save this for later", "color": "dark"}, {"type": "pill", "text": "💬 Who gets paid first? Comment below", "color": "muted"}]}
+  ]
+ },
+ "captions": {
+  "youtube_title": "Pay Yourself First 💰 Rich Dad Poor Dad #shorts",
+  "short": "When you get paid, who gets paid first? 💰\n\nLesson 3 from Rich Dad Poor Dad by Robert Kiyosaki: most people pay everyone else and save what's left. The book flips the order: pay yourself first, into your asset column.\n\n💬 Who gets paid first in your budget?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#richdadpoordad #booklessons #moneytips #payyourselffirst #financialfreedom #mindset #booksummary #robertkiyosaki #lobelessons",
+  "carousel": "Pay yourself first. 💰\n\nLesson 3 from Rich Dad Poor Dad. Most people pay rent, bills and shopping first, then save whatever is left. Kiyosaki flips the order: a slice goes to your asset column before anything else, and it takes self-discipline.\n\nSwipe to see how it works 👉\n\n💬 Who gets paid first when your paycheck lands?\n🔖 Save this for later.\n\n#richdadpoordad #booklessons #moneytips #payyourselffirst #personalfinance #mindset #booksummary #financialfreedom #lobelessons",
+  "youtube_tags": ["rich dad poor dad", "pay yourself first", "book summary", "money tips", "financial freedom", "robert kiyosaki", "book lessons"]
+ }
+}
