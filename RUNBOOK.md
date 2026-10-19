@@ -92,7 +92,10 @@ In the **Short**, Lobe is an animated rig (`pipeline/lobe_rig.js`): his mouth ta
 Vary pose and position between scenes and slides. Use `tr` (small, about 300px) when the content is tall.
 
 ## Voice
-Kokoro voice id 6 (`am_michael`), speed 1.05. Spell tricky words phonetically in `"say"` while keeping `"text"` for captions.
+**ElevenLabs (chosen by Jesser, Oct 20):** Lobe / Rich Brain = voice `v3p1kjzUvro6S76qmYmH`, Broke Brain = voice `1kvnzrSTos1KbmLKMLCC`, model `eleven_v4`, generations_count 1.
+One generation per character with all of that character's lines separated by `[long pause]`, then split on silence into `audio/dayNN/<line_id>.wav` and set `"audio_dir": "audio/dayNN"` in the spec (voice.py uses those files instead of Kokoro).
+Needs `storage.googleapis.com` allowed for downloads; if the download fails, build with Kokoro (below) and note it in Notion.
+Fallback: Kokoro voice id 6 (`am_michael`), speed 1.05. Spell tricky words phonetically in `"say"` while keeping `"text"` for captions.
 
 ## Evening check (about 23:15 Tunis time, after the 22:00 TikTok)
 Only step 1 (tick what was published today). No content creation. One-line report.
