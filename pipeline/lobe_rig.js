@@ -118,7 +118,7 @@
     // ---- face ----
     const fc = FACE[pose];
     const look = (st.side === 'l' ? 1 : -1) * 2.2 * smooth((ts - 0.6) / 0.4) * (Math.sin(t * 0.9) > -0.6 ? 1 : 0.2);
-    const blinkPh = (t + st.seed * 1.3) % 3.4; const blink = blinkPh < 0.13;
+    const blinkPh = (t + st.seed * 1.3 + 1.7) % 3.4; const blink = blinkPh < 0.13;
     let eyes;
     const eyeMode = fc.eyes === 'shock' && ts > 1.6 ? 'open' : fc.eyes;
     if (eyeMode === 'happy' || blink) eyes = `<path d="M163 184 q11 9 22 0 M215 184 q11 9 22 0" ${L(5)}/>`;
