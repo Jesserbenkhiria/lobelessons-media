@@ -1,0 +1,420 @@
+{
+ "day": 6,
+ "date": "2026-10-23",
+ "book": "The Psychology of Money",
+ "lesson": "Getting rich vs staying rich",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "label": "MONEY · MINDSET",
+  "cover": {
+   "html": "Getting rich ≠<br><g>staying</g> rich",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Getting rich and staying rich are two completely different skills."
+   },
+   {
+    "id": "get",
+    "text": "Getting rich takes risk, optimism, and putting yourself out there."
+   },
+   {
+    "id": "stay",
+    "text": "Staying rich takes the opposite. Humility, saving, and a little fear."
+   },
+   {
+    "id": "story",
+    "text": "Morgan Housel tells how Jesse Livermore made a fortune in the 1929 crash, then lost it all with bigger bets.",
+    "say": "Morgan Howzell tells how Jesse Livermore made a fortune in the 1929 crash, then lost it all with bigger bets."
+   },
+   {
+    "id": "rule",
+    "text": "So once you have something, protect it. Survive first, and let time do the rest."
+   },
+   {
+    "id": "ask",
+    "text": "You might know how to get it. Do you know how to keep it?"
+   },
+   {
+    "id": "cta",
+    "text": "Follow Lobe for one book lesson every day."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 300,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 540
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "Getting rich<br>≠<br><g>staying</g> rich.",
+      "at": "+0.1"
+     }
+    ]
+   },
+   {
+    "line": "get",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "GETTING RICH",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🎲 Risk",
+        "at": "risk"
+       },
+       {
+        "l": "☀️ Optimism",
+        "at": "optimism"
+       },
+       {
+        "l": "🚀 Going for it",
+        "at": "putting"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "stay",
+    "lobe": {
+     "pose": "calm",
+     "pos": "bl",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "STAYING RICH",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The <g>opposite</g>:",
+      "at": "opposite"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🙏 Humility",
+        "color": "green",
+        "at": "Humility"
+       },
+       {
+        "l": "🐷 Saving",
+        "color": "green",
+        "at": "saving"
+       },
+       {
+        "l": "😬 A little fear",
+        "color": "green",
+        "at": "fear"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "story",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "THE PSYCHOLOGY OF MONEY",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Jesse Livermore:",
+      "at": "Livermore"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1929",
+        "text": "📈 Makes a fortune in the crash",
+        "color": "green",
+        "at": "fortune"
+       },
+       {
+        "tag": "LATER",
+        "text": "📉 Bigger bets… loses it all",
+        "color": "red",
+        "at": "lost"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "rule",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Once you have it:",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "PROTECT IT",
+      "color": "green",
+      "size": 96,
+      "at": "protect"
+     },
+     {
+      "type": "space",
+      "h": 40
+     },
+     {
+      "type": "sub",
+      "html": "Survive first. <b>Let time do the rest.</b>",
+      "at": "Survive"
+     }
+    ]
+   },
+   {
+    "line": "ask",
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "You know how<br>to <y>get</y> it.",
+      "at": "get"
+     },
+     {
+      "type": "quote",
+      "size": 76,
+      "html": "\"Do you know how to <hl at=\"keep\" c=\"green\">keep</hl> it?\"",
+      "at": "Do"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "cta": true
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE PSYCHOLOGY OF MONEY",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 560
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 128,
+      "html": "Getting rich<br>≠<br><g>staying</g> rich."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Two different skills, from The Psychology of Money →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Two skills:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "GET RICH",
+        "text": "🎲 Risk · ☀️ Optimism · 🚀 Go for it",
+        "color": "gold"
+       },
+       {
+        "tag": "STAY RICH",
+        "text": "🙏 Humility · 🐷 Saving · 😬 Some fear",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Most people only learn the first →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRUE STORY",
+      "color": "muted"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Jesse Livermore:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1929",
+        "text": "📈 Makes a fortune in the crash",
+        "color": "green"
+       },
+       {
+        "tag": "LATER",
+        "text": "📉 Bigger bets… loses it all",
+        "color": "red"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "bl",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Once you have it:"
+     },
+     {
+      "type": "stamp",
+      "text": "PROTECT IT",
+      "color": "green",
+      "size": 90
+     },
+     {
+      "type": "space",
+      "h": 40
+     },
+     {
+      "type": "sub",
+      "html": "Survive first.<br><b>Let time do the rest.</b>"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Ask yourself:"
+     },
+     {
+      "type": "quote",
+      "size": 66,
+      "html": "\"If I lost my income tomorrow, would I <g>survive</g>?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Get it.<br>Then <g>keep</g> it."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for later",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Which skill is harder for you?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Getting Rich vs Staying Rich 💰 The Psychology of Money #shorts",
+  "short": "Getting rich and staying rich are two different skills. 💰\n\nIn The Psychology of Money, Morgan Housel explains: getting money takes risk and optimism, keeping it takes humility, saving and a little fear. Jesse Livermore made a fortune in 1929, then lost it all.\n\n💬 Which skill is harder for you?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#psychologyofmoney #morganhousel #booklessons #moneytips #mindset #booksummary #personalfinance #wealth #lobelessons",
+  "carousel": "Getting rich ≠ staying rich. 💰\n\nA lesson from The Psychology of Money by Morgan Housel: getting money takes risk and optimism, keeping it takes humility and saving. Once you have something, protect it and let time work.\n\nSwipe for the true story 👉\n\n💬 Which skill is harder for you?\n🔖 Save this for later.\n\n#psychologyofmoney #morganhousel #booklessons #moneytips #mindset #booksummary #personalfinance #lobelessons",
+  "youtube_tags": [
+   "psychology of money",
+   "morgan housel",
+   "getting rich vs staying rich",
+   "money mindset",
+   "book summary",
+   "book lessons",
+   "personal finance"
+  ]
+ }
+}

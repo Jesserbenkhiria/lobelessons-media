@@ -1,0 +1,441 @@
+{
+ "day": 4,
+ "date": "2026-10-21",
+ "book": "Rich Dad Poor Dad",
+ "lesson": "It's not how much you make, it's how much you keep",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "label": "MONEY · SKETCH",
+  "cover": {
+   "html": "I got a <y>raise</y>!<br>Now I'm <r>broke</r>?",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "I got a raise! Time to upgrade everything.",
+    "voice": 5
+   },
+   {
+    "id": "warn",
+    "text": "Careful. That's exactly how big salaries still go broke."
+   },
+   {
+    "id": "more",
+    "text": "But I make more money now!",
+    "voice": 5
+   },
+   {
+    "id": "rule",
+    "text": "Rich Dad Poor Dad says it's not how much money you make. It's how much you keep."
+   },
+   {
+    "id": "what",
+    "text": "So what do I do with the raise?",
+    "voice": 5
+   },
+   {
+    "id": "keep",
+    "text": "Keep a big part of it, before your spending grows to eat it."
+   },
+   {
+    "id": "cta",
+    "text": "Follow Lobe for one book lesson every day."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 300,
+    "lobe": {
+     "pose": "shock",
+     "pos": "bl",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"I got a <y>raise</y>!<br>Upgrade<br><r>everything</r>!\"",
+      "at": "+0.2"
+     }
+    ]
+   },
+   {
+    "line": "warn",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "That's how<br><r>big salaries</r><br>go broke.",
+      "at": "big"
+     }
+    ]
+   },
+   {
+    "line": "more",
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"But I make<br><y>more</y> now!\"",
+      "at": "+0.2"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "💵 Salary",
+        "r": "⬆️",
+        "color": "green",
+        "at": "more"
+       },
+       {
+        "l": "🛍️ Spending",
+        "r": "⬆️⬆️",
+        "color": "red",
+        "at": "now"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "rule",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "It's not how much<br>you <m>make</m>.",
+      "at": "not"
+     },
+     {
+      "type": "stamp",
+      "text": "IT'S WHAT YOU KEEP",
+      "color": "green",
+      "size": 70,
+      "at": "keep"
+     }
+    ]
+   },
+   {
+    "line": "what",
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "\"So what do I<br>do with the<br><y>raise</y>?\"",
+      "at": "+0.2"
+     }
+    ]
+   },
+   {
+    "line": "keep",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "<g>Keep</g> a big<br>part of it.",
+      "at": "Keep"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "FIRST",
+        "text": "💰 Keep part of the raise",
+        "color": "green",
+        "at": "part"
+       },
+       {
+        "tag": "THEN",
+        "text": "🛍️ Spend the rest",
+        "color": "muted",
+        "at": "spending"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "cta": true
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · RICH DAD POOR DAD",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 560
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 128,
+      "html": "Big salary.<br>Still <r>broke</r>.<br>Why?"
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Rich Dad Poor Dad has a simple answer →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "THE TRAP",
+      "color": "red"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "When pay goes up:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "💵 Salary",
+        "r": "goes up",
+        "color": "green"
+       },
+       {
+        "l": "🚗 Lifestyle",
+        "r": "goes up",
+        "color": "red"
+       },
+       {
+        "l": "💰 Savings",
+        "r": "stay at 0",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what's the fix? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "It's not how much<br>you <m>make</m>."
+     },
+     {
+      "type": "stamp",
+      "text": "IT'S WHAT YOU KEEP",
+      "color": "green",
+      "size": 64
+     },
+     {
+      "type": "space",
+      "h": 40
+     },
+     {
+      "type": "sub",
+      "html": "The core idea in Rich Dad Poor Dad."
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "calm",
+     "pos": "bl",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "EXAMPLE",
+      "color": "muted"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Two people, same raise:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🅰️ Spends all of it",
+        "r": "keeps 0",
+        "color": "red"
+       },
+       {
+        "l": "🅱️ Keeps half",
+        "r": "keeps 50%",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "ml": 380,
+      "html": "Same pay.<br><b>Different future.</b>"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Next raise:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "STEP 1",
+        "text": "Keep a big part of it",
+        "color": "green"
+       },
+       {
+        "tag": "STEP 2",
+        "text": "Put it toward assets",
+        "color": "green"
+       },
+       {
+        "tag": "STEP 3",
+        "text": "Then enjoy the rest",
+        "color": "gold"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Earn more?<br>Great.<br><g>Keep</g> more."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for later",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What did your last raise go to?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "I Got a Raise… Why Am I Still Broke? 💸 Rich Dad Poor Dad #shorts",
+  "short": "I got a raise… so why am I still broke? 💸\n\nBroke Brain vs Rich Brain. Rich Dad Poor Dad says it's not how much money you make, it's how much you keep. When spending grows with every raise, a bigger salary changes nothing.\n\n💬 What did your last raise go to?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#richdadpoordad #booklessons #moneytips #lifestylecreep #personalfinance #mindset #booksummary #robertkiyosaki #lobelessons",
+  "carousel": "Big salary. Still broke. Why? 💸\n\nRich Dad Poor Dad's answer: it's not how much you make, it's how much you keep. If your lifestyle grows with every raise, your savings never do.\n\nSwipe to see the fix 👉\n\n💬 What did your last raise go to?\n🔖 Save this for later.\n\n#richdadpoordad #booklessons #moneytips #lifestylecreep #personalfinance #mindset #booksummary #lobelessons",
+  "youtube_tags": [
+   "rich dad poor dad",
+   "how much you keep",
+   "lifestyle creep",
+   "money tips",
+   "book summary",
+   "robert kiyosaki",
+   "book lessons"
+  ]
+ }
+}
