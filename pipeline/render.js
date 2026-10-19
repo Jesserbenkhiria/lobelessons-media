@@ -151,6 +151,8 @@ async function main() {
     }
     await b.close(); console.log('slides', N); return;
   }
+  // ---- SHORT v2 ("stage" style): big persistent Lobe, camera moves, mood backgrounds, props, loop ending ----
+  if (MODE === 'short' && spec.short.style === 'stage') { await shortV2(b); await b.close(); return; }
   // ---- SHORT ----
   const sh = spec.short; const scenes = sh.scenes;
   const starts = scenes.map(s => lineStart(s.line));
@@ -239,4 +241,137 @@ async function main() {
   }
   await b.close(); console.log(STILLS.length ? 'stills' : 'frames', n);
 }
+// =====================================================================================================
+// SHORT v2 ("stage" style)
+//  - one persistent, big Lobe in the lower half (no double-Lobe at cuts); in sketches two brains side by side
+//  - camera: slow push-in per scene, punch-in on stamps/key moments, shake on shock
+//  - mood backgrounds (bad = warm red, good = green, neutral) with drifting emoji props
+//  - every scene shows its headline within 0.3 s (no dead frames)
+//  - no end card: a "Follow" badge slides in during the last line and the video loops into the hook
+// scene fields: mood: bad|good|gold|neutral, props: [emoji...], lobe: {pose, who: 'broke'|'rich'}
+async function shortV2(b) {
+  const sh = spec.short; const scenes = sh.scenes.filter(s => !s.cta);
+  const sketch = sh.format === 'sketch';
+  const starts = scenes.map(s => lineStart(s.line));
+  const BG = { neutral: '#F5F1EA', bad: '#F9E1DA', good: '#E2F1E6', gold: '#F8EED8' };
+  const PROPS = { bad: ['💸', '📉', '😰'], good: ['💰', '📈', '✨'], gold: ['⏳', '✨', '🪙'], neutral: ['📚', '✨', '💡'] };
+  let body = '';
+  scenes.forEach((s, i) => {
+    const a = i === 0 ? 0 : starts[i] - 0.05, z = i + 1 < scenes.length ? starts[i + 1] - 0.05 : TL.duration + 1;
+    const who = (s.lobe && s.lobe.who) || (s.lobe && s.lobe.pos === 'bl' ? 'broke' : 'rich');
+    const mood = s.mood || (sketch ? (who === 'broke' ? 'bad' : 'good') : 'neutral');
+    // no dead frames: the first headline/quote shows right away
+    const els = (s.els || []).map(e => Object.assign({}, e));
+    const firstBig = els.find(e => e.type === 'headline' || e.type === 'quote');
+    if (firstBig && at(firstBig.at, s.line) > a + 0.35) firstBig.at = '+0.05';
+    const props = (s.props || PROPS[mood] || []).slice(0, 4);
+    const pr = props.map((p, k) => `<div class="prop" data-k="${k}" style="left:${[70, 860, 40, 900][k]}px;top:${[620, 580, 1330, 1300][k]}px">${p}</div>`).join('');
+    body += `<div class="scene" data-in="${a}" data-out="${z}" data-bg="${BG[mood] || BG.neutral}" data-pose="${(s.lobe && s.lobe.pose) || 'explain'}" data-who="${who}">
+      <div class="props">${pr}</div><div class="content" style="top:${s.top || 250}px">${els.map(e => el(e, s.line)).join('')}</div></div>`;
+  });
+  const stage = sketch
+    ? `<div id="stage"><div class="rig2" id="rb" style="left:-130px"></div><div class="rig2" id="rr" style="right:-130px"></div></div>`
+    : `<div id="stage"><div class="rig1" id="r1"></div></div>`;
+  const lastLine = TL.lines[TL.lines.length - 1];
+  const html = `<!doctype html><html><head><meta charset="utf-8"><style>${CSS}
+   #v{width:1080px;height:1920px;background:#F5F1EA;position:relative;overflow:hidden;color:#111}
+   #cam{position:absolute;inset:0;transform-origin:50% 45%}
+   .hdr{position:absolute;top:120px;left:90px;right:90px;display:flex;justify-content:space-between;font:600 28px Inter;color:#8a8478;letter-spacing:.03em;z-index:10}
+   .prog{position:absolute;top:176px;left:90px;right:90px;height:6px;border-radius:3px;background:rgba(0,0,0,.08);z-index:10} .prog i{display:block;height:100%;border-radius:3px;background:#111;width:0}
+   .scene{position:absolute;inset:0}
+   .props{position:absolute;inset:0;z-index:1} .prop{position:absolute;font-size:150px;opacity:.0}
+   .content{z-index:3}
+   #stage{position:absolute;left:0;right:0;top:760px;height:700px;z-index:4}
+   .rig1{position:absolute;left:50%;width:960px;margin-left:-480px;top:20px}
+   .rig2{position:absolute;width:780px;top:40px}
+   .rig1 svg,.rig2 svg{width:100%;height:auto;display:block}
+   .tag{position:absolute;top:-6px;font:800 30px Inter;padding:10px 26px;border-radius:40px;letter-spacing:.04em}
+   #cap{position:absolute;left:60px;right:60px;top:1500px;text-align:center;z-index:20}
+   #cap span{display:inline-block;font:800 66px 'Inter Display';letter-spacing:-.02em;margin:0 9px;padding:2px 14px;border-radius:16px;color:#111}
+   #cap span.on{background:#111;color:#F5C84C}
+   #follow{position:absolute;left:50%;top:1640px;transform:translateX(-50%);z-index:21;white-space:nowrap;font:800 40px Inter;background:#111;color:#fff;padding:20px 44px;border-radius:60px;opacity:0}
+   #follow b{color:#F5C84C}
+  </style></head><body><div id="v"><div class="hdr"><span>${sh.label}</span><span>🧠 Lobe Lessons</span></div><div class="prog"><i></i></div>
+  <div id="cam">${body}${stage}</div><div id="cap"></div><div id="follow">＋ Follow <b>@lobelessons</b></div></div>
+  <script>
+  ${fs.readFileSync(path.join(__dirname, 'lobe_rig.js'), 'utf8')}
+  const ENV=${JSON.stringify(TL.env || [])},WORDS=${JSON.stringify(W)},DUR=${TL.duration},SKETCH=${sketch};
+  const LINES=${JSON.stringify(TL.lines)},LAST=${JSON.stringify(lastLine)};
+  const SC=[...document.querySelectorAll('.scene')];
+  // fit content above the stage (zoom down if too tall)
+  SC.forEach(s=>{const c=s.querySelector('.content');const top=c.getBoundingClientRect().top,h=c.getBoundingClientRect().height,max=720-top;
+    if(h>max)c.style.zoom=(max/h).toFixed(3);else c.style.top=(top+Math.min(120,(max-h)/2))+'px';});
+  // gesture switch times per scene (elements appearing), shared by the rig(s)
+  SC.forEach(sc=>{const a=+sc.dataset.in,b=+sc.dataset.out;const ts=[...sc.querySelectorAll('.el')].map(e=>+e.dataset.in).filter(x=>x>a+0.7&&x<b-0.4).sort((x,y)=>x-y);
+    const sw=[];let last=a;const push=x=>{if(x-last>=0.9){sw.push(x);last=x}};ts.forEach(x=>{while(x-last>2.6)push(last+2.4);push(x)});while(b-last>2.6)push(last+2.4);sc._sw=sw;});
+  const POPS=[...document.querySelectorAll('.el.pop')].map(e=>+e.dataset.in);
+  const ease=x=>{x=Math.min(1,Math.max(0,x));return 1-Math.pow(1-x,3)};
+  const back=x=>{x=Math.min(1,Math.max(0,x));const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+  const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+  const mix=(a,b,p)=>{const x=hex(a),y=hex(b);return 'rgb('+x.map((v,i)=>Math.round(v+(y[i]-v)*p)).join(',')+')'};
+  const chunks=[];let cur=[];
+  WORDS.forEach((w,i)=>{cur.push(w);const nx=WORDS[i+1];const txt=cur.map(c=>c.w).join(' ');
+   if(cur.length>=3||txt.length>16||/[.?!,:]$/.test(w.w)||!nx||nx.line!==w.line){chunks.push(cur);cur=[]}});
+  const lineAt=t=>{let k=0;LINES.forEach((l,i)=>{if(t>=l.start-0.1)k=i});return LINES[k]};
+  window.setT=function(t){
+   document.querySelector('.prog i').style.width=(100*t/DUR)+'%';
+   let ci=0;SC.forEach((s,i)=>{if(t>=+s.dataset.in-0.01)ci=i});const cs=SC[ci],ca=+cs.dataset.in;
+   // background colour blends from previous scene over 0.4 s
+   const prevBg=ci>0?SC[ci-1].dataset.bg:cs.dataset.bg;document.getElementById('v').style.background=mix(prevBg,cs.dataset.bg,ease((t-ca)/0.4));
+   SC.forEach((s,i)=>{const a=+s.dataset.in,b=+s.dataset.out;const vis=t>=a-0.01&&t<b+0.22;s.style.display=vis?'block':'none';if(!vis)return;
+    const pin=a<0.05?1:ease((t-a)/0.22),pout=ease((t-b)/0.2);s.style.opacity=pin*(1-pout);
+    s.querySelector('.content').style.transform='translateY('+((1-pin)*40-pout*30)+'px)';
+    s.querySelectorAll('.prop').forEach(p=>{const k=+p.dataset.k;const lt=t-a;p.style.opacity=(0.28*ease(lt/0.6)).toFixed(3);
+      p.style.transform='translate('+(Math.sin(lt*0.9+k)*14)+'px,'+(-lt*18+Math.cos(lt*1.3+k)*8)+'px) rotate('+(Math.sin(lt*0.7+k*2)*12)+'deg)';});});
+   document.querySelectorAll('.el').forEach(e=>{const a=+e.dataset.in;
+    if(e.classList.contains('pop')){const q=back((t-a)/0.35);e.style.opacity=Math.min(1,Math.max(0,(t-a)/0.12));e.style.transform='scale('+(1.6-0.6*q)+')';return;}
+    const p=a<0.4?1:ease((t-a)/0.4);e.style.opacity=p;e.style.filter='blur('+((1-p)*10)+'px)';e.style.transform='translateY('+((1-p)*30)+'px)';});
+   // camera: slow push-in per scene + punch on stamps + punch on scene start + shake on shock
+   const ts=t-ca;let z=1+0.035*Math.min(1,ts/4);POPS.forEach(a=>{if(t>=a)z+=0.06*Math.exp(-(t-a)*5)});z+=0.025*Math.exp(-Math.max(0,ts)*7)*(ci>0?1:0);
+   let sx=0,sy=0;if(cs.dataset.pose==='shock'&&ts<0.6){const k=(1-ts/0.6)*10;sx=Math.sin(t*70)*k;sy=Math.cos(t*55)*k*0.6;}
+   document.getElementById('cam').style.transform='translate('+sx+'px,'+sy+'px) scale('+z.toFixed(4)+')';
+   // rigs
+   const f=Math.floor(t*30);const lm=((ENV[f]||0)+(ENV[f+1]||0))/2;const pk=back(ts/0.45);
+   if(!SKETCH){const r=document.getElementById('r1');
+     r.innerHTML=lobeRig({pose:cs.dataset.pose,side:'r',t:t,lv:lm,tIn:ca,sw:cs._sw,seed:0});
+     r.style.transformOrigin='50% 90%';r.style.transform='translateY('+(Math.sin(t*2.4)*8)+'px) scale('+((ci>0?0.9+0.1*pk:1)*(1+lm*0.03)).toFixed(4)+')';}
+   else{const sp=cs.dataset.who;
+     [['rb','broke','l'],['rr','rich','r']].forEach(([id,who,side])=>{const r=document.getElementById(id);const on=sp===who;
+      const pose=on?cs.dataset.pose:(who==='broke'?'think':'calm');
+      r.innerHTML=lobeRig({pose:pose==='calm'&&!on?'explain':pose,side:side==='l'?'r':'l',t:t,lv:on?lm:0,tIn:on?ca:0,sw:on?cs._sw:[],seed:who==='broke'?1.3:0,who:who});
+      const sc=on?1.0:0.82;r.style.opacity=on?1:0.55;r.style.transformOrigin='50% 95%';
+      r.style.transform='translateY('+(Math.sin(t*2.4+(who==='broke'?1:0))*7+(on?0:30))+'px) scale('+(sc*(on?(0.94+0.06*pk):1)*(1+(on?lm*0.03:0))).toFixed(4)+')';});
+     document.getElementById('stage').style.transform='translateX('+(sp==='broke'?60:-60)*ease(ts/0.4)+'px)';}
+   const cap=document.getElementById('cap');const i=chunks.findIndex((c,k)=>t>=c[0].s-0.05&&(!chunks[k+1]||t<chunks[k+1][0].s-0.05));
+   const ch=chunks[i];cap.innerHTML=(ch&&t<ch[ch.length-1].e+0.6)?ch.map(w=>'<span class="'+(t>=w.s&&t<w.e+0.05?'on':'')+'">'+w.w+'</span>').join(''):'';
+   document.querySelectorAll('.hl').forEach(h=>{h.style.color=t>=+h.dataset.hl?h.dataset.c:''});
+   // follow badge during the last line
+   const fb=document.getElementById('follow');const fa=LAST.start;const fq=back((t-fa)/0.5);
+   fb.style.opacity=t<fa?0:Math.min(1,(t-fa)/0.2);fb.style.transform='translateX(-50%) scale('+(t<fa?0.6:0.6+0.4*fq)+')';
+  };
+  </script></body></html>`;
+  fs.writeFileSync(path.join(OUT, 'short.html'), html);
+  const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  await p.goto('file://' + path.resolve(OUT, 'short.html')); await p.waitForTimeout(300);
+  const ev = await p.evaluate(() => {
+    const out = []; const seen = new Set();
+    document.querySelectorAll('.scene').forEach((s, i) => { if (i > 0) out.push([+s.dataset.in - 0.12, 'whoosh', 0.1]); });
+    document.querySelectorAll('.el').forEach(e => { const t = +e.dataset.in; const k = t.toFixed(1); if (seen.has(k)) return; seen.add(k);
+      if (e.classList.contains('pop')) out.push([t, 'stamp', 0.45]); else if (e.querySelector('.card,.pill,.row')) out.push([t, 'pop', 0.16]); });
+    return out.filter(x => x[0] > 0.3);
+  });
+  ev.unshift([0.05, 'thud', 0.3]);
+  fs.writeFileSync(path.join(OUT, 'events.json'), JSON.stringify(ev));
+  const fps = 30;
+  const times = STILLS.length ? STILLS.map(Number) : [...Array(Math.ceil(TL.duration * fps)).keys()].map(i => i / fps);
+  const dir = path.join(OUT, STILLS.length ? 'stills' : 'frames'); fs.mkdirSync(dir, { recursive: true });
+  let n = 0;
+  for (const t of times) {
+    await p.evaluate(t => setT(t), t);
+    await p.screenshot({ path: path.join(dir, STILLS.length ? `still_${t.toFixed(1)}.jpg` : `f_${String(n).padStart(5, '0')}.jpg`), type: 'jpeg', quality: 92 });
+    n++;
+  }
+  console.log(STILLS.length ? 'stills' : 'frames', n);
+}
+
 main();

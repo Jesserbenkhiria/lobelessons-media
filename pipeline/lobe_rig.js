@@ -7,18 +7,28 @@
   const L = (w = 5, c = INK) => `fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"`;
   const f1 = n => n.toFixed(1);
 
-  let BRAIN = `<g transform="translate(200 196) scale(0.74) translate(-200 -200)"><g fill="${PINK}"><ellipse cx="200" cy="200" rx="128" ry="86"/>`;
-  const R = [44, 40, 46, 38, 44, 42, 40, 46, 42, 40, 44, 38, 46, 42, 40, 44];
-  for (let i = 0; i < 16; i++) { const a = Math.PI * 2 * i / 16; BRAIN += `<circle cx="${f1(200 + 132 * Math.cos(a))}" cy="${f1(200 + 88 * Math.sin(a) * (Math.sin(a) > 0 ? 0.85 : 1.08))}" r="${R[i]}"/>`; }
-  BRAIN += `</g><g fill="${PINK_HI}" opacity=".5"><circle cx="138" cy="128" r="26"/><circle cx="96" cy="170" r="16"/><circle cx="190" cy="106" r="15"/></g><g ${L(4.6, FOLD)}>` +
-    ['M118 150 q18 -24 40 -8', 'M150 128 q8 20 -6 34', 'M196 112 q22 -6 30 14 q6 14 -6 22', 'M250 132 q24 -10 36 10', 'M298 168 q-20 4 -22 26', 'M96 206 q22 -6 30 14', 'M128 250 q-6 -20 16 -28', 'M178 268 q4 -22 26 -20', 'M246 256 q18 4 22 -16', 'M290 236 q18 -4 26 12', 'M210 292 q12 -8 24 2', 'M146 284 q-14 -2 -18 -14'].map(d => `<path d="${d}"/>`).join('') +
-    `</g><path d="M246 92 L246 136 L256 126 L266 136 L266 88 Z" fill="${GOLD}"/></g>`;
+  // brain body; the "broke" variant (Broke Brain in sketches) is a duller, messier cousin of Lobe
+  function makeBrain(pal, top) {
+    let b = `<g transform="translate(200 196) scale(0.74) translate(-200 -200)"><g fill="${pal[0]}"><ellipse cx="200" cy="200" rx="128" ry="86"/>`;
+    const R = [44, 40, 46, 38, 44, 42, 40, 46, 42, 40, 44, 38, 46, 42, 40, 44];
+    for (let i = 0; i < 16; i++) { const a = Math.PI * 2 * i / 16; b += `<circle cx="${f1(200 + 132 * Math.cos(a))}" cy="${f1(200 + 88 * Math.sin(a) * (Math.sin(a) > 0 ? 0.85 : 1.08))}" r="${R[i]}"/>`; }
+    b += `</g><g fill="${pal[1]}" opacity=".5"><circle cx="138" cy="128" r="26"/><circle cx="96" cy="170" r="16"/><circle cx="190" cy="106" r="15"/></g><g ${L(4.6, pal[2])}>` +
+      ['M118 150 q18 -24 40 -8', 'M150 128 q8 20 -6 34', 'M196 112 q22 -6 30 14 q6 14 -6 22', 'M250 132 q24 -10 36 10', 'M298 168 q-20 4 -22 26', 'M96 206 q22 -6 30 14', 'M128 250 q-6 -20 16 -28', 'M178 268 q4 -22 26 -20', 'M246 256 q18 4 22 -16', 'M290 236 q18 -4 26 12', 'M210 292 q12 -8 24 2', 'M146 284 q-14 -2 -18 -14'].map(d => `<path d="${d}"/>`).join('') +
+      `</g>${top}</g>`;
+    return b;
+  }
+  const BRAIN = makeBrain([PINK, PINK_HI, FOLD], `<path d="M246 92 L246 136 L256 126 L266 136 L266 88 Z" fill="${GOLD}"/>`);
+  // Broke Brain: dusty mauve, messy hair tuft, a patch, no glasses
+  const BROKE = makeBrain(['#C99AA3', '#DDBCC2', '#A06C79'],
+    `<g ${L(5)}><path d="M188 96 q-6 -26 8 -40"/><path d="M204 94 q4 -28 22 -34"/><path d="M216 98 q14 -18 34 -14"/></g>` +
+    `<g transform="translate(118 248) rotate(-18)"><rect x="-22" y="-12" width="44" height="24" rx="5" fill="#F1E3C8" stroke="${INK}" stroke-width="3.5"/><path d="M-10 -6 v12 M0 -6 v12 M10 -6 v12" ${L(2.5, '#b9a17a')}/></g>`);
   const BLUSHES = `<ellipse cx="148" cy="214" rx="13" ry="7" fill="${BLUSH}" opacity=".45"/><ellipse cx="252" cy="214" rx="13" ry="7" fill="${BLUSH}" opacity=".45"/>`;
   const GLASSES = `<path d="M157 194 h34 a17 17 0 0 1 -34 0 Z M209 194 h34 a17 17 0 0 1 -34 0 Z" fill="rgba(255,255,255,.28)" stroke="${GOLD}" stroke-width="4" stroke-linejoin="round"/><path d="M191 195 q9 -6 18 0" ${L(4, GOLD)}/>`;
   const STAND = `<path d="M181 270 L178 346 L163 348 M219 270 L222 346 L237 348" ${L(5)}/>`;
   const SIT = `<path d="M150 262 C142 290 146 312 170 316 L230 316 C254 312 258 290 250 262" fill="#fff" stroke="${INK}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M162 296 C182 314 218 314 238 296 M238 296 C220 282 198 290 188 306 M162 296 C180 282 202 290 212 306" ${L(5)}/>`;
   const spark = (x, y, s) => `<path transform="translate(${f1(x)} ${f1(y)}) scale(${s.toFixed(3)})" d="M0 -22 C2 -6 6 -2 22 0 C6 2 2 6 0 22 C-2 6 -6 2 -22 0 C-6 -2 -2 -6 0 -22 Z" fill="${GOLD}"/>`;
   const qmark = (x, y, o) => `<text x="${x}" y="${y}" opacity="${o.toFixed(2)}" font-family="Inter Display, Inter, sans-serif" font-weight="800" font-size="58" fill="${GOLD}">?</text>`;
+  const SWEAT = t => { const y = 120 + ((t * 40) % 40); return `<path d="M312 ${f1(y)} q-8 14 0 19 q8 -5 0 -19 Z" fill="#8DBDE8" opacity="${f1(1 - ((t * 40) % 40) / 40)}"/>`; };
   const drops = `<path d="M86 104 q-7 13 0 17 q7 -4 0 -17 Z M318 98 q-7 13 0 17 q7 -4 0 -17 Z" fill="#8DBDE8"/>`;
   const book = (x, y) => `<g transform="translate(${x} ${y})"><path d="M0 0 C-18 -8 -42 -8 -54 -3 L-54 44 C-42 40 -18 40 0 47 C18 40 42 40 54 44 L54 -3 C42 -8 18 -8 0 0 Z" fill="#fff" stroke="${INK}" stroke-width="4.2" stroke-linejoin="round"/><path d="M0 0 V47" ${L(3.5)}/><path d="M-44 10 h30 M-44 20 h26 M-44 30 h30 M14 10 h18" ${L(2.5, '#c8c8ce')}/><path d="M28 -4 V30 l6 -6 l6 6 V-6" fill="${GOLD}"/></g>`;
 
@@ -61,6 +71,7 @@
     read: { eyes: 'happy', brows: 'soft', rest: 'smile' },
   };
   const BROWS = {
+    worried: [[162, 162, 12, -2, 24, 6], [214, 168, 12, -6, 24, -6]],
     soft: [[163, 166, 11, -6, 22, -1], [215, 165, 11, -5, 22, 1]], up: [[162, 160, 12, -9, 24, -2], [214, 158, 12, -7, 24, 2]],
     think: [[163, 170, 11, -2, 22, 0], [215, 158, 11, -8, 22, 0]], shock: [[160, 154, 13, -10, 26, -2], [214, 152, 13, -8, 26, 2]],
   };
@@ -124,7 +135,7 @@
     if (eyeMode === 'happy' || blink) eyes = `<path d="M163 184 q11 9 22 0 M215 184 q11 9 22 0" ${L(5)}/>`;
     else if (eyeMode === 'shock') eyes = `<circle cx="174" cy="184" r="12" fill="#fff" stroke="${INK}" stroke-width="4"/><circle cx="226" cy="184" r="12" fill="#fff" stroke="${INK}" stroke-width="4"/><circle cx="${f1(174 + look)}" cy="186" r="4.5" fill="${INK}"/><circle cx="${f1(226 + look)}" cy="186" r="4.5" fill="${INK}"/>`;
     else eyes = `<circle cx="${f1(174 + look)}" cy="186" r="7.5" fill="${INK}"/><circle cx="${f1(226 + look)}" cy="186" r="7.5" fill="${INK}"/><circle cx="${f1(176.5 + look)}" cy="183.5" r="2.4" fill="#fff"/><circle cx="${f1(228.5 + look)}" cy="183.5" r="2.4" fill="#fff"/>`;
-    const bl = BROWS[eyeMode === 'open' && fc.brows === 'shock' ? 'up' : fc.brows], lift = -lv * 5;
+    const bl = st.who === 'broke' && fc.brows !== 'shock' ? BROWS.worried : BROWS[eyeMode === 'open' && fc.brows === 'shock' ? 'up' : fc.brows], lift = -lv * 5;
     const brows = `<path d="${bl.map(b => `M${b[0]} ${f1(b[1] + lift)} q${b[2]} ${b[3]} ${b[4]} ${b[5]}`).join(' ')}" ${L(4)}/>`;
     const o = Math.min(1, Math.max(0, (lv - 0.07) * 1.5));
     let mouth;
@@ -145,9 +156,10 @@
     if (pose === 'read') front = book(200, 282);
 
     const legs = sit ? SIT : STAND;
+    const broke = st.who === 'broke';
     const backR = aR.path + (aR.front ? '' : aR.hand), backL = aL.path + (aL.front ? '' : aL.hand);
     const frontHands = (aR.front ? aR.hand : '') + (aL.front ? mir(aL.hand) : '');
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 20 520 360">${legs}${backR}${mir(backL)}${BRAIN}${BLUSHES}${eyes}${brows}${mouth}${fc.eyes === 'happy' || pose !== 'shock' || ts > 1.6 ? GLASSES : ''}${frontHands}${front}</svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 20 520 360">${legs}${backR}${mir(backL)}${broke ? BROKE : BRAIN}${BLUSHES}${eyes}${brows}${mouth}${!broke && (fc.eyes === 'happy' || pose !== 'shock' || ts > 1.6) ? GLASSES : ''}${broke ? SWEAT(t) : ''}${frontHands}${front}</svg>`;
   }
   root.lobeRig = lobeRig;
   if (typeof module !== 'undefined') module.exports = { lobeRig };

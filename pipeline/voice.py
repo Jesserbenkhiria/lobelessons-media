@@ -42,10 +42,27 @@ def word_times(x, sr, words):
 
 
 allw, lines, chunks, t, sr = [], [], [], 0.25, 24000
+# optional pre-recorded lines (e.g. ElevenLabs): spec "audio_dir" (relative to the repo) holding <line_id>.wav
+ADIR = spec.get("audio_dir"); ADIR = os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])), "..", ADIR) if ADIR else None
+
+
+def load_wav(fn, target=24000):
+    with wave.open(fn) as w:
+        r = w.getframerate(); ch = w.getnchannels()
+        y = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
+    if ch > 1: y = y.reshape(-1, ch).mean(1)
+    if r != target: y = np.interp(np.arange(0, len(y), r / target), np.arange(len(y)), y).astype(np.float32)
+    return y
+
+
 for ln in spec["short"]["lines"]:
-    a = tts.generate(ln.get("say", ln["text"]), sid=ln.get("voice", VOICE), speed=SPEED)  # per-line voice for sketches
-    sr = a.sample_rate
-    x = np.array(a.samples, np.float32)
+    ext = os.path.join(ADIR, ln["id"] + ".wav") if ADIR else None
+    if ext and os.path.exists(ext):
+        x = load_wav(ext); sr = 24000
+    else:
+        a = tts.generate(ln.get("say", ln["text"]), sid=ln.get("voice", VOICE), speed=SPEED)  # per-line voice for sketches
+        sr = a.sample_rate
+        x = np.array(a.samples, np.float32)
     nz = np.where(np.abs(x) > 0.01)[0]
     x = x[max(0, nz[0] - 800): nz[-1] + 1600]
     words = ln["text"].split()

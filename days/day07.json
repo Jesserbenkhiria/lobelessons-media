@@ -1,0 +1,458 @@
+{
+ "day": 7,
+ "date": "2026-10-24",
+ "book": "The Psychology of Money",
+ "lesson": "The magic of compounding (Buffett's real secret)",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day07",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "label": "MONEY · SKETCH",
+  "cover": {
+   "html": "Buffett's real<br>secret isn't <y>genius</y>",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Warren Buffett is rich because he's a genius, right?",
+    "voice": 5
+   },
+   {
+    "id": "smart",
+    "text": "Smart, yes. But his real secret is time."
+   },
+   {
+    "id": "time",
+    "text": "Time? What do you mean, time?",
+    "voice": 5
+   },
+   {
+    "id": "facts",
+    "text": "He started investing at ten. And over ninety-nine percent of his money came after his fiftieth birthday."
+   },
+   {
+    "id": "end",
+    "text": "Wait. So most of it showed up at the end?",
+    "voice": 5
+   },
+   {
+    "id": "lesson",
+    "text": "That's compounding. Small money, plenty of time. Start early, and don't interrupt it."
+   },
+   {
+    "id": "loop",
+    "text": "Okay, okay. But Buffett is rich because he's a genius, right?",
+    "voice": 5
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "🧠",
+     "💰",
+     "🤓"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"Buffett is rich<br>because he's a<br><y>genius</y>, right?\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "smart",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "⏳",
+     "✨",
+     "📚"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Smart, yes.<br>But his secret is…",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "TIME",
+      "color": "green",
+      "size": 120,
+      "at": "time"
+     }
+    ]
+   },
+   {
+    "line": "time",
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "❓",
+     "🤔",
+     "⏰"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 130,
+      "html": "\"<y>Time</y>??\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "facts",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "🎂",
+     "📈",
+     "⏳"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "THE PSYCHOLOGY OF MONEY",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Buffett's <y>timeline</y>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "AGE 10",
+        "text": "📈 Starts investing",
+        "color": "gold",
+        "at": "ten"
+       },
+       {
+        "tag": "AFTER AGE 50",
+        "text": "💰 Over 99% of his wealth",
+        "color": "green",
+        "at": "ninety"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "end",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "😱",
+     "💸",
+     "⏰"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"Most of it came<br>at the <r>END</r>?!\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "lesson",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "🌱",
+     "🌳",
+     "📈"
+    ],
+    "els": [
+     {
+      "type": "stamp",
+      "text": "COMPOUNDING",
+      "color": "green",
+      "size": 92,
+      "at": "compounding"
+     },
+     {
+      "type": "space",
+      "h": 20
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1",
+        "text": "🌱 Start early",
+        "color": "green",
+        "at": "Start"
+       },
+       {
+        "tag": "2",
+        "text": "🚫 Don't interrupt it",
+        "color": "green",
+        "at": "interrupt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "🧠",
+     "💰",
+     "🤓"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"…but he's a<br><y>genius</y>, right?\"",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE PSYCHOLOGY OF MONEY",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 560
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "Buffett's real<br>secret isn't<br><y>genius</y>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "From The Psychology of Money →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "His timeline:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "AGE 10",
+        "text": "📈 Starts investing",
+        "color": "gold"
+       },
+       {
+        "tag": "AFTER AGE 50",
+        "text": "💰 Over 99% of his wealth",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what's the secret? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "His skill is investing.<br>His secret is…"
+     },
+     {
+      "type": "stamp",
+      "text": "TIME",
+      "color": "green",
+      "size": 110
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "calm",
+     "pos": "bl",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Compounding:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🌱 Small money",
+        "color": "green"
+       },
+       {
+        "l": "⏳ + lots of time",
+        "color": "green"
+       },
+       {
+        "l": "🌳 = most growth at the end",
+        "color": "green"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Two rules:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1",
+        "text": "🌱 Start early, even small",
+        "color": "green"
+       },
+       {
+        "tag": "2",
+        "text": "🚫 Don't interrupt it",
+        "color": "green"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Genius helps.<br><g>Time</g> wins."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for later",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 When did you start investing?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Buffett's Real Secret Isn't Genius ⏳ The Psychology of Money #shorts",
+  "short": "Warren Buffett is rich because he's a genius… right? ⏳\n\nBroke Brain vs Rich Brain. In The Psychology of Money, Morgan Housel points out that Buffett started investing at 10, and over 99% of his wealth came after his 50th birthday. That's compounding: start early and don't interrupt it.\n\n💬 When did you start investing?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#psychologyofmoney #warrenbuffett #compounding #booklessons #moneytips #investing #booksummary #lobelessons",
+  "carousel": "Buffett's real secret isn't genius. ⏳\n\nA lesson from The Psychology of Money: Buffett started investing at 10, and over 99% of his wealth came after age 50. His skill is investing, his secret is time.\n\nSwipe for the 2 rules 👉\n\n💬 When did you start investing?\n🔖 Save this for later.\n\n#psychologyofmoney #warrenbuffett #compounding #booklessons #moneytips #investing #lobelessons",
+  "youtube_tags": [
+   "psychology of money",
+   "warren buffett",
+   "compounding",
+   "morgan housel",
+   "book summary",
+   "book lessons",
+   "investing"
+  ]
+ }
+}

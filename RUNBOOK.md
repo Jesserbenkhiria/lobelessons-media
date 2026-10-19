@@ -68,7 +68,7 @@ Find the Notion row where Date = tomorrow (also handle today's row first if it's
 7. **Update Notion:** `Status = Scheduled`, `Media` = the posts folder URL on GitHub, `Notes` = scheduled times plus any errors.
 8. Commit `days/dayNN.json` (publish.sh already does this).
 
-If the row is already `Scheduled` or `Published`, skip step 2. If there is no row for tomorrow, the 30-day plan is over: add 7 new days to the calendar (same format, new books/lessons that fit the channel), then continue.
+If the row is already `Scheduled` or `Published`, skip step 2. **If the row's Notes start with `HOLD`, skip it completely (no build, no schedule): Jesser must approve it first.** If there is no row for tomorrow, the 30-day plan is over: add 7 new days to the calendar (same format, new books/lessons that fit the channel), then continue.
 
 ### 3. Report
 Finish with a short summary: what was published yesterday (ticked), what's scheduled today (times per platform), and any problems.
