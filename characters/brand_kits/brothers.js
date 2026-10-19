@@ -27,13 +27,13 @@ const B = {
     handle: '@drbeat.explains', poseP: 'approve', poseB: 'explain',
     deco: (w, h, k) => ecg(w, h, k.ecgY, '#E0526A', .22, k.sw) + plus(k.p1[0], k.p1[1], k.ps, '#7CC3AE', .45) + plus(k.p2[0], k.p2[1], k.ps * .7, '#E0526A', .35),
   },
-  lumi: {
-    bg: '#15151B', ink: '#FFFFFF', sub: '#B9B9C6', acc: '#F7C948',
-    title: `LUMI <span style="color:#F7C948">CREATES</span>`, titleCss: `font:400 1em Anton;letter-spacing:.01em`,
+  cue: {
+    bg: '#16141F', ink: '#FFFFFF', sub: '#BEB8D8', acc: '#A89DF7',
+    title: `CUE <span style="color:#A89DF7">CREATES</span>`, titleCss: `font:400 1em Anton;letter-spacing:.01em`,
     tag: 'Make content people actually finish.', tagCss: `font:600 1em Inter`,
-    pills: ['🎣 Hooks', '💡 Lighting', '✂️ Editing', '📈 Growth'], pillCss: c => `background:#F7C948;color:#15151B`,
-    handle: '@lumi.creates', poseP: 'idea', poseB: 'explain',
-    deco: (w, h, k) => glow(k.gx, k.gy, k.gr, 'rgba(247,201,72,.33)') + `<div style="position:absolute;left:${k.rec[0]}px;top:${k.rec[1]}px;font:700 ${k.rs}px Inter;color:#fff;letter-spacing:.12em;display:flex;align-items:center;gap:${k.rs * .5}px"><span style="width:${k.rs * .8}px;height:${k.rs * .8}px;border-radius:50%;background:#FF4D4D;display:inline-block"></span>REC</div>`,
+    pills: ['🎣 Hooks', '💡 Lighting', '✂️ Editing', '📈 Growth'], pillCss: c => `background:#7C6CF2;color:#fff`,
+    handle: '@cue.creates', poseP: 'explain', poseB: 'explain',
+    deco: (w, h, k) => glow(k.gx, k.gy, k.gr, 'rgba(124,108,242,.38)') + `<div style="position:absolute;left:${k.rec[0]}px;top:${k.rec[1]}px;font:700 ${k.rs}px Inter;color:#fff;letter-spacing:.12em;display:flex;align-items:center;gap:${k.rs * .5}px"><span style="width:${k.rs * .8}px;height:${k.rs * .8}px;border-radius:50%;background:#FF4D4D;display:inline-block"></span>REC</div>`,
   },
   nimbus: {
     bg: 'linear-gradient(160deg,#DCE7FA 0%,#E9E3F7 55%,#F6EEF3 100%)', ink: '#2E4470', sub: '#62729A', acc: '#7C93D6',
@@ -63,22 +63,22 @@ const text = (b, sz) => `
 
 const pages = (id, b) => ({
   profile: [1080, 1080, `<div style="width:1080px;height:1080px;${bgCss(b)};position:relative;overflow:hidden">
-     ${id === 'lumi' ? glow(540, 560, 520, 'rgba(247,201,72,.38)') : ''}
+     ${id === 'cue' ? glow(540, 560, 520, 'rgba(124,108,242,.42)') : ''}
      ${id === 'nimbus' ? star(180, 200, 60) + star(860, 260, 40) + star(820, 830, 34) : ''}
      ${id === 'drbeat' ? ecg(1080, 1080, 900, '#E0526A', .18, 8) : ''}
-     <div style="position:absolute;left:50%;top:50%;width:${id==='roux'?720:800}px;transform:translate(-50%,-50%) translate(${id==='drbeat'?-20:id==='lumi'?0:0}px,${id==='roux'?10:20}px)">${S(id, b.poseP)}</div></div>`],
+     <div style="position:absolute;left:50%;top:50%;width:${id==='roux'?720:800}px;transform:translate(-50%,-50%) translate(${id==='drbeat'?-20:id==='cue'?0:0}px,${id==='roux'?10:20}px)">${S(id, b.poseP)}</div></div>`],
   banner: [2560, 1440, `<div style="width:2560px;height:1440px;${bgCss(b)};position:relative;overflow:hidden">
      ${b.deco(2560, 1440, { ecgY: 1000, sw: 8, p1: [400, 300], p2: [2200, 1100], ps: 70, gx: 820, gy: 720, gr: 520, rec: [1880, 560], rs: 34,
         stars: [[300, 260, 70], [2150, 320, 50], [2300, 1100, 60], [500, 1150, 40], [1950, 520, 36]], c1: [-120, 1180, 900, 380], c2: [1900, -160, 900, 360] })}
      <div style="position:absolute;left:507px;top:508px;width:1546px;height:423px;display:flex;align-items:center;gap:40px">
         <div style="width:440px;flex:none;margin-left:30px">${S(id, b.poseB)}</div>
-        <div>${text(b, { t: id === 'lumi' ? 150 : 140, s: 44, p: 28, h: 28 })}</div>
+        <div>${text(b, { t: id === 'cue' ? 150 : 140, s: 44, p: 28, h: 28 })}</div>
      </div></div>`],
   fbcover: [1640, 624, `<div style="width:1640px;height:624px;${bgCss(b)};position:relative;overflow:hidden">
      ${b.deco(1640, 624, { ecgY: 520, sw: 5, p1: [700, 90], p2: [1500, 470], ps: 44, gx: 1285, gy: 300, gr: 300, rec: [1480, 60], rs: 22,
         stars: [[760, 80, 40], [1520, 120, 30], [1060, 470, 26], [80, 70, 24]], c1: [-80, 470, 600, 220], c2: [1100, -90, 640, 220] })}
      <div style="position:absolute;left:110px;top:0;height:624px;display:flex;flex-direction:column;justify-content:center">
-       ${text(b, { t: id === 'lumi' ? 92 : 86, s: 30, p: 22, h: 22 })}</div>
+       ${text(b, { t: id === 'cue' ? 92 : 86, s: 30, p: 22, h: 22 })}</div>
      <div style="position:absolute;left:1120px;top:150px;width:330px">${S(id, b.poseB)}</div></div>`],
 });
 
