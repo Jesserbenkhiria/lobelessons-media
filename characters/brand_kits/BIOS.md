@@ -1,11 +1,11 @@
 # Lobe's brothers: names, handles and bios
 
-Each brother keeps the family drawing style but has his own look and voice.
+Dr. Beat and Roux keep the family drawing style; Cue and nimbus use a retro 1930s cartoon style. Each brother has his own look and voice.
 
 | | Dr. Beat | Cue | Nimbus | Roux |
 |---|---|---|---|---|
 | Topic | How the body works | Content-creator tips | Calm mind, sleep, stress | Kitchen science |
-| Look | Clinic mint + heart red, heartbeat line | Clapperboard on a dark studio background, violet spotlight, REC dot | Soft sky gradient, stars, lowercase | Cream recipe-grid paper, terracotta, serif |
+| Look | Clinic mint + heart red, heartbeat line | Retro cartoon film reel (white gloves, yellow sneakers, film strip) on a dark studio background, violet spotlight, REC dot | Retro blue line-art cloud meditating cross-legged, light blue background, lowercase | Cream recipe-grid paper, terracotta, serif |
 | Voice | Curious doctor: "Your body is weirder than you think." | Fast, punchy coach: "Stop. Fix your hook." | Slow, gentle, lowercase, no shouting | Playful chef-scientist: "Here's WHY it works." |
 | Handle | @drbeat.explains | @cue.creates | @nimbus.calm | @roux.foodlab (backup @hiroux) |
 
@@ -20,7 +20,7 @@ Each brother keeps the family drawing style but has his own look and voice.
 ## 🎬 Cue
 - **Name:** Cue Creates
 - **Instagram / TikTok bio:** Make content people actually finish 🎬 Hooks · Lighting · Editing · Growth
-- **YouTube description:** Cue is a little clapperboard who helps creators make videos people actually finish. Better hooks, cheap lighting setups, editing tricks and growth habits, one quick lesson a day. Take two is always allowed.
+- **YouTube description:** Cue is a little film reel who helps creators make videos people actually finish. Better hooks, cheap lighting setups, editing tricks and growth habits, one quick lesson a day. Take two is always allowed.
 - **Facebook Page:** category "Education Website" · About: Quick, practical tips for content creators. Hooks, lighting, editing and growth.
 
 ## ☁️ Nimbus

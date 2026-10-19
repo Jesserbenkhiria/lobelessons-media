@@ -36,12 +36,12 @@ const B = {
     deco: (w, h, k) => glow(k.gx, k.gy, k.gr, 'rgba(124,108,242,.38)') + `<div style="position:absolute;left:${k.rec[0]}px;top:${k.rec[1]}px;font:700 ${k.rs}px Inter;color:#fff;letter-spacing:.12em;display:flex;align-items:center;gap:${k.rs * .5}px"><span style="width:${k.rs * .8}px;height:${k.rs * .8}px;border-radius:50%;background:#FF4D4D;display:inline-block"></span>REC</div>`,
   },
   nimbus: {
-    bg: 'linear-gradient(160deg,#DCE7FA 0%,#E9E3F7 55%,#F6EEF3 100%)', ink: '#2E4470', sub: '#62729A', acc: '#7C93D6',
-    title: `nimbus`, titleCss: `font:300 1em 'Inter Display';letter-spacing:-.03em;text-transform:lowercase`,
+    bg: 'linear-gradient(160deg,#F6F9FF 0%,#E8F0FF 100%)', ink: '#1E5BD8', sub: '#5B7FCB', acc: '#1E5BD8',
+    title: `nimbus`, titleCss: `font:600 1em 'Inter Display';letter-spacing:-.03em;text-transform:lowercase`,
     tag: 'slow down. breathe. feel better.', tagCss: `font:400 1em Inter;letter-spacing:.02em`,
-    pills: ['🌙 Sleep', '🌿 Stress', '🫁 Breathing', '☁️ Calm'], pillCss: c => `background:rgba(255,255,255,.65);color:#2E4470;border:2px solid rgba(255,255,255,.9)`,
+    pills: ['🌙 Sleep', '🌿 Stress', '🫁 Breathing', '☁️ Calm'], pillCss: c => `background:#fff;color:#1E5BD8;border:3px solid #1E5BD8`,
     handle: '@nimbus.calm', poseP: 'calm', poseB: 'calm',
-    deco: (w, h, k) => k.stars.map(([x, y, s]) => star(x, y, s, '#fff', .9)).join('') + blob(k.c1[0], k.c1[1], k.c1[2], k.c1[3], '#fff', .45) + blob(k.c2[0], k.c2[1], k.c2[2], k.c2[3], '#fff', .35),
+    deco: (w, h, k) => k.stars.map(([x, y, s]) => star(x, y, s, '#A9C4F5', .9)).join('') + '',
   },
   roux: {
     bg: '#FBF3E8', ink: '#2B1B12', sub: '#7A5A47', acc: '#D9724A',
@@ -64,7 +64,7 @@ const text = (b, sz) => `
 const pages = (id, b) => ({
   profile: [1080, 1080, `<div style="width:1080px;height:1080px;${bgCss(b)};position:relative;overflow:hidden">
      ${id === 'cue' ? glow(540, 560, 520, 'rgba(124,108,242,.42)') : ''}
-     ${id === 'nimbus' ? star(180, 200, 60) + star(860, 260, 40) + star(820, 830, 34) : ''}
+     ${id === 'nimbus' ? star(160, 180, 60, '#A9C4F5') + star(880, 220, 40, '#A9C4F5') : ''}
      ${id === 'drbeat' ? ecg(1080, 1080, 900, '#E0526A', .18, 8) : ''}
      <div style="position:absolute;left:50%;top:50%;width:${id==='roux'?720:800}px;transform:translate(-50%,-50%) translate(${id==='drbeat'?-20:id==='cue'?0:0}px,${id==='roux'?10:20}px)">${S(id, b.poseP)}</div></div>`],
   banner: [2560, 1440, `<div style="width:2560px;height:1440px;${bgCss(b)};position:relative;overflow:hidden">
