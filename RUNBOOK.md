@@ -70,6 +70,7 @@ Short elements take `"at"`: a word from that scene's line (`"paid"`), `"word#2"`
 - `quote` {html, size}: inside html use `<hl at="word" c="green">text</hl>` to color a word when it's spoken
 - `space` {h}, `html` {html}
 Lobe: `{"pose": calm|explain|idea|think|shock|read|approve, "pos": br|bl|bc|tr|mr|center, "size": px}`.
+In the **Short**, Lobe is an animated rig (`pipeline/lobe_rig.js`): his mouth talks with the voice, he blinks, looks toward the text, and changes hand gesture each time a new element appears (the pose picks the gesture set: explain = presenting/pointing at content/open arms, idea = finger up, think = hand on chin, shock = hands up, approve = thumbs up/wave, calm/read = seated). So give each scene a pose that fits what is said, and use `at` times so elements appear on key words (that is what triggers the gestures). Carousels and covers use the static poses. `"static_lobe": true` in a spec turns the rig off.
 Vary pose and position between scenes and slides. Use `tr` (small, about 300px) when the content is tall.
 
 ## Voice

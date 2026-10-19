@@ -61,6 +61,14 @@ const POS = MODE === 'short'
 function lobe(l, t) {
   if (!l) return '';
   const size = l.size || 480;
+  if (MODE === 'short' && !spec.static_lobe) {
+    // animated rig: wider canvas (480 vs 400 units) so the hands have room; keep the brain where the static pose had it
+    const w = Math.round(size * 1.3), extra = Math.round(size * 0.15), pk = l.pos || 'br';
+    const pos = (POS[pk] || POS.br).replace('VAR', (w / 2) + 'px')
+      .replace(/(right|left):(-?\d+)px/, (_, k, v) => `${k}:${+v - extra}px`);
+    const side = pk === 'bl' ? 'l' : 'r';
+    return `<div class="lobe rig" data-in="${t.toFixed(2)}" data-pose="${l.pose || 'explain'}" data-side="${side}" style="${pos};width:${w}px"></div>`;
+  }
   const pos = (POS[l.pos || 'br'] || POS.br).replace('VAR', (size / 2) + 'px');
   return `<div class="lobe" data-in="${t.toFixed(2)}" style="${pos};width:${size}px">${M(l.pose || 'explain')}</div>`;
 }
@@ -156,7 +164,14 @@ async function main() {
   </style></head><body><div id="v"><div class="hdr"><span>${sh.label}</span><span>🧠 Lobe Lessons</span></div><div class="prog"><i></i></div>
   ${body}<div id="cap"></div><div class="handle">@lobelessons</div></div>
   <script>
+  ${fs.readFileSync(path.join(__dirname, 'lobe_rig.js'), 'utf8')}
   const ENV=${JSON.stringify(TL.env || [])},WORDS=${JSON.stringify(W)},DUR=${TL.duration};
+  // gesture switch times per rig: when the scene's elements appear (min 0.9s apart), plus a change every ~2.4s otherwise
+  document.querySelectorAll('.lobe.rig').forEach((l,i)=>{const sc=l.closest('.scene');const a=+l.dataset.in,b=+sc.dataset.out;
+    const ts=[...sc.querySelectorAll('.el')].map(e=>+e.dataset.in).filter(x=>x>a+0.7&&x<b-0.4).sort((x,y)=>x-y);const sw=[];let last=a;
+    const push=x=>{if(x-last>=0.9){sw.push(x);last=x}};
+    ts.forEach(x=>{while(x-last>2.6)push(last+2.4);push(x)});while(b-last>2.6)push(last+2.4);
+    l._sw=sw;l._seed=i*0.77;});
   const ease=x=>{x=Math.min(1,Math.max(0,x));return 1-Math.pow(1-x,3)};
   const back=x=>{x=Math.min(1,Math.max(0,x));const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
   const chunks=[];let cur=[];
@@ -175,7 +190,9 @@ async function main() {
    const lv=ENV[Math.min(ENV.length-1,Math.floor(t*30))]||0;
    document.querySelectorAll('.lobe').forEach(l=>{const a=+l.dataset.in;const q=back((t-a)/0.5);
     l.style.opacity=Math.min(1,Math.max(0,(t-a)/0.15));l.style.transformOrigin='50% 90%';
-    l.style.transform='translateY('+(Math.sin(t*2.4)*8+(1-Math.min(1,q))*60)+'px) scale('+((0.6+0.4*q)*(1+lv*0.035))+') rotate('+(Math.sin(t*1.7)*1.5)+'deg)';});
+    l.style.transform='translateY('+(Math.sin(t*2.4)*8+(1-Math.min(1,q))*60)+'px) scale('+((0.6+0.4*q)*(1+lv*0.035))+') rotate('+(Math.sin(t*1.7)*1.5)+'deg)';
+    if(l.classList.contains('rig')&&l.parentElement.style.display!=='none'){const f=Math.floor(t*30);const lm=((ENV[f]||0)+(ENV[f+1]||0))/2;
+     l.innerHTML=lobeRig({pose:l.dataset.pose,side:l.dataset.side,t:t,lv:lm,tIn:a,sw:l._sw,seed:l._seed});}});
    document.querySelectorAll('.hl').forEach(h=>{h.style.color=t>=+h.dataset.hl?h.dataset.c:''});
    const cap=document.getElementById('cap');const i=chunks.findIndex((c,k)=>t>=c[0].s-0.05&&(!chunks[k+1]||t<chunks[k+1][0].s-0.05));
    const ch=chunks[i];
