@@ -132,6 +132,21 @@ async function main() {
        <div class="sig"><span>🧠 <b>Follow @lobelessons</b></span><span class="dot">·</span><span style="font-style:italic">Open your brain, one lesson a day.</span></div>
        </div></body></html>`;
       await p.setContent(html); await p.waitForTimeout(120);
+      // short slides: enlarge headlines a little and center the content in the free space above Lobe (no big empty gap)
+      await p.evaluate(() => {
+        const c = document.querySelector('.content'), l = document.querySelector('.lobe'), sig = document.querySelector('.sig');
+        const sigTop = sig.getBoundingClientRect().top; let lr = l ? l.getBoundingClientRect() : null;
+        const bottom = (lr && lr.top > 450 ? lr.top + 40 : sigTop) - 40;
+        const top0 = c.getBoundingClientRect().top, avail = bottom - top0;
+        if (c.getBoundingClientRect().height > avail * 0.65) return;
+        const hs = [...c.querySelectorAll('.h')];
+        for (let k = 0; k < 10; k++) {
+          hs.forEach(h => { h.style.fontSize = (parseFloat(getComputedStyle(h).fontSize) * 1.07) + 'px'; });
+          if (c.getBoundingClientRect().height > avail * 0.8) { hs.forEach(h => { h.style.fontSize = (parseFloat(h.style.fontSize) / 1.07) + 'px'; }); break; }
+        }
+        const off = Math.max(0, (avail - c.getBoundingClientRect().height) / 2);
+        c.style.top = (top0 + off) + 'px';
+      });
       await p.screenshot({ path: path.join(OUT, `slide_${String(i + 1).padStart(2, '0')}.png`) });
     }
     await b.close(); console.log('slides', N); return;
