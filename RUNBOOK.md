@@ -31,8 +31,16 @@ checkboxes `YouTube Short`, `IG Reel`, `IG Carousel`, `TikTok Video`, `TikTok Ca
 Find the Notion row where Date = tomorrow (also handle today's row first if it's still `Planned`). If its Status is `Planned`:
 1. **Write `days/dayNN.json`** (NN = Day number, two digits), copying the structure of `days/day02.json` exactly.
    - Lesson = the row's `Lesson`, opening line = the row's `Hook`.
-   - **Short script:** 6–8 lines, 30–45 seconds total, hook question first, last line exactly `Follow Lobe for one book lesson every day.` (scene `{"line":"cta","cta":true}`).
-   - **Carousel:** 7–8 slides: cover (big claim) → problem → the idea → visual/example → what to do → "TRY THIS TODAY" question → final punchline with save + comment pills.
+   - **Short = edutainment, not a lesson.** People in the feed skip anything that feels like homework. Rules:
+     - **Hook in the first 1–2 s = a punch, not a book question.** A bold, specific, slightly provocative claim about the viewer's life ("You're paying everyone except yourself."). Never open with the book title or "Lesson N"; the book is mentioned later as proof.
+     - `short.label` = topic only, e.g. "MONEY · MINDSET" (never "LESSON N").
+     - **20–30 seconds total, 5–7 lines.** Something new appears on screen every 1–2 s (use `at` on key words).
+     - Last line exactly `Follow Lobe for one book lesson every day.` (scene `{"line":"cta","cta":true}`). Make the line before it loop back to the hook when possible.
+   - **Rotate formats by Day number** (Day % 3):
+     - **1 = SKETCH "Broke Brain vs Rich Brain":** two characters argue about a real-life moment (payday, a sale, a raise). Alternate scenes: Broke Brain = Lobe on the left (`bl`, poses shock/think, pill "BROKE BRAIN" color red, line field `"voice": 5`), Rich Brain = Lobe on the right (`br`, poses idea/approve/explain, pill "RICH BRAIN" color green, default voice). Funny, short lines; the lesson lands in the last 2 lines.
+     - **2 = POV:** hook "POV: …" a relatable moment ("POV: it's payday and your brain does this"), then what most people do vs what the book says.
+     - **0 = FAST LESSON:** the classic format, but with a punchy claim hook and 20–30 s.
+   - **Carousel:** 6 slides max (fewer slides = more people reach the end). Slide 1 = the same punchy claim, big, plus "Swipe →"; each slide ends with a reason to swipe ("But here's the catch →"). Slides: cover (big claim) → problem → the idea → visual/example → what to do → "TRY THIS TODAY" question → final punchline with save + comment pills.
    - **Captions:** `youtube_title` (≤ 90 chars, ends with `#shorts`), `short`, `carousel` (hook line, 2–3 lines of value, a question for comments, "🔖 Save this", hashtags incl. `#lobelessons`), `youtube_tags`.
 2. **Accuracy rules:** state only what the book actually says or widely documented facts. Mark any example numbers "Example". Never reproduce more than a short phrase from a book. Never draw a real book cover: use the `book` element (our neutral white card). No financial "advice" claims; frame things as lessons from the book.
 3. **Preview:** `bash pipeline/build.sh days/dayNN.json stills`, then **look at** `/home/claude/lobe_out/dayNN/short_contact.png` and `carousel_contact.png`. Fix overflow, overlaps (Lobe must never cover text), awkward wraps, or empty slides. Repeat until clean.

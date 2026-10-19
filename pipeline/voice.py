@@ -43,7 +43,7 @@ def word_times(x, sr, words):
 
 allw, lines, chunks, t, sr = [], [], [], 0.25, 24000
 for ln in spec["short"]["lines"]:
-    a = tts.generate(ln.get("say", ln["text"]), sid=VOICE, speed=SPEED)
+    a = tts.generate(ln.get("say", ln["text"]), sid=ln.get("voice", VOICE), speed=SPEED)  # per-line voice for sketches
     sr = a.sample_rate
     x = np.array(a.samples, np.float32)
     nz = np.where(np.abs(x) > 0.01)[0]
