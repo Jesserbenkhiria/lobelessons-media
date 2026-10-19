@@ -25,21 +25,21 @@ const ARMS = {
 
 const V = '#7C6CF2', VHI = '#A89DF7', VDK = '#5A4BD1';
 // slate body (the board)
-const body = `<rect x="112" y="132" width="176" height="160" rx="24" fill="${V}"/>
- <g fill="${VHI}" opacity=".6"><ellipse cx="142" cy="160" rx="16" ry="9" transform="rotate(-25 142 160)"/><circle cx="130" cy="186" r="5"/></g>
- <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M128 262 h52 M128 276 h34"/></g>
- <text x="272" y="280" text-anchor="end" font-family="Inter, sans-serif" font-weight="800" font-size="17" fill="#fff" opacity=".75">TAKE 2</text>`;
+const body = `<rect x="80" y="132" width="240" height="140" rx="22" fill="${V}"/>
+ <g fill="${VHI}" opacity=".6"><ellipse cx="110" cy="156" rx="16" ry="9" transform="rotate(-25 110 156)"/><circle cx="98" cy="180" r="5"/></g>
+ <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M98 244 h52 M98 258 h34"/></g>
+ <text x="304" y="262" text-anchor="end" font-family="Inter, sans-serif" font-weight="800" font-size="17" fill="#fff" opacity=".75">TAKE 2</text>`;
 // striped bar: base (fixed) + clapper arm (hinged at left, opens upward)
 const stripes = (x, y, w, h, id) => `<clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/></clipPath>
- <g clip-path="url(#${id})"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${INK}"/>${Array.from({length: 8}, (_, i) => `<path d="M${x + 6 + i * 26} ${y + h} l14 0 l14 -${h} l-14 0 Z" fill="#fff"/>`).join('')}</g>`;
-const base = stripes(112, 110, 176, 24, 'cb');
-const arm = a => `<g transform="rotate(${-a} 116 108)">${stripes(110, 84, 180, 24, 'ca')}<circle cx="116" cy="108" r="6" fill="${GOLD}" stroke="${INK}" stroke-width="3"/></g>`;
-const legs = `<path d="M182 290 L179 348 L164 350 M218 290 L221 348 L236 350" ${L(5)}/>`;
+ <g clip-path="url(#${id})"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${INK}"/>${Array.from({length: 10}, (_, i) => `<path d="M${x + 6 + i * 26} ${y + h} l14 0 l14 -${h} l-14 0 Z" fill="#fff"/>`).join('')}</g>`;
+const base = stripes(80, 110, 240, 24, 'cb');
+const arm = a => `<g transform="rotate(${-a} 84 108)">${stripes(78, 84, 244, 24, 'ca')}<circle cx="84" cy="108" r="6" fill="${GOLD}" stroke="${INK}" stroke-width="3"/></g>`;
+const legs = `<path d="M178 270 L175 348 L160 350 M222 270 L225 348 L240 350" ${L(5)}/>`;
 const m = mouth('#F3A9C6');
-const blush = `<ellipse cx="148" cy="214" rx="12" ry="6.5" fill="#F29BB0" opacity=".55"/><ellipse cx="252" cy="214" rx="12" ry="6.5" fill="#F29BB0" opacity=".55"/>`;
+const blush = `<ellipse cx="138" cy="214" rx="12" ry="6.5" fill="#F29BB0" opacity=".55"/><ellipse cx="262" cy="214" rx="12" ry="6.5" fill="#F29BB0" opacity=".55"/>`;
 const face = { explain: eyes + brows.up + m.talk, idea: eyes + brows.up + m.grin, shock: eyesShock + brows.shock + m.oh, approve: wink + brows.up + m.big, calm: eyesHappy + brows.up + m.smile };
 const open = { explain: 16, idea: 24, shock: 34, approve: 10, calm: 0 };
-const CUE = n => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 400 340">${legs}${ARMS[n]}${body}${blush}<g transform="translate(0 4)">${face[n]}</g>${base}${arm(open[n])}${n === 'idea' ? spark(340, 70, 1) : ''}${n === 'shock' ? `<g ${L(4.5, GOLD)}><path d="M300 70 l12 -12 M312 92 l18 -4 M84 80 l-12 -10"/></g>` : ''}</svg>`;
+const CUE = n => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 400 340">${legs}<clipPath id="lh"><rect x="-100" y="0" width="300" height="400"/></clipPath><clipPath id="rh"><rect x="200" y="0" width="300" height="400"/></clipPath><g clip-path="url(#lh)"><g transform="translate(-30 0)">${ARMS[n]}</g></g><g clip-path="url(#rh)"><g transform="translate(30 0)">${ARMS[n]}</g></g>${body}${blush}<g transform="translate(0 4)">${face[n]}</g>${base}${arm(open[n])}${n === 'idea' ? spark(340, 70, 1) : ''}${n === 'shock' ? `<g ${L(4.5, GOLD)}><path d="M300 70 l12 -12 M312 92 l18 -4 M84 80 l-12 -10"/></g>` : ''}</svg>`;
 const d = path.join(__dirname, 'svg');
 for (const p of Object.keys(ARMS)) fs.writeFileSync(path.join(d, `cue_${p}.svg`), CUE(p));
 console.log('ok');
