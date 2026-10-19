@@ -38,12 +38,13 @@ Find the Notion row where Date = tomorrow (also handle today's row first if it's
 3. **Preview:** `bash pipeline/build.sh days/dayNN.json stills`, then **look at** `/home/claude/lobe_out/dayNN/short_contact.png` and `carousel_contact.png`. Fix overflow, overlaps (Lobe must never cover text), awkward wraps, or empty slides. Repeat until clean.
 4. **Full build:** `bash pipeline/build.sh days/dayNN.json` → `short.mp4`, `cover.jpg` (designed Reel cover: hook + Lobe; optional `short.cover` {html, pose, textSize} in the spec, defaults to the first scene's headline), `carousel/slide_*.jpg`. Check `cover.jpg` too: the hook must be fully readable inside the centre square.
 5. **Publish media:** `bash pipeline/publish.sh days/dayNN.json` → prints public URLs. If the script can't confirm, check one URL with WebFetch before scheduling.
-6. **Schedule in Metricool** with `createScheduledPost` (blogId 7506135, timezone Africa/Tunis, autoPublish true) on the row's date. Use `getBestTimeToPostByNetwork` for that date. Default slots:
-   - Instagram **carousel** (type POST, media = slide URLs in order): 10:00
-   - TikTok **photo carousel** (same slide URLs): 12:00
-   - YouTube **Short** (type short, madeForKids false, category EDUCATION, title = youtube_title, tags): 16:00
-   - Instagram **Reel** (type REEL, media = short.mp4, **`videoThumbnailUrl` = the COVER url** from publish.sh): 18:00
-   - TikTok **video** (short.mp4): 18:30
+6. **Schedule in Metricool** with `createScheduledPost` (blogId 7506135, timezone Africa/Tunis, autoPublish true) on the row's date.
+   **Target audience = US + UK** (English speakers, highest YouTube ad rates). Do NOT use `getBestTimeToPostByNetwork`: it reflects the current (mostly Tunisian) audience. Use these fixed Tunis-time slots (Tunis is UTC+1 all year; UK = Tunis or Tunis-1 in winter; US East = Tunis-5, Tunis-6 from early Nov):
+   - Instagram **carousel** (type POST, media = slide URLs in order): **14:00** (UK lunch, US morning)
+   - TikTok **photo carousel** (same slide URLs): **15:00**
+   - YouTube **Short** (type short, madeForKids false, category EDUCATION, title = youtube_title, tags): **20:00** (UK evening, US afternoon; ramps up into US evening)
+   - Instagram **Reel** (type REEL, media = short.mp4, **`videoThumbnailUrl` = the COVER url** from publish.sh): **21:00** (UK prime time)
+   - TikTok **video** (short.mp4): **22:00**
    - **TikTok always needs `tiktokData.title`** (short hook, ≤ 60 chars), or the call fails.
    - Media URLs = the public URLs printed by publish.sh. Metricool copies them into its own storage when you schedule.
    If one network errors, still schedule the others and note the error.
@@ -76,5 +77,5 @@ Vary pose and position between scenes and slides. Use `tr` (small, about 300px) 
 ## Voice
 Kokoro voice id 6 (`am_michael`), speed 1.05. Spell tricky words phonetically in `"say"` while keeping `"text"` for captions.
 
-## Evening check (about 21:45 Tunis time)
+## Evening check (about 23:15 Tunis time, after the 22:00 TikTok)
 Only step 1 (tick what was published today). No content creation. One-line report.
