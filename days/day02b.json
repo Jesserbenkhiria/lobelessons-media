@@ -1,0 +1,64 @@
+{
+ "day": 2, "date": "2026-10-19", "book": "Rich Dad Poor Dad", "lesson": "Work to learn, not to earn",
+ "voice": 6, "speed": 1.05,
+ "short": {
+  "label": "RICH DAD POOR DAD · BONUS LESSON",
+  "cover": {"html": "Work to <g>learn</g>,<br>not to earn.", "pose": "idea"},
+  "lines": [
+   {"id": "hook", "text": "Would you take the job that pays more, or the one that teaches you more?"},
+   {"id": "poor", "text": "Poor dad said: get a safe job with a good salary."},
+   {"id": "rich", "text": "Rich dad said the opposite. Work to learn, not to earn."},
+   {"id": "burger", "text": "Kiyosaki asks: can you make a better burger than McDonald's? Most people can. But McDonald's built a better business.", "say": "Kiyosaki asks: can you make a better burger than McDonald's? Most people can. But McDonald's built a better business."},
+   {"id": "skills", "text": "So learn the skills that pay forever. Selling. Communication. Managing money and people."},
+   {"id": "ask", "text": "Next time you choose a job, ask: what will this teach me?"},
+   {"id": "cta", "text": "Follow Lobe for one book lesson every day."}
+  ],
+  "scenes": [
+   {"line": "hook", "top": 330, "lobe": {"pose": "think", "pos": "br", "size": 540},
+    "els": [{"type": "headline", "size": 112, "html": "More <y>money</y>…<br>or more<br><g>skills</g>?", "at": "+0.1"}]},
+   {"line": "poor", "lobe": {"pose": "explain", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "POOR DAD", "color": "muted", "at": "+0.05"},
+            {"type": "headline", "size": 100, "html": "\"Get a <m>safe job</m><br>with a good<br>salary.\"", "at": "+0.2"}]},
+   {"line": "rich", "lobe": {"pose": "idea", "pos": "bl", "size": 480},
+    "els": [{"type": "pill", "text": "RICH DAD", "color": "gold", "at": "+0.05"},
+            {"type": "headline", "size": 120, "html": "Work to <g>learn</g>,<br>not to <r>earn</r>.", "at": "Work"}]},
+   {"line": "burger", "lobe": {"pose": "shock", "pos": "br", "size": 440},
+    "els": [{"type": "headline", "size": 92, "html": "Can you make a<br>better burger? 🍔", "at": "+0.05"},
+            {"type": "list", "rows": [{"l": "🍔 Better burger", "r": "most people", "color": "muted", "at": "Most"},
+                                      {"l": "⚙️ Better business", "r": "McDonald's", "color": "green", "at": "business"}]}]},
+   {"line": "skills", "lobe": {"pose": "explain", "pos": "br", "size": 460},
+    "els": [{"type": "headline", "size": 96, "html": "Skills that pay<br><g>forever</g>:", "at": "+0.05"},
+            {"type": "list", "rows": [{"l": "🗣️ Selling", "at": "Selling"}, {"l": "💬 Communication", "at": "Communication"}, {"l": "💰 Managing money & people", "at": "Managing"}]}]},
+   {"line": "ask", "lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "TRY THIS TODAY", "color": "gold", "at": "+0.05"},
+            {"type": "headline", "size": 96, "html": "Before any job,<br>ask:", "at": "+0.3"},
+            {"type": "quote", "size": 76, "html": "\"What will this <hl at=\"teach\" c=\"green\">teach</hl> me?\"", "at": "what"}]},
+   {"line": "cta", "cta": true}
+  ]
+ },
+ "carousel": {
+  "label": "RICH DAD POOR DAD · BONUS LESSON",
+  "slides": [
+   {"top": 200, "lobe": {"pose": "idea", "pos": "br", "size": 600},
+    "els": [{"type": "headline", "size": 140, "html": "Work to<br><g>learn</g>,<br>not to <r>earn</r>."}, {"type": "sub", "max": 520, "html": "A Rich Dad Poor Dad lesson most people ignore."}]},
+   {"lobe": {"pose": "explain", "pos": "br", "size": 440},
+    "els": [{"type": "pill", "text": "POOR DAD", "color": "muted"}, {"type": "headline", "size": 96, "html": "\"Get a <m>safe job</m><br>with a good salary.\""}]},
+   {"lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "RICH DAD", "color": "gold"}, {"type": "headline", "size": 96, "html": "Choose jobs for<br>what they <g>teach</g> you."}]},
+   {"lobe": {"pose": "shock", "pos": "br", "size": 420},
+    "els": [{"type": "headline", "size": 90, "html": "Can you make a<br>better burger? 🍔"}, {"type": "list", "rows": [{"l": "🍔 Better burger", "r": "most people", "color": "muted"}, {"l": "⚙️ Better business", "r": "McDonald's", "color": "green"}]}]},
+   {"lobe": {"pose": "explain", "pos": "bl", "size": 400},
+    "els": [{"type": "headline", "size": 96, "html": "Skills that pay<br><g>forever</g>:"}, {"type": "list", "rows": [{"l": "🗣️ Selling"}, {"l": "💬 Communication"}, {"l": "💰 Managing money & people"}]}]},
+   {"lobe": {"pose": "idea", "pos": "br", "size": 460},
+    "els": [{"type": "pill", "text": "TRY THIS TODAY", "color": "gold"}, {"type": "headline", "size": 90, "html": "Before any job, ask:"}, {"type": "quote", "size": 70, "html": "\"What will this <g>teach</g> me?\""}]},
+   {"top": 180, "lobe": {"pose": "approve", "pos": "br", "size": 540},
+    "els": [{"type": "headline", "size": 96, "html": "Earn less now.<br><g>Learn more</g>.<br>Earn more<br>later."}, {"type": "pill", "text": "🔖 Save this for later", "color": "dark"}, {"type": "pill", "text": "💬 What's your job teaching you?", "color": "muted"}]}
+  ]
+ },
+ "captions": {
+  "youtube_title": "Work to Learn, Not to Earn 🧠 Rich Dad Poor Dad #shorts",
+  "short": "Would you take the job that pays more, or the one that teaches you more? 🧠\n\nA lesson from Rich Dad Poor Dad by Robert Kiyosaki: work to learn, not to earn. Most people can make a better burger than McDonald's, but McDonald's built a better business.\n\n💬 What is your job teaching you right now?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#richdadpoordad #booklessons #careeradvice #skills #mindset #booksummary #robertkiyosaki #selfimprovement #lobelessons",
+  "carousel": "Work to learn, not to earn. 🧠\n\nA lesson from Rich Dad Poor Dad: choose jobs for the skills they teach you, not just the paycheck.\n\n🔖 Save this for later.\n💬 What's your job teaching you?\n\n#richdadpoordad #booklessons #careeradvice #skills #mindset #booksummary #lobelessons",
+  "youtube_tags": ["rich dad poor dad", "book summary", "work to learn", "career advice", "robert kiyosaki", "book lessons", "skills"]
+ }
+}
