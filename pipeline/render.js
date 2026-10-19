@@ -276,6 +276,7 @@ async function shortV2(b) {
   const html = `<!doctype html><html><head><meta charset="utf-8"><style>${CSS}
    #v{width:1080px;height:1920px;background:#F5F1EA;position:relative;overflow:hidden;color:#111}
    #cam{position:absolute;inset:0;transform-origin:50% 45%}
+   #topbar{position:absolute;left:0;right:0;top:0;height:215px;z-index:9}
    .hdr{position:absolute;top:120px;left:90px;right:90px;display:flex;justify-content:space-between;font:600 28px Inter;color:#8a8478;letter-spacing:.03em;z-index:10}
    .prog{position:absolute;top:176px;left:90px;right:90px;height:6px;border-radius:3px;background:rgba(0,0,0,.08);z-index:10} .prog i{display:block;height:100%;border-radius:3px;background:#111;width:0}
    .scene{position:absolute;inset:0}
@@ -291,7 +292,7 @@ async function shortV2(b) {
    #cap span.on{background:#111;color:#F5C84C}
    #follow{position:absolute;left:50%;top:1640px;transform:translateX(-50%);z-index:21;white-space:nowrap;font:800 40px Inter;background:#111;color:#fff;padding:20px 44px;border-radius:60px;opacity:0}
    #follow b{color:#F5C84C}
-  </style></head><body><div id="v"><div class="hdr"><span>${sh.label}</span><span>🧠 Lobe Lessons</span></div><div class="prog"><i></i></div>
+  </style></head><body><div id="v"><div id="topbar"></div><div class="hdr"><span>${sh.label}</span><span>🧠 Lobe Lessons</span></div><div class="prog"><i></i></div>
   <div id="cam">${body}${stage}</div><div id="cap"></div><div id="follow">＋ Follow <b>@lobelessons</b></div></div>
   <script>
   ${fs.readFileSync(path.join(__dirname, 'lobe_rig.js'), 'utf8')}
@@ -299,7 +300,7 @@ async function shortV2(b) {
   const LINES=${JSON.stringify(TL.lines)},LAST=${JSON.stringify(lastLine)};
   const SC=[...document.querySelectorAll('.scene')];
   // fit content above the stage (zoom down if too tall)
-  SC.forEach(s=>{const c=s.querySelector('.content');const top=c.getBoundingClientRect().top,h=c.getBoundingClientRect().height,max=720-top;
+  SC.forEach((s,i)=>{const c=s.querySelector('.content');    const top=c.getBoundingClientRect().top,h=c.getBoundingClientRect().height,max=720-top;
     if(h>max)c.style.zoom=(max/h).toFixed(3);else c.style.top=(top+Math.min(120,(max-h)/2))+'px';});
   // gesture switch times per scene (elements appearing), shared by the rig(s)
   SC.forEach(sc=>{const a=+sc.dataset.in,b=+sc.dataset.out;const ts=[...sc.querySelectorAll('.el')].map(e=>+e.dataset.in).filter(x=>x>a+0.7&&x<b-0.4).sort((x,y)=>x-y);
@@ -316,20 +317,32 @@ async function shortV2(b) {
   window.setT=function(t){
    document.querySelector('.prog i').style.width=(100*t/DUR)+'%';
    let ci=0;SC.forEach((s,i)=>{if(t>=+s.dataset.in-0.01)ci=i});const cs=SC[ci],ca=+cs.dataset.in;
+   // camera: every other cut is a tight shot (1.14x, framed on the speaker), then a slow 7% push-in,
+   // a hard 14% punch when a stamp lands, a 4% bump on each new element, and a shake on shock
+   const ts=t-ca;const tight=ci%2===1;let z=(tight?1.1:1)+0.06*Math.min(1,ts/3.5);
+   POPS.forEach(a=>{if(t>=a)z+=0.1*Math.exp(-(t-a)*4)});
+   cs.querySelectorAll('.el:not(.pop)').forEach(e=>{const a=+e.dataset.in;if(a>ca+0.3&&t>=a)z+=0.04*Math.exp(-(t-a)*6)});
+   let ox=50;z=Math.min(z,1.2);
+   let sx=0,sy=0;if(cs.dataset.pose==='shock'&&ts<0.7){const k=(1-ts/0.7)*16;sx=Math.sin(t*70)*k;sy=Math.cos(t*55)*k*0.6;}
+   // camera zooms the characters + background props; the text only pulses gently (stays fully on screen)
+   const sxG=sx;
+   const tightZ=tight?1.1:1;const cz=1+Math.max(0,Math.min(0.08,(z-tightZ)*0.6));
    // background colour blends from previous scene over 0.4 s
-   const prevBg=ci>0?SC[ci-1].dataset.bg:cs.dataset.bg;document.getElementById('v').style.background=mix(prevBg,cs.dataset.bg,ease((t-ca)/0.4));
+   const prevBg=ci>0?SC[ci-1].dataset.bg:cs.dataset.bg;const bgc=mix(prevBg,cs.dataset.bg,ease((t-ca)/0.4));document.getElementById('v').style.background=bgc;document.getElementById('topbar').style.background='linear-gradient('+bgc+' 85%,transparent)';
    SC.forEach((s,i)=>{const a=+s.dataset.in,b=+s.dataset.out;const vis=t>=a-0.01&&t<b+0.22;s.style.display=vis?'block':'none';if(!vis)return;
     const pin=a<0.05?1:ease((t-a)/0.22),pout=ease((t-b)/0.2);s.style.opacity=pin*(1-pout);
-    s.querySelector('.content').style.transform='translateY('+((1-pin)*40-pout*30)+'px)';
+    const cc=s.querySelector('.content');cc.style.transformOrigin='50% 0';cc.style.transform='translate('+(i===ci?sxG*0.4:0)+'px,'+((1-pin)*40-pout*30)+'px) scale('+(i===ci?cz:1).toFixed(4)+')';
     s.querySelectorAll('.prop').forEach(p=>{const k=+p.dataset.k;const lt=t-a;p.style.opacity=(0.28*ease(lt/0.6)).toFixed(3);
       p.style.transform='translate('+(Math.sin(lt*0.9+k)*14)+'px,'+(-lt*18+Math.cos(lt*1.3+k)*8)+'px) rotate('+(Math.sin(lt*0.7+k*2)*12)+'deg)';});});
    document.querySelectorAll('.el').forEach(e=>{const a=+e.dataset.in;
     if(e.classList.contains('pop')){const q=back((t-a)/0.35);e.style.opacity=Math.min(1,Math.max(0,(t-a)/0.12));e.style.transform='scale('+(1.6-0.6*q)+')';return;}
     const p=a<0.4?1:ease((t-a)/0.4);e.style.opacity=p;e.style.filter='blur('+((1-p)*10)+'px)';e.style.transform='translateY('+((1-p)*30)+'px)';});
    // camera: slow push-in per scene + punch on stamps + punch on scene start + shake on shock
-   const ts=t-ca;let z=1+0.035*Math.min(1,ts/4);POPS.forEach(a=>{if(t>=a)z+=0.06*Math.exp(-(t-a)*5)});z+=0.025*Math.exp(-Math.max(0,ts)*7)*(ci>0?1:0);
-   let sx=0,sy=0;if(cs.dataset.pose==='shock'&&ts<0.6){const k=(1-ts/0.6)*10;sx=Math.sin(t*70)*k;sy=Math.cos(t*55)*k*0.6;}
-   document.getElementById('cam').style.transform='translate('+sx+'px,'+sy+'px) scale('+z.toFixed(4)+')';
+   const st=document.getElementById('stage');st.style.transformOrigin='50% 30%';
+   const pan=SKETCH?(cs.dataset.who==='broke'?60:-60)*ease(ts/0.4):0;
+   st.style.transform='translate('+(sx+pan)+'px,'+sy+'px) scale('+z.toFixed(4)+')';
+   cs.querySelector('.props').style.transform='scale('+(1+(z-1)*0.6).toFixed(4)+')';
+
    // rigs
    const f=Math.floor(t*30);const lm=((ENV[f]||0)+(ENV[f+1]||0))/2;const pk=back(ts/0.45);
    if(!SKETCH){const r=document.getElementById('r1');
@@ -341,7 +354,7 @@ async function shortV2(b) {
       r.innerHTML=lobeRig({pose:pose==='calm'&&!on?'explain':pose,side:side==='l'?'r':'l',t:t,lv:on?lm:0,tIn:on?ca:0,sw:on?cs._sw:[],seed:who==='broke'?1.3:0,who:who});
       const sc=on?1.0:0.82;r.style.opacity=on?1:0.55;r.style.transformOrigin='50% 95%';
       r.style.transform='translateY('+(Math.sin(t*2.4+(who==='broke'?1:0))*7+(on?0:30))+'px) scale('+(sc*(on?(0.94+0.06*pk):1)*(1+(on?lm*0.03:0))).toFixed(4)+')';});
-     document.getElementById('stage').style.transform='translateX('+(sp==='broke'?60:-60)*ease(ts/0.4)+'px)';}
+     }
    const cap=document.getElementById('cap');const i=chunks.findIndex((c,k)=>t>=c[0].s-0.05&&(!chunks[k+1]||t<chunks[k+1][0].s-0.05));
    const ch=chunks[i];cap.innerHTML=(ch&&t<ch[ch.length-1].e+0.6)?ch.map(w=>'<span class="'+(t>=w.s&&t<w.e+0.05?'on':'')+'">'+w.w+'</span>').join(''):'';
    document.querySelectorAll('.hl').forEach(h=>{h.style.color=t>=+h.dataset.hl?h.dataset.c:''});
