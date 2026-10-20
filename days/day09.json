@@ -1,0 +1,419 @@
+{
+ "day": 9,
+ "date": "2026-10-26",
+ "book": "The Psychology of Money",
+ "lesson": "Knowing when you have enough",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "label": "MONEY · MINDSET",
+  "cover": {
+   "html": "The hardest<br>money skill?<br><y>Stopping.</y>",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "The hardest money skill isn't earning. It's knowing when to stop."
+   },
+   {
+    "id": "party",
+    "text": "At a billionaire's party, Vonnegut joked the host made more in a day than Joseph Heller's Catch-22 ever did.",
+    "say": "At a billionaire's party, Vonnegut joked the host made more in a day than Joseph Heller's Catch twenty two ever did."
+   },
+   {
+    "id": "reply",
+    "text": "Heller said he had something the billionaire never would. Enough."
+   },
+   {
+    "id": "goal",
+    "text": "Morgan Housel calls it the moving goalpost. Every raise, you want more."
+   },
+   {
+    "id": "risk",
+    "text": "Chasing more makes people risk what they have and need."
+   },
+   {
+    "id": "ask",
+    "text": "So what's your enough? Write it down before your brain moves it."
+   },
+   {
+    "id": "cta",
+    "text": "Follow Lobe for one book lesson every day."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 300,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "The hardest<br>money skill isn't<br><m>earning</m>.",
+      "at": "+0.1"
+     },
+     {
+      "type": "stamp",
+      "text": "IT'S STOPPING",
+      "color": "green",
+      "size": 84,
+      "at": "stop"
+     }
+    ]
+   },
+   {
+    "line": "party",
+    "lobe": {
+     "pose": "explain",
+     "pos": "bl",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRUE STORY · A BILLIONAIRE'S PARTY",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "KURT VONNEGUT",
+        "text": "🎉 The host made more in a day…",
+        "color": "gold",
+        "at": "Vonnegut"
+       },
+       {
+        "tag": "…THAN JOSEPH HELLER",
+        "text": "📕 earned from Catch-22",
+        "color": "muted",
+        "at": "Catch"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "reply",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Heller's reply:<br>he had something<br>the host never will…",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "ENOUGH",
+      "color": "green",
+      "size": 140,
+      "at": "Enough"
+     }
+    ]
+   },
+   {
+    "line": "goal",
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The trap: a <r>moving</r><br>goalpost 🥅",
+      "at": "goalpost"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "💵 Get a raise",
+        "r": "→ want more",
+        "color": "red",
+        "at": "raise"
+       },
+       {
+        "l": "🏠 Get the house",
+        "r": "→ want more",
+        "color": "red",
+        "at": "want"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "risk",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Chasing <r>more</r><br>makes you risk:",
+      "at": "+0.05"
+     },
+     {
+      "type": "rule",
+      "items": [
+       {
+        "icon": "🏠",
+        "title": "WHAT YOU HAVE",
+        "sub": "your home, your savings",
+        "color": "red",
+        "at": "have"
+       },
+       {
+        "icon": "❤️",
+        "title": "WHAT YOU NEED",
+        "sub": "your peace, your people",
+        "color": "red",
+        "at": "need"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "ask",
+    "lobe": {
+     "pose": "idea",
+     "pos": "bl",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "What's <g>your</g><br>enough?",
+      "at": "enough"
+     },
+     {
+      "type": "sub",
+      "html": "✍️ Write it down, <b>before your brain moves it</b>.",
+      "at": "Write"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "cta": true
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE PSYCHOLOGY OF MONEY",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 540
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "The hardest<br>money skill?<br><g>Stopping.</g>"
+     },
+     {
+      "type": "sub",
+      "max": 560,
+      "html": "A lesson from The Psychology of Money. It starts at a party →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRUE STORY",
+      "color": "muted"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "A billionaire's party:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "KURT VONNEGUT",
+        "text": "🎉 The host made more in a day…",
+        "color": "gold"
+       },
+       {
+        "tag": "…THAN JOSEPH HELLER",
+        "text": "📕 earned from Catch-22",
+        "color": "muted"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Heller's reply is the lesson →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Heller's reply: he had<br>something the host<br>never will…"
+     },
+     {
+      "type": "stamp",
+      "text": "ENOUGH",
+      "color": "green",
+      "size": 130
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "sub",
+      "html": "So why is enough so hard? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The <r>moving</r> goalpost:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "💵 Get a raise",
+        "r": "→ want more",
+        "color": "red"
+       },
+       {
+        "l": "🏠 Get the house",
+        "r": "→ want more",
+        "color": "red"
+       },
+       {
+        "l": "🎯 Hit the goal",
+        "r": "→ move it",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Until you risk what you <b>already have</b>."
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Write down<br><g>your</g> enough:"
+     },
+     {
+      "type": "quote",
+      "size": 64,
+      "html": "\"What would I <g>stop</g> chasing if I had it?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "More is endless.<br><g>Enough</g> is rich."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for later",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Do you know your enough?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "The Hardest Money Skill Is Stopping 🛑 The Psychology of Money #shorts",
+  "short": "The hardest money skill isn't earning more. It's knowing when to stop. 🛑\n\nIn The Psychology of Money, Morgan Housel retells the story of Kurt Vonnegut and Joseph Heller at a billionaire's party. Heller's answer: he had something the host never would. Enough. The trap is a goalpost that keeps moving.\n\n💬 Do you know what your \"enough\" is?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#psychologyofmoney #morganhousel #enough #booklessons #moneytips #mindset #booksummary #contentment #lobelessons",
+  "carousel": "The hardest money skill? Stopping. 🛑\n\nA lesson from The Psychology of Money by Morgan Housel: when the goalpost keeps moving, \"more\" never ends, and people end up risking what they already have and need.\n\nSwipe for the story behind \"enough\" 👉\n\n💬 Do you know your enough?\n🔖 Save this for later.\n\n#psychologyofmoney #morganhousel #enough #booklessons #moneytips #mindset #lobelessons",
+  "youtube_tags": [
+   "psychology of money",
+   "morgan housel",
+   "enough",
+   "money mindset",
+   "book summary",
+   "book lessons",
+   "joseph heller"
+  ]
+ }
+}

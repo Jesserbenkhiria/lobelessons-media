@@ -1,0 +1,423 @@
+{
+ "day": 8,
+ "date": "2026-10-25",
+ "book": "The Psychology of Money",
+ "lesson": "Wealth is what you don't see",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "label": "MONEY · POV",
+  "cover": {
+   "html": "POV: you think<br>the Ferrari guy<br>is <y>rich</y>",
+   "pose": "think"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: a Ferrari drives past and your brain says, that guy is rich."
+   },
+   {
+    "id": "valet",
+    "text": "Morgan Housel used to park cars like that as a valet."
+   },
+   {
+    "id": "proof",
+    "text": "And the only thing a Ferrari proves? He has less money than before he bought it."
+   },
+   {
+    "id": "split",
+    "text": "Rich is the income you can see. Wealth is the money you didn't spend."
+   },
+   {
+    "id": "hidden",
+    "text": "Wealth is hidden. It's the car you didn't buy."
+   },
+   {
+    "id": "ask",
+    "text": "So next time a Ferrari drives past, ask yourself: rich, or just spent?"
+   },
+   {
+    "id": "cta",
+    "text": "Follow Lobe for one book lesson every day."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 300,
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "A <r>Ferrari</r><br>drives by.<br>Your brain:<br>\"He's <y>rich</y>.\"",
+      "at": "Ferrari"
+     }
+    ]
+   },
+   {
+    "line": "valet",
+    "lobe": {
+     "pose": "explain",
+     "pos": "bl",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "THE PSYCHOLOGY OF MONEY",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "The author was<br>once a <y>valet</y> 🔑",
+      "at": "Housel"
+     },
+     {
+      "type": "sub",
+      "html": "He parked cars like that <b>for a living</b>.",
+      "at": "park"
+     }
+    ]
+   },
+   {
+    "line": "proof",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "What a Ferrari<br><y>proves</y>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏎️ Before the car",
+        "r": "$$$",
+        "color": "green",
+        "at": "Ferrari"
+       },
+       {
+        "l": "🏎️ After the car",
+        "r": "$",
+        "color": "red",
+        "at": "less"
+       }
+      ]
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "stamp",
+      "text": "LESS MONEY",
+      "color": "red",
+      "size": 90,
+      "at": "bought"
+     }
+    ]
+   },
+   {
+    "line": "split",
+    "lobe": {
+     "pose": "idea",
+     "pos": "bl",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Two different things:",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "RICH",
+        "text": "💵 Income you can see",
+        "color": "gold",
+        "at": "Rich"
+       },
+       {
+        "tag": "WEALTHY",
+        "text": "🔒 Money you didn't spend",
+        "color": "green",
+        "at": "Wealth"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "hidden",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "stamp",
+      "text": "WEALTH IS HIDDEN",
+      "color": "green",
+      "size": 80,
+      "at": "hidden"
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "It's the car<br>you <g>didn't</g> buy.",
+      "at": "car"
+     }
+    ]
+   },
+   {
+    "line": "ask",
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 440
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "NEXT TIME",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "A Ferrari drives by.<br>Ask:",
+      "at": "Ferrari"
+     },
+     {
+      "type": "quote",
+      "size": 80,
+      "html": "\"<hl at=\"rich\" c=\"green\">Rich</hl>… or just <hl at=\"spent\" c=\"red\">spent</hl>?\"",
+      "at": "rich"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "cta": true
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE PSYCHOLOGY OF MONEY",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 540
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "The Ferrari guy<br>might <r>not</r><br>be rich."
+     },
+     {
+      "type": "sub",
+      "max": 560,
+      "html": "A lesson from The Psychology of Money. Here's why →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "What a nice car<br>actually <y>proves</y>:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏎️ Before the car",
+        "r": "$$$",
+        "color": "green"
+       },
+       {
+        "l": "🏎️ After the car",
+        "r": "$",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "He has <b>less money</b> than before. So what is wealth? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "bl",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Rich ≠ <g>wealthy</g>:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "RICH",
+        "text": "💵 Income you can see",
+        "color": "gold"
+       },
+       {
+        "tag": "WEALTHY",
+        "text": "🔒 Money you didn't spend",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "And that's the tricky part →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "stamp",
+      "text": "WEALTH IS HIDDEN",
+      "color": "green",
+      "size": 80
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🚗 The car you didn't buy",
+        "color": "green"
+       },
+       {
+        "l": "⌚ The watch you skipped",
+        "color": "green"
+       },
+       {
+        "l": "📈 The money still invested",
+        "color": "green"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Before you buy<br>to look rich, ask:"
+     },
+     {
+      "type": "quote",
+      "size": 66,
+      "html": "\"Do I want to <m>look</m> rich, or <g>be</g> wealthy?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Wealth is what<br>you <g>don't</g> see."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for later",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Look rich or be wealthy?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Is the Ferrari Guy Actually Rich? 🏎️ The Psychology of Money #shorts",
+  "short": "POV: a Ferrari drives past and your brain says \"that guy is rich.\" 🏎️\n\nIn The Psychology of Money, Morgan Housel (a former valet) points out that the only thing a fancy car proves is that its owner has less money than before he bought it. Rich is the income you can see. Wealth is the money you didn't spend.\n\n💬 Would you rather look rich or be wealthy?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#psychologyofmoney #morganhousel #booklessons #moneytips #wealth #booksummary #personalfinance #mindset #lobelessons",
+  "carousel": "The Ferrari guy might not be rich. 🏎️\n\nA lesson from The Psychology of Money by Morgan Housel: rich is the income you can see, wealth is the money you didn't spend. It's hidden: the car you didn't buy, the money still invested.\n\nSwipe to see why 👉\n\n💬 Would you rather look rich or be wealthy?\n🔖 Save this for later.\n\n#psychologyofmoney #morganhousel #booklessons #moneytips #wealth #personalfinance #lobelessons",
+  "youtube_tags": [
+   "psychology of money",
+   "morgan housel",
+   "wealth vs rich",
+   "money mindset",
+   "book summary",
+   "book lessons",
+   "personal finance"
+  ]
+ }
+}

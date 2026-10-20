@@ -1,0 +1,413 @@
+{
+ "day": 11,
+ "date": "2026-10-28",
+ "book": "Atomic Habits",
+ "lesson": "1% better every day",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "label": "HABITS · POV",
+  "cover": {
+   "html": "POV: \"one day<br>doesn't <r>matter</r>\"",
+   "pose": "think"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you skip the gym because one day doesn't matter."
+   },
+   {
+    "id": "true",
+    "text": "And you're right. One day doesn't. But Atomic Habits says habits compound, like interest."
+   },
+   {
+    "id": "math",
+    "text": "One percent better every day for a year? About thirty seven times better."
+   },
+   {
+    "id": "down",
+    "text": "One percent worse every day? You end up close to zero."
+   },
+   {
+    "id": "trap",
+    "text": "You won't feel it day to day. That's the trap, and that's the magic."
+   },
+   {
+    "id": "ask",
+    "text": "So, still think one day doesn't matter?"
+   },
+   {
+    "id": "cta",
+    "text": "Follow Lobe for one book lesson every day."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 300,
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "You skip the gym.<br>\"One day doesn't<br><r>matter</r>.\"",
+      "at": "gym"
+     }
+    ]
+   },
+   {
+    "line": "true",
+    "lobe": {
+     "pose": "explain",
+     "pos": "bl",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "One day <m>doesn't</m>.<br>But habits…",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "COMPOUND",
+      "color": "green",
+      "size": 110,
+      "at": "compound"
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "pill",
+      "text": "ATOMIC HABITS",
+      "color": "muted",
+      "at": "interest"
+     }
+    ]
+   },
+   {
+    "line": "math",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "1% <g>better</g> a day:",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1% BETTER · EVERY DAY · 1 YEAR",
+        "text": "📈 ≈ 37× better",
+        "color": "green",
+        "at": "About"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Tiny gains <b>multiply</b>.",
+      "at": "year"
+     }
+    ]
+   },
+   {
+    "line": "down",
+    "lobe": {
+     "pose": "shock",
+     "pos": "bl",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "1% <r>worse</r> a day:",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1% WORSE · EVERY DAY · 1 YEAR",
+        "text": "📉 ≈ close to zero",
+        "color": "red",
+        "at": "every"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Tiny losses <b>multiply too</b>.",
+      "at": "zero"
+     }
+    ]
+   },
+   {
+    "line": "trap",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Day to day,<br>you <m>feel nothing</m>.",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "THE TRAP",
+        "text": "😴 So you quit early",
+        "color": "red",
+        "at": "day#2"
+       },
+       {
+        "tag": "THE MAGIC",
+        "text": "✨ It adds up anyway",
+        "color": "green",
+        "at": "trap"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "ask",
+    "lobe": {
+     "pose": "think",
+     "pos": "bl",
+     "size": 460
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Still think<br>one day doesn't<br><y>matter</y>?",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "37× vs 0",
+      "color": "gold",
+      "at": "+0.9"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "cta": true
+   }
+  ]
+ },
+ "carousel": {
+  "label": "HABITS · ATOMIC HABITS",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 540
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"One day<br>doesn't matter.\"<br><r>Wrong.</r>"
+     },
+     {
+      "type": "sub",
+      "max": 540,
+      "html": "The math from Atomic Habits will change your mind →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Habits work like<br><g>compound interest</g>:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🌱 Small action",
+        "color": "green"
+       },
+       {
+        "l": "🔁 Repeated daily",
+        "color": "green"
+       },
+       {
+        "l": "📈 Grows over time",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Here's what it adds up to →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "bl",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "One year later:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1% BETTER EVERY DAY",
+        "text": "📈 ≈ 37× better",
+        "color": "green"
+       },
+       {
+        "tag": "1% WORSE EVERY DAY",
+        "text": "📉 ≈ down to zero",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So why don't we notice? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Day to day, you<br><m>feel nothing</m>."
+     },
+     {
+      "type": "rule",
+      "items": [
+       {
+        "icon": "😴",
+        "title": "THE TRAP",
+        "sub": "you quit before it shows",
+        "color": "red"
+       },
+       {
+        "icon": "✨",
+        "title": "THE MAGIC",
+        "sub": "it adds up anyway",
+        "color": "green"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Pick one thing.<br>Make it <g>1% better</g>."
+     },
+     {
+      "type": "quote",
+      "size": 62,
+      "html": "\"What's one tiny thing I can improve today?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Small steps.<br><g>Big results.</g>"
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for later",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What's your 1% today?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Why One Day Actually Matters 📈 Atomic Habits #shorts",
+  "short": "POV: you skip the gym because \"one day doesn't matter.\" 📈\n\nIn Atomic Habits, James Clear shows that habits compound like interest: 1% better every day for a year adds up to about 37 times better. 1% worse every day takes you close to zero. You won't feel it day to day, but it adds up.\n\n💬 What's your 1% today?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#atomichabits #jamesclear #habits #booklessons #selfimprovement #motivation #booksummary #productivity #lobelessons",
+  "carousel": "\"One day doesn't matter.\" Wrong. 📈\n\nA lesson from Atomic Habits by James Clear: habits are like compound interest. Get 1% better every day for a year and you end up about 37 times better. 1% worse, and you end up near zero.\n\nSwipe for the math 👉\n\n💬 What's your 1% today?\n🔖 Save this for later.\n\n#atomichabits #jamesclear #habits #booklessons #selfimprovement #productivity #lobelessons",
+  "youtube_tags": [
+   "atomic habits",
+   "james clear",
+   "1 percent better",
+   "habits",
+   "book summary",
+   "book lessons",
+   "self improvement"
+  ]
+ }
+}
