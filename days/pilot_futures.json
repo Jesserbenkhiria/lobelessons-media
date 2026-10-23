@@ -1,6 +1,6 @@
 {
  "day": 0,
- "date": "2026-10-27",
+ "date": "2026-10-26",
  "book": "The Psychology of Money",
  "lesson": "Two Futures: small daily spend vs invested",
  "voice": 6,
@@ -12,7 +12,7 @@
   "clean": true,
   "label": "TWO FUTURES",
   "cover": {
-   "html": "SAME COFFEE.<br><y>TWO LIVES.</y>",
+   "html": "$5 A DAY →<br><y>$17,000?</y>",
    "pose": "idea"
   },
   "lines": [
@@ -57,18 +57,18 @@
      {
       "type": "headline",
       "size": 118,
-      "html": "SAME COFFEE.<br><y>TWO LIVES.</y>",
+      "html": "$5 A DAY →<br><y>$17,000?</y>",
       "center": true,
       "at": "+0.0"
      },
      {
       "type": "split",
       "left": {
-       "title": "☕ BUYS IT",
+       "title": "☕ SPENDS $5",
        "bg": "#E9A08F"
       },
       "right": {
-       "title": "🏠 BREWS IT",
+       "title": "📈 INVESTS $5",
        "bg": "#7FCB9F"
       },
       "at": "+0.0"
@@ -98,7 +98,7 @@
       "type": "split",
       "size": 120,
       "left": {
-       "title": "☕ BUYS IT",
+       "title": "☕ SPENDS $5",
        "bg": "#E9A08F",
        "steps": [
         {
@@ -110,7 +110,7 @@
        ]
       },
       "right": {
-       "title": "🏠 BREWS IT",
+       "title": "📈 INVESTS $5",
        "bg": "#7FCB9F"
       },
       "at": "+0.05"
@@ -140,7 +140,7 @@
       "type": "split",
       "size": 120,
       "left": {
-       "title": "☕ BUYS IT",
+       "title": "☕ SPENDS $5",
        "bg": "#E9A08F",
        "steps": [
         {
@@ -152,7 +152,7 @@
        ]
       },
       "right": {
-       "title": "🏠 BREWS IT",
+       "title": "📈 INVESTS $5",
        "bg": "#7FCB9F",
        "steps": [
         {
@@ -207,7 +207,7 @@
        ]
       },
       "right": {
-       "title": "🏠 HAS",
+       "title": "📈 INVESTED",
        "bg": "#7FCB9F",
        "steps": [
         {
@@ -257,19 +257,20 @@
        ]
       },
       "right": {
-       "title": "🏠 HAS",
+       "title": "📈 WORTH",
        "bg": "#7FCB9F",
        "steps": [
         {
-         "v": 0,
-         "at": "+0.05",
-         "color": "green"
+         "v": 5,
+         "at": "+0.0",
+         "color": "green",
+         "label": "INVESTED / DAY"
         },
         {
          "v": 17271,
          "at": "seventeen",
          "color": "green",
-         "label": "≈ IN THE BANK"
+         "label": "HYPOTHETICAL VALUE"
         }
        ]
       },
@@ -310,8 +311,8 @@
   "slides": []
  },
  "captions": {
-  "youtube_title": "Same Coffee. Two Different Lives ☕",
-  "short": "One buys a $5 coffee every workday. One brews at home and invests the $5. ☕\n\n10 years later: $12,500 spent vs about $17,000 saved (example: 250 workdays a year, 7% yearly return, not guaranteed).\n\n💬 Which one are you right now?\n\n#twofutures #money #personalfinance #investing #moneytips #lobelessons",
+  "youtube_title": "$5 a Day → $17,000? Same Coffee, Two Lives ☕",
+  "short": "One spends $5 on coffee every workday. One invests that $5 instead. ☕📈\n\n10 years later: $12,500 spent vs about $17,000 (hypothetical: $5 × 250 workdays a year, 7% yearly return, not guaranteed; home-brewed coffee isn't free, so real savings are a bit lower).\n\n💬 Which one are you right now?\n\n#twofutures #money #personalfinance #investing #moneytips #lobelessons",
   "carousel": "",
   "youtube_tags": [
    "two futures",
