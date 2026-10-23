@@ -51,7 +51,15 @@ function el(e, line) {
       return `<div ${D(t)}><div class="card" style="padding:52px 56px"><div class="h" style="font-size:${e.size || 72}px">${h}</div></div></div>`; }
     case 'big': { // giant rolling number: steps [{v, at, color, label}] ; counts to each new value and flips colour
       const st = e.steps.map(x => ({ v: x.v, t: +at(x.at, line).toFixed(2), c: C[x.color || 'dark'] || x.color, l: x.label || '' }));
-      return `<div ${D(st[0].t, 'el bigel')} style="text-align:${e.align || 'left'}"><div class="big" data-steps='${JSON.stringify(st)}' data-prefix="${e.prefix || '$'}" data-suffix="${e.suffix || ''}" style="font-size:${e.size || 190}px"></div><div class="biglab" style="font:800 ${e.labelSize || 44}px Inter;letter-spacing:.04em"></div></div>`; }
+      return `<div ${D(st[0].t, 'el bigel')} style="text-align:${e.align || 'left'}"><div class="big" data-steps='${JSON.stringify(st)}' data-sign="${e.sign === false ? 0 : 1}" data-prefix="${e.prefix ?? '$'}" data-suffix="${e.suffix || ''}" style="font-size:${e.size || 190}px"></div><div class="biglab" style="font:800 ${e.labelSize || 44}px Inter;letter-spacing:.04em"></div></div>`; }
+    case 'versus': { // two option cards side by side (Money Game)
+      const card = (o, col) => `<div class="card" style="flex:1;padding:34px 26px;text-align:center;border:5px solid ${C[col]}"><div style="font:900 70px 'Inter Display';color:${C[col]}">${o.tag}</div><div class="h" style="font-size:${o.size || 92}px;margin-top:6px">${mk(o.big)}</div><div style="font:600 32px Inter;color:#5e5a52;margin-top:8px">${mk(o.sub || '')}</div></div>`;
+      return `<div ${D(t)} style="display:flex;gap:28px">${card(e.a, e.a.color || 'gold')}${card(e.b, e.b.color || 'green')}</div>`; }
+    case 'split': { // two futures: two columns, each with a title and a rolling counter
+      const col = (o) => { const st = (o.steps || []).map(x => ({ v: x.v, t: +at(x.at, line).toFixed(2), c: C[x.color || 'dark'] || x.color, l: x.label || '' }));
+        return `<div style="flex:1 1 0;min-width:0;text-align:center;padding:26px 10px;border-radius:34px;background:#ffffffd9;border:7px solid ${o.bg || '#e8dfd0'};box-shadow:0 10px 0 ${o.bg || '#e8dfd0'}"><div style="font:800 40px Inter;letter-spacing:.03em">${mk(o.title)}</div>
+          ${st.length ? `<div class="big" data-sign="0" data-steps='${JSON.stringify(st)}' data-prefix="$" data-suffix="" style="font-size:${e.size || 118}px;margin-top:14px;transform-origin:50% 60%"></div><div class="biglab" style="font:800 30px Inter;letter-spacing:.04em"></div>` : ''}</div>`; };
+      return `<div ${D(t)} style="display:flex;gap:22px;align-items:stretch">${col(e.left)}${col(e.right)}</div>`; }
     case 'small': return `<div ${D(t)}><div style="font:500 26px Inter;color:#7d766a">${mk(e.text)}</div></div>`;
     case 'space': return `<div style="height:${e.h || 40}px"></div>`;
     case 'html': return `<div ${D(t)}>${e.html}</div>`;
@@ -318,7 +326,7 @@ async function shortV2(b) {
     const sw=[];let last=a;const push=x=>{if(x-last>=0.9){sw.push(x);last=x}};ts.forEach(x=>{while(x-last>2.6)push(last+2.4);push(x)});while(b-last>2.6)push(last+2.4);sc._sw=sw;});
   const POPS=[...document.querySelectorAll('.el.pop')].map(e=>+e.dataset.in);
   const NEG=[];document.querySelectorAll('.big').forEach(b=>{const st=JSON.parse(b.dataset.steps);st.slice(1).forEach(x=>POPS.push(x.t));st.forEach((x,i)=>{if(x.v<0&&(i>0||x.t>0.3))NEG.push(x.t)})});
-  const fmt=(v,b)=>(v<0?'−':'+')+b.dataset.prefix+Math.round(Math.abs(v)).toLocaleString('en-US')+b.dataset.suffix;
+  const fmt=(v,b)=>(b.dataset.sign==='0'?(v<0?'−':''):(v<0?'−':'+'))+b.dataset.prefix+Math.round(Math.abs(v)).toLocaleString('en-US')+b.dataset.suffix;
   const ease=x=>{x=Math.min(1,Math.max(0,x));return 1-Math.pow(1-x,3)};
   const back=x=>{x=Math.min(1,Math.max(0,x));const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
   const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));

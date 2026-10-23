@@ -1,0 +1,325 @@
+{
+ "day": 0,
+ "date": "2026-10-27",
+ "book": "The Psychology of Money",
+ "lesson": "Two Futures: small daily spend vs invested",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.16,
+ "audio_dir": "audio/pilot_futures",
+ "short": {
+  "style": "stage",
+  "clean": true,
+  "label": "TWO FUTURES",
+  "cover": {
+   "html": "SAME COFFEE.<br><y>TWO LIVES.</y>",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Same coffee. Two different lives."
+   },
+   {
+    "id": "left",
+    "text": "Left buys a five dollar coffee every workday."
+   },
+   {
+    "id": "right",
+    "text": "Right brews at home, and invests that five dollars instead."
+   },
+   {
+    "id": "spent",
+    "text": "Ten years later, left has spent twelve and a half thousand."
+   },
+   {
+    "id": "has",
+    "text": "Right has about seventeen thousand."
+   },
+   {
+    "id": "punch",
+    "text": "Same coffee. Different decade."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "☕",
+     "⏳",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 118,
+      "html": "SAME COFFEE.<br><y>TWO LIVES.</y>",
+      "center": true,
+      "at": "+0.0"
+     },
+     {
+      "type": "split",
+      "left": {
+       "title": "☕ BUYS IT",
+       "bg": "#E9A08F"
+      },
+      "right": {
+       "title": "🏠 BREWS IT",
+       "bg": "#7FCB9F"
+      },
+      "at": "+0.0"
+     }
+    ]
+   },
+   {
+    "line": "left",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "☕",
+     "💸",
+     "🧾"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Every workday:",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "split",
+      "size": 120,
+      "left": {
+       "title": "☕ BUYS IT",
+       "bg": "#E9A08F",
+       "steps": [
+        {
+         "v": 5,
+         "at": "five",
+         "color": "red",
+         "label": "PER DAY"
+        }
+       ]
+      },
+      "right": {
+       "title": "🏠 BREWS IT",
+       "bg": "#7FCB9F"
+      },
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "right",
+    "mood": "good",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "🏠",
+     "📈",
+     "🌱"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Every workday:",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "split",
+      "size": 120,
+      "left": {
+       "title": "☕ BUYS IT",
+       "bg": "#E9A08F",
+       "steps": [
+        {
+         "v": 5,
+         "at": "+0.05",
+         "color": "red",
+         "label": "SPENT / DAY"
+        }
+       ]
+      },
+      "right": {
+       "title": "🏠 BREWS IT",
+       "bg": "#7FCB9F",
+       "steps": [
+        {
+         "v": 5,
+         "at": "invests",
+         "color": "green",
+         "label": "INVESTED / DAY"
+        }
+       ]
+      },
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "spent",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock"
+    },
+    "props": [
+     "📅",
+     "💸",
+     "☕"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "10 years later…",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "split",
+      "size": 104,
+      "left": {
+       "title": "☕ SPENT",
+       "bg": "#E9A08F",
+       "steps": [
+        {
+         "v": 5,
+         "at": "+0.05",
+         "color": "red"
+        },
+        {
+         "v": 12500,
+         "at": "twelve",
+         "color": "red",
+         "label": "GONE"
+        }
+       ]
+      },
+      "right": {
+       "title": "🏠 HAS",
+       "bg": "#7FCB9F",
+       "steps": [
+        {
+         "v": 5,
+         "at": "+0.05",
+         "color": "green",
+         "label": "INVESTED / DAY"
+        }
+       ]
+      },
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "has",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "📈",
+     "🌳",
+     "💰"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "10 years later…",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "split",
+      "size": 104,
+      "left": {
+       "title": "☕ SPENT",
+       "bg": "#E9A08F",
+       "steps": [
+        {
+         "v": 12500,
+         "at": "+0.05",
+         "color": "red",
+         "label": "GONE"
+        }
+       ]
+      },
+      "right": {
+       "title": "🏠 HAS",
+       "bg": "#7FCB9F",
+       "steps": [
+        {
+         "v": 0,
+         "at": "+0.05",
+         "color": "green"
+        },
+        {
+         "v": 17271,
+         "at": "seventeen",
+         "color": "green",
+         "label": "≈ IN THE BANK"
+        }
+       ]
+      },
+      "at": "+0.05"
+     },
+     {
+      "type": "small",
+      "text": "Example: $5 × 250 workdays/yr for 10 yrs, invested at 7%/yr. Returns not guaranteed.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "punch",
+    "mood": "gold",
+    "lobe": {
+     "pose": "calm"
+    },
+    "props": [
+     "☕",
+     "⏳",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "Same coffee.<br><g>Different decade.</g>",
+      "center": true,
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "TWO FUTURES",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "Same Coffee. Two Different Lives ☕",
+  "short": "One buys a $5 coffee every workday. One brews at home and invests the $5. ☕\n\n10 years later: $12,500 spent vs about $17,000 saved (example: 250 workdays a year, 7% yearly return, not guaranteed).\n\n💬 Which one are you right now?\n\n#twofutures #money #personalfinance #investing #moneytips #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "two futures",
+   "coffee",
+   "investing",
+   "compound interest",
+   "personal finance",
+   "money tips"
+  ]
+ }
+}
