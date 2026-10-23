@@ -25,7 +25,7 @@ checkboxes `YouTube Short`, `IG Reel`, `IG Carousel`, `TikTok Video`, `TikTok Ca
 
 ### 1. Tick what was published
 - Query Notion rows with `Status = Scheduled` and Date ≤ today.
-- For each, call Metricool `getScheduledPosts` (brandId 7506135, that date ±1 day). A post that is no longer in the scheduled list and whose time has passed has been **published**: tick that platform's checkbox. If every platform for the row is ticked, set `Status = Published`.
+- For each, call Metricool `getScheduledPosts` (brandId 7506135, that date ±1 day). The list also returns past posts: a post whose provider `status` is `PUBLISHED` has been **published**: tick that platform's checkbox (Facebook posts count with the Instagram/TikTok/YouTube ones; if there's no Facebook checkbox just note it). If every platform for the row is ticked, set `Status = Published`.
 - If a post failed or is still pending hours after its time, set `Status = Problem` and say what happened in `Notes`.
 
 ### Who does what (usage-optimized)
@@ -35,13 +35,15 @@ checkboxes `YouTube Short`, `IG Reel`, `IG Carousel`, `TikTok Video`, `TikTok Ca
 
 ### 2. Create TOMORROW's content (one day ahead, so a failure never leaves a day empty)
 Find the Notion row where Date = tomorrow (also handle today's row first if it's still `Planned`). If its Status is `Planned` (write the spec) or `Created` (spec already written by the weekly writer, skip to 2.4):
-1. **Write `days/dayNN.json`** (NN = Day number, two digits), copying the structure of `days/day02.json` exactly.
+1. **Write `days/dayNN.json`** (NN = Day number, two digits), copying the structure of `days/day07.json` exactly (**stage style**: `"style": "stage"`, plus `"format": "sketch"` on sketch days, `"audio_dir": "audio/dayNN"`). Scenes use `lobe: {pose, who}` (who = `broke` or `rich`, sketch only), optional `mood` (bad/good/gold/neutral) and `props` (3 emojis). Every scene starts with a headline or quote.
    - Lesson = the row's `Lesson`, opening line = the row's `Hook`.
    - **Short = edutainment, not a lesson.** People in the feed skip anything that feels like homework. Rules:
      - **Hook in the first 1–2 s = a punch, not a book question.** A bold, specific, slightly provocative claim about the viewer's life ("You're paying everyone except yourself."). Never open with the book title or "Lesson N"; the book is mentioned later as proof.
      - `short.label` = topic only, e.g. "MONEY · MINDSET" (never "LESSON N").
      - **20–30 seconds total, 5–7 lines.** Something new appears on screen every 1–2 s (use `at` on key words).
-     - Last line exactly `Follow Lobe for one book lesson every day.` (scene `{"line":"cta","cta":true}`). Make the line before it loop back to the hook when possible.
+     - **No CTA line and no CTA scene** (the renderer shows a Follow badge during the last line). The last line must loop back into the hook so the video replays (e.g. Broke Brain repeating the opening question).
+     - Keep the total under ~30 s with ElevenLabs voices (they speak slower): 6–7 short lines.
+     - **Voices:** after writing the spec, generate the ElevenLabs lines (see Voice section) into `audio/dayNN/` before building.
    - **Rotate formats by Day number** (Day % 3):
      - **1 = SKETCH "Broke Brain vs Rich Brain":** two characters argue about a real-life moment (payday, a sale, a raise). Alternate scenes: Broke Brain = Lobe on the left (`bl`, poses shock/think, pill "BROKE BRAIN" color red, line field `"voice": 5`), Rich Brain = Lobe on the right (`br`, poses idea/approve/explain, pill "RICH BRAIN" color green, default voice). Funny, short lines; the lesson lands in the last 2 lines.
      - **2 = POV:** hook "POV: …" a relatable moment ("POV: it's payday and your brain does this"), then what most people do vs what the book says.
