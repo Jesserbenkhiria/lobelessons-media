@@ -275,11 +275,11 @@ async function shortV2(b) {
     if (firstBig && at(firstBig.at, s.line) > a + 0.35) firstBig.at = '+0.05';
     const props = (s.props || PROPS[mood] || []).slice(0, 4);
     const pr = props.map((p, k) => `<div class="prop" data-k="${k}" style="left:${[70, 860, 40, 900][k]}px;top:${[620, 580, 1330, 1300][k]}px">${p}</div>`).join('');
-    body += `<div class="scene" data-in="${a}" data-out="${z}" data-bg="${BG[mood] || BG.neutral}" data-pose="${(s.lobe && s.lobe.pose) || 'explain'}" data-who="${who}">
+    body += `<div class="scene" data-in="${a}" data-out="${z}" data-bg="${BG[mood] || BG.neutral}" data-pose="${(s.lobe && s.lobe.pose) || 'explain'}" data-who="${who}" data-react="${(s.lobe && s.lobe.react) || ''}">
       <div class="props">${pr}</div><div class="content" style="top:${s.top || 250}px">${els.map(e => el(e, s.line)).join('')}</div></div>`;
   });
   const stage = sketch
-    ? `<div id="stage"><div class="rig2" id="rb" style="left:-130px"></div><div class="rig2" id="rr" style="right:-130px"></div></div>`
+    ? `<div id="stage"><div class="rig2" id="rb" style="left:${sh.clean ? -250 : -130}px"></div><div class="rig2" id="rr" style="right:${sh.clean ? -250 : -130}px"></div></div>`
     : `<div id="stage"><div class="rig1" id="r1"></div></div>`;
   const lastLine = TL.lines[TL.lines.length - 1];
   const html = `<!doctype html><html><head><meta charset="utf-8"><style>${CSS}
@@ -293,7 +293,7 @@ async function shortV2(b) {
    .content{z-index:3}
    #stage{position:absolute;left:0;right:0;top:760px;height:700px;z-index:4}
    .rig1{position:absolute;left:50%;width:960px;margin-left:-480px;top:20px}
-   .rig2{position:absolute;width:780px;top:40px}
+   .rig2{position:absolute;width:${sh.clean ? 960 : 780}px;top:${sh.clean ? 0 : 40}px}
    .rig1 svg,.rig2 svg{width:100%;height:auto;display:block}
    .tag{position:absolute;top:-6px;font:800 30px Inter;padding:10px 26px;border-radius:40px;letter-spacing:.04em}
    #cap{position:absolute;left:60px;right:60px;top:1500px;text-align:center;z-index:20}
@@ -317,7 +317,7 @@ async function shortV2(b) {
   SC.forEach(sc=>{const a=+sc.dataset.in,b=+sc.dataset.out;const ts=[...sc.querySelectorAll('.el')].map(e=>+e.dataset.in).filter(x=>x>a+0.7&&x<b-0.4).sort((x,y)=>x-y);
     const sw=[];let last=a;const push=x=>{if(x-last>=0.9){sw.push(x);last=x}};ts.forEach(x=>{while(x-last>2.6)push(last+2.4);push(x)});while(b-last>2.6)push(last+2.4);sc._sw=sw;});
   const POPS=[...document.querySelectorAll('.el.pop')].map(e=>+e.dataset.in);
-  document.querySelectorAll('.big').forEach(b=>{JSON.parse(b.dataset.steps).slice(1).forEach(x=>POPS.push(x.t))});
+  const NEG=[];document.querySelectorAll('.big').forEach(b=>{const st=JSON.parse(b.dataset.steps);st.slice(1).forEach(x=>POPS.push(x.t));st.forEach((x,i)=>{if(x.v<0&&(i>0||x.t>0.3))NEG.push(x.t)})});
   const fmt=(v,b)=>(v<0?'−':'+')+b.dataset.prefix+Math.round(Math.abs(v)).toLocaleString('en-US')+b.dataset.suffix;
   const ease=x=>{x=Math.min(1,Math.max(0,x));return 1-Math.pow(1-x,3)};
   const back=x=>{x=Math.min(1,Math.max(0,x));const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
@@ -337,6 +337,7 @@ async function shortV2(b) {
    cs.querySelectorAll('.el:not(.pop)').forEach(e=>{const a=+e.dataset.in;if(a>ca+0.3&&t>=a)z+=0.04*Math.exp(-(t-a)*6)});
    let ox=50;z=Math.min(z,1.2);
    let sx=0,sy=0;if(cs.dataset.pose==='shock'&&ts<0.7){const k=(1-ts/0.7)*16;sx=Math.sin(t*70)*k;sy=Math.cos(t*55)*k*0.6;}
+   NEG.forEach(a=>{const d=t-a;if(d>=0&&d<0.55){const k=(1-d/0.55)*22;sx+=Math.sin(t*80)*k;sy+=Math.cos(t*63)*k*0.7;z+=0.08*(1-d/0.55);}});
    // camera zooms the characters + background props; the text only pulses gently (stays fully on screen)
    const sxG=sx;
    const tightZ=tight?1.1:1;const cz=1+Math.max(0,Math.min(0.08,(z-tightZ)*0.6));
@@ -351,7 +352,7 @@ async function shortV2(b) {
     if(e.classList.contains('pop')){const q=back((t-a)/0.35);e.style.opacity=Math.min(1,Math.max(0,(t-a)/0.12));e.style.transform='scale('+(1.6-0.6*q)+')';return;}
     const p=a<0.4?1:ease((t-a)/0.4);e.style.opacity=p;e.style.filter='blur('+((1-p)*10)+'px)';e.style.transform='translateY('+((1-p)*30)+'px)';});
    document.querySelectorAll('.big').forEach(b=>{const st=JSON.parse(b.dataset.steps);let k=0;st.forEach((x,i)=>{if(t>=x.t)k=i});
-    const cur=st[k],prev=k>0?st[k-1]:{v:0};const p=(k===0&&cur.t<0.4)?1:ease((t-cur.t)/0.45);const v=prev.v+(cur.v-prev.v)*p;
+    const cur=st[k],prev=k>0?st[k-1]:{v:0};const p=k===0?1:ease((t-cur.t)/0.45);const v=prev.v+(cur.v-prev.v)*p;
     b.textContent=fmt(v,b);b.style.color=cur.c;const bump=Math.exp(-Math.max(0,t-cur.t)*7);b.style.transform='scale('+(1+0.18*bump)+') rotate('+(-3*bump)+'deg)';
     const lab=b.parentElement.querySelector('.biglab');lab.textContent=cur.l;lab.style.color=cur.c;});
    // camera: slow push-in per scene + punch on stamps + punch on scene start + shake on shock
@@ -367,7 +368,7 @@ async function shortV2(b) {
      r.style.transformOrigin='50% 90%';r.style.transform='translateY('+(Math.sin(t*2.4)*8)+'px) scale('+((ci>0?0.9+0.1*pk:1)*(1+lm*0.03)).toFixed(4)+')';}
    else{const sp=cs.dataset.who;
      [['rb','broke','l'],['rr','rich','r']].forEach(([id,who,side])=>{const r=document.getElementById(id);const on=sp===who;
-      const pose=on?cs.dataset.pose:(who==='broke'?'think':'calm');
+      const pose=on?cs.dataset.pose:(cs.dataset.react||(who==='broke'?'think':'calm'));
       r.innerHTML=lobeRig({pose:pose==='calm'&&!on?'explain':pose,side:side==='l'?'r':'l',t:t,lv:on?lm:0,tIn:on?ca:0,sw:on?cs._sw:[],seed:who==='broke'?1.3:0,who:who});
       const sc=on?1.0:0.82;r.style.opacity=on?1:0.55;r.style.transformOrigin='50% 95%';
       r.style.transform='translateY('+(Math.sin(t*2.4+(who==='broke'?1:0))*7+(on?0:30))+'px) scale('+(sc*(on?(0.94+0.06*pk):1)*(1+(on?lm*0.03:0))).toFixed(4)+')';});
@@ -388,6 +389,7 @@ async function shortV2(b) {
     document.querySelectorAll('.scene').forEach((s, i) => { if (i > 0) out.push([+s.dataset.in - 0.12, 'whoosh', 0.1]); });
     document.querySelectorAll('.el').forEach(e => { const t = +e.dataset.in; const k = t.toFixed(1); if (seen.has(k)) return; seen.add(k);
       if (e.classList.contains('pop')) out.push([t, 'stamp', 0.45]); else if (e.querySelector('.card,.pill,.row')) out.push([t, 'pop', 0.16]); });
+    document.querySelectorAll('.big').forEach(b => JSON.parse(b.dataset.steps).forEach((x, i) => { if (i > 0 || x.t > 0.3) out.push([x.t, x.v < 0 ? 'cash' : 'pop_hi', x.v < 0 ? 0.5 : 0.22]); if (x.v < 0) out.push([x.t, 'thud', 0.35]); }));
     return out.filter(x => x[0] > 0.3);
   });
   ev.unshift([0.05, 'thud', 0.3]);

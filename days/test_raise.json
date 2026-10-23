@@ -50,7 +50,8 @@
     "mood": "gold",
     "lobe": {
      "pose": "approve",
-     "who": "broke"
+     "who": "broke",
+     "react": "explain"
     },
     "props": [
      "🎉",
@@ -72,6 +73,12 @@
         "at": "+0.0",
         "color": "green",
         "label": "RAISE / MONTH"
+       },
+       {
+        "v": -50,
+        "at": "+0.75",
+        "color": "red",
+        "label": "…THEN THIS"
        }
       ]
      }
@@ -163,8 +170,9 @@
     "line": "cost",
     "mood": "bad",
     "lobe": {
-     "pose": "shock",
-     "who": "rich"
+     "pose": "explain",
+     "who": "rich",
+     "react": "shock"
     },
     "props": [
      "🔥",
@@ -229,7 +237,8 @@
     "mood": "bad",
     "lobe": {
      "pose": "think",
-     "who": "rich"
+     "who": "rich",
+     "react": "approve"
     },
     "props": [
      "💀",
@@ -243,15 +252,6 @@
       "color": "red",
       "size": 74,
       "at": "+0.05"
-     },
-     {
-      "type": "space",
-      "h": 30
-     },
-     {
-      "type": "sub",
-      "html": "It's not what you <b>make</b>.<br>It's what you <b>keep</b>.",
-      "at": "+0.3"
      }
     ]
    }
