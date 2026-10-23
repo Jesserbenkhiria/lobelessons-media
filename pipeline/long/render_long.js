@@ -30,8 +30,10 @@ const read = p => fs.readFileSync(p, 'utf8');
 const sh = (cmd, a, o = {}) => execFileSync(cmd, a, { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 1 << 28, ...o }).toString();
 
 const COMP = read(path.join(__dirname, 'components.js')), RIG = read(path.join(ROOT, 'pipeline', 'lobe_rig.js'));
-const VERSION = sha(read(__filename) + COMP + RIG).slice(0, 12);
 const story = JSON.parse(read(STORY));
+// optional extra component libraries (e.g. pipeline/essay/components_essay.js), repo-relative
+const EXTRA = (story.components || []).map(f => read(path.join(ROOT, f))).join('\n;\n');
+const VERSION = sha(read(__filename) + COMP + RIG + EXTRA).slice(0, 12);
 
 // 1. narration timing (real clips or estimates) and 2. verified numbers
 process.stdout.write(sh('python3', ['pipeline/long/timing.py', path.resolve(STORY), path.resolve(OUT)]));
@@ -40,7 +42,7 @@ const FACTS = JSON.parse(sh('python3', ['pipeline/finance.py', 'values', path.re
 
 // ------------------------------------------------------------------ time anchors
 const normw = w => w.toLowerCase().replace(/[^a-z0-9$%']/g, '');
-const TIMEKEYS = new Set(['at', 'in', 'out', 'start', 'end', 'glow']);
+const TIMEKEYS = new Set(['at', 'in', 'out', 'start', 'end', 'glow', 'dim', 'typeStart', 'sfxAt']);
 function resolver(sc) {
   return v => {
     if (typeof v === 'number') return v;
@@ -72,6 +74,9 @@ function prepare(raw) {
   s.env = { type: 'plain', ...(s.env || {}), dur: sc.dur };
   s.elements = (s.elements || []).map((e, i) => {
     const el = { in: 0, out: sc.dur + 1, layer: WORLD.has(e.type) ? 'world' : 'hud', ...e, i };
+    if (el.src && !/^(file|https?):/.test(el.src)) {          // repo-relative media: absolute URL + content hash (cache key)
+      const abs = path.join(ROOT, el.src); if (!fs.existsSync(abs)) throw new Error(`scene ${s.id}: missing media ${el.src}`);
+      el._srcHash = sha(fs.readFileSync(abs)).slice(0, 12); el.src = 'file://' + abs; }
     if (el.type === 'counter') {
       if (el.start === undefined) el.start = el.in; if (el.end === undefined) el.end = el.start + 1.2;
       const ser = el.series ? FACTS.series[el.series] : null;
@@ -116,6 +121,7 @@ function prepare(raw) {
     if (e.type === 'emitter') { const n = Math.floor((e.end - e.start) / (e.every || 0.5)); for (let k = 0; k < n; k += 2) ev.push([e.start + k * (e.every || 0.5) + (e.flight || 0.8), 'pop_hi', 0.12]); }
     if (e.type === 'chart') ev.push([e.start, 'riser', 0.25]);
   }
+  for (const e of s.elements) if (e.sfx) ev.push([e.sfxAt ?? e.in, e.sfx, e.gain ?? 0.4]);
   for (const sh2 of s.shots.slice(1)) if (!sh2.cut) ev.push([sh2.at, 'whoosh', 0.18]);
   s.events = ev.filter(x => x[0] >= 0 && x[0] < sc.dur);
   return s;
@@ -132,7 +138,7 @@ function page(s) {
   #cap span{display:inline-block;font:800 46px 'Inter Display',Inter;letter-spacing:-.01em;margin:0 6px;padding:2px 12px;border-radius:12px;color:#111;background:#ffffffd0}
   #cap span.on{background:#111;color:#F5C84C}
   </style></head><body><div id="v"><div id="world"><div id="env"></div><div id="wl"></div><div id="actors"></div></div><div id="hud"></div><div id="cap"></div></div>
-  <script>${COMP}</script><script>${RIG}</script><script>
+  <script>${COMP}</script><script>${EXTRA}</script><script>${RIG}</script><script>
   const S=${JSON.stringify(s)};LL.setFacts(${JSON.stringify(FACTS)});
   const world=document.getElementById('world'),envN=document.getElementById('env'),cap=document.getElementById('cap');
   const nodes=S.elements.map(e=>{const d=document.createElement('div');d.className='el';d.style.cssText='position:absolute;left:0;top:0;opacity:0';
@@ -154,7 +160,8 @@ function page(s) {
   function setT(t){
     const c=camAt(t);world.style.transform='translate('+(960-c.cx*c.z+c.ox)+'px,'+(540-c.cy*c.z+c.oy)+'px) scale('+c.z+')';
     envN.innerHTML=LL.ENV[S.env.type](S.env,t);
-    S.elements.forEach((e,i)=>{const op=LL.fade(e,t),n=nodes[i];n.style.opacity=op;n.style.display=op<=0.001?'none':'block';if(op>0.001)LL.E[e.type].upd(e,n.firstElementChild||n,t);});
+    S.elements.forEach((e,i)=>{const op=LL.fade(e,t),n=nodes[i];n.style.opacity=op;n.style.display=op<=0.001?'none':'block';
+      if(e.enter==='slide-up'||e.enter==='slide-left'){const q=1-LL.outCubic((t-e.in)/(e.enterDur||0.45));n.style.transform=e.enter==='slide-up'?'translateY('+(q*1100)+'px)':'translateX('+(q*1920)+'px)';}if(op>0.001)LL.E[e.type].upd(e,n.firstElementChild||n,t);});
     acts.forEach(A=>{const a=A.a;let pc=null;for(const cu of a.cues)if(cu.pose&&cu.at<=t)pc=cu;
       const pose=pc?pc.pose:(a.pose||'explain'),tIn=pc?pc.at:0;
       let k=0;while(k+1<A.keys.length&&A.keys[k+1].at<=t)k++;let x=A.keys[k].x,y=A.keys[k].y,moving=0;
@@ -177,7 +184,8 @@ function page(s) {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' }).catch(() => chromium.launch());
   const pg = await b.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: DSF });
   const load = async s => { const f = path.join(OUT, 'pages', s.id + '.html'); fs.writeFileSync(f, page(s));
-    await pg.goto('file://' + f); await pg.waitForTimeout(150); return f; };
+    await pg.goto('file://' + f); await pg.waitForFunction(() => [...document.images].every(i => i.complete && i.naturalWidth > 0), null, { timeout: 30000 });
+    await pg.evaluate(() => document.fonts.ready); await pg.waitForTimeout(150); return f; };
   if (STILLS) {
     const dir = path.join(OUT, 'stills', RES); fs.mkdirSync(dir, { recursive: true });
     for (const s of scenes) { const want = STILLS.filter(x => x.id === s.id); if (!want.length) continue; await load(s);

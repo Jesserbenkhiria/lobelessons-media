@@ -1,0 +1,84 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  5.24,
+  20.005,
+  25.82,
+  33.665
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "s1_01",
+   "duration": 5.07,
+   "words_per_sec": 2.37,
+   "heard": "you on something right now that you have absolutely no use for",
+   "expected": "you own something right now that you have absolutely no use for",
+   "match": 0.92,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "s1_02",
+   "duration": 14.24,
+   "words_per_sec": 2.81,
+   "heard": "he be it's a kitchen gadgets that can turn a cucumber into seventeen different shapes maybe it's a shirt with the tags still on or maybe it's that mystery cable you been keeping since twenty seventeen just in case nasa calls",
+   "expected": "maybe it's a kitchen gadget that can turn a cucumber into seventeen different shapes maybe it's a shirt with the tag still on or maybe it's that mystery cable you've been keeping since twenty seventeen just in case nasa calls",
+   "match": 0.89,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 1,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "s1_03",
+   "duration": 5.19,
+   "words_per_sec": 2.89,
+   "heard": "and here's the strange part when you bought it it seemed like a fantastic idea",
+   "expected": "and here's the strange part when you bought it it seemed like a fantastic idea",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "s1_04",
+   "duration": 7.24,
+   "words_per_sec": 2.76,
+   "heard": "so how can your brain be completely convinced you need something on tuesday and completely forget it exists by friday",
+   "expected": "so how can your brain be completely convinced you need something on tuesday and completely forget it exists by friday",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "s1_05",
+   "duration": 5.83,
+   "words_per_sec": 1.89,
+   "heard": "today we're investigating one of humanity's most expensive hobbies buying nonsense",
+   "expected": "today we're investigating one of humanity's most expensive hobbies buying nonsense",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

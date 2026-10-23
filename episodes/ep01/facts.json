@@ -1,0 +1,18 @@
+{
+ "note": "Every number shown on screen in Episode 01. All examples are fictional illustrations, not statistics.",
+ "facts": {
+  "inputs": [100, 60, 20, 52, 5, 12, 17, 2017],
+  "assumptions": [
+   {"id": "example", "text": "Fictional example prices, not a real product or store.", "screen": "example prices", "on_screen": true},
+   {"id": "hypothetical", "text": "Hypothetical example: $20 a week for 52 weeks, not an average or a prediction.", "screen": "hypothetical: $20 × 52 weeks", "on_screen": true}
+  ],
+  "values": {
+   "list_price":   {"formula": "100", "display": "$100"},
+   "sale_price":   {"formula": "60", "display": "$60"},
+   "discount":     {"formula": "list_price - sale_price", "display": "$40"},
+   "spent":        {"formula": "sale_price", "display": "$60"},
+   "weekly_extra": {"formula": "20", "display": "$20"},
+   "yearly_extra": {"formula": "weekly_extra * 52", "display": "$1,040"}
+  }
+ }
+}

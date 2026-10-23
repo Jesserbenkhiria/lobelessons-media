@@ -1,0 +1,439 @@
+{
+ "episode": "ep01",
+ "title": "Why Do We Buy Things We Don't Even Want?",
+ "voice": {
+  "narrator": {
+   "voice_id": "v3p1kjzUvro6S76qmYmH",
+   "name": "Mark",
+   "model": "eleven_v4",
+   "generations_count": 1
+  }
+ },
+ "generation_plan": "one ElevenLabs generation per section (all its paragraphs separated by [long pause]), split per paragraph with pipeline/el_split.py; prompts in audio/_prompts/s<N>_mark.txt; cached by prompt hash",
+ "pace_wps": [
+  2.2,
+  2.6
+ ],
+ "sections": [
+  {
+   "n": 1,
+   "title": "The Drawer Of Shame",
+   "delivery": "warm, conversational, a little mischievous; cold open, no announcer energy",
+   "lines": [
+    "s1_01",
+    "s1_02",
+    "s1_03",
+    "s1_04",
+    "s1_05"
+   ]
+  },
+  {
+   "n": 2,
+   "title": "The Discount Trap",
+   "delivery": "playful build-up, then a dry deflation on 'No. You spent sixty.'",
+   "lines": [
+    "s2_01",
+    "s2_02",
+    "s2_03",
+    "s2_04",
+    "s2_05",
+    "s2_06",
+    "s2_07"
+   ]
+  },
+  {
+   "n": 3,
+   "title": "The Shopping Mood",
+   "delivery": "sympathetic and amused; dreamy on the lamp fantasy, flat on 'Just... better illuminated.'",
+   "lines": [
+    "s3_01",
+    "s3_02",
+    "s3_03",
+    "s3_04",
+    "s3_05",
+    "s3_06",
+    "s3_07",
+    "s3_08"
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Your Future Self Is A Very Good Salesperson",
+   "delivery": "teasing list rhythm; land 'Present You' deadpan; calm, sincere on the habit point",
+   "lines": [
+    "s4_01",
+    "s4_02",
+    "s4_03",
+    "s4_04",
+    "s4_05",
+    "s4_06",
+    "s4_07",
+    "s4_08",
+    "s4_09"
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The Expensive Little Extras",
+   "delivery": "light; slow down and make the arithmetic clear; reassuring on 'That's not the lesson.'",
+   "lines": [
+    "s5_01",
+    "s5_02",
+    "s5_03",
+    "s5_04",
+    "s5_05",
+    "s5_06"
+   ]
+  },
+  {
+   "n": 6,
+   "title": "The Three-Question Test",
+   "delivery": "slower and clear for the three questions; warm, practical",
+   "lines": [
+    "s6_01",
+    "s6_02",
+    "s6_03",
+    "s6_04",
+    "s6_05",
+    "s6_06",
+    "s6_07"
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Outro / Callback",
+   "delivery": "conspiratorial, playful; short pause before 'Much.'",
+   "lines": [
+    "s7_01",
+    "s7_02",
+    "s7_03",
+    "s7_04"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": "s1_01",
+   "section": 1,
+   "speaker": "lobe",
+   "text": "You own something right now that you have absolutely no use for.",
+   "words": 12
+  },
+  {
+   "id": "s1_02",
+   "section": 1,
+   "speaker": "lobe",
+   "text": "Maybe it's a kitchen gadget that can turn a cucumber into seventeen different shapes. Maybe it's a shirt with the tag still on. Or maybe it's that mystery cable you've been keeping since 2017, just in case NASA calls.",
+   "say": "Maybe it's a kitchen gadget that can turn a cucumber into seventeen different shapes. Maybe it's a shirt with the tag still on. Or maybe it's that mystery cable you've been keeping since twenty seventeen, just in case NASA calls.",
+   "words": 39
+  },
+  {
+   "id": "s1_03",
+   "section": 1,
+   "speaker": "lobe",
+   "text": "And here's the strange part: when you bought it, it seemed like a fantastic idea.",
+   "words": 15
+  },
+  {
+   "id": "s1_04",
+   "section": 1,
+   "speaker": "lobe",
+   "text": "So how can your brain be completely convinced you NEED something on Tuesday... and completely forget it exists by Friday?",
+   "words": 20
+  },
+  {
+   "id": "s1_05",
+   "section": 1,
+   "speaker": "lobe",
+   "text": "Today we're investigating one of humanity's most expensive hobbies: buying nonsense.",
+   "words": 11
+  },
+  {
+   "id": "s2_01",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "Picture this. You're scrolling. You see headphones listed for a hundred dollars. But today? Sixty dollars. A giant red sticker screams: SAVE FORTY!",
+   "words": 23
+  },
+  {
+   "id": "s2_02",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "Your brain does a tiny victory dance.",
+   "words": 7
+  },
+  {
+   "id": "s2_03",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "Except there's a problem. You already have working headphones. You didn't wake up wanting new ones. And you weren't planning to spend sixty dollars.",
+   "words": 24
+  },
+  {
+   "id": "s2_04",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "So if you buy them, did you save forty dollars? No. You spent sixty.",
+   "words": 14
+  },
+  {
+   "id": "s2_05",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "The discount is real relative to the listed price. But the saving only makes sense if you actually needed or planned to buy that product.",
+   "words": 25
+  },
+  {
+   "id": "s2_06",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "A sale can shift your attention from 'Do I want this?' to 'Am I missing a deal?'",
+   "words": 17
+  },
+  {
+   "id": "s2_07",
+   "section": 2,
+   "speaker": "lobe",
+   "text": "And that's a much more dangerous question for your wallet.",
+   "words": 10
+  },
+  {
+   "id": "s3_01",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "But discounts are only half the story.",
+   "words": 7
+  },
+  {
+   "id": "s3_02",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "Imagine you've had the worst day at work. Your inbox is a disaster. Someone scheduled a meeting to discuss the meeting about the other meeting.",
+   "words": 25
+  },
+  {
+   "id": "s3_03",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "And then you see a beautiful new desk lamp online.",
+   "words": 10
+  },
+  {
+   "id": "s3_04",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "Suddenly, for thirty glorious seconds, life has meaning. You picture a clean desk. A fresh notebook. A more organized version of yourself who wakes up at six in the morning and drinks water voluntarily.",
+   "words": 34
+  },
+  {
+   "id": "s3_05",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "You don't just want the lamp. You want the LIFE that comes with the lamp.",
+   "words": 15
+  },
+  {
+   "id": "s3_06",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "Shopping can feel rewarding because of anticipation, mood, identity, or just the pleasure of choosing something new. Researchers studying impulse buying find that both personal feelings and shopping environments play a role. It isn't one magical button in the brain that stores can press.",
+   "words": 44
+  },
+  {
+   "id": "s3_07",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "And sometimes we genuinely enjoy what we buy. That's fine. The problem begins when the imagined future is doing most of the selling.",
+   "words": 23
+  },
+  {
+   "id": "s3_08",
+   "section": 3,
+   "speaker": "lobe",
+   "text": "Because the lamp arrives. You plug it in. Two days later, you're still the same person. Just... better illuminated.",
+   "words": 19
+  },
+  {
+   "id": "s4_01",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "There's another trick hiding in your shopping cart.",
+   "words": 8
+  },
+  {
+   "id": "s4_02",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "The person you imagine using the product isn't always the person you actually are.",
+   "words": 14
+  },
+  {
+   "id": "s4_03",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "The running shoes? Those belong to Future You, who runs five miles every morning.",
+   "words": 14
+  },
+  {
+   "id": "s4_04",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "The expensive planner? Future You has color-coded goals and an actual filing system.",
+   "words": 13
+  },
+  {
+   "id": "s4_05",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "The guitar? Future You is somehow playing sold-out concerts by Christmas.",
+   "words": 11
+  },
+  {
+   "id": "s4_06",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "Present You? Present You is lying on the sofa watching someone review a guitar.",
+   "words": 14
+  },
+  {
+   "id": "s4_07",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "Buying the equipment can feel like progress, even though the difficult part — practicing, changing habits, doing the work — hasn't happened yet.",
+   "words": 23
+  },
+  {
+   "id": "s4_08",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "This doesn't mean you should never buy a guitar. It means the purchase and the habit are two separate things.",
+   "words": 20
+  },
+  {
+   "id": "s4_09",
+   "section": 4,
+   "speaker": "lobe",
+   "text": "A box on your doorstep isn't a personality upgrade.",
+   "words": 9
+  },
+  {
+   "id": "s5_01",
+   "section": 5,
+   "speaker": "lobe",
+   "text": "And then there are the tiny purchases that barely register.",
+   "words": 10
+  },
+  {
+   "id": "s5_02",
+   "section": 5,
+   "speaker": "lobe",
+   "text": "Five dollars here. Twelve dollars there. A 'limited-time' upgrade. A delivery fee because putting on shoes seems unreasonable tonight.",
+   "words": 19
+  },
+  {
+   "id": "s5_03",
+   "section": 5,
+   "speaker": "lobe",
+   "text": "Here's a simple example: spending twenty dollars on an unplanned extra every week adds up to one thousand and forty dollars over a year.",
+   "words": 24
+  },
+  {
+   "id": "s5_04",
+   "section": 5,
+   "speaker": "lobe",
+   "text": "That's not a prediction about your life. It's just twenty times fifty-two. The kind of arithmetic that is incredibly easy to ignore when each purchase feels small.",
+   "words": 27
+  },
+  {
+   "id": "s5_05",
+   "section": 5,
+   "speaker": "lobe",
+   "text": "But I don't want to tell you to stop enjoying money. That's not the lesson. Your money is supposed to do things for you — including fun things.",
+   "words": 28
+  },
+  {
+   "id": "s5_06",
+   "section": 5,
+   "speaker": "lobe",
+   "text": "The real question is whether you're choosing the purchase... or reacting to the moment.",
+   "words": 14
+  },
+  {
+   "id": "s6_01",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "So next time you see something you suddenly, urgently, desperately need, try three questions.",
+   "words": 14
+  },
+  {
+   "id": "s6_02",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "First: Would I still want this at full price? If the only exciting thing is the discount, that's useful information.",
+   "words": 20
+  },
+  {
+   "id": "s6_03",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "Second: What exactly will I do with it this week? Not Future Me. Actual Me. The one who currently owns three abandoned notebooks.",
+   "words": 23
+  },
+  {
+   "id": "s6_04",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "Third: Would I still buy it tomorrow? A short delay won't solve every problem, but it can create space between the feeling and the decision.",
+   "words": 25
+  },
+  {
+   "id": "s6_05",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "And sometimes, after that pause, the answer is yes. Great. Buy it if it fits your budget.",
+   "words": 17
+  },
+  {
+   "id": "s6_06",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "Other times, the answer is no. And you just saved yourself sixty dollars — by not spending it.",
+   "words": 18
+  },
+  {
+   "id": "s6_07",
+   "section": 6,
+   "speaker": "lobe",
+   "text": "Which is a lot more impressive than a red sticker telling you that you saved forty.",
+   "words": 16
+  },
+  {
+   "id": "s7_01",
+   "section": 7,
+   "speaker": "lobe",
+   "text": "Now, if you'll excuse me, I need to go check whether I already own a cucumber spiralizer.",
+   "words": 17
+  },
+  {
+   "id": "s7_02",
+   "section": 7,
+   "speaker": "lobe",
+   "text": "I have a terrible feeling the answer is three.",
+   "words": 9
+  },
+  {
+   "id": "s7_03",
+   "section": 7,
+   "speaker": "lobe",
+   "text": "And if you've ever bought something ridiculous, tell me what it was. I promise Lobe won't judge.",
+   "words": 17
+  },
+  {
+   "id": "s7_04",
+   "section": 7,
+   "speaker": "lobe",
+   "text": "Much.",
+   "words": 1
+  }
+ ]
+}

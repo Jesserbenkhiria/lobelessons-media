@@ -1,0 +1,11 @@
+[
+ {
+  "sha": "bd3a2ad731c33e9b6f95964b758568685e53df0d",
+  "file": "episodes/ep01/audio/_source/bd3a2ad731c3.mp3",
+  "added": "2026-10-23T16:48:48",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "r9nHlgVSfLhv13gcuX6D",
+  "prompt": "[warm, conversational, a little mischievous] You own something right now that you have absolutely no use for.\n\n[long pause]\n\n[amused] Maybe it's a kitchen gadget that can turn a cucumber into seventeen different shapes. Maybe it's a shirt with the tag still on. Or maybe it's that mystery cable you've been keeping since 2017, just in case NASA calls.\n\n[long pause]\n\n[thoughtful] And here's the strange part: when you bought it, it seemed like a fantastic idea.\n\n[long pause]\n\n[curious] So how can your brain be completely convinced you NEED something on Tuesday... and completely forget it exists by Friday?\n\n[long pause]\n\n[dry, warm] Today we're investigating one of humanity's most expensive hobbies: buying nonsense.\n"
+ }
+]

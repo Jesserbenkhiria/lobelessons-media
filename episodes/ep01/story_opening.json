@@ -1,0 +1,468 @@
+{
+ "title": "Ep01 opening: proof of style",
+ "components": [
+  "pipeline/essay/fonts.js",
+  "pipeline/essay/components_essay.js"
+ ],
+ "audio_dir": "audio",
+ "gap": 0.3,
+ "lead": 0.0,
+ "tail": 0.35,
+ "captions": {
+  "long": ""
+ },
+ "lines": [
+  {
+   "id": "s1_01",
+   "speaker": "lobe",
+   "text": "You own something right now that you have absolutely no use for."
+  },
+  {
+   "id": "s1_02",
+   "speaker": "lobe",
+   "text": "Maybe it's a kitchen gadget that can turn a cucumber into seventeen different shapes. Maybe it's a shirt with the tag still on. Or maybe it's that mystery cable you've been keeping since 2017, just in case NASA calls.",
+   "say": "Maybe it's a kitchen gadget that can turn a cucumber into seventeen different shapes. Maybe it's a shirt with the tag still on. Or maybe it's that mystery cable you've been keeping since twenty seventeen, just in case NASA calls."
+  },
+  {
+   "id": "s1_03",
+   "speaker": "lobe",
+   "text": "And here's the strange part: when you bought it, it seemed like a fantastic idea."
+  },
+  {
+   "id": "s1_04",
+   "speaker": "lobe",
+   "text": "So how can your brain be completely convinced you NEED something on Tuesday... and completely forget it exists by Friday?"
+  },
+  {
+   "id": "s1_05",
+   "speaker": "lobe",
+   "text": "Today we're investigating one of humanity's most expensive hobbies: buying nonsense."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "drawer",
+   "lines": [
+    "s1_01"
+   ],
+   "lead": 0.05,
+   "captions": false,
+   "env": {
+    "type": "plain",
+    "color": "#111"
+   },
+   "elements": [
+    {
+     "type": "photo",
+     "src": "episodes/ep01/assets/pexels_4219101.jpg",
+     "in": 0,
+     "fin": 0.01,
+     "kb": {
+      "from": [
+       1.0,
+       0.5,
+       0.5
+      ],
+      "to": [
+       1.12,
+       0.48,
+       0.55
+      ]
+     },
+     "pos": [
+      0.5,
+      0.5
+     ],
+     "grade": "warm"
+    },
+    {
+     "type": "vignette"
+    },
+    {
+     "type": "write",
+     "text": "EXHIBIT A",
+     "x": 330,
+     "y": 150,
+     "size": 84,
+     "color": "#fff",
+     "rot": -5,
+     "shadow": true,
+     "in": 0.05,
+     "dur": 0.4
+    },
+    {
+     "type": "marker",
+     "x": 1010,
+     "y": 560,
+     "rx": 210,
+     "ry": 150,
+     "in": 0.35,
+     "sfx": "pop",
+     "gain": 0.3
+    },
+    {
+     "type": "write",
+     "text": "USED: 0 TIMES",
+     "x": 1420,
+     "y": 330,
+     "size": 92,
+     "rot": -6,
+     "in": "s1_01:use",
+     "shadow": true
+    }
+   ]
+  },
+  {
+   "id": "three_things",
+   "lines": [
+    "s1_02"
+   ],
+   "captions": false,
+   "env": {
+    "type": "plain",
+    "color": "#111"
+   },
+   "elements": [
+    {
+     "type": "photo",
+     "src": "episodes/ep01/assets/pexels_7496818.jpg",
+     "in": 0,
+     "out": "s1_02:Maybe#2",
+     "fin": 0.01,
+     "fout": 0.01,
+     "kb": {
+      "from": [
+       1.1,
+       0.5,
+       0.45
+      ],
+      "to": [
+       1.3,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "type": "ticker",
+     "from": 1,
+     "to": 17,
+     "start": "s1_02:cucumber",
+     "end": "s1_02:shapes",
+     "x": 1500,
+     "y": 470,
+     "size": 230,
+     "label": "SHAPES",
+     "in": "s1_02:cucumber",
+     "out": "s1_02:Maybe#2",
+     "fin": 0.2,
+     "fout": 0.01,
+     "sfx": "dice",
+     "gain": 0.35
+    },
+    {
+     "type": "write",
+     "text": "(used once)",
+     "x": 1500,
+     "y": 720,
+     "size": 58,
+     "color": "#fff",
+     "rot": -4,
+     "shadow": true,
+     "in": "s1_02:shapes+0.4",
+     "out": "s1_02:Maybe#2",
+     "fout": 0.01
+    },
+    {
+     "type": "photo",
+     "src": "episodes/ep01/assets/pexels_11485130.jpg",
+     "in": "s1_02:Maybe#2",
+     "out": "s1_02:Or",
+     "fin": 0.01,
+     "fout": 0.01,
+     "kb": {
+      "from": [
+       1.15,
+       0.42,
+       0.5
+      ],
+      "to": [
+       1.32,
+       0.45,
+       0.5
+      ]
+     }
+    },
+    {
+     "type": "write",
+     "text": "BOUGHT: 2023\nWORN: NEVER",
+     "x": 880,
+     "y": 600,
+     "size": 92,
+     "color": "#2b2b2b",
+     "rot": -34,
+     "in": "s1_02:tag",
+     "out": "s1_02:Or",
+     "fout": 0.01,
+     "dur": 0.8
+    },
+    {
+     "type": "photo",
+     "src": "episodes/ep01/assets/pexels_8071732.jpg",
+     "in": "s1_02:Or",
+     "fin": 0.01,
+     "kb": {
+      "from": [
+       1.0,
+       0.5,
+       0.35
+      ],
+      "to": [
+       1.15,
+       0.5,
+       0.45
+      ]
+     },
+     "pos": [
+      0.5,
+      0.35
+     ],
+     "grade": "warm"
+    },
+    {
+     "type": "stamp",
+     "text": "KEPT SINCE 2017",
+     "x": 560,
+     "y": 230,
+     "size": 64,
+     "color": "#E0463A",
+     "in": "s1_02:since"
+    },
+    {
+     "type": "phone",
+     "caller": "NASA",
+     "sub": "“about that cable…”",
+     "x": 1430,
+     "y": 600,
+     "in": "s1_02:NASA",
+     "enter": "none",
+     "sfx": "ding",
+     "gain": 0.35
+    }
+   ]
+  },
+  {
+   "id": "lobe_idea",
+   "lines": [
+    "s1_03"
+   ],
+   "captions": false,
+   "env": {
+    "type": "plain",
+    "color": "#F6EFE4"
+   },
+   "actors": [
+    {
+     "id": "lobe",
+     "who": "rich",
+     "x": 640,
+     "y": 1090,
+     "scale": 2.15,
+     "face": "r",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "explain"
+      },
+      {
+       "at": "s1_03:fantastic",
+       "pose": "idea"
+      }
+     ]
+    }
+   ],
+   "elements": [
+    {
+     "type": "thought",
+     "icons": [
+      "🛒",
+      "✨",
+      "📦"
+     ],
+     "x": 1280,
+     "y": 300,
+     "size": 84,
+     "in": "s1_03:bought",
+     "tail": "l"
+    },
+    {
+     "type": "label",
+     "text": "✨ FANTASTIC IDEA ✨",
+     "x": 1330,
+     "y": 610,
+     "size": 54,
+     "bg": "gold",
+     "fg": "#111",
+     "in": "s1_03:fantastic"
+    }
+   ],
+   "shots": [
+    {
+     "at": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "s1_03:fantastic",
+     "zoom": 1.12,
+     "cx": 1000,
+     "cy": 520,
+     "ease": 0.8
+    }
+   ]
+  },
+  {
+   "id": "tue_fri",
+   "lines": [
+    "s1_04"
+   ],
+   "captions": false,
+   "env": {
+    "type": "plain",
+    "color": "#22252B"
+   },
+   "elements": [
+    {
+     "type": "card",
+     "kicker": "TUESDAY",
+     "title": "I <span style='color:#E0463A'>NEED</span> THIS.",
+     "x": 620,
+     "y": 520,
+     "w": 720,
+     "size": 104,
+     "rot": -3,
+     "in": 0.05,
+     "dim": "s1_04:Friday",
+     "sfx": "pop",
+     "gain": 0.4
+    },
+    {
+     "type": "card",
+     "kicker": "FRIDAY",
+     "kicker_color": "#888",
+     "title": "…what is this?",
+     "x": 1330,
+     "y": 560,
+     "w": 700,
+     "size": 88,
+     "rot": 3,
+     "accent": "#7d766a",
+     "in": "s1_04:Friday",
+     "enter": "slide-left",
+     "sfx": "whoosh",
+     "gain": 0.35
+    },
+    {
+     "type": "photo",
+     "src": "episodes/ep01/assets/pexels_7496818.jpg",
+     "x": 1145,
+     "y": 700,
+     "w": 370,
+     "h": 230,
+     "radius": 18,
+     "grade": "gray",
+     "in": "s1_04:Friday+0.35",
+     "kb": {
+      "from": [
+       1.2,
+       0.5,
+       0.5
+      ],
+      "to": [
+       1.2,
+       0.5,
+       0.5
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "case_file",
+   "lines": [
+    "s1_05"
+   ],
+   "captions": false,
+   "tail": 0.9,
+   "env": {
+    "type": "plain",
+    "color": "#F6EFE4"
+   },
+   "actors": [
+    {
+     "id": "lobe",
+     "who": "rich",
+     "x": 470,
+     "y": 1075,
+     "scale": 1.85,
+     "face": "r",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "think"
+      },
+      {
+       "at": "s1_05:nonsense",
+       "pose": "approve"
+      }
+     ]
+    }
+   ],
+   "elements": [
+    {
+     "type": "label",
+     "text": "LOBE LESSONS · EPISODE 01",
+     "x": 1240,
+     "y": 170,
+     "size": 34,
+     "bg": "dark",
+     "in": 0.1
+    },
+    {
+     "type": "card",
+     "kicker": "CASE FILE #01",
+     "title": "Humanity's most expensive hobby",
+     "body": "BUYING NONSENSE.",
+     "type_on": true,
+     "typeStart": "s1_05:buying",
+     "typeDur": 0.9,
+     "mono": true,
+     "bodySize": 64,
+     "bodyWeight": 900,
+     "size": 66,
+     "x": 1240,
+     "y": 520,
+     "w": 860,
+     "bg": "#fff",
+     "border": "4px solid #151515",
+     "in": "s1_05:investigating",
+     "sfx": "typing",
+     "sfxAt": "s1_05:buying",
+     "gain": 0.3
+    }
+   ],
+   "shots": [
+    {
+     "at": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "s1_05:nonsense",
+     "zoom": 1.06,
+     "cx": 1000,
+     "cy": 540,
+     "ease": 0.6
+    }
+   ]
+  }
+ ]
+}

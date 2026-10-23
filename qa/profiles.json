@@ -89,7 +89,7 @@
    1040
   ],
   "caption_max_lines": 2,
-  "loudness_lufs": null,
+  "loudness_lufs": -14,
   "loudness_tolerance": 2,
   "max_true_peak_dbtp": -1.0,
   "first_word_max": 2.0,
@@ -101,6 +101,6 @@
    1080
   ],
   "narration_optional": true,
-  "note": "silent 960x540 preview of a long-form story: layout checked in 1920x1080 design space, no loudness target"
+  "note": "960x540 preview of a long-form story: layout checked in 1920x1080 design space; loudness is skipped automatically when narration is only estimated"
  }
 }
