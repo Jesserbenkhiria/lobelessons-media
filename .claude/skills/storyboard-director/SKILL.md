@@ -19,16 +19,19 @@ Read first: `docs/channel.md` (characters, poses, colours, rules), `RUNBOOK.md` 
 7. **Safe areas:** keep text inside `qa/profiles.json` → `safe`; in Shorts keep it left of x=960 between y=1000 and 1720 (YouTube buttons). Huge numbers (≥250 px) need ≤ 6 characters.
 8. **Static on purpose** (a held reveal, a pause for effect) must be declared in the spec: `"qa": {"static": [[start_s, end_s]]}` so QA does not flag it.
 
-## Long-form (16:9) additions
-Until the 16:9 renderer exists, write the storyboard table only (no spec). Use these shot types so they map onto the planned components:
-`split_futures` (two lives side by side), `timeline_jump` (calendar/years flipping), `chart` (line or bar with counters), `scene` (environment + characters acting), `reveal` (both numbers land together), `title_card`. Keep subtitles in the lower band and text inside the 5% safe margin.
+## Long-form (16:9)
+Write `stories/<slug>/story.json` for `pipeline/long/render_long.js`; the format and every element are in `pipeline/long/README.md`.
+- Several `shots` per line: cut or ease the camera on words (`"b2:spends"`), not only at line starts.
+- Acting first, numbers second: each scene needs characters *doing* something different (pile, emitter, jar, plant, thought bubble), not just counters changing.
+- Numbers: `counter` with `fact` (+ `series`/`idx` to animate), `chart` with series ids; assumptions as a `note` chip (short wording), full wording in `captions.long`.
+- Check with `--stills` first, then `--preview` (960x540), and only then the 1920x1080 render.
 
 ## Output
 1. A storyboard table:
 ```
 | Shot | Line id | Shows | Layout / elements (anchor word) | Characters & pose | Camera | SFX | Facts |
 ```
-2. The spec: Shorts → `days/<name>.json` with `short.style: "stage"`, `clean: true`, scenes in line order; long-form → `stories/<slug>/storyboard.md` for now.
+2. The spec: Shorts → `days/<name>.json` with `short.style: "stage"`, `clean: true`, scenes in line order; long-form → `stories/<slug>/story.json` (+ the table in `stories/<slug>/storyboard.md`).
 3. A list of "needs" (missing poses, props, components) for the motion work.
 
 ## Quality bar

@@ -142,7 +142,9 @@ def audio_checks(video, P, rep):
         rep.add("audio.clipping", "pass", f"no clipping (sample peak {peak:.1f} dBFS)")
     e = run(["ffmpeg", "-hide_banner", "-nostats", "-i", video, "-vn", "-af", "ebur128=peak=true", "-f", "null", "-"]).stderr
     m = re.search(r"Integrated loudness:\s+I:\s+([-\d.]+) LUFS", e); tp = re.search(r"True peak:\s+Peak:\s+([-\d.]+) dBFS", e)
-    if m:
+    if P.get("loudness_lufs") is None:
+        rep.add("audio.loudness", "skip", "no loudness target for this profile (silent preview: music and SFX only)", "")
+    elif m:
         I = float(m.group(1)); ok = abs(I - P["loudness_lufs"]) <= P["loudness_tolerance"]
         rep.add("audio.loudness", "pass" if ok else "fail", f"integrated loudness {I:.1f} LUFS (target {P['loudness_lufs']})",
                 "" if ok else f"re-encode with `-af loudnorm=I={P['loudness_lufs']}:TP=-1.5:LRA=11`")
@@ -184,11 +186,17 @@ def narration_checks(tl, P, rep, dur):
 
 
 def layout_checks(build, P, rep, dur):
-    page = os.path.join(build, "short.html")
-    r = run(["node", os.path.join(Q, "layout_probe.js"), page, str(P["width"]), str(P["height"]), "0.25", f"{dur:.2f}"])
-    if r.returncode:
-        rep.add("layout.probe", "fail", f"layout probe failed: {r.stderr.strip()[-300:]}", "check the page loads (short.html)"); return []
-    frames = json.loads(r.stdout); x0, y0, x1, y1 = P["safe"]; W, H = P["width"], P["height"]
+    W, H = P.get("design", [P["width"], P["height"]])
+    lp = os.path.join(build, "layout_pages.json")
+    pages = json.load(open(lp)) if os.path.exists(lp) else [{"page": os.path.join(build, "short.html"), "t0": 0, "t1": dur}]
+    frames = []
+    for pg in pages:   # long-form: one page per scene, probed in scene time and shifted to story time
+        r = run(["node", os.path.join(Q, "layout_probe.js"), pg["page"], str(W), str(H), "0.25", f"{pg['t1'] - pg['t0'] - 0.01:.2f}"])
+        if r.returncode:
+            rep.add("layout.probe", "fail", f"layout probe failed on {pg['page']}: {r.stderr.strip()[-300:]}", "check the page loads"); return []
+        for f in json.loads(r.stdout):
+            f["t"] = round(f["t"] + pg["t0"], 2); frames.append(f)
+    x0, y0, x1, y1 = P["safe"]
     found, bad_t = {}, []
     def flag(key, status, msg, fix, t):
         if key not in found:
@@ -256,16 +264,22 @@ def main():
     P = json.load(open(os.path.join(Q, "profiles.json")))[a.profile]
     out = a.out or os.path.dirname(os.path.abspath(a.video)); os.makedirs(out, exist_ok=True)
     rep = Report(); spec = json.load(open(a.spec)) if a.spec else None
+    if spec and "scenes" in spec and "short" not in spec:   # long-form story: facts may live in a shared file
+        spec = {"story": spec, "facts": finance.load_facts(spec, R), "captions": spec.get("captions", {}), "qa": spec.get("qa", {})}
     tl = json.load(open(os.path.join(a.build, "timeline.json"))) if a.build and os.path.exists(os.path.join(a.build, "timeline.json")) else None
     static = [tuple(map(float, s.split("-"))) for s in a.static.split(",") if s]
     if spec: static += [tuple(x) for x in spec.get("qa", {}).get("static", [])]
     info = probe(a.video, P, rep); marks = []
     if info:
         marks += black_and_freeze(a.video, P, rep, tl, static, info["duration"])
+        if tl and tl.get("estimated_lines") and len(tl["estimated_lines"]) == len(tl.get("lines", [])):
+            P = dict(P, loudness_lufs=None)   # no narration recorded yet: music + SFX only, no loudness target
+            rep.add("narration.recorded", "warn", "narration timing is ESTIMATED (no voice recorded yet)",
+                    "record the lines (elevenlabs-voice-director) before any final export")
         if info["audio"]: audio_checks(a.video, P, rep)
         if tl: marks += narration_checks(tl, P, rep, info["duration"])
         else: rep.add("narration", "skip", "no timeline.json", "pass --build OUTDIR to check narration timing")
-        if a.build and os.path.exists(os.path.join(a.build, "short.html")):
+        if a.build and (os.path.exists(os.path.join(a.build, "short.html")) or os.path.exists(os.path.join(a.build, "layout_pages.json"))):
             marks += layout_checks(a.build, P, rep, info["duration"])
         else:
             rep.add("layout", "skip", "no rendered page to measure", "pass --build OUTDIR (with short.html) to check text and subtitle bounds")

@@ -129,10 +129,54 @@ def _norm(s):
     return re.sub(r"[^a-z0-9%$.]+", " ", s.lower().replace("−", "-")).strip()
 
 
+def compute(facts):
+    """All fact values and series of a facts block: {"values": {id: number}, "series": {id: [numbers]}}."""
+    vals, series = {}, {}
+    for fid, f in facts.get("values", {}).items():
+        vals[fid] = evaluate(f["formula"], vals)
+    for sid, f in facts.get("series", {}).items():
+        r = evaluate(f["formula"], vals)
+        col = f.get("col")
+        series[sid] = [float(x[col]) if col is not None else float(x) for x in r]
+    return {"values": vals, "series": series}
+
+
+def load_facts(spec, base="."):
+    """A spec may embed `facts` or point to a shared file with `facts_file` (repo-relative)."""
+    import json, os
+    if "facts" in spec: return spec["facts"]
+    if "facts_file" in spec: return json.load(open(os.path.join(base, spec["facts_file"])))["facts"]
+    return None
+
+
+def fact_refs(o, where="", out=None):
+    out = [] if out is None else out
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k in ("fact", "series") and isinstance(v, str): out.append((k, v, where))
+            elif k == "series" and isinstance(v, list): out += [("series", x, where) for x in v if isinstance(x, str)]
+            else: fact_refs(v, f"{where}.{k}", out)
+    elif isinstance(o, list):
+        for i, v in enumerate(o): fact_refs(v, f"{where}[{i}]", out)
+    return out
+
+
 def check_facts(spec):
     """Returns a list of check dicts: {id, status: pass|fail|skip, message, fix}."""
     F = spec.get("facts")
     texts = on_screen_texts(spec)
+    refs = fact_refs(spec.get("story") or spec.get("short") or {})
+    if F:  # "note" elements show the short wording of assumptions by id
+        def notes(o):
+            if isinstance(o, dict):
+                if o.get("type") == "note":
+                    for aid in o.get("assumptions", []):
+                        a = next((x for x in F.get("assumptions", []) if x.get("id") == aid), None)
+                        if a: texts.append((a.get("screen") or a["text"], "note"))
+                for v in o.values(): notes(v)
+            elif isinstance(o, list):
+                for v in o: notes(v)
+        notes(spec.get("story") or spec.get("short") or {})
     shown = [(m.group(0), where) for t, where in texts for m in MONEY.finditer(t)]
     if not F:
         if shown:
@@ -176,28 +220,49 @@ def check_facts(spec):
             res.append({"id": "finance.unverified_amount", "status": "fail",
                         "message": f"{s} at {where} is not produced by any fact or listed input",
                         "fix": "add it to facts.values with a formula, or to facts.inputs if it is a given (e.g. a price)"})
+    for kind, ref, where in refs:
+        pool = F.get("values", {}) if kind == "fact" else F.get("series", {})
+        if ref not in pool:
+            res.append({"id": "finance.reference", "status": "fail", "message": f"{where} uses {kind} '{ref}' which is not defined",
+                        "fix": f"add '{ref}' to facts.{'values' if kind == 'fact' else 'series'} or fix the id"})
+    if refs and not any(r["id"] == "finance.reference" for r in res):
+        res.append({"id": "finance.reference", "status": "pass", "message": f"{len(refs)} on-screen numbers come from facts", "fix": ""})
     if F.get("values") and not F.get("assumptions"):
         res.append({"id": "finance.assumptions", "status": "fail", "message": "facts have no assumptions listed",
                     "fix": "list the rate, compounding, timing and 'hypothetical / not guaranteed' in facts.assumptions"})
     screen = _norm(" ".join(t for t, _ in texts)); desc = _norm(description_text(spec))
     for a in F.get("assumptions", []):
-        txt = _norm(a["text"]); hay = screen if a.get("on_screen") else screen + " " + desc
+        # "screen" is the short on-screen wording; "text" the full sentence for the description
+        txt = _norm(a.get("screen") or a["text"]) if a.get("on_screen") else _norm(a["text"])
+        hay = screen if a.get("on_screen") else screen + " " + desc
+        if not a.get("on_screen") and txt not in hay and a.get("screen") and _norm(a["screen"]) in screen:
+            txt = _norm(a["screen"])
         if txt not in hay:
             res.append({"id": f"finance.assumption.{a.get('id', txt[:20])}", "status": "fail",
-                        "message": f"assumption '{a['text']}' is not visible {'on screen' if a.get('on_screen') else 'on screen or in the description'}",
+                        "message": f"assumption '{a.get('screen') if a.get('on_screen') and a.get('screen') else a['text']}' is not visible {'on screen' if a.get('on_screen') else 'on screen or in the description'}",
                         "fix": "add it as on-screen fine print (`small` element) or to the description, word for word"})
+        elif a.get("on_screen") and a.get("screen") and _norm(a["text"]) not in desc:
+            res.append({"id": f"finance.assumption.{a.get('id', txt[:20])}", "status": "fail",
+                        "message": f"'{a['screen']}' is on screen but the full wording '{a['text']}' is not in the description",
+                        "fix": "add the full sentence to the description (captions.long / captions.short)"})
         else:
             res.append({"id": f"finance.assumption.{a.get('id', txt[:20])}", "status": "pass",
-                        "message": f"assumption shown: {a['text']}", "fix": ""})
+                        "message": f"assumption shown: {a.get('screen') or a['text']}", "fix": ""})
     return res
 
 
 if __name__ == "__main__":
     # python3 pipeline/finance.py SPEC.json  -> verifies the spec's facts; exit 1 on any failure
     import json, sys
+    if len(sys.argv) == 3 and sys.argv[1] == "values":   # machine output for renderers
+        sp = json.load(open(sys.argv[2])); F = load_facts(sp)
+        print(json.dumps({**compute(F), "assumptions": F.get("assumptions", [])} if F else {"values": {}, "series": {}, "assumptions": []}))
+        sys.exit(0)
     if len(sys.argv) != 2:
-        sys.exit("usage: python3 pipeline/finance.py SPEC.json")
+        sys.exit("usage: python3 pipeline/finance.py SPEC.json | values SPEC.json")
     spec = json.load(open(sys.argv[1]))
+    if "scenes" in spec and "short" not in spec:   # long-form story spec
+        spec = {"story": spec, "facts": load_facts(spec), "captions": spec.get("captions", {})}
     facts_only = "facts" in spec and not ("short" in spec or "story" in spec)
     if facts_only:
         spec = {"facts": spec["facts"]}

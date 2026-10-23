@@ -1,0 +1,769 @@
+{
+ "title": "Same $300. Two Different Futures (visual test: scenes A, B, C)",
+ "note": "Technical milestone. No ElevenLabs audio yet: line timing is estimated (timing.py) and the preview is silent apart from music and SFX.",
+ "facts_file": "stories/same300/facts.json",
+ "gap": 0.35,
+ "captions": {
+  "long": "Hypothetical 7% nominal annual return. Compounded monthly, deposits at the end of each month. Not guaranteed. Not financial advice. No fees, taxes or inflation included."
+ },
+ "lines": [
+  {
+   "id": "a1",
+   "speaker": "broke",
+   "text": "Three hundred bucks a month. Finally, I can upgrade everything!"
+  },
+  {
+   "id": "a2",
+   "speaker": "lobe",
+   "text": "Or you could let that money grow."
+  },
+  {
+   "id": "a3",
+   "speaker": "broke",
+   "text": "Grow? Money doesn't grow on trees."
+  },
+  {
+   "id": "a4",
+   "speaker": "lobe",
+   "text": "No. It grows on time."
+  },
+  {
+   "id": "b1",
+   "speaker": "narrator",
+   "text": "Every month, the same three hundred dollars."
+  },
+  {
+   "id": "b2",
+   "speaker": "narrator",
+   "text": "Left spends it the day it arrives."
+  },
+  {
+   "id": "b3",
+   "speaker": "narrator",
+   "text": "Right invests it, and leaves it alone."
+  },
+  {
+   "id": "b4",
+   "speaker": "narrator",
+   "text": "After one year, Right's pile is already a little bigger."
+  },
+  {
+   "id": "c1",
+   "speaker": "narrator",
+   "text": "Now let five years go by."
+  },
+  {
+   "id": "c2",
+   "speaker": "narrator",
+   "text": "Left keeps spending. The stuff piles up, then wears out."
+  },
+  {
+   "id": "c3",
+   "speaker": "narrator",
+   "text": "Right keeps investing, and the money starts growing by itself."
+  },
+  {
+   "id": "c4",
+   "speaker": "narrator",
+   "text": "Five years later: eighteen thousand dollars spent."
+  },
+  {
+   "id": "c5",
+   "speaker": "narrator",
+   "text": "Versus twenty-one thousand, four hundred and seventy-eight invested."
+  },
+  {
+   "id": "c6",
+   "speaker": "narrator",
+   "text": "Same three hundred a month. Two very different futures."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "lines": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+   ],
+   "lead": 0.5,
+   "tail": 1.0,
+   "env": {
+    "type": "room",
+    "day": [
+     0.4,
+     0.45
+    ]
+   },
+   "actors": [
+    {
+     "id": "broke",
+     "who": "broke",
+     "x": 640,
+     "y": 960,
+     "scale": 1.55,
+     "face": "r",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "idea"
+      },
+      {
+       "at": "a1:upgrade",
+       "pose": "approve"
+      },
+      {
+       "at": "a2",
+       "pose": "think"
+      },
+      {
+       "at": "a3",
+       "pose": "explain"
+      },
+      {
+       "at": "a4:time",
+       "pose": "shock"
+      }
+     ]
+    },
+    {
+     "id": "lobe",
+     "who": "rich",
+     "x": 2100,
+     "y": 960,
+     "scale": 1.55,
+     "face": "l",
+     "cues": [
+      {
+       "at": 0.2,
+       "x": 1300,
+       "move": 1.4
+      },
+      {
+       "at": 0,
+       "pose": "idea"
+      },
+      {
+       "at": "a2",
+       "pose": "explain"
+      },
+      {
+       "at": "a3",
+       "pose": "think"
+      },
+      {
+       "at": "a4",
+       "pose": "idea"
+      },
+      {
+       "at": "a4:time",
+       "pose": "approve"
+      }
+     ]
+    }
+   ],
+   "elements": [
+    {
+     "type": "label",
+     "text": "PAYDAY · +$300",
+     "x": 960,
+     "y": 80,
+     "bg": "gold",
+     "in": 0.2,
+     "out": "a2"
+    },
+    {
+     "type": "thought",
+     "icons": [
+      "🛍️",
+      "📱",
+      "🎮",
+      "👟"
+     ],
+     "x": 520,
+     "y": 430,
+     "in": "a1:upgrade",
+     "out": "a2+0.3",
+     "size": 56
+    },
+    {
+     "type": "plant",
+     "x": 1720,
+     "y": 820,
+     "size": 0.9,
+     "grow": {
+      "start": "a4:time",
+      "end": "end",
+      "from": 0.12,
+      "to": 0.55
+     },
+     "in": 0
+    },
+    {
+     "type": "prop",
+     "kind": "coin",
+     "x": 1250,
+     "y": 420,
+     "size": 0.9,
+     "bob": true,
+     "in": "a2:grow",
+     "out": "a3+0.2"
+    }
+   ],
+   "shots": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 960,
+     "cy": 540
+    },
+    {
+     "at": "a1:upgrade",
+     "zoom": 1.55,
+     "cx": 660,
+     "cy": 560,
+     "ease": 0.6
+    },
+    {
+     "at": "a2",
+     "zoom": 1.1,
+     "cx": 980,
+     "cy": 560,
+     "cut": true
+    },
+    {
+     "at": "a2:grow",
+     "zoom": 1.55,
+     "cx": 1300,
+     "cy": 560,
+     "ease": 0.7
+    },
+    {
+     "at": "a3",
+     "zoom": 1.6,
+     "cx": 660,
+     "cy": 620,
+     "cut": true
+    },
+    {
+     "at": "a3:trees",
+     "zoom": 1.7,
+     "cx": 660,
+     "cy": 620,
+     "cut": true,
+     "shake": true
+    },
+    {
+     "at": "a4",
+     "zoom": 1.15,
+     "cx": 1060,
+     "cy": 580,
+     "ease": 0.8
+    },
+    {
+     "at": "a4:time",
+     "zoom": 1.45,
+     "cx": 1500,
+     "cy": 620,
+     "ease": 0.9
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "lines": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "lead": 0.4,
+   "tail": 1.4,
+   "env": {
+    "type": "split"
+   },
+   "actors": [
+    {
+     "id": "broke",
+     "who": "broke",
+     "x": 500,
+     "y": 900,
+     "scale": 1.05,
+     "face": "r",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "idea"
+      },
+      {
+       "at": "b2",
+       "pose": "approve"
+      },
+      {
+       "at": "b4",
+       "pose": "explain"
+      },
+      {
+       "at": "b4:bigger",
+       "pose": "think"
+      }
+     ]
+    },
+    {
+     "id": "lobe",
+     "who": "rich",
+     "x": 1420,
+     "y": 900,
+     "scale": 1.05,
+     "face": "l",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "approve"
+      },
+      {
+       "at": "b3",
+       "pose": "explain"
+      },
+      {
+       "at": "b3:alone",
+       "pose": "calm"
+      },
+      {
+       "at": "b4:bigger",
+       "pose": "approve"
+      }
+     ]
+    }
+   ],
+   "elements": [
+    {
+     "type": "label",
+     "text": "SAME $300 EVERY MONTH",
+     "x": 960,
+     "y": 90,
+     "bg": "dark",
+     "in": 0.1
+    },
+    {
+     "type": "label",
+     "text": "SPENDS IT",
+     "x": 480,
+     "y": 160,
+     "bg": "red",
+     "in": "b2"
+    },
+    {
+     "type": "label",
+     "text": "INVESTS IT",
+     "x": 1440,
+     "y": 160,
+     "bg": "green",
+     "in": "b3"
+    },
+    {
+     "type": "calendar",
+     "x": 960,
+     "y": 330,
+     "years": 1,
+     "start": "b2",
+     "end": "b4:bigger",
+     "w": 200
+    },
+    {
+     "type": "counter",
+     "title": "SPENT SO FAR",
+     "fact": "year1_spent",
+     "series": "deposit_curve",
+     "idx": [
+      0,
+      12
+     ],
+     "x": 480,
+     "y": 330,
+     "size": 96,
+     "color": "red",
+     "in": "b2",
+     "start": "b2",
+     "end": "b4:bigger"
+    },
+    {
+     "type": "counter",
+     "title": "WORTH NOW",
+     "fact": "year1",
+     "series": "invested_curve",
+     "idx": [
+      0,
+      12
+     ],
+     "x": 1440,
+     "y": 330,
+     "size": 96,
+     "color": "green",
+     "in": "b3",
+     "start": "b2",
+     "end": "b4:bigger"
+    },
+    {
+     "type": "note",
+     "assumptions": [
+      "rate",
+      "compounding"
+     ],
+     "x": 1440,
+     "y": 450,
+     "size": 28,
+     "in": "b3"
+    },
+    {
+     "type": "prop",
+     "kind": "shop",
+     "x": 170,
+     "y": 700,
+     "size": 1.1,
+     "in": 0
+    },
+    {
+     "type": "emitter",
+     "kind": "coin",
+     "from": [
+      520,
+      640
+     ],
+     "to": [
+      190,
+      660
+     ],
+     "start": "b2",
+     "end": "end",
+     "every": 0.42,
+     "flight": 0.75,
+     "arc": -160
+    },
+    {
+     "type": "pile",
+     "kinds": [
+      "box",
+      "bag"
+     ],
+     "x": 760,
+     "y": 900,
+     "size": 1.0,
+     "max": 8,
+     "start": "b2+0.3",
+     "end": "b4:bigger"
+    },
+    {
+     "type": "jar",
+     "x": 1160,
+     "y": 830,
+     "size": 0.9,
+     "level": {
+      "series": "invested_curve",
+      "idx": [
+       0,
+       12
+      ],
+      "start": "b2",
+      "end": "b4:bigger",
+      "scale": 4200
+     },
+     "glow": "b4:bigger"
+    },
+    {
+     "type": "laptop",
+     "x": 1730,
+     "y": 820,
+     "size": 1.0,
+     "chart": {
+      "start": "b3",
+      "end": "end",
+      "from": 0.2,
+      "to": 1
+     }
+    },
+    {
+     "type": "emitter",
+     "kind": "coin",
+     "from": [
+      1400,
+      640
+     ],
+     "to": [
+      1160,
+      760
+     ],
+     "start": "b3",
+     "end": "end",
+     "every": 0.55,
+     "flight": 0.7,
+     "arc": -200
+    }
+   ],
+   "shots": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 960,
+     "cy": 540
+    },
+    {
+     "at": "b2:spends",
+     "zoom": 1.22,
+     "cx": 600,
+     "cy": 600,
+     "ease": 0.8
+    },
+    {
+     "at": "b3",
+     "zoom": 1.22,
+     "cx": 1330,
+     "cy": 600,
+     "cut": true
+    },
+    {
+     "at": "b4",
+     "zoom": 1.0,
+     "cx": 960,
+     "cy": 540,
+     "ease": 0.9
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "lines": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6"
+   ],
+   "lead": 0.3,
+   "tail": 1.6,
+   "env": {
+    "type": "sky",
+    "days": 9
+   },
+   "actors": [
+    {
+     "id": "broke",
+     "who": "broke",
+     "x": 250,
+     "y": 960,
+     "scale": 1.0,
+     "face": "r",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "approve"
+      },
+      {
+       "at": "c2:wears",
+       "pose": "shock"
+      },
+      {
+       "at": "c4",
+       "pose": "think"
+      },
+      {
+       "at": "c5",
+       "pose": "shock"
+      },
+      {
+       "at": "c6",
+       "pose": "think"
+      }
+     ]
+    },
+    {
+     "id": "lobe",
+     "who": "rich",
+     "x": 1680,
+     "y": 960,
+     "scale": 1.0,
+     "face": "l",
+     "cues": [
+      {
+       "at": 0,
+       "pose": "calm"
+      },
+      {
+       "at": "c3:growing",
+       "pose": "approve"
+      },
+      {
+       "at": "c5",
+       "pose": "idea"
+      },
+      {
+       "at": "c6",
+       "pose": "calm"
+      }
+     ]
+    }
+   ],
+   "elements": [
+    {
+     "type": "timeline",
+     "x": 360,
+     "y": 80,
+     "w": 1200,
+     "years": 5,
+     "mode": "stepped",
+     "start": "c1:go",
+     "end": "c4",
+     "color": "gold"
+    },
+    {
+     "type": "chart",
+     "x": 560,
+     "y": 270,
+     "w": 800,
+     "h": 360,
+     "start": "c1:go",
+     "end": "c4",
+     "out": "c4+0.4",
+     "xlabels": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5 yrs"
+     ],
+     "series": [
+      {
+       "id": "deposit_curve",
+       "color": "#B9A98A",
+       "label": "Put in",
+       "tagDy": 70
+      },
+      {
+       "id": "invested_curve",
+       "color": "green",
+       "label": "Invested value",
+       "fill": "#2F9E6B"
+      }
+     ]
+    },
+    {
+     "type": "pile",
+     "kinds": [
+      "box",
+      "bag"
+     ],
+     "x": 470,
+     "y": 960,
+     "size": 0.8,
+     "max": 9,
+     "start": "c2",
+     "end": "c3",
+     "fade": [
+      "c2:wears",
+      "c4"
+     ]
+    },
+    {
+     "type": "plant",
+     "x": 1490,
+     "y": 990,
+     "size": 1.05,
+     "grow": {
+      "start": "c1:go",
+      "end": "c5",
+      "from": 0.05,
+      "to": 1
+     }
+    },
+    {
+     "type": "counter",
+     "title": "SPENT",
+     "fact": "spent",
+     "x": 600,
+     "y": 420,
+     "size": 110,
+     "color": "red",
+     "in": "c4",
+     "start": "c4",
+     "end": "c4:spent",
+     "card": true
+    },
+    {
+     "type": "counter",
+     "title": "INVESTED",
+     "fact": "invested",
+     "series": "invested_curve",
+     "x": 1320,
+     "y": 420,
+     "size": 110,
+     "color": "green",
+     "in": "c5",
+     "start": "c5",
+     "end": "c5:invested",
+     "card": true
+    },
+    {
+     "type": "stamp",
+     "text": "+$3,478 OF GROWTH",
+     "x": 1320,
+     "y": 610,
+     "size": 52,
+     "color": "green",
+     "in": "c5:invested+0.3"
+    },
+    {
+     "type": "note",
+     "assumptions": [
+      "rate",
+      "compounding",
+      "guarantee"
+     ],
+     "x": 960,
+     "y": 800,
+     "size": 28,
+     "in": "c5"
+    }
+   ],
+   "shots": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 960,
+     "cy": 540
+    },
+    {
+     "at": "c2",
+     "zoom": 1.25,
+     "cx": 520,
+     "cy": 640,
+     "ease": 0.9
+    },
+    {
+     "at": "c3",
+     "zoom": 1.25,
+     "cx": 1440,
+     "cy": 640,
+     "ease": 0.9
+    },
+    {
+     "at": "c4",
+     "zoom": 1.0,
+     "cx": 960,
+     "cy": 540,
+     "cut": true
+    },
+    {
+     "at": "c6",
+     "zoom": 1.06,
+     "cx": 960,
+     "cy": 560,
+     "ease": 1.2,
+     "drift": 0.01
+    }
+   ]
+  }
+ ]
+}
