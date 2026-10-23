@@ -5,7 +5,7 @@
  "lesson": "Money Game: monthly payments hide the total",
  "voice": 6,
  "speed": 1.05,
- "gap": 0.16,
+ "gap": 0.1,
  "audio_dir": "audio/pilot_game",
  "short": {
   "style": "stage",
@@ -26,7 +26,7 @@
    },
    {
     "id": "count",
-    "text": "Pick one. Three, two, one."
+    "text": "Three, two, one."
    },
    {
     "id": "reveal",
@@ -133,7 +133,7 @@
       "size": 100,
       "html": "Pick one…",
       "center": true,
-      "at": "+0.05"
+      "at": "+0.0"
      },
      {
       "type": "big",
@@ -144,17 +144,17 @@
       "steps": [
        {
         "v": 3,
-        "at": "+0.87",
+        "at": "Three",
         "color": "dark"
        },
        {
         "v": 2,
-        "at": "+1.89",
+        "at": "two",
         "color": "dark"
        },
        {
         "v": 1,
-        "at": "+2.82",
+        "at": "one",
         "color": "red"
        }
       ]
@@ -175,23 +175,17 @@
     "els": [
      {
       "type": "headline",
-      "size": 96,
-      "html": "B costs:",
+      "size": 92,
+      "html": "B = $45 × 24 =",
       "center": true,
-      "at": "+0.05"
+      "at": "+0.0"
      },
      {
       "type": "big",
       "sign": false,
-      "size": 230,
+      "size": 290,
       "align": "center",
       "steps": [
-       {
-        "v": 45,
-        "at": "+0.05",
-        "color": "green",
-        "label": "$45 × 24 MONTHS"
-       },
        {
         "v": 1080,
         "at": "thousand",
@@ -259,11 +253,6 @@
       "color": "dark",
       "center": true,
       "at": "+0.3"
-     },
-     {
-      "type": "small",
-      "text": "Example prices. Some plans charge 0% interest, always check the total.",
-      "at": "+0.3"
      }
     ]
    }
@@ -275,7 +264,7 @@
  },
  "captions": {
   "youtube_title": "Which Phone Costs More? (Most People Get This Wrong) 📱",
-  "short": "A: $1,000 today. B: $45 a month for 24 months. Which costs more? 📱\n\nB adds up to $1,080: $80 extra just for paying slowly. Monthly payments hide the total (example prices).\n\n💬 Did you pick right? Comment A or B.\n\n#moneygame #money #personalfinance #moneytips #budgeting #lobelessons",
+  "short": "A: $1,000 today. B: $45 a month for 24 months. Which costs more? 📱\n\nB adds up to $1,080: $80 extra just for paying slowly. Example prices; some plans are 0% interest, so always check the total.\n\n💬 Did you pick right? Comment A or B.\n\n#moneygame #money #personalfinance #moneytips #budgeting #lobelessons",
   "carousel": "",
   "youtube_tags": [
    "money game",
