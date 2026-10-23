@@ -1,0 +1,279 @@
+{
+ "day": 0,
+ "date": "2026-10-25",
+ "book": "-",
+ "lesson": "Money Game: monthly payments hide the total",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.1,
+ "audio_dir": "../audio/pilot_game",
+ "short": {
+  "style": "stage",
+  "clean": true,
+  "label": "MONEY GAME",
+  "cover": {
+   "html": "WHICH COSTS<br><y>MORE?</y>",
+   "pose": "think"
+  },
+  "lines": [
+   {
+    "id": "q",
+    "text": "Which phone costs more?"
+   },
+   {
+    "id": "opts",
+    "text": "A thousand dollars today, or forty-five a month for two years?"
+   },
+   {
+    "id": "count",
+    "text": "Three, two, one."
+   },
+   {
+    "id": "reveal",
+    "text": "B costs one thousand and eighty dollars."
+   },
+   {
+    "id": "extra",
+    "text": "That's eighty bucks extra, just for paying slowly."
+   },
+   {
+    "id": "cta",
+    "text": "Did you pick right? Comment A or B."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "q",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "📱",
+     "💸",
+     "🤔"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "WHICH COSTS<br><y>MORE?</y>",
+      "center": true,
+      "at": "+0.0"
+     },
+     {
+      "type": "versus",
+      "a": {
+       "tag": "A",
+       "big": "$1,000",
+       "sub": "pay once",
+       "color": "gold"
+      },
+      "b": {
+       "tag": "B",
+       "big": "$45<span style='font-size:.5em'>/mo</span>",
+       "sub": "for 24 months",
+       "color": "green"
+      },
+      "at": "+0.0"
+     }
+    ]
+   },
+   {
+    "line": "opts",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "📱",
+     "💳",
+     "📅"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Which one<br>costs more?",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "versus",
+      "a": {
+       "tag": "A",
+       "big": "$1,000",
+       "sub": "today",
+       "color": "gold"
+      },
+      "b": {
+       "tag": "B",
+       "big": "$45<span style='font-size:.5em'>/mo</span>",
+       "sub": "× 24 months",
+       "color": "green"
+      },
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "count",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "⏱️",
+     "🤔",
+     "❓"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Pick one…",
+      "center": true,
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "prefix": "",
+      "size": 300,
+      "align": "center",
+      "steps": [
+       {
+        "v": 3,
+        "at": "Three",
+        "color": "dark"
+       },
+       {
+        "v": 2,
+        "at": "two",
+        "color": "dark"
+       },
+       {
+        "v": 1,
+        "at": "one",
+        "color": "red"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "reveal",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock"
+    },
+    "props": [
+     "😱",
+     "💸",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "B = $45 × 24 =",
+      "center": true,
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "size": 290,
+      "align": "center",
+      "steps": [
+       {
+        "v": 1080,
+        "at": "thousand",
+        "color": "red",
+        "label": "TOTAL"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "extra",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "🐌",
+     "💳",
+     "🧾"
+    ],
+    "els": [
+     {
+      "type": "stamp",
+      "text": "+$80 FOR WAITING",
+      "color": "red",
+      "size": 80,
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "sub",
+      "center": true,
+      "html": "Monthly payments <b>hide the total</b>.",
+      "at": "+0.4"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "💬",
+     "🅰️",
+     "🅱️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Did you<br>pick right?",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Comment A or B",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY GAME",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "Which Phone Costs More? (Most People Get This Wrong) 📱",
+  "short": "A: $1,000 today. B: $45 a month for 24 months. Which costs more? 📱\n\nB adds up to $1,080: $80 extra just for paying slowly. Example prices; some plans are 0% interest, so always check the total.\n\n💬 Did you pick right? Comment A or B.\n\n#moneygame #money #personalfinance #moneytips #budgeting #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "money game",
+   "which costs more",
+   "monthly payments",
+   "personal finance",
+   "money tips",
+   "budgeting"
+  ]
+ },
+ "_note": "Frozen copy for qa/regress.py. Do not edit: it separates renderer regressions from episode edits."
+}

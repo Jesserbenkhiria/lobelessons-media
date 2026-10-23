@@ -19,7 +19,8 @@ from PIL import Image
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.environ.get("QA_REF", os.path.join(R, "qa", "reference"))
 WORK = "/home/claude/lobe_out/_regress"
-SPECS = ["days/pilot_game.json", "days/test_raise.json", "days/day07.json"]
+# frozen copies of approved episodes: editing an episode in days/ never looks like a renderer regression
+SPECS = ["qa/fixtures/pilot_game.json", "qa/fixtures/test_raise.json", "qa/fixtures/day07.json"]
 SHARED = ["pipeline/render.js", "pipeline/lobe_rig.js", "pipeline/voice.py", "pipeline/mix.py",
           "pipeline/sfx.py", "pipeline/build.sh", "pipeline/publish.sh", "pipeline/setup.sh"]
 SIZE = (540, 960)          # compare at half resolution (enough to see any layout/pose change)

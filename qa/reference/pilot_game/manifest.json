@@ -1,5 +1,5 @@
 {
- "spec": "days/pilot_game.json",
+ "spec": "qa/fixtures/pilot_game.json",
  "times": [
   0.1,
   0.9,

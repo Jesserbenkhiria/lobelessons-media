@@ -1,5 +1,5 @@
 {
- "spec": "days/day07.json",
+ "spec": "qa/fixtures/day07.json",
  "times": [
   0.1,
   1.2,
