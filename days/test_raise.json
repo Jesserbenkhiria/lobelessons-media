@@ -1,0 +1,278 @@
+{
+ "day": 0,
+ "date": "2026-10-25",
+ "book": "Rich Dad Poor Dad",
+ "lesson": "The raise trap (lifestyle creep)",
+ "voice": 6,
+ "speed": 1.08,
+ "audio_dir": "audio/test_raise",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "clean": true,
+  "label": "MONEY · SKETCH",
+  "cover": {
+   "html": "GOT A RAISE.<br><r>LOST MONEY.</r>",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "raise",
+    "text": "I got five hundred more a month!",
+    "voice": 5
+   },
+   {
+    "id": "spend",
+    "text": "New car! More takeout! Let's go!",
+    "voice": 5
+   },
+   {
+    "id": "bills",
+    "text": "You just added five-fifty in bills."
+   },
+   {
+    "id": "cost",
+    "text": "So your raise costs you fifty bucks a month."
+   },
+   {
+    "id": "look",
+    "text": "But I look successful.",
+    "voice": 5
+   },
+   {
+    "id": "punch",
+    "text": "Successfully broke."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "raise",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "🎉",
+     "💵",
+     "🎊"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "GOT A RAISE.<br><r>LOST MONEY.</r>",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "steps": [
+       {
+        "v": 500,
+        "at": "+0.0",
+        "color": "green",
+        "label": "RAISE / MONTH"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "spend",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "🚗",
+     "🍔",
+     "🛍️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "\"New car!<br>More takeout!\"",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🚗 New car",
+        "r": "+$350/mo",
+        "color": "red",
+        "at": "car"
+       },
+       {
+        "l": "🍔 Takeout",
+        "r": "+$200/mo",
+        "color": "red",
+        "at": "takeout"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "bills",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "🧾",
+     "💸",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Raise vs new bills:",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "size": 170,
+      "steps": [
+       {
+        "v": 500,
+        "at": "+0.05",
+        "color": "green",
+        "label": "RAISE"
+       },
+       {
+        "v": 550,
+        "at": "five-fifty",
+        "color": "red",
+        "label": "NEW BILLS"
+       }
+      ]
+     },
+     {
+      "type": "small",
+      "text": "Example budget",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "cost",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "rich"
+    },
+    "props": [
+     "🔥",
+     "💸",
+     "😬"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Your raise <r>costs</r> you:",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "size": 210,
+      "steps": [
+       {
+        "v": 500,
+        "at": "+0.05",
+        "color": "green",
+        "label": "BEFORE"
+       },
+       {
+        "v": -50,
+        "at": "fifty",
+        "color": "red",
+        "label": "EVERY MONTH"
+       }
+      ]
+     },
+     {
+      "type": "small",
+      "text": "Example: +$500 pay, +$550 new monthly costs",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "look",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "😎",
+     "🚗",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"But I look<br><y>successful</y>.\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "punch",
+    "mood": "bad",
+    "lobe": {
+     "pose": "think",
+     "who": "rich"
+    },
+    "props": [
+     "💀",
+     "🧾",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "stamp",
+      "text": "SUCCESSFULLY BROKE",
+      "color": "red",
+      "size": 74,
+      "at": "+0.05"
+     },
+     {
+      "type": "space",
+      "h": 30
+     },
+     {
+      "type": "sub",
+      "html": "It's not what you <b>make</b>.<br>It's what you <b>keep</b>.",
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · SKETCH",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "He Got a Raise. Then Lost Money 💀",
+  "short": "He got a $500 raise… and ended up $50 worse off every month. 💀\n\nNew car, more takeout, and suddenly the raise is gone (example budget). It's not what you make, it's what you keep.\n\n💬 Be honest: where did your last raise go?\n\n#money #personalfinance #moneytips #lifestylecreep #budgeting #brokebrain #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "lifestyle creep",
+   "money tips",
+   "personal finance",
+   "budgeting",
+   "raise",
+   "broke brain",
+   "animation"
+  ]
+ }
+}

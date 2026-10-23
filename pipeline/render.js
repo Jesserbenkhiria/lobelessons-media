@@ -49,6 +49,10 @@ function el(e, line) {
     case 'quote': {
       const h = mk(e.html).replace(/<hl at="([^"]+)" c="([a-z]+)">(.*?)<\/hl>/g, (_, a, c, txt) => `<span class="hl" data-hl="${at(a, line).toFixed(2)}" data-c="${C[c]}">${txt}</span>`);
       return `<div ${D(t)}><div class="card" style="padding:52px 56px"><div class="h" style="font-size:${e.size || 72}px">${h}</div></div></div>`; }
+    case 'big': { // giant rolling number: steps [{v, at, color, label}] ; counts to each new value and flips colour
+      const st = e.steps.map(x => ({ v: x.v, t: +at(x.at, line).toFixed(2), c: C[x.color || 'dark'] || x.color, l: x.label || '' }));
+      return `<div ${D(st[0].t, 'el bigel')} style="text-align:${e.align || 'left'}"><div class="big" data-steps='${JSON.stringify(st)}' data-prefix="${e.prefix || '$'}" data-suffix="${e.suffix || ''}" style="font-size:${e.size || 190}px"></div><div class="biglab" style="font:800 ${e.labelSize || 44}px Inter;letter-spacing:.04em"></div></div>`; }
+    case 'small': return `<div ${D(t)}><div style="font:500 26px Inter;color:#7d766a">${mk(e.text)}</div></div>`;
     case 'space': return `<div style="height:${e.h || 40}px"></div>`;
     case 'html': return `<div ${D(t)}>${e.html}</div>`;
   }
@@ -258,7 +262,7 @@ async function shortV2(b) {
   const sh = spec.short; const scenes = sh.scenes.filter(s => !s.cta);
   const sketch = sh.format === 'sketch';
   const starts = scenes.map(s => lineStart(s.line));
-  const BG = { neutral: '#F5F1EA', bad: '#F9E1DA', good: '#E2F1E6', gold: '#F8EED8' };
+  const BG = sh.clean ? { neutral: '#F6EFE4', bad: '#FBD3C7', good: '#D9F2E3', gold: '#FBEBC5' } : { neutral: '#F5F1EA', bad: '#F9E1DA', good: '#E2F1E6', gold: '#F8EED8' };
   const PROPS = { bad: ['💸', '📉', '😰'], good: ['💰', '📈', '✨'], gold: ['⏳', '✨', '🪙'], neutral: ['📚', '✨', '💡'] };
   let body = '';
   scenes.forEach((s, i) => {
@@ -295,6 +299,8 @@ async function shortV2(b) {
    #cap{position:absolute;left:60px;right:60px;top:1500px;text-align:center;z-index:20}
    #cap span{display:inline-block;font:800 66px 'Inter Display';letter-spacing:-.02em;margin:0 9px;padding:2px 14px;border-radius:16px;color:#111}
    #cap span.on{background:#111;color:#F5C84C}
+   ${sh.clean ? ".hdr,.prog,#topbar{display:none}" : ""}
+   .big{font-family:'Inter Display';font-weight:900;letter-spacing:-.05em;line-height:.95;display:inline-block;transform-origin:0 60%}
    #follow{position:absolute;left:50%;top:1640px;transform:translateX(-50%);z-index:21;white-space:nowrap;font:800 40px Inter;background:#111;color:#fff;padding:20px 44px;border-radius:60px;opacity:0}
    #follow b{color:#F5C84C}
   </style></head><body><div id="v"><div id="topbar"></div><div class="hdr"><span>${sh.label}</span><span>🧠 Lobe Lessons</span></div><div class="prog"><i></i></div>
@@ -311,6 +317,8 @@ async function shortV2(b) {
   SC.forEach(sc=>{const a=+sc.dataset.in,b=+sc.dataset.out;const ts=[...sc.querySelectorAll('.el')].map(e=>+e.dataset.in).filter(x=>x>a+0.7&&x<b-0.4).sort((x,y)=>x-y);
     const sw=[];let last=a;const push=x=>{if(x-last>=0.9){sw.push(x);last=x}};ts.forEach(x=>{while(x-last>2.6)push(last+2.4);push(x)});while(b-last>2.6)push(last+2.4);sc._sw=sw;});
   const POPS=[...document.querySelectorAll('.el.pop')].map(e=>+e.dataset.in);
+  document.querySelectorAll('.big').forEach(b=>{JSON.parse(b.dataset.steps).slice(1).forEach(x=>POPS.push(x.t))});
+  const fmt=(v,b)=>(v<0?'−':'+')+b.dataset.prefix+Math.round(Math.abs(v)).toLocaleString('en-US')+b.dataset.suffix;
   const ease=x=>{x=Math.min(1,Math.max(0,x));return 1-Math.pow(1-x,3)};
   const back=x=>{x=Math.min(1,Math.max(0,x));const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
   const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
@@ -342,6 +350,10 @@ async function shortV2(b) {
    document.querySelectorAll('.el').forEach(e=>{const a=+e.dataset.in;
     if(e.classList.contains('pop')){const q=back((t-a)/0.35);e.style.opacity=Math.min(1,Math.max(0,(t-a)/0.12));e.style.transform='scale('+(1.6-0.6*q)+')';return;}
     const p=a<0.4?1:ease((t-a)/0.4);e.style.opacity=p;e.style.filter='blur('+((1-p)*10)+'px)';e.style.transform='translateY('+((1-p)*30)+'px)';});
+   document.querySelectorAll('.big').forEach(b=>{const st=JSON.parse(b.dataset.steps);let k=0;st.forEach((x,i)=>{if(t>=x.t)k=i});
+    const cur=st[k],prev=k>0?st[k-1]:{v:0};const p=(k===0&&cur.t<0.4)?1:ease((t-cur.t)/0.45);const v=prev.v+(cur.v-prev.v)*p;
+    b.textContent=fmt(v,b);b.style.color=cur.c;const bump=Math.exp(-Math.max(0,t-cur.t)*7);b.style.transform='scale('+(1+0.18*bump)+') rotate('+(-3*bump)+'deg)';
+    const lab=b.parentElement.querySelector('.biglab');lab.textContent=cur.l;lab.style.color=cur.c;});
    // camera: slow push-in per scene + punch on stamps + punch on scene start + shake on shock
    const st=document.getElementById('stage');st.style.transformOrigin='50% 30%';
    const pan=SKETCH?(cs.dataset.who==='broke'?60:-60)*ease(ts/0.4):0;
