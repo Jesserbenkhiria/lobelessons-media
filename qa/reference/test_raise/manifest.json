@@ -1,0 +1,45 @@
+{
+ "spec": "days/test_raise.json",
+ "times": [
+  0.1,
+  1.2,
+  3.7,
+  7.0,
+  9.7,
+  12.8,
+  14.7
+ ],
+ "lines": [
+  {
+   "id": "raise",
+   "start": 0.25,
+   "end": 2.493
+  },
+  {
+   "id": "spend",
+   "start": 2.653,
+   "end": 5.883
+  },
+  {
+   "id": "bills",
+   "start": 6.043,
+   "end": 8.566
+  },
+  {
+   "id": "cost",
+   "start": 8.726,
+   "end": 11.666
+  },
+  {
+   "id": "look",
+   "start": 11.826,
+   "end": 13.855
+  },
+  {
+   "id": "punch",
+   "start": 14.015,
+   "end": 15.456
+  }
+ ],
+ "duration": 16.216
+}

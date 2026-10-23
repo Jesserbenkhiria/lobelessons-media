@@ -1,0 +1,45 @@
+{
+ "spec": "days/pilot_game.json",
+ "times": [
+  0.1,
+  0.9,
+  2.6,
+  6.3,
+  8.6,
+  11.6,
+  14.4
+ ],
+ "lines": [
+  {
+   "id": "q",
+   "start": 0.25,
+   "end": 1.522
+  },
+  {
+   "id": "opts",
+   "start": 1.622,
+   "end": 5.198
+  },
+  {
+   "id": "count",
+   "start": 5.298,
+   "end": 7.539
+  },
+  {
+   "id": "reveal",
+   "start": 7.639,
+   "end": 10.488
+  },
+  {
+   "id": "extra",
+   "start": 10.588,
+   "end": 13.338
+  },
+  {
+   "id": "cta",
+   "start": 13.438,
+   "end": 16.158
+  }
+ ],
+ "duration": 16.858
+}

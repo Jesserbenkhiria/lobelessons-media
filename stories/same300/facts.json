@@ -1,0 +1,20 @@
+{
+ "title": "Same $300. Two Different Futures",
+ "note": "Facts for the 16:9 proof of concept. Every number shown in the video must come from here.",
+ "facts": {
+  "inputs": [300, 5, 60],
+  "assumptions": [
+   {"id": "rate", "text": "Hypothetical 7% nominal annual return", "on_screen": true},
+   {"id": "compounding", "text": "Compounded monthly, deposits at the end of each month", "on_screen": true},
+   {"id": "guarantee", "text": "Not guaranteed. Not financial advice.", "on_screen": true},
+   {"id": "fees", "text": "No fees, taxes or inflation included", "on_screen": false}
+  ],
+  "values": {
+   "spent":     {"formula": "300 * 12 * 5", "display": "$18,000"},
+   "deposited": {"formula": "300 * 12 * 5", "display": "$18,000"},
+   "invested":  {"formula": "fv_monthly(300, 0.07, 5)", "display": "$21,478", "round": 0},
+   "growth":    {"formula": "invested - deposited", "display": "$3,478", "round": 0},
+   "year1":     {"formula": "fv_monthly(300, 0.07, 1)", "display": "$3,718", "round": 0}
+  }
+ }
+}
