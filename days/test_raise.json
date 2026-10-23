@@ -191,12 +191,6 @@
       "size": 210,
       "steps": [
        {
-        "v": 500,
-        "at": "+0.05",
-        "color": "green",
-        "label": "BEFORE"
-       },
-       {
         "v": -50,
         "at": "fifty",
         "color": "red",
@@ -207,7 +201,7 @@
      {
       "type": "small",
       "text": "Example: +$500 pay, +$550 new monthly costs",
-      "at": "+0.05"
+      "at": "fifty"
      }
     ]
    },
@@ -274,5 +268,6 @@
    "broke brain",
    "animation"
   ]
- }
+ },
+ "gap": 0.16
 }

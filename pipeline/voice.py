@@ -17,7 +17,7 @@ tts = sherpa_onnx.OfflineTts(sherpa_onnx.OfflineTtsConfig(model=sherpa_onnx.Offl
 VM = Model(T + "vosk-model")
 VOICE = spec.get("voice", 6)  # 6 = am_michael (channel default)
 SPEED = spec.get("speed", 1.05)
-GAP = 0.32
+GAP = spec.get("gap", 0.32)
 norm = lambda w: re.sub(r"[^a-z0-9']", "", w.lower())
 
 
