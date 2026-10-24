@@ -1,0 +1,99 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  5.145,
+  7.785,
+  10.215,
+  13.22,
+  20.085
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "hook",
+   "duration": 4.92,
+   "words_per_sec": 2.85,
+   "heard": "you spend a hundred dollars every day how long until a million is gone",
+   "expected": "you spend a hundred dollars every day how long until a million is gone",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "count",
+   "duration": 1.98,
+   "words_per_sec": 2.02,
+   "heard": "yes three two one",
+   "expected": "guess three two one",
+   "match": 0.75,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "reveal",
+   "duration": 1.84,
+   "words_per_sec": 1.63,
+   "heard": "twenty seven years",
+   "expected": "twenty seven years",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "days",
+   "duration": 2.65,
+   "words_per_sec": 2.26,
+   "heard": "that's ten thousand days of spending",
+   "expected": "that's ten thousand days of spending",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "flip",
+   "duration": 6.54,
+   "words_per_sec": 3.06,
+   "heard": "now flip it invests that hundred a day at seven percent and you'd build a million in about fifteen years",
+   "expected": "now flip it invest that hundred a day at seven percent and you'd build a million in about fifteen years",
+   "match": 0.95,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "cta",
+   "duration": 1.65,
+   "words_per_sec": 3.04,
+   "heard": "so what did you guess",
+   "expected": "so what did you guess",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

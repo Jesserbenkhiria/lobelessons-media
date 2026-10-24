@@ -1,0 +1,11 @@
+[
+ {
+  "sha": "eaa40eb2f1ee64c49b461049d3ae969347597f46",
+  "file": "audio/test_million/_source/eaa40eb2f1ee.mp3",
+  "added": "2026-10-24T22:27:12",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "Nv4sDaG3mghPmEurIIvd",
+  "prompt": "[intriguing, punchy] You spend a hundred dollars every day. How long until a million is gone?\n\n[long pause]\n\n[playful, quick] Guess. Three, two, one.\n\n[long pause]\n\n[surprised] Twenty-seven years.\n\n[long pause]\n\n[dry] That's ten thousand days of spending.\n\n[long pause]\n\n[warm, punchy] Now flip it. Invest that hundred a day at seven percent, and you'd build a million in about fifteen years.\n\n[long pause]\n\n[grinning] So, what did you guess?\n"
+ }
+]

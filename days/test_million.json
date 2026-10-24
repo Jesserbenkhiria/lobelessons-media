@@ -1,0 +1,323 @@
+{
+ "day": 0,
+ "date": "2026-10-30",
+ "book": "-",
+ "lesson": "Guess game: spending vs building a million",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.12,
+ "audio_dir": "audio/test_million",
+ "short": {
+  "style": "stage",
+  "clean": true,
+  "label": "GUESS FIRST",
+  "cover": {
+   "html": "$100 A DAY.<br>HOW LONG TO<br>SPEND <r>$1M</r>?",
+   "pose": "think"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "You spend a hundred dollars every day. How long until a million is gone?"
+   },
+   {
+    "id": "count",
+    "text": "Guess. Three, two, one."
+   },
+   {
+    "id": "reveal",
+    "text": "Twenty-seven years."
+   },
+   {
+    "id": "days",
+    "text": "That's ten thousand days of spending."
+   },
+   {
+    "id": "flip",
+    "text": "Now flip it. Invest that hundred a day at seven percent, and you'd build a million in about fifteen years."
+   },
+   {
+    "id": "cta",
+    "text": "So, what did you guess?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "💸",
+     "🤔",
+     "⏳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Spend <y>$100</y> a day.<br>How long until…",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 125,
+      "sign": false,
+      "prefix": "$",
+      "align": "center",
+      "steps": [
+       {
+        "v": 1000000,
+        "at": "+0.0",
+        "color": "gold",
+        "label": "IS GONE?"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "count",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "⏱️",
+     "🤔",
+     "❓"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Guess first…",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "prefix": "",
+      "size": 300,
+      "align": "center",
+      "steps": [
+       {
+        "v": 3,
+        "at": "Three",
+        "color": "dark"
+       },
+       {
+        "v": 2,
+        "at": "two",
+        "color": "dark"
+       },
+       {
+        "v": 1,
+        "at": "one",
+        "color": "red"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "reveal",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock"
+    },
+    "props": [
+     "😱",
+     "📅",
+     "💸"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 80,
+      "html": "$1,000,000 ÷ $100/day =",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 300,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 27,
+        "at": "+0.0",
+        "color": "red",
+        "label": "YEARS"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "days",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "📅",
+     "🧾",
+     "💸"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "That's",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 230,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 10000,
+        "at": "ten",
+        "color": "red",
+        "label": "DAYS OF SPENDING"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "flip",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "📈",
+     "💚",
+     "🌱"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "<g>Invest</g> $100/day instead:",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "📈 7%/yr, hypothetical, not guaranteed",
+      "color": "green",
+      "center": true,
+      "at": "seven"
+     },
+     {
+      "type": "big",
+      "size": 230,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 15,
+        "at": "fifteen",
+        "color": "green",
+        "label": "YEARS TO BUILD $1M"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "💬",
+     "🤔",
+     "🎯"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "What did<br><y>you</y> guess?",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 Comment your guess",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [
+   100,
+   1000000
+  ],
+  "assumptions": [
+   {
+    "id": "hyp",
+    "text": "Hypothetical 7% yearly return, not guaranteed.",
+    "on_screen": true,
+    "screen": "7%/yr, hypothetical, not guaranteed"
+   }
+  ],
+  "values": {
+   "days": {
+    "formula": "1000000/100",
+    "display": "10,000"
+   },
+   "years_spend": {
+    "formula": "days/365.25",
+    "display": "27",
+    "round": 0
+   },
+   "monthly": {
+    "formula": "100*365/12",
+    "display": "$3,042",
+    "round": 0
+   },
+   "years_build": {
+    "formula": "math.log(1+1000000*(0.07/12)/monthly)/math.log(1+0.07/12)/12",
+    "display": "15",
+    "round": 0
+   }
+  }
+ },
+ "carousel": {
+  "label": "GUESS FIRST",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "$100 a Day: How Long Until $1 Million Is Gone? 🤔 (Guess First)",
+  "short": "Spend $100 every day. How long until $1,000,000 is gone? 🤔\n\nAbout 27 years (10,000 days).\n\nFlip it: invest $100 a day (about $3,042 a month) at a hypothetical 7% yearly return and you'd reach $1 million in about 15 years. Not guaranteed; no taxes or fees included.\n\nHypothetical 7% yearly return, not guaranteed.\n\n💬 What did you guess?\n\n#money #millionaire #investing #compoundinterest #personalfinance #moneytips #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "million dollars",
+   "guess",
+   "investing",
+   "compound interest",
+   "personal finance",
+   "money tips"
+  ]
+ }
+}

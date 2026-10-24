@@ -1,0 +1,55 @@
+{
+ "source": "audio/test_million/_source/eaa40eb2f1ee.mp3",
+ "source_sha": "eaa40eb2f1ee64c49b461049d3ae969347597f46",
+ "lines": [
+  "hook",
+  "count",
+  "reveal",
+  "days",
+  "flip",
+  "cta"
+ ],
+ "mode": "auto",
+ "cuts": [
+  5.145,
+  7.785,
+  10.215,
+  13.22,
+  20.085
+ ],
+ "auto_cuts": [
+  5.145,
+  7.785,
+  10.215,
+  13.22,
+  20.085
+ ],
+ "nudge": {},
+ "pauses": [
+  [
+   2.6,
+   2.89
+  ],
+  [
+   4.8,
+   5.49
+  ],
+  [
+   7.3,
+   8.27
+  ],
+  [
+   9.95,
+   10.48
+  ],
+  [
+   12.96,
+   13.48
+  ],
+  [
+   19.85,
+   20.32
+  ]
+ ],
+ "source_duration": 21.92
+}
