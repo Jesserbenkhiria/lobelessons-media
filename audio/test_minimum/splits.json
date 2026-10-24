@@ -1,0 +1,27 @@
+{
+ "source": "audio/test_minimum/_source/8f38544519e2.mp3",
+ "source_sha": "8f38544519e2b88c14d09c140dc3ae9f17e2bdda",
+ "lines": [
+  "easy",
+  "what"
+ ],
+ "mode": "auto",
+ "cuts": [
+  2.63
+ ],
+ "auto_cuts": [
+  2.63
+ ],
+ "nudge": {},
+ "pauses": [
+  [
+   1.31,
+   1.54
+  ],
+  [
+   2.25,
+   3.01
+  ]
+ ],
+ "source_duration": 4.48
+}

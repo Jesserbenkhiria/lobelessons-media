@@ -1,0 +1,20 @@
+[
+ {
+  "sha": "028c6a7d0295b9d1fb762b515f66f201079ccebe",
+  "file": "audio/test_minimum/_source/028c6a7d0295.mp3",
+  "added": "2026-10-24T21:53:39",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "RX8XXZazcUwzV1pwivWx",
+  "prompt": "[intriguing] Do you know why paying the minimum keeps you broke?\n\n[long pause]\n\n[serious] At twenty-four percent, that takes almost five years.\n\n[long pause]\n\n[dry] And costs you about six hundred sixty-four dollars in interest.\n\n[long pause]\n\n[warm, punchy] Pay a hundred a month instead. Done in a year, about a hundred twenty-seven in interest.\n\n[long pause]\n\n[grinning] Minimum or more? Which one are you?\n"
+ },
+ {
+  "sha": "8f38544519e2b88c14d09c140dc3ae9f17e2bdda",
+  "file": "audio/test_minimum/_source/8f38544519e2.mp3",
+  "added": "2026-10-24T21:53:45",
+  "voice": "1kvnzrSTos1KbmLKMLCC",
+  "model": "eleven_v4",
+  "generation_id": "nRjVi4q9dhPKU6lXSALV",
+  "prompt": "[playful, confident] Thirty bucks a month? Easy!\n\n[long pause]\n\n[shocked] For NOTHING?!\n"
+ }
+]

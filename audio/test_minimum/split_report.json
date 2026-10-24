@@ -1,0 +1,39 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  2.63
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "easy",
+   "duration": 2.37,
+   "words_per_sec": 2.11,
+   "heard": "thirty bucks a month easy",
+   "expected": "thirty bucks a month easy",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "what",
+   "duration": 1.44,
+   "words_per_sec": 1.39,
+   "heard": "for nothing",
+   "expected": "for nothing",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

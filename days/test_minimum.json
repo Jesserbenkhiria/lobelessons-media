@@ -1,0 +1,348 @@
+{
+ "day": 0,
+ "date": "2026-10-28",
+ "book": "-",
+ "lesson": "Minimum payments: slow payoff, big interest",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.12,
+ "audio_dir": "audio/test_minimum",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "clean": true,
+  "label": "MONEY · SKETCH",
+  "cover": {
+   "html": "PAYING THE<br><r>MINIMUM?</r>",
+   "pose": "explain"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Do you know why paying the minimum keeps you broke?"
+   },
+   {
+    "id": "easy",
+    "text": "Thirty bucks a month? Easy!",
+    "voice": 5
+   },
+   {
+    "id": "time",
+    "text": "At twenty-four percent, that takes almost five years."
+   },
+   {
+    "id": "interest",
+    "text": "And costs you about six hundred sixty-four dollars in interest."
+   },
+   {
+    "id": "what",
+    "text": "For NOTHING?!",
+    "voice": 5
+   },
+   {
+    "id": "rich",
+    "text": "Pay a hundred a month instead. Done in a year, about a hundred twenty-seven in interest."
+   },
+   {
+    "id": "cta",
+    "text": "Minimum or more? Which one are you?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich",
+     "react": "think"
+    },
+    "props": [
+     "💳",
+     "🤔",
+     "💸"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "Paying the<br><r>minimum?</r>",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "size": 200,
+      "sign": false,
+      "steps": [
+       {
+        "v": 1000,
+        "at": "+0.0",
+        "color": "red",
+        "label": "CARD BALANCE"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "easy",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "😎",
+     "💳",
+     "👌"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"Easy!\"",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "size": 230,
+      "sign": false,
+      "steps": [
+       {
+        "v": 30,
+        "at": "+0.0",
+        "color": "dark",
+        "label": "PER MONTH"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "time",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich",
+     "react": "shock"
+    },
+    "props": [
+     "📅",
+     "⏳",
+     "🐌"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Paid off in:",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "size": 260,
+      "sign": false,
+      "steps": [
+       {
+        "v": 56,
+        "at": "five",
+        "color": "red",
+        "label": "MONTHS"
+       }
+      ],
+      "prefix": ""
+     },
+     {
+      "type": "small",
+      "text": "Example: $1,000 card, 24% APR, fixed payments, no new purchases",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "interest",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich",
+     "react": "shock"
+    },
+    "props": [
+     "🔥",
+     "💸",
+     "🧾"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Interest <r>paid</r>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "size": 250,
+      "sign": false,
+      "steps": [
+       {
+        "v": 664,
+        "at": "six",
+        "color": "red",
+        "label": "FOR NOTHING"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "what",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "😱",
+     "💸",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"For <r>NOTHING</r>?!\"",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "size": 200,
+      "sign": false,
+      "steps": [
+       {
+        "v": 664,
+        "at": "+0.0",
+        "color": "red",
+        "label": "INTEREST"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "rich",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "✅",
+     "💚",
+     "📈"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "$100/month →<br><g>done in 12 months</g>",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "size": 230,
+      "sign": false,
+      "steps": [
+       {
+        "v": 127,
+        "at": "hundred",
+        "color": "green",
+        "label": "TOTAL INTEREST"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think",
+     "who": "rich"
+    },
+    "props": [
+     "💬",
+     "💳",
+     "🤔"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "Minimum<br>or <y>more</y>?",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 Comment: minimum or more?",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [
+   1000,
+   30,
+   100
+  ],
+  "assumptions": [
+   {
+    "id": "ex",
+    "text": "Example: $1,000 card, 24% APR, fixed payments, no new purchases",
+    "on_screen": true
+   }
+  ],
+  "values": {
+   "months_min": {
+    "formula": "math.ceil(-math.log(1-0.02*1000/30)/math.log(1.02))",
+    "display": "56"
+   },
+   "interest_min": {
+    "formula": "30*55 + (1000*1.02**55 - 30*(1.02**55-1)/0.02)*1.02 - 1000",
+    "display": "$664",
+    "round": 0
+   },
+   "months_more": {
+    "formula": "math.ceil(-math.log(1-0.02*1000/100)/math.log(1.02))",
+    "display": "12"
+   },
+   "interest_more": {
+    "formula": "100*11 + (1000*1.02**11 - 100*(1.02**11-1)/0.02)*1.02 - 1000",
+    "display": "$127",
+    "round": 0
+   }
+  }
+ },
+ "carousel": {
+  "label": "MONEY · SKETCH",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "Why Paying the Minimum Keeps You Broke 💳 ($664 in Interest)",
+  "short": "$1,000 on a card. Paying $30 a month takes 56 months and costs about $664 in interest. 💳\n\nPaying $100 a month: done in 12 months, about $127 in interest.\n\nExample: 24% APR, interest charged monthly, fixed payments, no new purchases, fees not included. Real minimums vary by card.\n\n💬 Minimum or more? Which one are you?\n\n#creditcard #money #personalfinance #moneytips #debt #brokebrain #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "credit card",
+   "minimum payment",
+   "interest",
+   "personal finance",
+   "money tips",
+   "debt",
+   "broke brain"
+  ]
+ }
+}
