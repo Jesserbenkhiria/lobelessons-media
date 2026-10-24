@@ -48,3 +48,8 @@ Single source of truth. Skills link here instead of repeating it.
 | QA an exported video | `python3 qa/video_qa.py VIDEO --profile short|long --build OUT --spec SPEC` |
 | Shorts regression | `python3 qa/regress.py` |
 | All tests | `bash tests/run_tests.sh` |
+
+## Short formats (approved Oct 24, 2026)
+1. **Broke Brain sketch** (`days/test_subs.json`, `days/test_minimum.json`): Lobe opens with a number or question hook, Broke Brain reacts (2–3 lines), Lobe lands the payoff, question CTA. 18–23 s.
+2. **Lobe solo** (`days/test_rule72.json`): one voice, one rule or number, big counter on every line, hook visible in frame 1, comparison (good vs bad) then question CTA. ~22 s.
+Rules for both: the character in front is the one speaking; every number lands on its spoken word; assumptions in fine print; after the build, re-run loudnorm at TP=-2 if QA flags true peak.
