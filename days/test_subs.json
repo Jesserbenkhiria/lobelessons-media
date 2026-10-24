@@ -31,12 +31,22 @@
     "text": "That's ninety dollars a month."
    },
    {
+    "id": "wait",
+    "text": "Wait... WHAT?",
+    "voice": 5
+   },
+   {
     "id": "never",
     "text": "And you never open three of them."
    },
    {
     "id": "cancel",
     "text": "Cancel those three, and you keep five hundred forty a year."
+   },
+   {
+    "id": "keep",
+    "text": "Wait, I could keep that?!",
+    "voice": 5
    },
    {
     "id": "cta",
@@ -139,6 +149,40 @@
     ]
    },
    {
+    "line": "wait",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "😱",
+     "💸",
+     "🧾"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"Wait…<br><r>WHAT?</r>\"",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "size": 200,
+      "steps": [
+       {
+        "v": 90,
+        "at": "+0.0",
+        "color": "red",
+        "label": "EVERY MONTH"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "line": "never",
     "mood": "bad",
     "lobe": {
@@ -218,6 +262,39 @@
       "type": "small",
       "text": "Example prices: 6 subscriptions at $15/month",
       "at": "five"
+     }
+    ]
+   },
+   {
+    "line": "keep",
+    "mood": "good",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "🤩",
+     "💚",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"I could <g>keep</g><br>that?!\"",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "size": 200,
+      "steps": [
+       {
+        "v": 540,
+        "at": "+0.0",
+        "color": "green",
+        "label": "EVERY YEAR"
+       }
+      ]
      }
     ]
    },

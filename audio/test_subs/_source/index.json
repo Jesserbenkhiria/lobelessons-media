@@ -16,5 +16,14 @@
   "model": "eleven_v4",
   "generation_id": "pZwa3eeSJ8ymCAnueJSC",
   "prompt": "[playful] Relax! It's only fifteen bucks each!\n"
+ },
+ {
+  "sha": "ac4b94a91a0ecab03ab4a88bb570619457cfdee0",
+  "file": "audio/test_subs/_source/ac4b94a91a0e.mp3",
+  "added": "2026-10-24T21:35:39",
+  "voice": "1kvnzrSTos1KbmLKMLCC",
+  "model": "eleven_v4",
+  "generation_id": "cfUWK2IEhFHv00Kk3Iya",
+  "prompt": "[shocked] Wait... WHAT?\n\n[long pause]\n\n[excited, amazed] Wait, I could keep that?!\n"
  }
 ]

@@ -1,18 +1,31 @@
 {
- "source": "audio/test_subs/_source/acf1b8fdafe7.mp3",
- "source_sha": "acf1b8fdafe71c941e5d9392c0ee330f31fa62fc",
+ "source": "audio/test_subs/_source/ac4b94a91a0e.mp3",
+ "source_sha": "ac4b94a91a0ecab03ab4a88bb570619457cfdee0",
  "lines": [
-  "only"
+  "wait",
+  "keep"
  ],
  "mode": "auto",
- "cuts": [],
- "auto_cuts": [],
+ "cuts": [
+  1.865
+ ],
+ "auto_cuts": [
+  1.865
+ ],
  "nudge": {},
  "pauses": [
   [
-   3.05,
-   3.27
+   0.52,
+   0.74
+  ],
+  [
+   1.4,
+   2.33
+  ],
+  [
+   2.87,
+   3.15
   ]
  ],
- "source_duration": 3.28
+ "source_duration": 4.72
 }
