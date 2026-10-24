@@ -58,8 +58,9 @@
     "line": "hook",
     "mood": "bad",
     "lobe": {
-     "pose": "shock",
-     "who": "broke"
+     "pose": "explain",
+     "who": "rich",
+     "react": "shock"
     },
     "props": [
      "📺",
