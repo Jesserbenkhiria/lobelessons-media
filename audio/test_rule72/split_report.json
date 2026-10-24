@@ -1,0 +1,114 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  3.955,
+  7.315,
+  10.915,
+  15.05,
+  18.58,
+  21.98
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "hook",
+   "duration": 3.57,
+   "words_per_sec": 2.52,
+   "heard": "this one number tells you when your money doubles",
+   "expected": "this one number tells you when your money doubles",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "name",
+   "duration": 2.64,
+   "words_per_sec": 2.65,
+   "heard": "it's called the rule of seventy two",
+   "expected": "it's called the rule of seventy two",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "how",
+   "duration": 3.04,
+   "words_per_sec": 2.3,
+   "heard": "divide seventy two by your yearly return",
+   "expected": "divide seventy two by your yearly return",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "seven",
+   "duration": 3.61,
+   "words_per_sec": 2.77,
+   "heard": "at seven percent your money doubles in about ten years",
+   "expected": "at seven percent your money doubles in about ten years",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "two",
+   "duration": 3.0,
+   "words_per_sec": 2.33,
+   "heard": "at two percent above thirty six years",
+   "expected": "at two percent about thirty six years",
+   "match": 0.86,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "diff",
+   "duration": 2.89,
+   "words_per_sec": 2.08,
+   "heard": "same money twenty six years longer",
+   "expected": "same money twenty six years longer",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "cta",
+   "duration": 2.05,
+   "words_per_sec": 2.93,
+   "heard": "what's your money earning right now",
+   "expected": "what's your money earning right now",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

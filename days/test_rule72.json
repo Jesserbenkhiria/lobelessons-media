@@ -1,0 +1,336 @@
+{
+ "day": 0,
+ "date": "2026-10-29",
+ "book": "-",
+ "lesson": "Rule of 72: how long until your money doubles",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.12,
+ "audio_dir": "audio/test_rule72",
+ "short": {
+  "style": "stage",
+  "clean": true,
+  "label": "MONEY RULE",
+  "cover": {
+   "html": "WHEN DOES YOUR<br>MONEY <g>DOUBLE</g>?",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "This one number tells you when your money doubles."
+   },
+   {
+    "id": "name",
+    "text": "It's called the rule of seventy-two."
+   },
+   {
+    "id": "how",
+    "text": "Divide seventy-two by your yearly return."
+   },
+   {
+    "id": "seven",
+    "text": "At seven percent, your money doubles in about ten years."
+   },
+   {
+    "id": "two",
+    "text": "At two percent? About thirty-six years."
+   },
+   {
+    "id": "diff",
+    "text": "Same money. Twenty-six years longer."
+   },
+   {
+    "id": "cta",
+    "text": "What's your money earning right now?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "💰",
+     "⏳",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "When does your<br>money <g>double</g>?",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 250,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 72,
+        "at": "+0.0",
+        "color": "gold",
+        "label": ""
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "name",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "📏",
+     "🧠",
+     "💡"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "The Rule of",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 320,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 72,
+        "at": "+0.0",
+        "color": "gold",
+        "label": ""
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "how",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "➗",
+     "📈",
+     "🧮"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "72 ÷ <y>your return</y><br>= years to double",
+      "at": "+0.05",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "seven",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "📈",
+     "💚",
+     "🌱"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "72 ÷ 7% ≈",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 280,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 10,
+        "at": "doubles",
+        "color": "green",
+        "label": "YEARS"
+       }
+      ]
+     },
+     {
+      "type": "small",
+      "text": "Hypothetical yearly returns, not guaranteed. Rule of 72 is an estimate.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "two",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock"
+    },
+    "props": [
+     "🐌",
+     "😴",
+     "⏳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "72 ÷ 2% =",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 280,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 36,
+        "at": "thirty",
+        "color": "red",
+        "label": "YEARS"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "diff",
+    "mood": "bad",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "⏳",
+     "🤔",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Same money.",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 280,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 26,
+        "at": "Twenty",
+        "color": "red",
+        "label": "YEARS LONGER"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "💬",
+     "📈",
+     "🤔"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "What's <y>your</y> money<br>earning?",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 Comment your rate",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [],
+  "assumptions": [
+   {
+    "id": "hyp",
+    "text": "Hypothetical yearly returns, not guaranteed. Rule of 72 is an estimate.",
+    "on_screen": true
+   }
+  ],
+  "values": {
+   "years7": {
+    "formula": "round(72/7)",
+    "display": "10"
+   },
+   "years7_exact": {
+    "formula": "math.log(2)/math.log(1.07)",
+    "display": "10.2",
+    "round": 1
+   },
+   "years2": {
+    "formula": "72/2",
+    "display": "36"
+   },
+   "years2_exact": {
+    "formula": "math.log(2)/math.log(1.02)",
+    "display": "35.0",
+    "round": 1
+   },
+   "diff": {
+    "formula": "years2 - years7",
+    "display": "26"
+   }
+  }
+ },
+ "carousel": {
+  "label": "MONEY RULE",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "The Rule of 72: When Will Your Money Double? 📈",
+  "short": "The Rule of 72: divide 72 by your yearly return to estimate how many years your money takes to double. 📈\n\n7% → about 10 years. 2% → about 36 years.\n\nHypothetical returns, compounded yearly, not guaranteed. The rule is an estimate (exact: 10.2 and 35.0 years).\n\n💬 What's your money earning right now?\n\n#ruleof72 #compoundinterest #investing #money #personalfinance #moneytips #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "rule of 72",
+   "compound interest",
+   "investing",
+   "money doubles",
+   "personal finance",
+   "money tips"
+  ]
+ }
+}

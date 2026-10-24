@@ -1,0 +1,11 @@
+[
+ {
+  "sha": "1c720757542682530304c1b873d5d6996e9e2080",
+  "file": "audio/test_rule72/_source/1c7207575426.mp3",
+  "added": "2026-10-24T21:57:32",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "wL07efQmN7PcgNMSUBpT",
+  "prompt": "[intriguing, punchy] This one number tells you when your money doubles.\n\n[long pause]\n\n[playful] It's called the rule of seventy-two.\n\n[long pause]\n\n[explaining] Divide seventy-two by your yearly return.\n\n[long pause]\n\n[impressed] At seven percent, your money doubles in about ten years.\n\n[long pause]\n\n[dry] At two percent? About thirty-six years.\n\n[long pause]\n\n[serious] Same money. Twenty-six years longer.\n\n[long pause]\n\n[grinning] What's your money earning right now?\n"
+ }
+]

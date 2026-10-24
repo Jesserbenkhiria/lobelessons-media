@@ -46,5 +46,13 @@
   "model": "eleven_v4",
   "generation_id": "nRjVi4q9dhPKU6lXSALV",
   "added": "2026-10-24T21:53:45"
+ },
+ "c6435dbddeea2c48c7e92a63cc8508b1f018d222": {
+  "file": "audio/test_rule72/_source/1c7207575426.mp3",
+  "sha": "1c720757542682530304c1b873d5d6996e9e2080",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "wL07efQmN7PcgNMSUBpT",
+  "added": "2026-10-24T21:57:32"
  }
 }
