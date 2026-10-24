@@ -1,0 +1,303 @@
+{
+ "day": 0,
+ "date": "2026-10-27",
+ "book": "-",
+ "lesson": "Subscription creep: small monthly costs add up",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.12,
+ "audio_dir": "audio/test_subs",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "clean": true,
+  "label": "MONEY · SKETCH",
+  "cover": {
+   "html": "6 \"LITTLE\"<br><r>SUBSCRIPTIONS</r>",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Six subscriptions. One thousand and eighty dollars a year."
+   },
+   {
+    "id": "only",
+    "text": "Relax! It's only fifteen bucks each!",
+    "voice": 5
+   },
+   {
+    "id": "month",
+    "text": "That's ninety dollars a month."
+   },
+   {
+    "id": "never",
+    "text": "And you never open three of them."
+   },
+   {
+    "id": "cancel",
+    "text": "Cancel those three, and you keep five hundred forty a year."
+   },
+   {
+    "id": "cta",
+    "text": "How many are you paying for right now?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "📺",
+     "💸",
+     "😬"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "6 \"LITTLE\"<br><r>SUBSCRIPTIONS</r>",
+      "at": "+0.0"
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "size": 200,
+      "steps": [
+       {
+        "v": 1080,
+        "at": "+0.0",
+        "color": "red",
+        "label": "PER YEAR"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "only",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "🎬",
+     "🎵",
+     "🎮"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"It's only<br><y>$15</y> each!\"",
+      "at": "+0.05"
+     },
+     {
+      "type": "html",
+      "html": "<div style=\"font-size:112px;line-height:1.25;letter-spacing:10px\">🎬 📺 🎵<br>🏋️ ☁️ 🎮</div>",
+      "at": "only"
+     }
+    ]
+   },
+   {
+    "line": "month",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "🧾",
+     "💸",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "6 × $15 =",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "size": 260,
+      "steps": [
+       {
+        "v": 90,
+        "at": "ninety",
+        "color": "red",
+        "label": "EVERY MONTH"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "never",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich",
+     "react": "shock"
+    },
+    "props": [
+     "🙈",
+     "📱",
+     "💤"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "<r>Never</r> opened:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏋️ Fitness app",
+        "r": "0 opens",
+        "color": "red",
+        "at": "+0.15"
+       },
+       {
+        "l": "☁️ Extra storage",
+        "r": "0 opens",
+        "color": "red",
+        "at": "+0.55"
+       },
+       {
+        "l": "🎮 Gaming plan",
+        "r": "0 opens",
+        "color": "red",
+        "at": "+0.95"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "cancel",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "✂️",
+     "💚",
+     "📈"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Cancel 3.<br>You <g>keep</g>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "big",
+      "size": 250,
+      "steps": [
+       {
+        "v": 540,
+        "at": "five",
+        "color": "green",
+        "label": "EVERY YEAR"
+       }
+      ]
+     },
+     {
+      "type": "small",
+      "text": "Example prices: 6 subscriptions at $15/month",
+      "at": "five"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think",
+     "who": "rich"
+    },
+    "props": [
+     "💬",
+     "🤔",
+     "📱"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "How many are<br><y>you</y> paying for?",
+      "center": true,
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Comment your number",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [
+   15
+  ],
+  "assumptions": [
+   {
+    "id": "example",
+    "text": "Example prices: 6 subscriptions at $15/month",
+    "on_screen": true
+   }
+  ],
+  "values": {
+   "monthly": {
+    "formula": "6 * 15",
+    "display": "$90"
+   },
+   "yearly": {
+    "formula": "monthly * 12",
+    "display": "$1,080"
+   },
+   "kept_monthly": {
+    "formula": "3 * 15",
+    "display": "$45"
+   },
+   "kept_yearly": {
+    "formula": "kept_monthly * 12",
+    "display": "$540"
+   }
+  }
+ },
+ "carousel": {
+  "label": "MONEY · SKETCH",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "Your Subscriptions Cost More Than You Think 😬 ($1,080 a Year)",
+  "short": "6 \"little\" subscriptions at $15 a month = $90 a month, $1,080 a year. 😬\n\nCancel the 3 you never open and you keep $540 a year (example prices).\n\n💬 How many are you paying for right now?\n\n#subscriptions #money #personalfinance #moneytips #budgeting #brokebrain #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "subscriptions",
+   "money tips",
+   "personal finance",
+   "budgeting",
+   "save money",
+   "broke brain",
+   "animation"
+  ]
+ }
+}

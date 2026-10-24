@@ -1,0 +1,18 @@
+{
+ "source": "audio/test_subs/_source/acf1b8fdafe7.mp3",
+ "source_sha": "acf1b8fdafe71c941e5d9392c0ee330f31fa62fc",
+ "lines": [
+  "only"
+ ],
+ "mode": "auto",
+ "cuts": [],
+ "auto_cuts": [],
+ "nudge": {},
+ "pauses": [
+  [
+   3.05,
+   3.27
+  ]
+ ],
+ "source_duration": 3.28
+}

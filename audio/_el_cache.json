@@ -6,5 +6,21 @@
   "model": "eleven_v4",
   "generation_id": "r9nHlgVSfLhv13gcuX6D",
   "added": "2026-10-23T16:48:48"
+ },
+ "f06ec092176319af92192df89f9ca25b68267147": {
+  "file": "audio/test_subs/_source/3df3ac3f8b2d.mp3",
+  "sha": "3df3ac3f8b2d7908ed1e527212e0e408850587e7",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "MEkSLJUB42tSE6yORuPC",
+  "added": "2026-10-24T21:24:20"
+ },
+ "a46c0eda09015ace245bc5cb8ff83f3c43d6f63f": {
+  "file": "audio/test_subs/_source/acf1b8fdafe7.mp3",
+  "sha": "acf1b8fdafe71c941e5d9392c0ee330f31fa62fc",
+  "voice": "1kvnzrSTos1KbmLKMLCC",
+  "model": "eleven_v4",
+  "generation_id": "pZwa3eeSJ8ymCAnueJSC",
+  "added": "2026-10-24T21:24:25"
  }
 }

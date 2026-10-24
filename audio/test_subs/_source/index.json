@@ -1,0 +1,20 @@
+[
+ {
+  "sha": "3df3ac3f8b2d7908ed1e527212e0e408850587e7",
+  "file": "audio/test_subs/_source/3df3ac3f8b2d.mp3",
+  "added": "2026-10-24T21:24:20",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "MEkSLJUB42tSE6yORuPC",
+  "prompt": "[intriguing, punchy] Six subscriptions. One thousand and eighty dollars a year.\n\n[long pause]\n\n[dry] That's ninety dollars a month.\n\n[long pause]\n\n[teasing] And you never open three of them.\n\n[long pause]\n\n[warm, punchy] Cancel those three, and you keep five hundred forty a year.\n\n[long pause]\n\n[grinning] How many are you paying for right now?\n"
+ },
+ {
+  "sha": "acf1b8fdafe71c941e5d9392c0ee330f31fa62fc",
+  "file": "audio/test_subs/_source/acf1b8fdafe7.mp3",
+  "added": "2026-10-24T21:24:25",
+  "voice": "1kvnzrSTos1KbmLKMLCC",
+  "model": "eleven_v4",
+  "generation_id": "pZwa3eeSJ8ymCAnueJSC",
+  "prompt": "[playful] Relax! It's only fifteen bucks each!\n"
+ }
+]
