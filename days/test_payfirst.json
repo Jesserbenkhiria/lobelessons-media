@@ -1,0 +1,356 @@
+{
+ "day": 0,
+ "date": "2026-10-31",
+ "book": "The Richest Man in Babylon",
+ "lesson": "Pay yourself first",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.12,
+ "audio_dir": "audio/test_payfirst",
+ "short": {
+  "style": "stage",
+  "clean": true,
+  "label": "MONEY RULE",
+  "cover": {
+   "html": "THE PAYDAY RULE<br>YOU DO <r>BACKWARDS</r>",
+   "pose": "explain"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "This payday rule is a hundred years old. And you're probably doing it backwards."
+   },
+   {
+    "id": "most",
+    "text": "Most people get paid, spend, then save what's left."
+   },
+   {
+    "id": "left",
+    "text": "And what's left? Usually nothing."
+   },
+   {
+    "id": "flip",
+    "text": "Flip it. Get paid, save first, then spend the rest."
+   },
+   {
+    "id": "num",
+    "text": "Make three thousand a month? Move ten percent on payday. That's three hundred."
+   },
+   {
+    "id": "year",
+    "text": "In a year, that's three thousand six hundred dollars you didn't have to think about."
+   },
+   {
+    "id": "cta",
+    "text": "So be honest. Do you save first, or last?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "📜",
+     "💵",
+     "⏳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "The 100-year-old<br>payday rule…",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "stamp",
+      "text": "YOU DO IT BACKWARDS",
+      "color": "red",
+      "size": 66,
+      "center": true,
+      "at": "+0.0"
+     }
+    ]
+   },
+   {
+    "line": "most",
+    "mood": "bad",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "🛍️",
+     "💸",
+     "🍔"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Most people:",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1",
+        "text": "💵 Get paid",
+        "color": "muted",
+        "at": "+0.35"
+       },
+       {
+        "tag": "2",
+        "text": "🛍️ Spend",
+        "color": "red",
+        "at": "+1.1"
+       },
+       {
+        "tag": "3",
+        "text": "💰 Save what's left",
+        "color": "red",
+        "at": "+1.9"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "left",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock"
+    },
+    "props": [
+     "😬",
+     "🕳️",
+     "💸"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "What's left?",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 300,
+      "sign": false,
+      "prefix": "$",
+      "align": "center",
+      "steps": [
+       {
+        "v": 0,
+        "at": "Usually",
+        "color": "red",
+        "label": "USUALLY"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "flip",
+    "mood": "good",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "🔄",
+     "💚",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "<g>Flip it:</g>",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "1",
+        "text": "💵 Get paid",
+        "color": "muted",
+        "at": "+0.9"
+       },
+       {
+        "tag": "2",
+        "text": "💰 Save FIRST",
+        "color": "green",
+        "at": "+1.8"
+       },
+       {
+        "tag": "3",
+        "text": "🛍️ Spend the rest",
+        "color": "muted",
+        "at": "+2.8"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "num",
+    "mood": "good",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "📅",
+     "💵",
+     "🧮"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "$3,000 × 10% =",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 260,
+      "sign": false,
+      "prefix": "$",
+      "align": "center",
+      "steps": [
+       {
+        "v": 300,
+        "at": "three hundred",
+        "color": "green",
+        "label": "EVERY PAYDAY"
+       }
+      ]
+     },
+     {
+      "type": "small",
+      "text": "Example: $3,000/month take-home pay",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "year",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "📈",
+     "💚",
+     "🎉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "In one year:",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 250,
+      "sign": false,
+      "prefix": "$",
+      "align": "center",
+      "steps": [
+       {
+        "v": 3600,
+        "at": "+0.9",
+        "color": "green",
+        "label": "SAVED FIRST"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "💬",
+     "🤔",
+     "💵"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Do you save<br><g>first</g> or <r>last</r>?",
+      "at": "+0.05",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 Comment: first or last?",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [
+   3000,
+   0
+  ],
+  "assumptions": [
+   {
+    "id": "ex",
+    "text": "Example: $3,000/month take-home pay",
+    "on_screen": true
+   }
+  ],
+  "values": {
+   "monthly": {
+    "formula": "3000*0.10",
+    "display": "$300"
+   },
+   "yearly": {
+    "formula": "monthly*12",
+    "display": "$3,600"
+   }
+  },
+  "sources": [
+   {
+    "claim": "The Richest Man in Babylon (pamphlets 1920s, book 1926) teaches saving at least one-tenth of earnings / paying yourself first",
+    "url": "https://en.wikipedia.org/wiki/The_Richest_Man_in_Babylon",
+    "accessed": "2026-10-25"
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY RULE",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "The 100-Year-Old Payday Rule You're Doing Backwards 💵",
+  "short": "Most people: get paid → spend → save what's left (usually nothing). 💵\n\nThe Richest Man in Babylon (1926) flips it: pay yourself first. Save at least a tenth of what you earn, then spend the rest.\n\nExample: $3,000/month take-home pay → $300 on payday → $3,600 in a year (before any interest).\n\n💬 Be honest: do you save first or last?\n\n#payyourselffirst #richestmaninbabylon #savingmoney #money #personalfinance #moneytips #lobelessons",
+  "carousel": "",
+  "youtube_tags": [
+   "pay yourself first",
+   "richest man in babylon",
+   "saving money",
+   "budgeting",
+   "personal finance",
+   "money tips"
+  ]
+ }
+}

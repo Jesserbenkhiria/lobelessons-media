@@ -1,0 +1,114 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  5.415,
+  9.775,
+  12.99,
+  17.865,
+  22.705,
+  28.05
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "hook",
+   "duration": 5.21,
+   "words_per_sec": 2.69,
+   "heard": "this paid a rule is a hundred years old and you're probably doing it backwards",
+   "expected": "this payday rule is a hundred years old and you're probably doing it backwards",
+   "match": 0.9,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "most",
+   "duration": 3.87,
+   "words_per_sec": 2.33,
+   "heard": "most people get paid spend then save what's left",
+   "expected": "most people get paid spend then save what's left",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "left",
+   "duration": 2.73,
+   "words_per_sec": 1.83,
+   "heard": "and what's left usually nothing",
+   "expected": "and what's left usually nothing",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "flip",
+   "duration": 4.38,
+   "words_per_sec": 2.28,
+   "heard": "flip it get paid save first then spend the rest",
+   "expected": "flip it get paid save first then spend the rest",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "num",
+   "duration": 4.43,
+   "words_per_sec": 2.93,
+   "heard": "make three thousand a month move ten percent on payday that's three hundred",
+   "expected": "make three thousand a month move ten percent on payday that's three hundred",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "year",
+   "duration": 4.98,
+   "words_per_sec": 3.01,
+   "heard": "in a year that's three thousand six hundred dollars you didn't have to think about",
+   "expected": "in a year that's three thousand six hundred dollars you didn't have to think about",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "cta",
+   "duration": 3.6,
+   "words_per_sec": 2.5,
+   "heard": "so be honest do you save first or last",
+   "expected": "so be honest do you save first or last",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

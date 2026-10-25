@@ -1,0 +1,11 @@
+[
+ {
+  "sha": "729f32831f87c598d986153f3a8afc9487b4c681",
+  "file": "audio/test_payfirst/_source/729f32831f87.mp3",
+  "added": "2026-10-25T12:49:58",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "uJVFngDHMwziY3QaGWyp",
+  "prompt": "[intriguing, punchy] This payday rule is a hundred years old. And you're probably doing it backwards.\n\n[long pause]\n\n[explaining] Most people get paid, spend, then save what's left.\n\n[long pause]\n\n[dry] And what's left? Usually nothing.\n\n[long pause]\n\n[warm, punchy] Flip it. Get paid, save first, then spend the rest.\n\n[long pause]\n\n[explaining] Make three thousand a month? Move ten percent on payday. That's three hundred.\n\n[long pause]\n\n[impressed] In a year, that's three thousand six hundred dollars you didn't have to think about.\n\n[long pause]\n\n[grinning] So be honest. Do you save first, or last?\n"
+ }
+]
