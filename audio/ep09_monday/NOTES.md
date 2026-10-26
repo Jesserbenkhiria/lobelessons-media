@@ -1,0 +1,1 @@
+- hook.wav replaced 2026-10-26 with an energetic re-take (source in _source_hook/), trimmed and sped up 8% (atempo 1.08); verified with faster-whisper.
