@@ -1,0 +1,20 @@
+[
+ {
+  "sha": "35526ddece26b365de5d9eda662079f4ff18a86d",
+  "file": "audio/ep10_spotlight/_source/35526ddece26.mp3",
+  "added": "2026-10-26T13:31:53",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "vkPAeas9siaXGwZ6WbvA",
+  "prompt": "[teasing, intriguing] Remember that embarrassing thing you did five years ago? Your brain certainly does.\n\n[long pause]\n\n[dry, deadpan] Five years ago.\n\n[long pause]\n\n[explaining] Psychologists call this the spotlight effect. In experiments, people overestimated how much others noticed them.\n\n[long pause]\n\n[warm] So that moment you keep replaying? Other people likely noticed far less than you think.\n\n[long pause]\n\n[curious] Ask yourself: would I remember if someone else did that?\n\n[long pause]\n\n[dry, grinning] Has other customers.\n"
+ },
+ {
+  "sha": "7389f95025898a12bdff59a615d5dbfd097c2336",
+  "file": "audio/ep10_spotlight/_source/7389f9502589.mp3",
+  "added": "2026-10-26T13:32:00",
+  "voice": "1kvnzrSTos1KbmLKMLCC",
+  "model": "eleven_v4",
+  "generation_id": "091e9fvCPg6jjVMSXGbs",
+  "prompt": "[mortified, shouting] I SAID 'YOU TOO' TO THE WAITER!\n\n[long pause]\n\n[panicked] EVERYONE REMEMBERS!\n\n[long pause]\n\n[whining] But the waiter...\n"
+ }
+]

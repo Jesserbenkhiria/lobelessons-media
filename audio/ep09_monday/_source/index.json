@@ -1,0 +1,20 @@
+[
+ {
+  "sha": "26948145959d67de7ff7949c67ed1cb61b8f4d29",
+  "file": "audio/ep09_monday/_source/26948145959d.mp3",
+  "added": "2026-10-26T13:31:40",
+  "voice": "v3p1kjzUvro6S76qmYmH",
+  "model": "eleven_v4",
+  "generation_id": "nNjUrKChjfvyuBQUibU0",
+  "prompt": "[teasing, punchy] This guy has started his new life forty-seven times. And every time, it's Monday.\n\n[long pause]\n\n[dry] It's Monday.\n\n[long pause]\n\n[dry, deadpan] Why?\n\n[long pause]\n\n[warm] Fresh starts can help. But a perfect date doesn't replace a plan.\n\n[long pause]\n\n[explaining] Choose one action. Decide exactly when and where. Like reading one page after breakfast.\n\n[long pause]\n\n[warm, playful] And if you miss Monday? Tuesday works too.\n\n[long pause]\n\n[dry, grinning] What about after breakfast?\n"
+ },
+ {
+  "sha": "38e7ec16840e6f798bf08479371435c3e9d4dc50",
+  "file": "audio/ep09_monday/_source/38e7ec16840e.mp3",
+  "added": "2026-10-26T13:31:49",
+  "voice": "1kvnzrSTos1KbmLKMLCC",
+  "model": "eleven_v4",
+  "generation_id": "akE7uMMvGcE9ByECp6TU",
+  "prompt": "[excited, shouting] Monday, I'm changing EVERYTHING!\n\n[long pause]\n\n[sheepish] Next Monday.\n\n[long pause]\n\n[dramatic] Because I need a fresh start!\n\n[long pause]\n\n[hopeful] What about next year?\n"
+ }
+]

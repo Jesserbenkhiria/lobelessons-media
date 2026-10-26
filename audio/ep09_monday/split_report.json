@@ -1,0 +1,69 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  3.415,
+  5.51,
+  8.52
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "b1",
+   "duration": 3.13,
+   "words_per_sec": 1.28,
+   "heard": "monday aren't changing everything",
+   "expected": "monday i'm changing everything",
+   "match": 0.75,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "b2",
+   "duration": 1.53,
+   "words_per_sec": 1.31,
+   "heard": "next monday",
+   "expected": "next monday",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "b3",
+   "duration": 2.49,
+   "words_per_sec": 2.41,
+   "heard": "because i need a fresh start",
+   "expected": "because i need a fresh start",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "b4",
+   "duration": 1.65,
+   "words_per_sec": 2.42,
+   "heard": "what about next year",
+   "expected": "what about next year",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

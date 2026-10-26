@@ -1,0 +1,331 @@
+{
+ "day": 0,
+ "date": "2026-11-03",
+ "book": "-",
+ "lesson": "The spotlight effect",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.14,
+ "audio_dir": "audio/ep10_spotlight",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "clean": true,
+  "label": "PSYCHOLOGY",
+  "cover": {
+   "html": "THAT EMBARRASSING<br>MOMENT… <r>5 YEARS AGO</r>",
+   "pose": "explain",
+   "names": [
+    "THE BRAIN",
+    "LOBE"
+   ]
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Remember that embarrassing thing you did five years ago? Your brain certainly does."
+   },
+   {
+    "id": "b1",
+    "text": "I SAID 'YOU TOO' TO THE WAITER!",
+    "voice": 5
+   },
+   {
+    "id": "l1",
+    "text": "Five years ago."
+   },
+   {
+    "id": "b2",
+    "text": "EVERYONE REMEMBERS!",
+    "voice": 5
+   },
+   {
+    "id": "spot",
+    "text": "Psychologists call this the spotlight effect. In experiments, people overestimated how much others noticed them."
+   },
+   {
+    "id": "less",
+    "text": "So that moment you keep replaying? Other people likely noticed far less than you think."
+   },
+   {
+    "id": "ask",
+    "text": "Ask yourself: would I remember if someone else did that?"
+   },
+   {
+    "id": "b3",
+    "text": "But the waiter...",
+    "voice": 5
+   },
+   {
+    "id": "end",
+    "text": "Has other customers."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich",
+     "react": "shock"
+    },
+    "props": [
+     "🛏️",
+     "🌙",
+     "⏰"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "🛏️ 2:00 AM…<br><r>5 years ago</r>",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "b1",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "🍽️",
+     "😳",
+     "🧑‍🍳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Flashback:",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🧑‍🍳 Waiter",
+        "r": "\"Enjoy your meal!\"",
+        "color": "muted",
+        "at": "+0.0"
+       },
+       {
+        "l": "🧠 Brain",
+        "r": "\"You too!\"",
+        "color": "red",
+        "at": "TOO"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "l1",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "think",
+     "who": "rich",
+     "react": "shock"
+    },
+    "props": [
+     "📅",
+     "🤨",
+     "⏳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "Five.<br>Years.<br><y>Ago.</y>",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "b2",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "🔦",
+     "😱",
+     "👀"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"EVERYONE<br><r>REMEMBERS!</r>\"",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "spot",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "🔦",
+     "🧪",
+     "🧠"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "The <y>Spotlight<br>Effect</y>",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "sub",
+      "center": true,
+      "html": "People <b>overestimate</b> how much others notice them.",
+      "at": "overestimated"
+     },
+     {
+      "type": "small",
+      "text": "Spotlight effect: Gilovich, Medvec & Savitsky (2000)",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "less",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "🍝",
+     "📱",
+     "💬"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "They noticed<br><g>far less</g>.",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "ask",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think",
+     "who": "rich"
+    },
+    "props": [
+     "🤔",
+     "🪞",
+     "❓"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Would <y>you</y> remember<br>if someone else did it?",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "b3",
+    "mood": "bad",
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "🧑‍🍳",
+     "😬",
+     "🍽️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"But the <r>waiter</r>…\"",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "end",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "🍽️",
+     "👥",
+     "😌"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "…has other<br><g>customers</g>.",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 Your most awkward 'you too'?",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [],
+  "assumptions": [],
+  "values": {},
+  "sources": [
+   {
+    "claim": "People overestimate how much others notice their appearance/behaviour (spotlight effect)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/10707330/",
+    "accessed": "2026-10-26"
+   }
+  ]
+ },
+ "carousel": {
+  "label": "PSYCHOLOGY",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "Why You Still Remember That Embarrassing Moment 😳",
+  "short": "That moment feels enormous to you. It was probably tiny to everyone else. 😳\n\nPsychologists call it the spotlight effect: in experiments, people overestimated how much others noticed them (Gilovich, Medvec & Savitsky, 2000).\n\nNext time it replays at 2 AM, ask: would I remember if someone else did that?\n\n💬 What's your most awkward \"you too\" moment?\n\n#lobelessons #psychology #overthinking #spotlighteffect #selfimprovement",
+  "carousel": "",
+  "youtube_tags": [
+   "spotlight effect",
+   "embarrassing moments",
+   "overthinking",
+   "psychology",
+   "self improvement",
+   "cringe memories"
+  ]
+ }
+}

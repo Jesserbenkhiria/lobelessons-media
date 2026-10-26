@@ -1,0 +1,114 @@
+{
+ "status": "pass",
+ "mode": "auto",
+ "cuts": [
+  4.91,
+  7.92,
+  10.235,
+  11.555,
+  20.625,
+  26.335
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "hook",
+   "duration": 4.79,
+   "words_per_sec": 3.55,
+   "heard": "if you read just ten pages a day how many books could you finish in a year",
+   "expected": "if you read just ten pages a day how many books could you finish in a year",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "opts",
+   "duration": 2.64,
+   "words_per_sec": 1.52,
+   "heard": "three seven or twelve",
+   "expected": "three seven or twelve",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "count",
+   "duration": 1.97,
+   "words_per_sec": 2.03,
+   "heard": "guess three two one",
+   "expected": "guess three two one",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "reveal",
+   "duration": 0.86,
+   "words_per_sec": 1.16,
+   "heard": "twelve",
+   "expected": "twelve",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "math",
+   "duration": 8.69,
+   "words_per_sec": 2.65,
+   "heard": "ten pages times three hundred sixty five days is three thousand six hundred fifty pages with three hundred page books that's about twelve",
+   "expected": "ten pages times three hundred sixty five days is three thousand six hundred fifty pages with three hundred page books that's about twelve",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "challenge",
+   "duration": 5.32,
+   "words_per_sec": 2.63,
+   "heard": "but here's the real challenge can you remember one useful idea from each book",
+   "expected": "but here's the real challenge can you remember one useful idea from each book",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "cta",
+   "duration": 4.42,
+   "words_per_sec": 2.94,
+   "heard": "because reading matters most when you use it so what did you guess",
+   "expected": "because reading matters most when you use it so what did you guess",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  }
+ ],
+ "errors": []
+}

@@ -1,0 +1,61 @@
+{
+ "status": "fail",
+ "mode": "auto",
+ "cuts": [
+  3.335,
+  5.685
+ ],
+ "notes": [],
+ "clips": [
+  {
+   "line": "b1",
+   "duration": 3.17,
+   "words_per_sec": 2.21,
+   "heard": "i said you to to the waiter",
+   "expected": "i said 'you too' to the waiter",
+   "match": 0.71,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "b2",
+   "duration": 1.9,
+   "words_per_sec": 1.05,
+   "heard": "everyone remembers",
+   "expected": "everyone remembers",
+   "match": 1.0,
+   "edges": {
+    "missing_start": 0,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 0
+   }
+  },
+  {
+   "line": "b3",
+   "duration": 1.41,
+   "words_per_sec": 2.13,
+   "heard": "the way too",
+   "expected": "but the waiter",
+   "match": 0.33,
+   "edges": {
+    "missing_start": 1,
+    "missing_end": 0,
+    "extra_start": 0,
+    "extra_end": 1
+   }
+  }
+ ],
+ "errors": [
+  {
+   "check": "alignment",
+   "clip": "b3",
+   "message": "clip 'b3' does not match its text (33%); heard \"the way too\"",
+   "fix": "listen to it: if ElevenLabs said different words, fix `text`/`say` in the spec or regenerate that line only; if it is cut, move the split points"
+  }
+ ]
+}

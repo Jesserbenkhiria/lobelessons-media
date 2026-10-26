@@ -1,0 +1,37 @@
+{
+ "source": "audio/ep09_monday/_source/38e7ec16840e.mp3",
+ "source_sha": "38e7ec16840e6f798bf08479371435c3e9d4dc50",
+ "lines": [
+  "b1",
+  "b2",
+  "b3",
+  "b4"
+ ],
+ "mode": "auto",
+ "cuts": [
+  3.415,
+  5.51,
+  8.52
+ ],
+ "auto_cuts": [
+  3.415,
+  5.51,
+  8.52
+ ],
+ "nudge": {},
+ "pauses": [
+  [
+   3.01,
+   3.82
+  ],
+  [
+   5.18,
+   5.84
+  ],
+  [
+   8.16,
+   8.88
+  ]
+ ],
+ "source_duration": 10.48
+}

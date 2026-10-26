@@ -124,7 +124,7 @@ async function main() {
           const br = lobeRig({ pose: 'shock', side: 'r', t: 0.9, lv: 0.4, tIn: 0, sw: [], seed: 1.3, who: 'broke' });
           const rr = lobeRig({ pose: cv.pose || 'idea', side: 'l', t: 1.2, lv: 0, tIn: 0, sw: [], seed: 0 });
           return `<div style="position:absolute;left:-110px;top:980px;width:700px">${br}</div><div style="position:absolute;right:-110px;top:980px;width:700px">${rr}</div>
-            <div style="position:absolute;left:0;right:0;top:1440px;display:flex;justify-content:space-around;padding:0 70px"><span class="pill" style="background:#D9534F22;color:#D9534F">BROKE BRAIN</span><span class="pill" style="background:#2F9E6B22;color:#2F9E6B">RICH BRAIN</span></div>`; })()
+            <div style="position:absolute;left:0;right:0;top:1440px;display:flex;justify-content:space-around;padding:0 70px"><span class="pill" style="background:#D9534F22;color:#D9534F">${(cv.names || [])[0] || 'BROKE BRAIN'}</span><span class="pill" style="background:#2F9E6B22;color:#2F9E6B">${(cv.names || [])[1] || 'RICH BRAIN'}</span></div>`; })()
         : `<div class="lobe">${M(cv.pose || (first.lobe && first.lobe.pose) || 'think')}</div>`}
       <div class="hdl">🧠 @lobelessons</div></div></body></html>`);
     await p.waitForTimeout(150);

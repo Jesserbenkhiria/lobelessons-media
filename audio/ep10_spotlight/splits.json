@@ -1,0 +1,30 @@
+{
+ "source": "audio/ep10_spotlight/_source/7389f9502589.mp3",
+ "source_sha": "7389f95025898a12bdff59a615d5dbfd097c2336",
+ "lines": [
+  "b1",
+  "b2",
+  "b3"
+ ],
+ "mode": "auto",
+ "cuts": [
+  3.335,
+  5.685
+ ],
+ "auto_cuts": [
+  3.335,
+  5.685
+ ],
+ "nudge": {},
+ "pauses": [
+  [
+   3.05,
+   3.62
+  ],
+  [
+   5.35,
+   6.02
+  ]
+ ],
+ "source_duration": 7.52
+}

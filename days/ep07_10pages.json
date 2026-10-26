@@ -1,0 +1,348 @@
+{
+ "day": 0,
+ "date": "2026-11-01",
+ "book": "-",
+ "lesson": "10 pages a day adds up",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.12,
+ "audio_dir": "audio/ep07_10pages",
+ "short": {
+  "style": "stage",
+  "clean": true,
+  "label": "GUESS FIRST",
+  "cover": {
+   "html": "10 PAGES A DAY<br>= <y>? BOOKS</y>",
+   "pose": "think"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "If you read just ten pages a day, how many books could you finish in a year?"
+   },
+   {
+    "id": "opts",
+    "text": "Three? Seven? Or twelve?"
+   },
+   {
+    "id": "count",
+    "text": "Guess. Three, two, one."
+   },
+   {
+    "id": "reveal",
+    "text": "Twelve!"
+   },
+   {
+    "id": "math",
+    "text": "Ten pages times three hundred sixty-five days is three thousand six hundred fifty pages. With three-hundred-page books, that's about twelve."
+   },
+   {
+    "id": "challenge",
+    "text": "But here's the real challenge. Can you remember one useful idea from each book?"
+   },
+   {
+    "id": "cta",
+    "text": "Because reading matters most when you use it. So, what did you guess?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think"
+    },
+    "props": [
+     "📖",
+     "📚",
+     "🤔"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "10 pages a day =",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "prefix": "",
+      "suffix": "",
+      "size": 300,
+      "align": "center",
+      "steps": [
+       {
+        "v": 10,
+        "at": "+0.0",
+        "color": "gold",
+        "label": "PAGES / DAY"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "opts",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "📚",
+     "❓",
+     "🤓"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "How many books<br>in a year?",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "A",
+        "r": "3 books",
+        "color": "muted",
+        "at": "Three"
+       },
+       {
+        "l": "B",
+        "r": "7 books",
+        "color": "muted",
+        "at": "Seven"
+       },
+       {
+        "l": "C",
+        "r": "12 books",
+        "color": "muted",
+        "at": "twelve"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "count",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "⏱️",
+     "🤔",
+     "❓"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Guess first…",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "sign": false,
+      "prefix": "",
+      "size": 300,
+      "align": "center",
+      "steps": [
+       {
+        "v": 3,
+        "at": "Three",
+        "color": "dark"
+       },
+       {
+        "v": 2,
+        "at": "two",
+        "color": "dark"
+       },
+       {
+        "v": 1,
+        "at": "one",
+        "color": "red"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "reveal",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "🎉",
+     "📚",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "big",
+      "size": 320,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 12,
+        "at": "+0.0",
+        "color": "green",
+        "label": "BOOKS IN ONE YEAR"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "math",
+    "mood": "good",
+    "lobe": {
+     "pose": "explain"
+    },
+    "props": [
+     "🧮",
+     "📅",
+     "📖"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "10 × 365 =",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 230,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 3650,
+        "at": "+0.3",
+        "color": "gold",
+        "label": "PAGES"
+       }
+      ]
+     },
+     {
+      "type": "small",
+      "text": "Assumes reading every day and 300-page books",
+      "at": "+0.05"
+     },
+     {
+      "type": "sub",
+      "center": true,
+      "html": "÷ 300 pages per book ≈ <b>12 books</b>",
+      "at": "three-hundred-page"
+     }
+    ]
+   },
+   {
+    "line": "challenge",
+    "mood": "gold",
+    "lobe": {
+     "pose": "idea"
+    },
+    "props": [
+     "💡",
+     "📝",
+     "🧠"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "The real challenge:",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "stamp",
+      "text": "1 IDEA PER BOOK",
+      "color": "green",
+      "size": 76,
+      "center": true,
+      "at": "one"
+     }
+    ]
+   },
+   {
+    "line": "cta",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve"
+    },
+    "props": [
+     "💬",
+     "💡",
+     "📚"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "Read. Learn.<br><g>Use it.</g>",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 What did you guess?",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [],
+  "assumptions": [
+   {
+    "id": "a",
+    "text": "Assumes reading every day and 300-page books",
+    "on_screen": true
+   }
+  ],
+  "values": {
+   "pages": {
+    "formula": "10*365",
+    "display": "3,650"
+   },
+   "books": {
+    "formula": "pages/300",
+    "display": "12",
+    "round": 0
+   }
+  }
+ },
+ "carousel": {
+  "label": "GUESS FIRST",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "10 Pages a Day = How Many Books a Year? 📚 (Guess First)",
+  "short": "10 pages a day × 365 days = 3,650 pages: about twelve 300-page books in a year. 📚\n\nAssumes reading every day and 300-page books.\n\nBut the real challenge: one useful idea from each book that you actually use.\n\n💬 What did you guess: 3, 7 or 12?\n\n#lobelessons #readingchallenge #books #habits #selfimprovement",
+  "carousel": "",
+  "youtube_tags": [
+   "reading challenge",
+   "10 pages a day",
+   "books",
+   "habits",
+   "self improvement",
+   "reading"
+  ]
+ }
+}

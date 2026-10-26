@@ -1,0 +1,417 @@
+{
+ "day": 0,
+ "date": "2026-11-02",
+ "book": "Atomic Habits",
+ "lesson": "Implementation intentions beat fresh-start dates",
+ "voice": 6,
+ "speed": 1.05,
+ "gap": 0.14,
+ "audio_dir": "audio/ep09_monday",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "clean": true,
+  "label": "HABIT LESSON",
+  "cover": {
+   "html": "THE \"I'LL START<br><r>MONDAY</r>\" TRAP",
+   "pose": "think",
+   "names": [
+    "THE BRAIN",
+    "LOBE"
+   ]
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "This guy has started his new life forty-seven times. And every time, it's Monday."
+   },
+   {
+    "id": "b1",
+    "text": "Monday, I'm changing EVERYTHING!",
+    "voice": 5
+   },
+   {
+    "id": "l1",
+    "text": "It's Monday."
+   },
+   {
+    "id": "b2",
+    "text": "Next Monday.",
+    "voice": 5
+   },
+   {
+    "id": "l2",
+    "text": "Why?"
+   },
+   {
+    "id": "b3",
+    "text": "Because I need a fresh start!",
+    "voice": 5
+   },
+   {
+    "id": "lesson",
+    "text": "Fresh starts can help. But a perfect date doesn't replace a plan."
+   },
+   {
+    "id": "plan",
+    "text": "Choose one action. Decide exactly when and where. Like reading one page after breakfast."
+   },
+   {
+    "id": "miss",
+    "text": "And if you miss Monday? Tuesday works too."
+   },
+   {
+    "id": "b4",
+    "text": "What about next year?",
+    "voice": 5
+   },
+   {
+    "id": "end",
+    "text": "What about after breakfast?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich",
+     "react": "think"
+    },
+    "props": [
+     "📅",
+     "🔁",
+     "😅"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "Monday<br><r>again?</r>",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "big",
+      "size": 230,
+      "sign": false,
+      "prefix": "",
+      "align": "center",
+      "steps": [
+       {
+        "v": 47,
+        "at": "+0.0",
+        "color": "red",
+        "label": "NEW STARTS"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "b1",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "😎",
+     "🎉",
+     "📅"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "\"Monday, I'm changing<br><y>EVERYTHING</y>!\"",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "stamp",
+      "text": "NEW ME",
+      "color": "gold",
+      "size": 110,
+      "center": true,
+      "at": "+0.2"
+     }
+    ]
+   },
+   {
+    "line": "l1",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "think",
+     "who": "rich",
+     "react": "shock"
+    },
+    "props": [
+     "📅",
+     "👀",
+     "⏳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "📅 It's Monday.",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "b2",
+    "mood": "bad",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "📅",
+     "➡️",
+     "😬"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 130,
+      "html": "\"<r>Next</r> Monday.\"",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "l2",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "think",
+     "who": "rich"
+    },
+    "props": [
+     "🦗",
+     "🤨",
+     "❓"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 150,
+      "html": "Why?",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "b3",
+    "mood": "gold",
+    "lobe": {
+     "pose": "explain",
+     "who": "broke"
+    },
+    "props": [
+     "✨",
+     "📅",
+     "🌅"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"I need a<br><y>fresh start</y>!\"",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "lesson",
+    "mood": "neutral",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "📅",
+     "📝",
+     "🧠"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 130,
+      "html": "A date ≠<br>a <g>plan</g>",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "plan",
+    "mood": "good",
+    "lobe": {
+     "pose": "idea",
+     "who": "rich"
+    },
+    "props": [
+     "📖",
+     "⏰",
+     "🍳"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Your plan:",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "WHAT",
+        "r": "📖 Read 1 page",
+        "color": "green",
+        "at": "action"
+       },
+       {
+        "l": "WHEN",
+        "r": "⏰ After breakfast",
+        "color": "green",
+        "at": "when"
+       },
+       {
+        "l": "WHERE",
+        "r": "🍳 At the kitchen table",
+        "color": "green",
+        "at": "where"
+       }
+      ]
+     },
+     {
+      "type": "pill",
+      "text": "📖 Atomic Habits — James Clear",
+      "color": "gold",
+      "center": true,
+      "at": "+0.2"
+     }
+    ]
+   },
+   {
+    "line": "miss",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "✅",
+     "📅",
+     "👍"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Missed Monday?",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "stamp",
+      "text": "TUESDAY WORKS",
+      "color": "green",
+      "size": 84,
+      "center": true,
+      "at": "Tuesday"
+     }
+    ]
+   },
+   {
+    "line": "b4",
+    "mood": "gold",
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "📆",
+     "🎆",
+     "🤔"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "\"What about<br>next <y>year</y>?\"",
+      "at": "+0.0",
+      "center": true
+     }
+    ]
+   },
+   {
+    "line": "end",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "🍳",
+     "📖",
+     "😏"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "What about<br><g>after breakfast</g>?",
+      "at": "+0.0",
+      "center": true
+     },
+     {
+      "type": "pill",
+      "text": "💬 How many Mondays for you?",
+      "color": "dark",
+      "center": true,
+      "at": "+0.3"
+     }
+    ]
+   }
+  ]
+ },
+ "facts": {
+  "inputs": [],
+  "assumptions": [],
+  "values": {},
+  "sources": [
+   {
+    "claim": "Implementation intentions (what/when/where) — Atomic Habits, Chapter 5",
+    "url": "https://jamesclear.com/implementation-intentions",
+    "accessed": "2026-10-26"
+   }
+  ]
+ },
+ "carousel": {
+  "label": "HABIT LESSON",
+  "slides": []
+ },
+ "captions": {
+  "youtube_title": "The \"I'll Start Monday\" Trap 📅",
+  "short": "A fresh start can help. But your plan needs an action, a time and a place. 📅\n\nTry: \"I will read one page after breakfast at the kitchen table.\" Missed Monday? Tuesday works too.\n\nInspired by Atomic Habits by James Clear (implementation intentions, Chapter 5).\n\n💬 How many Mondays have you started over on?\n\n#lobelessons #atomichabits #habits #startToday #selfimprovement",
+  "carousel": "",
+  "youtube_tags": [
+   "i'll start monday",
+   "atomic habits",
+   "habits",
+   "procrastination",
+   "self improvement",
+   "james clear"
+  ]
+ }
+}
