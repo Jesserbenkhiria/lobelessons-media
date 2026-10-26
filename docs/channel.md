@@ -3,7 +3,7 @@
 Single source of truth. Skills link here instead of repeating it.
 
 ## Channel
-- Faceless animated channel about money, psychology, life decisions and ideas from nonfiction books.
+- Faceless animated channel that teaches lessons on anything: money, habits, self-improvement, psychology, life decisions, ideas from nonfiction books. Lobe is the teacher; topics rotate (Jesser, Oct 26 2026). The money rules below apply only to money topics; self-improvement videos give behaviour advice, never medical or fitness promises.
 - Audience: English speakers in the US/UK, 18–35. YouTube is the main platform (income); Instagram, TikTok and Facebook get the same videos.
 - Posting: Metricool (brand 7506135, Africa/Tunis). Slots: FB Reel 19:00, YouTube 20:00, IG Reel 21:00, TikTok 22:00.
 - Every video idea is tested on evidence: YouTube Studio "Stayed to watch", average view duration and average % viewed, compared 48 h after posting.
