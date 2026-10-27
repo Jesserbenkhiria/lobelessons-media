@@ -1,0 +1,445 @@
+{
+ "day": 18,
+ "date": "2026-11-04",
+ "book": "Think and Grow Rich",
+ "lesson": "Specialized knowledge pays",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day18",
+ "short": {
+  "style": "stage",
+  "label": "MONEY · MINDSET",
+  "cover": {
+   "html": "Being smart won't<br>make you <y>rich</y>.<br>Not on its own.",
+   "pose": "explain",
+   "textSize": 100
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Being smart won't make you rich. Not on its own."
+   },
+   {
+    "id": "general",
+    "text": "Think and Grow Rich says general knowledge alone does little for your money."
+   },
+   {
+    "id": "potential",
+    "text": "Knowledge is only potential power. It pays when you turn it into a plan and use it."
+   },
+   {
+    "id": "ford",
+    "text": "Lawyers grilled Henry Ford with trivia. His answer? I press a button and call someone who knows."
+   },
+   {
+    "id": "do",
+    "text": "So skip the trivia. Go deep on one useful skill and aim it at a real problem."
+   },
+   {
+    "id": "loop",
+    "text": "Because being smart won't make you rich. Not on its own."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 280,
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "🎓",
+     "📚",
+     "💸"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Being <y>smart</y><br>won't make<br>you rich.",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "NOT ON ITS OWN",
+      "color": "red",
+      "at": "Not"
+     }
+    ]
+   },
+   {
+    "line": "general",
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "bad",
+    "props": [
+     "",
+     "📚",
+     "🧠",
+     "🤷"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "THINK AND GROW RICH · NAPOLEON HILL",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "<m>General</m> knowledge",
+      "at": "general"
+     },
+     {
+      "type": "stamp",
+      "text": "DOES LITTLE",
+      "color": "red",
+      "size": 100,
+      "at": "little"
+     }
+    ]
+   },
+   {
+    "line": "potential",
+    "lobe": {
+     "pose": "idea"
+    },
+    "mood": "gold",
+    "props": [
+     "",
+     "🔋",
+     "📝",
+     "⚡"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Knowledge =<br><y>potential</y> power.",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "IT PAYS WHEN",
+        "text": "📝 Organized into a plan",
+        "color": "green",
+        "at": "turn"
+       },
+       {
+        "tag": "AND",
+        "text": "⚡ Actually used",
+        "color": "green",
+        "at": "plan"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "ford",
+    "lobe": {
+     "pose": "shock"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "⚖️",
+     "🔘",
+     "📞"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Ford vs <r>lawyers</r>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "❓ Trivia, again and again",
+        "color": "red",
+        "at": "trivia"
+       },
+       {
+        "l": "🔘 \"I press a button…\"",
+        "color": "gold",
+        "at": "press"
+       },
+       {
+        "l": "🧑‍💼 \"…and call someone who knows.\"",
+        "color": "green",
+        "at": "call"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "do",
+    "lobe": {
+     "pose": "approve"
+    },
+    "mood": "good",
+    "props": [
+     "",
+     "🎯",
+     "🛠️",
+     "📈"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🗂️ Skip the trivia",
+        "color": "red",
+        "at": "skip"
+       },
+       {
+        "l": "🎯 Go deep on one useful skill",
+        "color": "green",
+        "at": "deep"
+       },
+       {
+        "l": "🛠️ Aim it at a real problem",
+        "color": "green",
+        "at": "aim"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "top": 280,
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "🎓",
+     "📚",
+     "💸"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Being <y>smart</y><br>won't make<br>you rich.",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "NOT ON ITS OWN",
+      "color": "red",
+      "at": "Not"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THINK AND GROW RICH",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Being smart<br>won't make<br>you <y>rich</y>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Not on its own. Think and Grow Rich explains why. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The problem:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📚 Lots of facts",
+        "color": "muted"
+       },
+       {
+        "l": "🎓 Lots of degrees",
+        "color": "muted"
+       },
+       {
+        "l": "🤷 No plan to use them",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Napoleon Hill's take →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Knowledge is only<br><y>potential</y> power."
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "IT PAYS WHEN",
+        "text": "📝 It's organized into a plan",
+        "color": "green"
+       },
+       {
+        "tag": "AND",
+        "text": "⚡ You actually use it",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Henry Ford proved it →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 360
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Ford vs the lawyers:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "THEY",
+        "text": "❓ Grilled him with trivia",
+        "color": "red"
+       },
+       {
+        "tag": "FORD",
+        "text": "🔘 \"I can press a button and call someone who knows.\"",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what should you learn? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Pick <g>one</g> skill:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"What problem could I solve if I went deep on ___?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Facts are free.<br><g>Using them</g> pays."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for your next learning plan",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Which skill are you going deep on?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Being Smart Won't Make You Rich 🧠 Think and Grow Rich #shorts",
+  "short": "Being smart won't make you rich. Not on its own. 🧠\n\nIn Think and Grow Rich, Napoleon Hill says general knowledge does little for your money. Knowledge is only potential power: it pays when it's organized into a plan and used. Henry Ford didn't know every fact, he knew who to call.\n\n💬 Which skill are you going deep on?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#thinkandgrowrich #napoleonhill #skills #booklessons #mindset #careeradvice #booksummary #selfimprovement #lobelessons",
+  "carousel": "Being smart won't make you rich. Not on its own. 🧠\n\nNapoleon Hill's Think and Grow Rich calls knowledge \"potential power\": it only pays when you organize it into a plan and use it. Henry Ford showed it when lawyers grilled him with trivia.\n\nSwipe for the Ford story 👉\n\n💬 Which skill are you going deep on?\n🔖 Save this for your next learning plan.\n\n#thinkandgrowrich #napoleonhill #skills #booklessons #mindset #selfimprovement #lobelessons",
+  "youtube_tags": [
+   "think and grow rich",
+   "napoleon hill",
+   "specialized knowledge",
+   "henry ford",
+   "skills",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}

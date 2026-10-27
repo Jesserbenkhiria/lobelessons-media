@@ -1,0 +1,445 @@
+{
+ "day": 15,
+ "date": "2026-11-01",
+ "book": "Atomic Habits",
+ "lesson": "Never miss twice",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day15",
+ "short": {
+  "style": "stage",
+  "label": "HABITS · MINDSET",
+  "cover": {
+   "html": "One missed day<br>won't kill your habit.<br>The <r>second</r> will.",
+   "pose": "idea",
+   "textSize": 96
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Missing one day won't kill your habit. The second day will."
+   },
+   {
+    "id": "spiral",
+    "text": "You skip the gym once. Then you think, the week is ruined anyway. So you skip again."
+   },
+   {
+    "id": "rule",
+    "text": "Atomic Habits has one rule for this. Never miss twice."
+   },
+   {
+    "id": "why",
+    "text": "Miss once? That's an accident. Miss twice? That's a new habit starting."
+   },
+   {
+    "id": "tiny",
+    "text": "So on a bad day, do a tiny version. Five minutes still counts."
+   },
+   {
+    "id": "loop",
+    "text": "Because one missed day won't kill your habit. The second day will."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 260,
+    "lobe": {
+     "pose": "idea"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "❌",
+     "📅",
+     "🏋️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Missing <m>1 day</m><br>won't kill<br>your habit.",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "DAY 2 WILL",
+      "color": "red",
+      "size": 96,
+      "at": "second"
+     }
+    ]
+   },
+   {
+    "line": "spiral",
+    "lobe": {
+     "pose": "shock"
+    },
+    "mood": "bad",
+    "props": [
+     "😩",
+     "🛋️",
+     "📉"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The <r>spiral</r>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "❌ Skip once",
+        "color": "red",
+        "at": "skip"
+       },
+       {
+        "l": "🤷 \"The week is ruined\"",
+        "color": "red",
+        "at": "ruined"
+       },
+       {
+        "l": "❌❌ Skip again",
+        "color": "red",
+        "at": "again"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "rule",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "gold",
+    "props": [
+     "📘",
+     "✨",
+     "🔁"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "ATOMIC HABITS · JAMES CLEAR",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "One rule:",
+      "at": "rule"
+     },
+     {
+      "type": "stamp",
+      "text": "NEVER MISS TWICE",
+      "color": "green",
+      "size": 90,
+      "at": "Never"
+     }
+    ]
+   },
+   {
+    "line": "why",
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "neutral",
+    "props": [
+     "🤔",
+     "📅",
+     "🔁"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Why it works:",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "MISS ONCE",
+        "text": "😅 An accident",
+        "color": "gold",
+        "at": "accident"
+       },
+       {
+        "tag": "MISS TWICE",
+        "text": "⚠️ A new habit starting",
+        "color": "red",
+        "at": "new"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "tiny",
+    "lobe": {
+     "pose": "approve"
+    },
+    "mood": "good",
+    "props": [
+     "⏱️",
+     "🌱",
+     "✅"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BAD DAY?",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Do a <g>tiny</g> version.",
+      "at": "tiny"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏋️ 1 set, not 5",
+        "color": "green",
+        "at": "version"
+       },
+       {
+        "l": "⏱️ 5 minutes still counts",
+        "color": "green",
+        "at": "Five"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "top": 260,
+    "lobe": {
+     "pose": "idea"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "❌",
+     "📅",
+     "🏋️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Missing <m>1 day</m><br>won't kill<br>your habit.",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "DAY 2 WILL",
+      "color": "red",
+      "size": 96,
+      "at": "second"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "HABITS · ATOMIC HABITS",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "One missed day<br>won't kill<br>your habit."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "The <r>second</r> one will. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "How habits<br>really die:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "❌ You skip once",
+        "color": "red"
+       },
+       {
+        "l": "🤷 \"Week's ruined anyway\"",
+        "color": "red"
+       },
+       {
+        "l": "❌❌ You skip again",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Atomic Habits has a fix →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "bl",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "ATOMIC HABITS · JAMES CLEAR",
+      "color": "muted"
+     },
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The rule:"
+     },
+     {
+      "type": "stamp",
+      "text": "NEVER MISS TWICE",
+      "color": "green",
+      "size": 84
+     },
+     {
+      "type": "space",
+      "h": 24
+     },
+     {
+      "type": "sub",
+      "html": "Here's why it works →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "One miss vs two:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "MISS ONCE",
+        "text": "😅 An accident",
+        "color": "gold"
+       },
+       {
+        "tag": "MISS TWICE",
+        "text": "⚠️ A new habit starting",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what do you do on a bad day? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Plan your<br><g>tiny version</g>:"
+     },
+     {
+      "type": "quote",
+      "size": 60,
+      "html": "\"If I can't do it all, I'll do ___ for 5 minutes.\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Miss once.<br><g>Never twice.</g>"
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for your next bad day",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Which habit do you keep missing?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Missed a Day? This Rule Saves Your Habit 📅 Atomic Habits #shorts",
+  "short": "Missing one day won't kill your habit. The second day will. 📅\n\nA lesson from Atomic Habits by James Clear: never miss twice. Missing once is an accident. Missing twice is the start of a new habit. On a bad day, do a tiny version instead of nothing.\n\n💬 Which habit do you keep missing?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#atomichabits #jamesclear #habits #booklessons #selfimprovement #motivation #booksummary #productivity #lobelessons",
+  "carousel": "One missed day won't kill your habit. The second one will. 📅\n\nAtomic Habits by James Clear has a simple rule for bad days: never miss twice. Missing once is an accident. Missing twice is a new habit starting. When you can't do it all, do a tiny version.\n\nSwipe for the rule 👉\n\n💬 Which habit do you keep missing?\n🔖 Save this for your next bad day.\n\n#atomichabits #jamesclear #habits #booklessons #selfimprovement #productivity #consistency #lobelessons",
+  "youtube_tags": [
+   "atomic habits",
+   "james clear",
+   "never miss twice",
+   "habits",
+   "consistency",
+   "book summary",
+   "book lessons",
+   "self improvement"
+  ]
+ }
+}

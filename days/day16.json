@@ -1,0 +1,489 @@
+{
+ "day": 16,
+ "date": "2026-11-02",
+ "book": "Think and Grow Rich",
+ "lesson": "Desire: know exactly what you want",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day16",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "label": "MONEY · SKETCH",
+  "cover": {
+   "html": "\"I want to be rich\"<br>is not a <r>plan</r>.",
+   "pose": "idea"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "I want to be rich. That's my plan.",
+    "voice": 5
+   },
+   {
+    "id": "wish",
+    "text": "That's not a plan. That's a wish."
+   },
+   {
+    "id": "more",
+    "text": "Fine. I want more money. Lots more!",
+    "voice": 5
+   },
+   {
+    "id": "exact",
+    "text": "Think and Grow Rich says get exact. Write the amount, the date, and what you'll give in return."
+   },
+   {
+    "id": "give",
+    "text": "Wait. What I give?",
+    "voice": 5
+   },
+   {
+    "id": "plan",
+    "text": "Your time, your skill, your work. Then make a plan, start now, and read it out loud every morning and night."
+   },
+   {
+    "id": "loop",
+    "text": "Okay, okay. I want to be rich. That's my plan.",
+    "voice": 5
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "💰",
+     "🤑",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "\"I want to be<br><y>rich</y>. That's<br>my plan.\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "wish",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "🌠",
+     "📝",
+     "❌"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "That's not<br>a plan.",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "IT'S A WISH",
+      "color": "red",
+      "size": 100,
+      "at": "wish"
+     }
+    ]
+   },
+   {
+    "line": "more",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "💸",
+     "🤑",
+     "💰"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"<y>MORE</y> money!<br>Lots more!\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "exact",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "📝",
+     "📅",
+     "🎯"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Get <g>exact</g>:",
+      "at": "exact"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🎯 The amount",
+        "color": "gold",
+        "at": "amount"
+       },
+       {
+        "l": "📅 The date",
+        "color": "gold",
+        "at": "date"
+       },
+       {
+        "l": "🤝 What you'll give",
+        "color": "green",
+        "at": "give"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "give",
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "❓",
+     "🤔",
+     "🎁"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 124,
+      "html": "\"What I<br><r>GIVE</r>??\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "plan",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "⏰",
+     "🌙",
+     "📈"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Time. Skill. <g>Work.</g>",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📝 Make a plan",
+        "color": "green",
+        "at": "plan"
+       },
+       {
+        "l": "🚀 Start now",
+        "color": "green",
+        "at": "now"
+       },
+       {
+        "l": "🗣️ Read it aloud, AM + PM",
+        "color": "green",
+        "at": "morning"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "idea",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "💰",
+     "🤑",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "\"I want to be<br><y>rich</y>. That's<br>my plan.\"",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THINK AND GROW RICH",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "\"I want to<br>be rich\" is<br>not a <r>plan</r>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Here's what Think and Grow Rich says to do instead. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Most people<br>only <m>wish</m>:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🌠 \"I want more money\"",
+        "color": "red"
+       },
+       {
+        "l": "🤷 No number",
+        "color": "red"
+       },
+       {
+        "l": "📅 No deadline",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Think and Grow Rich has a fix →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 360
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Get <g>exact</g>:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "HOW MUCH",
+        "text": "🎯 An exact amount",
+        "color": "gold"
+       },
+       {
+        "tag": "BY WHEN",
+        "text": "📅 A real date",
+        "color": "gold"
+       },
+       {
+        "tag": "IN RETURN",
+        "text": "🤝 What you'll give for it",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "What does that look like? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "EXAMPLE",
+      "color": "dark"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Wish vs <g>desire</g>:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "WISH",
+        "text": "🌠 \"More money someday\"",
+        "color": "muted"
+       },
+       {
+        "tag": "DESIRE",
+        "text": "🎯 $10,000 saved by Dec 2027, from extra freelance work",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Then what? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Write it down.<br><g>Then start.</g>"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📝 Amount + date + what you'll give",
+        "color": "green"
+       },
+       {
+        "l": "🚀 A plan you start now",
+        "color": "green"
+       },
+       {
+        "l": "🗣️ Read it aloud, morning + night",
+        "color": "green"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Wishes wait.<br><g>Plans move.</g>"
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this before you set your goal",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What's your exact number?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "\"I Want to Be Rich\" Is Not a Plan 💭 Think and Grow Rich #shorts",
+  "short": "\"I want to be rich\" is not a plan. It's a wish. 💭\n\nIn Think and Grow Rich, Napoleon Hill says to get exact: write down the amount, the date, and what you'll give in return. Then make a plan, start now, and read it out loud morning and night.\n\n💬 What's your exact number?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#thinkandgrowrich #napoleonhill #goals #booklessons #mindset #moneymindset #booksummary #selfimprovement #lobelessons",
+  "carousel": "\"I want to be rich\" is not a plan. 💭\n\nNapoleon Hill's Think and Grow Rich turns a wish into a desire: an exact amount, a real date, and what you'll give in return. Then a plan you start now, read aloud morning and night.\n\nSwipe for the wish vs desire example 👉\n\n💬 What's your exact number?\n🔖 Save this before you set your goal.\n\n#thinkandgrowrich #napoleonhill #goals #goalsetting #booklessons #mindset #moneymindset #lobelessons",
+  "youtube_tags": [
+   "think and grow rich",
+   "napoleon hill",
+   "goal setting",
+   "desire",
+   "money mindset",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}

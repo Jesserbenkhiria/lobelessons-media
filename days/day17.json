@@ -1,0 +1,422 @@
+{
+ "day": 17,
+ "date": "2026-11-03",
+ "book": "Think and Grow Rich",
+ "lesson": "Persistence beats talent",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day17",
+ "short": {
+  "style": "stage",
+  "label": "MINDSET · POV",
+  "cover": {
+   "html": "POV: you quit<br><y>3 feet</y> from gold",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you quit three feet from gold."
+   },
+   {
+    "id": "vein",
+    "text": "In Think and Grow Rich, a man digs for gold, finds a rich vein, and then it vanishes."
+   },
+   {
+    "id": "quit",
+    "text": "He keeps drilling. Nothing. So he quits and sells his machine to a junk man."
+   },
+   {
+    "id": "gold",
+    "text": "The junk man calls in an engineer. The gold was three feet away."
+   },
+   {
+    "id": "lesson",
+    "text": "Hill's point: most people quit at the first defeat. But a temporary defeat isn't failure."
+   },
+   {
+    "id": "loop",
+    "text": "So, are you about to quit three feet from gold?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "top": 280,
+    "lobe": {
+     "pose": "shock"
+    },
+    "mood": "bad",
+    "props": [
+     "",
+     "⛏️",
+     "🪨",
+     "💰"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "You quit<br><y>3 feet</y> from<br>gold.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "vein",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "gold",
+    "props": [
+     "",
+     "⛏️",
+     "✨",
+     "🪙"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "THINK AND GROW RICH · NAPOLEON HILL",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "⛏️ He digs for gold",
+        "color": "gold",
+        "at": "digs"
+       },
+       {
+        "l": "✨ Finds a rich vein",
+        "color": "green",
+        "at": "rich"
+       },
+       {
+        "l": "😶 Then it vanishes",
+        "color": "red",
+        "at": "vanishes"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "quit",
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "bad",
+    "props": [
+     "",
+     "🪨",
+     "😩",
+     "🛻"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Drill… drill…<br><m>nothing.</m>",
+      "at": "+0.05"
+     },
+     {
+      "type": "space",
+      "h": 16
+     },
+     {
+      "type": "stamp",
+      "text": "QUITS",
+      "color": "red",
+      "size": 110,
+      "at": "quits"
+     },
+     {
+      "type": "space",
+      "h": 20
+     },
+     {
+      "type": "sub",
+      "html": "Sells the machine to a <b>junk man</b>.",
+      "at": "junk"
+     }
+    ]
+   },
+   {
+    "line": "gold",
+    "lobe": {
+     "pose": "shock"
+    },
+    "mood": "gold",
+    "props": [
+     "",
+     "💰",
+     "📏",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The junk man<br>calls an <g>engineer</g>…",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "3 FEET AWAY",
+      "color": "gold",
+      "size": 104,
+      "at": "three"
+     }
+    ]
+   },
+   {
+    "line": "lesson",
+    "lobe": {
+     "pose": "idea"
+    },
+    "mood": "good",
+    "props": [
+     "",
+     "💡",
+     "📈",
+     "🧗"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Hill's point:",
+      "at": "+0.05"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "MOST PEOPLE",
+        "text": "🏳️ Quit at the first defeat",
+        "color": "red",
+        "at": "most"
+       },
+       {
+        "tag": "THE BOOK",
+        "text": "🧗 Temporary defeat ≠ failure",
+        "color": "green",
+        "at": "temporary"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "top": 280,
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "⛏️",
+     "🪨",
+     "💰"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "About to quit<br><y>3 feet</y> from<br>gold?",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · THINK AND GROW RICH",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 116,
+      "html": "Most people<br>quit <y>3 feet</y><br>from gold."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "A story from Think and Grow Rich. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The story:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "⛏️ A man digs for gold",
+        "color": "gold"
+       },
+       {
+        "l": "✨ Finds a rich vein",
+        "color": "green"
+       },
+       {
+        "l": "😶 Then it vanishes",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what does he do? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "He drills.<br><m>Nothing.</m>"
+     },
+     {
+      "type": "stamp",
+      "text": "HE QUITS",
+      "color": "red",
+      "size": 96
+     },
+     {
+      "type": "space",
+      "h": 20
+     },
+     {
+      "type": "sub",
+      "html": "He sells his machine to a junk man →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "bl",
+     "size": 360
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The junk man<br>calls an <g>engineer</g>."
+     },
+     {
+      "type": "stamp",
+      "text": "GOLD: 3 FEET AWAY",
+      "color": "gold",
+      "size": 76
+     },
+     {
+      "type": "space",
+      "h": 20
+     },
+     {
+      "type": "sub",
+      "html": "Hill's lesson →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Before you quit, ask:"
+     },
+     {
+      "type": "quote",
+      "size": 60,
+      "html": "\"Is this a <g>temporary defeat</g>… or a real failure?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Defeat is<br><g>temporary</g>.<br>Quitting isn't."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for the day you want to quit",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What almost made you quit?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "POV: You Quit 3 Feet From Gold ⛏️ Think and Grow Rich #shorts",
+  "short": "POV: you quit three feet from gold. ⛏️\n\nIn Think and Grow Rich, Napoleon Hill tells the story of a man who found gold, lost the vein, quit, and sold his machine to a junk man. The junk man called in an engineer, and the gold was three feet away. Hill's point: most people quit at the first defeat, but a temporary defeat isn't failure.\n\n💬 What almost made you quit?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#thinkandgrowrich #napoleonhill #persistence #neverquit #booklessons #mindset #motivation #booksummary #lobelessons",
+  "carousel": "Most people quit three feet from gold. ⛏️\n\nNapoleon Hill's Think and Grow Rich tells the story of a gold miner who gave up when the vein vanished. The man who bought his machine kept going and found the gold three feet away. Hill's lesson: temporary defeat is not failure.\n\nSwipe for the full story 👉\n\n💬 What almost made you quit?\n🔖 Save this for the day you want to quit.\n\n#thinkandgrowrich #napoleonhill #persistence #booklessons #mindset #motivation #lobelessons",
+  "youtube_tags": [
+   "think and grow rich",
+   "napoleon hill",
+   "three feet from gold",
+   "persistence",
+   "never give up",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
