@@ -1,0 +1,409 @@
+{
+ "day": 20,
+ "date": "2026-11-06",
+ "book": "Deep Work",
+ "lesson": "Attention residue",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "FOCUS · POV",
+  "cover": {
+   "html": "POV: you just<br>checked your<br><r>phone</r>.",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you just quickly checked your phone."
+   },
+   {
+    "id": "stuck",
+    "text": "Your brain didn't switch back. Part of it is still stuck on that message."
+   },
+   {
+    "id": "name",
+    "text": "Researcher Sophie Leroy calls it attention residue. Cal Newport explains it in Deep Work."
+   },
+   {
+    "id": "split",
+    "text": "So even a quick check leaves your focus split between two tasks."
+   },
+   {
+    "id": "fix",
+    "text": "The fix: finish one task before switching. Phone away during deep work."
+   },
+   {
+    "id": "loop",
+    "text": "POV: you just quickly checked your phone."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 500
+    },
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "You <y>just</y> checked<br>your <r>phone</r>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "stuck",
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Your brain<br>didn't <m>switch back</m>.",
+      "at": "switch"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📱 Part of you: the message",
+        "color": "red",
+        "at": "stuck"
+       },
+       {
+        "l": "💼 Part of you: your work",
+        "color": "muted",
+        "at": "message"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "name",
+    "lobe": {
+     "pose": "explain",
+     "pos": "tr",
+     "size": 280
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "<y>Attention</y><br>residue",
+      "at": "residue"
+     },
+     {
+      "type": "space",
+      "h": 50
+     },
+     {
+      "type": "stamp",
+      "text": "CAL NEWPORT · DEEP WORK",
+      "color": "gold",
+      "size": 52,
+      "at": "Newport"
+     }
+    ],
+    "top": 260
+   },
+   {
+    "line": "split",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Focus <r>split</r><br>in two.",
+      "at": "split"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "TASK A",
+        "text": "Still on your mind",
+        "color": "red",
+        "at": "quick"
+       },
+       {
+        "tag": "TASK B",
+        "text": "What you must do now",
+        "color": "gold",
+        "at": "two"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "fix",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "The <g>fix</g>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "✅ Finish one task first",
+        "color": "green",
+        "at": "finish"
+       },
+       {
+        "l": "📵 Phone away",
+        "color": "green",
+        "at": "Phone"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 500
+    },
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "You <y>just</y> checked<br>your <r>phone</r>.",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "FOCUS · DEEP WORK",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Just checking<br>your phone<br>costs <r>focus</r>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Why it lingers, from Deep Work. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "You look away.<br>Your <m>mind</m> doesn't."
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📱 Quick check",
+        "color": "red"
+       },
+       {
+        "l": "💭 Part of you stays on it",
+        "color": "red"
+       },
+       {
+        "l": "💼 Less left for your work",
+        "color": "muted"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "There's a name for it →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "tr",
+     "size": 280
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "<y>Attention</y><br>residue"
+     },
+     {
+      "type": "quote",
+      "size": 60,
+      "html": "Switching tasks leaves part of your <hl at=\"x\" c=\"green\">attention</hl> behind."
+     },
+     {
+      "type": "sub",
+      "html": "Researcher Sophie Leroy's idea, which Cal Newport uses in Deep Work →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "EXAMPLE",
+      "color": "dark"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Same hour,<br>two ways:"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "SPLIT",
+        "text": "Work, check, work, check",
+        "color": "red"
+       },
+       {
+        "tag": "DEEP",
+        "text": "Work, phone away, done",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what do you do? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Finish <g>one task</g><br>before you switch."
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📵 Phone out of reach",
+        "color": "green"
+       },
+       {
+        "l": "🔕 Notifications off",
+        "color": "green"
+       },
+       {
+        "l": "✅ One task at a time",
+        "color": "green"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Quick checks<br>aren't <r>quick</r>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for your next work day",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Where does your phone live while you work?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "POV: You Just Checked Your Phone 📱 Deep Work by Cal Newport #shorts",
+  "short": "POV: you just quickly checked your phone. 📱\n\nIn Deep Work, Cal Newport describes attention residue (an idea from researcher Sophie Leroy): when you switch tasks, part of your attention stays on the last one. Finish one task before switching, and keep your phone away during deep work.\n\n💬 Where does your phone live while you work?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#deepwork #calnewport #focus #productivity #booklessons #mindset #booksummary #pov #lobelessons",
+  "carousel": "Just checking your phone costs more than you think. 📱\n\nCal Newport's Deep Work explains attention residue: when you switch tasks, part of your attention stays behind. Finish one task before switching, and keep your phone away while you work.\n\nSwipe for the fix 👉\n\n💬 Where does your phone live while you work?\n🔖 Save this for your next work day.\n\n#deepwork #calnewport #focus #productivity #booklessons #mindset #lobelessons",
+  "youtube_tags": [
+   "deep work",
+   "cal newport",
+   "attention residue",
+   "focus",
+   "productivity",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
