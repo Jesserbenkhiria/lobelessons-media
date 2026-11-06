@@ -1,0 +1,442 @@
+{
+ "day": 21,
+ "date": "2026-11-07",
+ "book": "The Richest Man in Babylon",
+ "lesson": "A part of all you earn is yours to keep",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day21",
+ "short": {
+  "style": "stage",
+  "label": "MONEY · MINDSET",
+  "cover": {
+   "html": "You pay <r>everyone</r><br>but <y>yourself</y>.",
+   "pose": "explain",
+   "textSize": 100
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "You're paying everyone except yourself."
+   },
+   {
+    "id": "bills",
+    "text": "Rent, phone, subscriptions. Everybody gets paid first. You get whatever's left."
+   },
+   {
+    "id": "rule",
+    "text": "The Richest Man in Babylon flips it: a part of all you earn is yours to keep."
+   },
+   {
+    "id": "ten",
+    "text": "Arkad's rule is simple. Keep at least one tenth, before you spend the rest."
+   },
+   {
+    "id": "ex",
+    "text": "Example: earn one thousand, keep one hundred first. Live on the rest."
+   },
+   {
+    "id": "loop",
+    "text": "Stop paying everyone except yourself."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "💸",
+     "🏠",
+     "📱"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "You pay<br><r>everyone</r><br>but yourself.",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "THE 10% RULE",
+      "color": "gold",
+      "at": "yourself"
+     }
+    ],
+    "top": 280
+   },
+   {
+    "line": "bills",
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "bad",
+    "props": [
+     "",
+     "🏠",
+     "📱",
+     "🤷"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "Everyone gets paid <m>first</m>.",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏠 Rent",
+        "color": "muted",
+        "at": "Rent"
+       },
+       {
+        "l": "📱 Phone & subscriptions",
+        "color": "muted",
+        "at": "subscriptions"
+       },
+       {
+        "l": "🤷 You: leftovers",
+        "color": "red",
+        "at": "left"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "rule",
+    "lobe": {
+     "pose": "idea"
+    },
+    "mood": "gold",
+    "props": [
+     "",
+     "📜",
+     "🏺",
+     "💰"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "THE RICHEST MAN IN BABYLON",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "A part of all you earn<br>is <y>yours to keep</y>.",
+      "at": "flips"
+     }
+    ]
+   },
+   {
+    "line": "ten",
+    "lobe": {
+     "pose": "approve"
+    },
+    "mood": "good",
+    "props": [
+     "",
+     "🪙",
+     "1️⃣",
+     "🔟"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Keep <g>1/10</g><br>first.",
+      "at": "tenth"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "STEP 1",
+        "text": "💰 Keep your share",
+        "color": "green",
+        "at": "Keep"
+       },
+       {
+        "tag": "STEP 2",
+        "text": "🛒 Then spend the rest",
+        "color": "muted",
+        "at": "spend"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "ex",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "good",
+    "props": [
+     "",
+     "💵",
+     "🪙",
+     "📈"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "EXAMPLE",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Earn",
+       "Keep first"
+      ],
+      "rows": [
+       {
+        "l": "Example: $1,000",
+        "r": "$100 → you",
+        "color": "green",
+        "at": "hundred"
+       },
+       {
+        "l": "Live on",
+        "r": "$900",
+        "color": "muted",
+        "at": "rest"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "💸",
+     "🏠",
+     "📱"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "You pay<br><r>everyone</r><br>but yourself.",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "THE 10% RULE",
+      "color": "gold",
+      "at": "yourself"
+     }
+    ],
+    "top": 280
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE RICHEST MAN IN BABYLON",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "You pay<br><r>everyone</r><br>but yourself."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "The Richest Man in Babylon has a fix. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The problem:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏠 Rent gets paid",
+        "color": "muted"
+       },
+       {
+        "l": "📱 Bills get paid",
+        "color": "muted"
+       },
+       {
+        "l": "🤷 You get what's left",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Arkad flips the order →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "A part of all you earn<br>is <y>yours to keep</y>."
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "THE RULE",
+        "text": "🪙 Keep at least 1/10",
+        "color": "green"
+       },
+       {
+        "tag": "WHEN",
+        "text": "⏱️ Before you spend the rest",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "See it with numbers →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 360
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "EXAMPLE",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Earn",
+       "Keep first"
+      ],
+      "rows": [
+       {
+        "l": "Example: $1,000",
+        "r": "$100 → you",
+        "color": "green"
+       },
+       {
+        "l": "Live on",
+        "r": "$900",
+        "color": "muted"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Small. Steady. First. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Pay <g>yourself</g> first:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"Next payday, what share can I set aside before I spend anything?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Keep first.<br><g>Spend second.</g>"
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for payday",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What share would you keep?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "You Pay Everyone Except Yourself 💸 The Richest Man in Babylon #shorts",
+  "short": "You're paying everyone except yourself. 💸\n\nIn The Richest Man in Babylon, George S. Clason's lesson is: a part of all you earn is yours to keep. Arkad's rule of thumb is to keep at least one tenth before you spend the rest. (Example numbers only, not financial advice.)\n\n💬 What share would you keep?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#richestmaninbabylon #savemoney #payyourselffirst #booklessons #mindset #personalfinance #booksummary #lobelessons",
+  "carousel": "You're paying everyone except yourself. 💸\n\nThe Richest Man in Babylon teaches that a part of all you earn is yours to keep: set aside at least one tenth before you spend the rest. Example numbers only, not financial advice.\n\nSwipe for the rule 👉\n\n💬 What share would you keep?\n🔖 Save this for payday.\n\n#richestmaninbabylon #payyourselffirst #savemoney #booklessons #mindset #lobelessons",
+  "youtube_tags": [
+   "richest man in babylon",
+   "george clason",
+   "pay yourself first",
+   "saving money",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
