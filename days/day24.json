@@ -1,0 +1,435 @@
+{
+ "day": 24,
+ "date": "2026-11-10",
+ "book": "Man's Search for Meaning",
+ "lesson": "The last human freedom: choose your attitude",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day24",
+ "short": {
+  "style": "stage",
+  "label": "MINDSET · FREEDOM",
+  "cover": {
+   "html": "Everything can<br>be taken.<br><y>Except one thing.</y>",
+   "pose": "think",
+   "textSize": 100
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Everything can be taken from you. Except one thing."
+   },
+   {
+    "id": "who",
+    "text": "Viktor Frankl was a psychiatrist who survived Nazi camps. In Man's Search for Meaning, he saw it up close."
+   },
+   {
+    "id": "rule",
+    "text": "You can't always choose what happens to you. But you can choose your attitude."
+   },
+   {
+    "id": "ex",
+    "text": "Bad news. Traffic. A rough day. The event is fixed. Your response is yours."
+   },
+   {
+    "id": "act",
+    "text": "So pause, and pick your response. That part is always yours."
+   },
+   {
+    "id": "loop",
+    "text": "Everything can be taken. Except your choice of attitude."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "🧠",
+     "⛓️",
+     "🗝️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Everything can<br>be taken.<br><y>Except one thing.</y>",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "FRANKL'S BIG IDEA",
+      "color": "gold",
+      "at": "thing"
+     }
+    ],
+    "top": 280
+   },
+   {
+    "line": "who",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "📖",
+     "🧠",
+     "🕯️"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "MAN'S SEARCH FOR MEANING",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "book",
+      "title": "Man's Search for Meaning",
+      "author": "Viktor E. Frankl",
+      "side": "<y>Psychiatrist.</y><br>Survivor.<br>Seen it up close.",
+      "at": "Frankl"
+     }
+    ]
+   },
+   {
+    "line": "rule",
+    "lobe": {
+     "pose": "idea"
+    },
+    "mood": "gold",
+    "props": [
+     "",
+     "🗝️",
+     "💭",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Choose your<br><g>attitude</g>.",
+      "at": "attitude"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "FIXED",
+        "text": "🌧️ What happens to you",
+        "color": "muted",
+        "at": "can't"
+       },
+       {
+        "tag": "YOURS",
+        "text": "🧭 Your attitude",
+        "color": "green",
+        "at": "But"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "ex",
+    "lobe": {
+     "pose": "explain"
+    },
+    "mood": "good",
+    "props": [
+     "",
+     "🚗",
+     "📩",
+     "😮‍💨"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "EVERYDAY EXAMPLES",
+      "color": "gold",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📩 Bad news",
+        "color": "muted",
+        "at": "news"
+       },
+       {
+        "l": "🚗 Traffic",
+        "color": "muted",
+        "at": "Traffic"
+       },
+       {
+        "l": "☁️ A rough day",
+        "color": "muted",
+        "at": "rough"
+       },
+       {
+        "l": "🧭 Your response: yours",
+        "color": "green",
+        "at": "yours"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "act",
+    "lobe": {
+     "pose": "approve"
+    },
+    "mood": "good",
+    "props": [
+     "",
+     "⏸️",
+     "🧭",
+     "✅"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "<y>Pause.</y> Pick<br>your <g>response</g>.",
+      "at": "pause"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "STEP 1",
+        "text": "⏸️ Pause",
+        "color": "muted",
+        "at": "pause"
+       },
+       {
+        "tag": "STEP 2",
+        "text": "🧭 Choose how to respond",
+        "color": "green",
+        "at": "pick"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "think"
+    },
+    "mood": "neutral",
+    "props": [
+     "",
+     "🧠",
+     "⛓️",
+     "🗝️"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Everything can<br>be taken.<br><y>Except one thing.</y>",
+      "at": "+0.05"
+     },
+     {
+      "type": "pill",
+      "text": "FRANKL'S BIG IDEA",
+      "color": "gold",
+      "at": "thing"
+     }
+    ],
+    "top": 280
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · MAN'S SEARCH FOR MEANING",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "Everything can<br>be taken.<br><y>Except one thing.</y>"
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Viktor Frankl's big idea. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Who said it?"
+     },
+     {
+      "type": "book",
+      "title": "Man's Search for Meaning",
+      "author": "Viktor E. Frankl",
+      "side": "Psychiatrist. Survivor of Nazi camps."
+     },
+     {
+      "type": "sub",
+      "html": "His lesson came from there →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "The idea:<br><g>choose your attitude</g>."
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "FIXED",
+        "text": "🌧️ What happens to you",
+        "color": "muted"
+       },
+       {
+        "tag": "YOURS",
+        "text": "🧭 How you respond",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Sounds simple. Here's where it shows up →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 360
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "EVERYDAY EXAMPLES",
+      "color": "gold"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📩 Bad news",
+        "color": "muted"
+       },
+       {
+        "l": "🚗 Traffic",
+        "color": "muted"
+       },
+       {
+        "l": "☁️ A rough day",
+        "color": "muted"
+       },
+       {
+        "l": "🧭 Your response: yours",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "So what do you do? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "<y>Pause.</y> Then <g>choose</g>:"
+     },
+     {
+      "type": "quote",
+      "size": 56,
+      "html": "\"What's one thing I can choose in this moment: my response?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Not everything is yours.<br><g>Your attitude is.</g>"
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this for a hard day",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What will you choose today?",
+      "color": "muted"
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Everything Can Be Taken. Except One Thing 🧠 Man's Search for Meaning #shorts",
+  "short": "Everything can be taken from you. Except one thing. 🧠\n\nIn Man's Search for Meaning, Viktor Frankl, a psychiatrist who survived Nazi camps, writes that even when circumstances are out of your hands, you keep the freedom to choose your attitude. Pause, then pick your response. (A lesson from a book, not professional advice.)\n\n💬 What will you choose today?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#mansearchformeaning #viktorfrankl #mindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "Everything can be taken from you. Except one thing. 🧠\n\nIn Man's Search for Meaning, Viktor Frankl's big idea: you can't always choose what happens, but you can choose your attitude. Pause, then pick your response. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What will you choose today?\n🔖 Save this for a hard day.\n\n#mansearchformeaning #viktorfrankl #mindset #booklessons #selfgrowth #lobelessons",
+  "youtube_tags": [
+   "man's search for meaning",
+   "viktor frankl",
+   "choose your attitude",
+   "mindset",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
