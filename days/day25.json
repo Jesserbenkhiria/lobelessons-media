@@ -1,0 +1,477 @@
+{
+ "day": 25,
+ "date": "2026-11-11",
+ "book": "Man's Search for Meaning",
+ "lesson": "Find your why",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day25",
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "label": "MINDSET · SKETCH",
+  "cover": {
+   "html": "Monday again.<br>I <r>can't</r> do this.",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Monday again. I can't do this.",
+    "voice": 5
+   },
+   {
+    "id": "why",
+    "text": "You don't lack energy. You lack a reason."
+   },
+   {
+    "id": "cof",
+    "text": "A reason? I need coffee!",
+    "voice": 5
+   },
+   {
+    "id": "book",
+    "text": "Frankl, in Man's Search for Meaning, quotes: a person with a why can bear almost any how."
+   },
+   {
+    "id": "find",
+    "text": "Fine. How do I find my why?",
+    "voice": 5
+   },
+   {
+    "id": "pick",
+    "text": "Pick one: something to finish, or someone to show up for."
+   },
+   {
+    "id": "loop",
+    "text": "Monday again. I can't do this.",
+    "voice": 5
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "😩",
+     "⏰",
+     "☕"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"Monday again.<br>I <r>can't</r><br>do this.\"",
+      "at": "+0.05"
+     }
+    ],
+    "top": 300
+   },
+   {
+    "line": "why",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "🧭",
+     "🔋",
+     "❓"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Not low <r>energy</r>.<br>No <g>reason</g>.",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "MISSING: A WHY",
+      "color": "red",
+      "size": 78,
+      "at": "reason"
+     }
+    ],
+    "top": 300
+   },
+   {
+    "line": "cof",
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "☕",
+     "😵",
+     "🥱"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "\"A reason?<br>I need <r>coffee</r>!\"",
+      "at": "+0.05"
+     }
+    ],
+    "top": 300
+   },
+   {
+    "line": "book",
+    "lobe": {
+     "pose": "idea",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "📖",
+     "🧠",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "MAN'S SEARCH FOR MEANING",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Have a <y>why</y>.<br>Bear the <g>how</g>.",
+      "at": "why"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "WHY",
+        "text": "🎯 A reason to keep going",
+        "color": "gold",
+        "at": "why#1"
+       },
+       {
+        "tag": "HOW",
+        "text": "🪨 The hard part",
+        "color": "muted",
+        "at": "how"
+       }
+      ]
+     }
+    ],
+    "top": 130
+   },
+   {
+    "line": "find",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "🤔",
+     "❓",
+     "🧭"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "\"How do I find<br>my <y>why</y>?\"",
+      "at": "+0.05"
+     }
+    ],
+    "top": 300
+   },
+   {
+    "line": "pick",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "✅",
+     "🤝",
+     "📌"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "rule",
+      "items": [
+       {
+        "icon": "🏁",
+        "title": "Something to finish",
+        "sub": "a task that's yours",
+        "color": "green",
+        "at": "finish"
+       },
+       {
+        "icon": "🤝",
+        "title": "Someone to show up for",
+        "sub": "a person who counts on you",
+        "color": "gold",
+        "at": "someone"
+       }
+      ]
+     }
+    ],
+    "top": 130
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "😩",
+     "⏰",
+     "☕"
+    ],
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"Monday again.<br>I <r>can't</r><br>do this.\"",
+      "at": "+0.05"
+     }
+    ],
+    "top": 300
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · MAN'S SEARCH FOR MEANING",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "You don't lack<br><r>energy</r>.<br>You lack a <y>why</y>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Viktor Frankl, Man's Search for Meaning. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The Monday feeling:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "⏰ Dragging yourself up",
+        "color": "red"
+       },
+       {
+        "l": "🔁 Same days on repeat",
+        "color": "muted"
+       },
+       {
+        "l": "❓ \"What's it all for?\"",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Frankl saw it differently →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Have a <y>why</y>.<br>Bear the <g>how</g>."
+     },
+     {
+      "type": "sub",
+      "html": "Frankl quotes a line like this: a reason to live helps you bear almost any \"how\". Example: a hard week feels lighter when it's for something. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "WHERE A WHY CAN COME FROM",
+      "color": "gold"
+     },
+     {
+      "type": "rule",
+      "items": [
+       {
+        "icon": "🏁",
+        "title": "Something to finish",
+        "sub": "work or a task that's yours",
+        "color": "green"
+       },
+       {
+        "icon": "🤝",
+        "title": "Someone to show up for",
+        "sub": "a person who counts on you",
+        "color": "gold"
+       },
+       {
+        "icon": "🧭",
+        "title": "Your attitude",
+        "sub": "how you meet what you can't change",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Your turn →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Name your <g>why</g>:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"What is one thing, or one person, worth showing up for this week?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "A reason to get up<br>beats <g>more coffee</g>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What's your why?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Monday Again? You Lack a Reason, Not Energy 😩 Man's Search for Meaning #shorts",
+  "short": "Monday again. I can't do this. 😩\n\nIn Man's Search for Meaning, Viktor Frankl quotes the idea that a person with a \"why\" can bear almost any \"how\". The lesson: find something to finish or someone to show up for. (A lesson from a book, not professional advice.)\n\n💬 What's your why?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#mansearchformeaning #viktorfrankl #mindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "You don't lack energy. You lack a why. 😩\n\nIn Man's Search for Meaning, Viktor Frankl quotes the idea that a person with a \"why\" can bear almost any \"how\". Something to finish or someone to show up for can be a start. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What's your why?\n🔖 Save this for Monday.\n\n#mansearchformeaning #viktorfrankl #mindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "man's search for meaning",
+   "viktor frankl",
+   "find your why",
+   "motivation",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
