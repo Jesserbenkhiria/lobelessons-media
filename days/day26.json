@@ -1,0 +1,403 @@
+{
+ "day": 26,
+ "date": "2026-11-12",
+ "book": "The Millionaire Next Door",
+ "lesson": "Big hat, no cattle",
+ "voice": 6,
+ "speed": 1.05,
+ "audio_dir": "audio/day26",
+ "short": {
+  "style": "stage",
+  "label": "MONEY · POV",
+  "cover": {
+   "html": "POV: you look <y>rich</y>.<br>Are you <r>rich</r>?",
+   "pose": "think"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you look rich. But are you rich?"
+   },
+   {
+    "id": "book",
+    "text": "In The Millionaire Next Door, Stanley and Danko studied real millionaires."
+   },
+   {
+    "id": "found",
+    "text": "Many lived in modest homes, and drove ordinary cars."
+   },
+   {
+    "id": "why",
+    "text": "Wealth is what you keep, not what you show."
+   },
+   {
+    "id": "hat",
+    "text": "Texans call the other kind: big hat, no cattle."
+   },
+   {
+    "id": "lesson",
+    "text": "Looking rich costs money. Being rich builds it."
+   },
+   {
+    "id": "loop",
+    "text": "POV: you look rich. But are you rich?"
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You <y>look</y> rich.<br>But are<br>you <r>rich</r>?",
+      "at": "+0.05"
+     }
+    ],
+    "top": 300
+   },
+   {
+    "line": "book",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "The Millionaire Next Door",
+      "author": "Stanley & Danko",
+      "side": "They <g>studied</g><br>real <y>millionaires</y>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "found",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "What they <y>found</y>:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏠 Modest homes",
+        "color": "green",
+        "at": "modest"
+       },
+       {
+        "l": "🚗 Ordinary cars",
+        "color": "green",
+        "at": "ordinary"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "why",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Wealth =<br>what you <g>keep</g>.",
+      "at": "keep"
+     },
+     {
+      "type": "sub",
+      "html": "Not what you <r>show</r>.",
+      "at": "show"
+     }
+    ]
+   },
+   {
+    "line": "hat",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "🤠 Big hat,<br><r>no cattle</r>.",
+      "at": "hat"
+     },
+     {
+      "type": "sub",
+      "html": "All show. Little wealth underneath.",
+      "at": "+2.0"
+     }
+    ]
+   },
+   {
+    "line": "lesson",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 300
+    },
+    "els": [
+     {
+      "type": "rows",
+      "header": [
+       "Looking rich",
+       "Being rich"
+      ],
+      "rows": [
+       {
+        "l": "Spends money",
+        "r": "Builds money",
+        "color": "gold",
+        "at": "Looking"
+       },
+       {
+        "l": "Looks good",
+        "r": "Lasts",
+        "color": "green",
+        "at": "Being"
+       }
+      ]
+     }
+    ],
+    "top": 130
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You <y>look</y> rich.<br>But are<br>you <r>rich</r>?",
+      "at": "+0.05"
+     }
+    ],
+    "top": 300
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE MILLIONAIRE NEXT DOOR",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Do millionaires<br>really <y>look</y><br>rich?"
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "The Millionaire Next Door, by Stanley &amp; Danko. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The classic guess:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🚗 Flashy car",
+        "color": "muted"
+       },
+       {
+        "l": "🏰 Big house",
+        "color": "muted"
+       },
+       {
+        "l": "⌚ Designer everything",
+        "color": "muted"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "The book found a different story →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Many real millionaires <g>live modestly</g>."
+     },
+     {
+      "type": "sub",
+      "html": "Stanley and Danko found plenty of them in ordinary homes with ordinary cars. They kept more of what they earned. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "BIG HAT, NO CATTLE",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Looks rich",
+       "Is rich"
+      ],
+      "rows": [
+       {
+        "l": "Spends to impress",
+        "r": "Saves and builds",
+        "color": "gold"
+       },
+       {
+        "l": "Wealth you can see",
+        "r": "Wealth you keep",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example: two people earn the same. Only one keeps the difference. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Ask <g>one</g> question:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"Am I buying this to look rich, or to build wealth?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Looking rich costs money.<br>Being rich <g>builds</g> it."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Big hat or cattle?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not financial advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "POV: You Look Rich. Are You? 🤠 The Millionaire Next Door #shorts",
+  "short": "POV: you look rich. But are you rich? 🤠\n\nIn The Millionaire Next Door, Thomas Stanley and William Danko studied real millionaires and found many lived in modest homes and drove ordinary cars. The lesson: wealth is what you keep, not what you show. \"Big hat, no cattle.\" (A lesson from a book, not financial advice.)\n\n💬 Big hat or cattle: which are you?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#themillionairenextdoor #moneymindset #personalfinance #booklessons #savemoney #booksummary #pov #lobelessons",
+  "carousel": "Do millionaires really look rich? 🤠\n\nIn The Millionaire Next Door, Stanley and Danko found many real millionaires lived modestly. Wealth is what you keep, not what you show. A lesson from a book, not financial advice.\n\nSwipe for the idea 👉\n\n💬 Big hat or cattle?\n🔖 Save this before your next big purchase.\n\n#themillionairenextdoor #moneymindset #personalfinance #booklessons #savemoney #lobelessons",
+  "youtube_tags": [
+   "the millionaire next door",
+   "stanley and danko",
+   "live below your means",
+   "money mindset",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
