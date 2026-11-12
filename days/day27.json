@@ -1,0 +1,387 @@
+{
+ "day": 27,
+ "date": "2026-11-13",
+ "book": "The Millionaire Next Door",
+ "lesson": "Live below your means",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "MONEY · MINDSET",
+  "cover": {
+   "html": "Earning a lot<br>≠ <y>rich</y>",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Earning a lot isn't the same as being rich."
+   },
+   {
+    "id": "book",
+    "text": "The Millionaire Next Door looked at how real millionaires lived."
+   },
+   {
+    "id": "found",
+    "text": "Many spent well below what they earned."
+   },
+   {
+    "id": "gap",
+    "text": "Example: earn 5,000, spend 4,000. You keep 1,000 every month."
+   },
+   {
+    "id": "year",
+    "text": "That gap is where wealth gets built."
+   },
+   {
+    "id": "lesson",
+    "text": "Live below your means. The gap is the whole game."
+   },
+   {
+    "id": "loop",
+    "text": "Earning a lot isn't the same as being rich."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "top": 300,
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Earning <y>a lot</y><br>isn't being<br><r>rich</r>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "book",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "The Millionaire Next Door",
+      "author": "Stanley & Danko",
+      "side": "How do real<br><y>millionaires</y><br><g>live</g>?",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "found",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Many <g>spent less</g><br>than they earned.",
+      "at": "+0.05"
+     },
+     {
+      "type": "sub",
+      "html": "Well below their means.",
+      "at": "below"
+     }
+    ]
+   },
+   {
+    "line": "gap",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 300
+    },
+    "top": 150,
+    "els": [
+     {
+      "type": "rows",
+      "header": [
+       "Per month",
+       "Example"
+      ],
+      "rows": [
+       {
+        "l": "Earn",
+        "r": "5,000",
+        "color": "gold",
+        "at": "earn"
+       },
+       {
+        "l": "Spend",
+        "r": "4,000",
+        "color": "red",
+        "at": "spend"
+       },
+       {
+        "l": "Keep",
+        "r": "1,000",
+        "color": "green",
+        "at": "keep"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "year",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The <g>gap</g><br>builds wealth.",
+      "at": "gap"
+     },
+     {
+      "type": "sub",
+      "html": "Not the paycheck size.",
+      "at": "+2.0"
+     }
+    ]
+   },
+   {
+    "line": "lesson",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Live <g>below</g><br>your means.",
+      "at": "+0.1"
+     },
+     {
+      "type": "sub",
+      "html": "The <y>gap</y> is the whole game.",
+      "at": "gap"
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "top": 300,
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "Earning <y>a lot</y><br>isn't being<br><r>rich</r>.",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MONEY · THE MILLIONAIRE NEXT DOOR",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Earning a lot<br>isn't being<br><y>rich</y>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "The Millionaire Next Door, by Stanley &amp; Danko. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The common guess:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "💰 Big salary = rich",
+        "color": "muted"
+       },
+       {
+        "l": "🛍️ Big spending = status",
+        "color": "muted"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "But look at what you keep →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Many real millionaires <g>spent less</g> than they earned."
+     },
+     {
+      "type": "sub",
+      "html": "Income is what comes in. Wealth is what stays. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "EXAMPLE (NOT REAL DATA)",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Per month",
+       "Example"
+      ],
+      "rows": [
+       {
+        "l": "Earn",
+        "r": "5,000",
+        "color": "gold"
+       },
+       {
+        "l": "Spend",
+        "r": "4,000",
+        "color": "red"
+       },
+       {
+        "l": "Keep",
+        "r": "1,000",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Keeping 1,000 a month adds up to 12,000 a year. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Ask <g>one</g> question:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"What is the gap between what I earn and what I spend?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Live below<br>your means.<br>The <g>gap</g> builds it."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Your gap today?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not financial advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Earning a Lot Isn't Being Rich 💰 The Millionaire Next Door #shorts",
+  "short": "Earning a lot isn't the same as being rich. 💰\n\nIn The Millionaire Next Door, Thomas Stanley and William Danko looked at how real millionaires lived, and many spent well below what they earned. Example: earn 5,000, spend 4,000, keep 1,000 a month. The lesson: live below your means. (A lesson from a book, not financial advice.)\n\n💬 What's your gap between earning and spending?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#themillionairenextdoor #moneymindset #personalfinance #booklessons #savemoney #booksummary #lobelessons",
+  "carousel": "Earning a lot isn't the same as being rich. 💰\n\nIn The Millionaire Next Door, Stanley and Danko found many real millionaires spent well below what they earned. Income is what comes in, wealth is what stays. A lesson from a book, not financial advice.\n\nSwipe for the idea 👉\n\n💬 What's your gap?\n🔖 Save this for payday.\n\n#themillionairenextdoor #moneymindset #personalfinance #booklessons #savemoney #lobelessons",
+  "youtube_tags": [
+   "the millionaire next door",
+   "stanley and danko",
+   "live below your means",
+   "money mindset",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
