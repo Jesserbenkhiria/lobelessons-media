@@ -1,0 +1,480 @@
+{
+ "day": 28,
+ "date": "2026-11-14",
+ "book": "Can't Hurt Me",
+ "lesson": "The 40% rule",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "label": "MINDSET · SKETCH",
+  "cover": {
+   "html": "Think you're <r>done</r>?<br>You're at <y>40%</y>.",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Think you're done? You're only at 40%."
+   },
+   {
+    "id": "done",
+    "text": "I'm exhausted. I'm done.",
+    "voice": 5
+   },
+   {
+    "id": "book",
+    "text": "David Goggins, in Can't Hurt Me, calls it the forty percent rule."
+   },
+   {
+    "id": "why",
+    "text": "Forty percent? Then why do I want to quit?",
+    "voice": 5
+   },
+   {
+    "id": "mind",
+    "text": "Your mind says stop long before your body has to."
+   },
+   {
+    "id": "try",
+    "text": "Fine. One more rep.",
+    "voice": 5
+   },
+   {
+    "id": "loop",
+    "text": "Think you're done? You're only at 40%."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "⚡",
+     "🔋",
+     "💪"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "Think you're <r>done</r>?<br>You're only<br>at <y>40%</y>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "done",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "😮‍💨",
+     "🥵",
+     "🛑"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "\"I'm <r>exhausted</r>.<br>I'm done.\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "book",
+    "lobe": {
+     "pose": "idea",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "📖",
+     "🧠",
+     "✨"
+    ],
+    "top": 130,
+    "els": [
+     {
+      "type": "pill",
+      "text": "CAN'T HURT ME · GOGGINS",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "The <y>40%</y> rule.",
+      "at": "forty"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "MIND",
+        "text": "🛑 \"I'm done\"",
+        "color": "red",
+        "at": "forty"
+       },
+       {
+        "tag": "REALITY",
+        "text": "🔋 Often not the limit",
+        "color": "green",
+        "at": "rule"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "why",
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "🤔",
+     "❓",
+     "🥵"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "\"<y>40%</y>?!<br>Then why do I<br>want to <r>quit</r>?\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "mind",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "🧠",
+     "🛑",
+     "💪"
+    ],
+    "top": 130,
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "The <r>mind</r> quits<br>before the <g>body</g>.",
+      "at": "+0.05"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Who stops first",
+       "Often"
+      ],
+      "rows": [
+       {
+        "l": "Your mind",
+        "r": "First",
+        "color": "red",
+        "at": "mind"
+       },
+       {
+        "l": "Your body",
+        "r": "Later",
+        "color": "green",
+        "at": "body"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "try",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "🏋️",
+     "✅",
+     "🔥"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "\"Fine.<br><g>One more</g><br>rep.\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "⚡",
+     "🔋",
+     "💪"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "Think you're <r>done</r>?<br>You're only<br>at <y>40%</y>.",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · CAN'T HURT ME",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Think you're <r>done</r>?<br>You're only<br>at <y>40%</y>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "The 40% rule, from Can't Hurt Me. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "That moment<br>you want to stop:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🥵 Tired and sore",
+        "color": "red"
+       },
+       {
+        "l": "🧠 \"I can't do more\"",
+        "color": "muted"
+       },
+       {
+        "l": "🛑 Quit right there",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "David Goggins asks: is that the real limit? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "When your mind says <y>done</y>, you may be at <g>40%</g>."
+     },
+     {
+      "type": "sub",
+      "html": "That's Goggins' 40% rule: the mind tends to ask you to stop long before you've truly reached your limit. His view, shared from his own experience. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW HE USES IT",
+      "color": "gold"
+     },
+     {
+      "type": "rule",
+      "items": [
+       {
+        "icon": "🛑",
+        "title": "Notice the urge to quit",
+        "sub": "it's a signal, not a verdict",
+        "color": "red"
+       },
+       {
+        "icon": "👣",
+        "title": "Take one more step",
+        "sub": "one more rep, one more minute",
+        "color": "green"
+       },
+       {
+        "icon": "🔁",
+        "title": "Repeat",
+        "sub": "small pushes add up",
+        "color": "gold"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Your turn →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Next time you want to <g>stop</g>:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"Can I do just one more minute?\""
+     },
+     {
+      "type": "sub",
+      "html": "Pain and injury are different from tiredness. Listen to your body."
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "You're probably<br>not <g>done</g> yet."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Where do you quit?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not medical or professional advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Think You're Done? You're Only at 40% 🔋 Can't Hurt Me #shorts",
+  "short": "Think you're done? You're only at 40%. 🔋\n\nIn Can't Hurt Me, David Goggins describes the 40% rule: when your mind says you're done, you may have much more left. The lesson: notice the urge to quit, then take one more step. (A lesson from a book, not medical advice.)\n\n💬 Where do you usually quit?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#canthurtme #davidgoggins #40percentrule #mindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "Think you're done? You're only at 40%. 🔋\n\nIn Can't Hurt Me, David Goggins describes the 40% rule: the urge to quit often shows up long before your real limit. Notice it, then try one more minute. A lesson from a book, not medical advice.\n\nSwipe for the idea 👉\n\n💬 Where do you usually quit?\n🔖 Save this for your next hard day.\n\n#canthurtme #davidgoggins #40percentrule #mindset #booklessons #selfgrowth #lobelessons",
+  "youtube_tags": [
+   "can't hurt me",
+   "david goggins",
+   "40 percent rule",
+   "mindset",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
