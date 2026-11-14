@@ -1,0 +1,408 @@
+{
+ "day": 29,
+ "date": "2026-11-15",
+ "book": "Can't Hurt Me",
+ "lesson": "The cookie jar",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "MINDSET · POV",
+  "cover": {
+   "html": "POV: you want to <r>quit</r>.<br>Open the <y>jar</y>.",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you want to quit. Open the jar."
+   },
+   {
+    "id": "book",
+    "text": "In Can't Hurt Me, David Goggins calls it the cookie jar."
+   },
+   {
+    "id": "what",
+    "text": "It's a mental list of your past wins, the hard things you finished."
+   },
+   {
+    "id": "when",
+    "text": "When your mind says stop, you pull one out."
+   },
+   {
+    "id": "why",
+    "text": "Proof you've already done hard things."
+   },
+   {
+    "id": "lesson",
+    "text": "Quitting feels like truth. Your record says otherwise."
+   },
+   {
+    "id": "loop",
+    "text": "POV: you want to quit. Open the jar."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You're about to <r>quit</r>.<br>Open the <y>jar</y>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "book",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "Can't Hurt Me",
+      "author": "David Goggins",
+      "side": "The <y>cookie jar</y><br>idea.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "what",
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "A <y>jar</y> of past wins:",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏁 Hard things you finished",
+        "color": "green",
+        "at": "hard"
+       },
+       {
+        "l": "💪 Moments you pushed through",
+        "color": "green",
+        "at": "wins"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "when",
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "MIND SAYS",
+        "text": "Stop. This is too hard.",
+        "color": "red",
+        "at": "stop"
+       },
+       {
+        "tag": "YOU",
+        "text": "Pull a win from the jar.",
+        "color": "green",
+        "at": "pull"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "why",
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "<g>Proof</g> you've<br>done hard things.",
+      "at": "Proof"
+     },
+     {
+      "type": "sub",
+      "html": "Your own record, not a pep talk.",
+      "at": "+2.0"
+     }
+    ]
+   },
+   {
+    "line": "lesson",
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 300
+    },
+    "top": 130,
+    "els": [
+     {
+      "type": "rows",
+      "header": [
+       "Quitting says",
+       "Your record says"
+      ],
+      "rows": [
+       {
+        "l": "I can't",
+        "r": "I already did",
+        "color": "gold",
+        "at": "Quitting"
+       },
+       {
+        "l": "Too hard",
+        "r": "Done before",
+        "color": "green",
+        "at": "record"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "loop",
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "POV",
+      "color": "dark",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You're about to <r>quit</r>.<br>Open the <y>jar</y>.",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · CAN'T HURT ME",
+  "slides": [
+   {
+    "top": 200,
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Want to <r>quit</r>?<br>Open the <y>jar</y>."
+     },
+     {
+      "type": "sub",
+      "max": 520,
+      "html": "Can't Hurt Me, by David Goggins. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 90,
+      "html": "The moment it hits:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "😮‍💨 Too tired",
+        "color": "muted"
+       },
+       {
+        "l": "🤷 Too hard",
+        "color": "muted"
+       },
+       {
+        "l": "🚪 Time to stop",
+        "color": "muted"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Goggins has a trick for it →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "The <y>cookie jar</y>."
+     },
+     {
+      "type": "sub",
+      "html": "A mental jar of your past wins. When you want to quit, you pull one out and remember what you already got through. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT WORKS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "In the moment",
+       "From the jar"
+      ],
+      "rows": [
+       {
+        "l": "\"I can't\"",
+        "r": "\"I've done hard before\"",
+        "color": "gold"
+       },
+       {
+        "l": "Feels like truth",
+        "r": "Evidence from your life",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example: a hard exam you passed, a tough project you finished. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Name <g>one</g> win:"
+     },
+     {
+      "type": "quote",
+      "size": 58,
+      "html": "\"What's one hard thing I've already finished?\""
+     }
+    ]
+   },
+   {
+    "top": 180,
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Quitting feels like truth.<br>Your record says <g>otherwise</g>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What's in your jar?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not medical advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "POV: You Want to Quit. Open the Jar 🍪 Can't Hurt Me #shorts",
+  "short": "POV: you want to quit. Open the jar. 🍪\n\nIn Can't Hurt Me, David Goggins describes the cookie jar: a mental collection of your past wins. When your mind says stop, you recall what you've already gotten through. The lesson: your record is proof you can do hard things. (A lesson from a book, not medical advice.)\n\n💬 What's in your cookie jar?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#canthurtme #davidgoggins #cookiejar #mindset #booklessons #selfgrowth #booksummary #pov #lobelessons",
+  "carousel": "Want to quit? Open the jar. 🍪\n\nIn Can't Hurt Me, David Goggins describes the cookie jar: a mental list of your past wins to recall when things get hard. Your record is evidence. A lesson from a book, not medical advice.\n\nSwipe for the idea 👉\n\n💬 What's in your jar?\n🔖 Save this for your next hard day.\n\n#canthurtme #davidgoggins #cookiejar #mindset #booklessons #selfgrowth #lobelessons",
+  "youtube_tags": [
+   "can't hurt me",
+   "david goggins",
+   "cookie jar",
+   "mindset",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
