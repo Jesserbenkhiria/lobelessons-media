@@ -1,0 +1,414 @@
+{
+ "day": 32,
+ "date": "2026-11-20",
+ "book": "Mindset",
+ "lesson": "The power of 'yet'",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "MINDSET · POV",
+  "cover": {
+   "html": "POV: you said<br><r>\"I can't.\"</r><br>Add <y>one word</y>.",
+   "pose": "shock",
+   "textSize": 100
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you said \"I can't.\" Add one word."
+   },
+   {
+    "id": "word",
+    "text": "The word is yet. \"I can't do this... yet.\""
+   },
+   {
+    "id": "book",
+    "text": "In Mindset, Carol Dweck describes a school that gave the grade \"Not Yet\" instead of a fail."
+   },
+   {
+    "id": "why",
+    "text": "A fail says it's over. Not yet says you're on a path."
+   },
+   {
+    "id": "idea",
+    "text": "That's the growth mindset: ability can grow with effort and better strategies."
+   },
+   {
+    "id": "do",
+    "text": "Next time you say \"I can't\", finish the sentence."
+   },
+   {
+    "id": "loop",
+    "text": "POV: you said \"I can't.\" Add one word."
+   }
+  ],
+  "scenes": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "MINDSET · POV",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "POV: you said<br><r>\"I can't.\"</r><br>Add <y>one word</y>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "hook",
+    "top": 260
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 120,
+      "html": "\"I can't<br>do this... <y>yet</y>.\"",
+      "at": "yet"
+     },
+     {
+      "type": "stamp",
+      "text": "YET",
+      "color": "gold",
+      "size": 90,
+      "at": "yet"
+     }
+    ],
+    "line": "word",
+    "top": 230
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "Mindset",
+      "author": "Carol Dweck",
+      "side": "left"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "GRADE",
+        "text": "❌ Fail",
+        "color": "red",
+        "at": "Fail#1"
+       },
+       {
+        "tag": "GRADE",
+        "text": "🌱 Not Yet",
+        "color": "green",
+        "at": "Not"
+       }
+      ]
+     }
+    ],
+    "line": "book"
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "<r>Fail</r> = it's over.<br><g>Not yet</g> = a path.",
+      "at": "+0.1"
+     },
+     {
+      "type": "sub",
+      "html": "Same result. Different story.",
+      "center": true,
+      "at": "path"
+     }
+    ],
+    "line": "why"
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "GROWTH MINDSET",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Fixed",
+       "Growth"
+      ],
+      "rows": [
+       {
+        "l": "\"I can't\"",
+        "r": "\"I can't yet\"",
+        "color": "gold",
+        "at": "effort"
+       },
+       {
+        "l": "Ability is set",
+        "r": "Ability can grow",
+        "color": "green",
+        "at": "strategies"
+       }
+      ]
+     }
+    ],
+    "line": "idea"
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "\"I can't\"<br>→ \"I can't <y>yet</y>\"",
+      "at": "finish"
+     },
+     {
+      "type": "sub",
+      "html": "Try it on one thing today.",
+      "center": true,
+      "at": "+1.5"
+     }
+    ],
+    "line": "do"
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "MINDSET · POV",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "POV: you said<br><r>\"I can't.\"</r><br>Add <y>one word</y>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "loop",
+    "top": 260
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · CAROL DWECK",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "top": 200,
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "\"I can't.\"<br>Add <y>one</y><br>word."
+     },
+     {
+      "type": "sub",
+      "html": "The power of \"yet\". Mindset, by Carol Dweck. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "What \"I can't\"<br>really says:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🪨 \"This is how I am\"",
+        "color": "red"
+       },
+       {
+        "l": "🛑 \"Nothing will change\"",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "A fixed-mindset sentence →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "\"Not <g>yet</g>.\""
+     },
+     {
+      "type": "sub",
+      "html": "Dweck describes a school that graded \"Not Yet\" instead of fail: the student is still on a learning path. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT SOUNDS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Fixed",
+       "Growth"
+      ],
+      "rows": [
+       {
+        "l": "\"I can't do this\"",
+        "r": "\"I can't do this yet\"",
+        "color": "gold"
+       },
+       {
+        "l": "\"I'm bad at math\"",
+        "r": "\"I haven't got it yet\"",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example: one word turns a verdict into a direction. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Finish <g>one</g> sentence:"
+     },
+     {
+      "type": "quote",
+      "size": 56,
+      "html": "\"I can't ______ <g>yet</g>.\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "top": 180,
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "\"I can't\" ends<br>the story.<br>\"Yet\" <g>continues</g> it."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What can't you do yet?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "POV: You Said \"I Can't.\" Add One Word 🧠 Mindset #shorts",
+  "short": "POV: you said \"I can't.\" Add one word. 🧠\n\nIn Mindset, Carol Dweck describes a school that graded \"Not Yet\" instead of fail, a small shift that fits the growth mindset: ability can be built with effort and better strategies. (A lesson from a book, not professional advice.)\n\n💬 What can't you do yet?\n🧠 Follow Lobe Lessons for one book lesson every day.\n\n#mindset #caroldweck #growthmindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "\"I can't.\" Add one word. 🧠\n\nIn Mindset, Carol Dweck describes a school that graded \"Not Yet\" instead of fail: the student is still on the path. That's the growth mindset in a word. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What can't you do yet?\n🔖 Save this for the next time you say \"I can't\".\n\n#mindset #caroldweck #growthmindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "mindset",
+   "carol dweck",
+   "growth mindset",
+   "power of yet",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
