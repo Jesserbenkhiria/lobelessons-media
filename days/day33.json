@@ -1,0 +1,387 @@
+{
+ "day": 33,
+ "date": "2026-11-21",
+ "book": "Mindset",
+ "lesson": "Praise effort, not talent",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "MINDSET · PRAISE",
+  "cover": {
+   "html": "Stop telling people<br>they're <r>smart</r>.",
+   "pose": "shock",
+   "textSize": 104
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Stop telling people they're smart."
+   },
+   {
+    "id": "claim",
+    "text": "In Mindset, Carol Dweck says that praise can backfire."
+   },
+   {
+    "id": "talent",
+    "text": "Praise the talent, and people start protecting the label. They avoid hard things."
+   },
+   {
+    "id": "effort",
+    "text": "Praise the effort, the strategy, the progress, and they lean into challenges."
+   },
+   {
+    "id": "swap",
+    "text": "So swap smart for: you worked hard on that, what did you try?"
+   },
+   {
+    "id": "loop",
+    "text": "Stop telling people they're smart."
+   }
+  ],
+  "scenes": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "top": 260,
+    "line": "hook",
+    "els": [
+     {
+      "type": "pill",
+      "text": "MINDSET · PRAISE",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Stop telling people<br>they're <r>smart</r>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "line": "claim",
+    "els": [
+     {
+      "type": "book",
+      "title": "Mindset",
+      "author": "Carol Dweck",
+      "side": "Praise and<br>mindset"
+     },
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "Praise can <r>backfire</r>.",
+      "at": "backfire"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 400
+    },
+    "line": "talent",
+    "els": [
+     {
+      "type": "pill",
+      "text": "PRAISE THE TALENT",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏷️ \"You're so smart\"",
+        "color": "red",
+        "at": "talent"
+       },
+       {
+        "l": "🙈 Avoids hard things",
+        "color": "red",
+        "at": "avoid"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "line": "effort",
+    "els": [
+     {
+      "type": "pill",
+      "text": "PRAISE THE EFFORT",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "💪 \"You worked hard\"",
+        "color": "green",
+        "at": "effort"
+       },
+       {
+        "l": "🧗 Leans into challenges",
+        "color": "green",
+        "at": "lean"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 420
+    },
+    "line": "swap",
+    "els": [
+     {
+      "type": "rows",
+      "header": [
+       "Instead of",
+       "Try"
+      ],
+      "rows": [
+       {
+        "l": "\"You're smart\"",
+        "r": "\"You worked hard on that\"",
+        "color": "gold",
+        "at": "smart"
+       },
+       {
+        "l": "\"Easy for you\"",
+        "r": "\"What did you try?\"",
+        "color": "green",
+        "at": "try"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "top": 260,
+    "line": "loop",
+    "els": [
+     {
+      "type": "pill",
+      "text": "MINDSET · PRAISE",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 112,
+      "html": "Stop telling people<br>they're <r>smart</r>.",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "MINDSET · CAROL DWECK",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "top": 200,
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Stop telling<br>people they're<br><r>smart</r>."
+     },
+     {
+      "type": "sub",
+      "html": "Praise and mindset. Mindset, by Carol Dweck. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Why praise<br>can backfire:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🏷️ Talent praise becomes a label",
+        "color": "red"
+       },
+       {
+        "l": "🙈 Labels are scary to risk",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "If you're \"the smart one\", failing looks like losing it →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Praise the <g>process</g>."
+     },
+     {
+      "type": "sub",
+      "html": "Dweck's research found that kids praised for effort and strategy tended to embrace challenges more than kids praised for being smart. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT SOUNDS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Talent praise",
+       "Process praise"
+      ],
+      "rows": [
+       {
+        "l": "\"You're so smart\"",
+        "r": "\"You worked hard on that\"",
+        "color": "gold"
+       },
+       {
+        "l": "\"Natural talent\"",
+        "r": "\"I like the strategy you tried\"",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example phrases, not a script. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Praise <g>one</g> effort:"
+     },
+     {
+      "type": "quote",
+      "size": 56,
+      "html": "\"I noticed how you <g>kept going</g>.\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "top": 180,
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Praise the <g>work</g>,<br>not the label."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Who needs to hear this?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Stop Telling People They're Smart 🧠 Mindset #shorts",
+  "short": "Stop telling people they're smart. 🧠\n\nIn Mindset, Carol Dweck argues that praising talent can make people protect the label and avoid challenges, while praising effort and strategy encourages growth. (A lesson from a book, not professional advice.)\n\n💬 Who needs to hear this?\n🧠 Follow Lobe Lessons for one book lesson every day.\n\n#mindset #caroldweck #growthmindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "Stop telling people they're smart. 🧠\n\nIn Mindset, Carol Dweck argues that praising talent can turn into a label people are afraid to risk, while praising effort and strategy builds a love of challenge. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 Who needs to hear this?\n🔖 Save this for the next time you give a compliment.\n\n#mindset #caroldweck #growthmindset #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "mindset",
+   "carol dweck",
+   "growth mindset",
+   "praise effort not talent",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
