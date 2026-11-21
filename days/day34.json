@@ -1,0 +1,456 @@
+{
+ "day": 34,
+ "date": "2026-11-22",
+ "book": "How to Win Friends and Influence People",
+ "lesson": "A person's name is the sweetest sound",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "label": "PEOPLE · SKETCH",
+  "cover": {
+   "html": "You forgot their<br><r>name</r> again.",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "You forgot their name again."
+   },
+   {
+    "id": "greet",
+    "text": "Hey, you! Great to see you again!",
+    "voice": 5
+   },
+   {
+    "id": "book",
+    "text": "Dale Carnegie says a person's name is the sweetest sound to them."
+   },
+   {
+    "id": "bad",
+    "text": "But I'm just terrible with names.",
+    "voice": 5
+   },
+   {
+    "id": "tip",
+    "text": "His tips: repeat it, picture it, write it down."
+   },
+   {
+    "id": "try",
+    "text": "Nice to meet you, Sarah. Sarah. Got it.",
+    "voice": 5
+   },
+   {
+    "id": "loop",
+    "text": "You forgot their name again."
+   }
+  ],
+  "scenes": [
+   {
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "💭",
+     "🔁",
+     "🧠"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "You forgot<br>their <r>name</r><br>again.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "hook"
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "😬",
+     "👋",
+     "❓"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "\"Hey, <y>you</y>!<br>Great to see<br>you again!\"",
+      "at": "+0.05"
+     }
+    ],
+    "line": "greet"
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "📖",
+     "🧠",
+     "✨"
+    ],
+    "top": 175,
+    "els": [
+     {
+      "type": "pill",
+      "text": "CARNEGIE · HOW TO WIN FRIENDS",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Their name = the <g>sweetest</g> sound.",
+      "at": "sweetest"
+     },
+     {
+      "type": "book",
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "side": "Names<br>matter"
+     }
+    ],
+    "line": "book"
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "🤔",
+     "😞",
+     "🙈"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "\"I'm just <r>terrible</r><br>with names.\"",
+      "at": "+0.05"
+     }
+    ],
+    "line": "bad"
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "💡",
+     "✍️",
+     "🧠"
+    ],
+    "top": 175,
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Carnegie's <g>tips</g>:",
+      "at": "tips"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🔁 Repeat it",
+        "color": "green",
+        "at": "repeat"
+       },
+       {
+        "l": "🖼️ Picture it",
+        "color": "green",
+        "at": "picture"
+       },
+       {
+        "l": "✍️ Write it down",
+        "color": "green",
+        "at": "write"
+       }
+      ]
+     }
+    ],
+    "line": "tip"
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "",
+     "😊",
+     "🤝",
+     "✅"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "BROKE BRAIN",
+      "color": "red",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 106,
+      "html": "\"Nice to meet you,<br><g>Sarah</g>. Sarah.<br>Got it.\"",
+      "at": "+0.05"
+     }
+    ],
+    "line": "try"
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "",
+     "💭",
+     "🔁",
+     "🧠"
+    ],
+    "top": 300,
+    "els": [
+     {
+      "type": "pill",
+      "text": "RICH BRAIN",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "You forgot<br>their <r>name</r><br>again.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "loop"
+   }
+  ]
+ },
+ "carousel": {
+  "label": "PEOPLE · DALE CARNEGIE",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "top": 200,
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "You forgot<br>their <r>name</r><br>again."
+     },
+     {
+      "type": "sub",
+      "html": "How to Win Friends and Influence People, by Dale Carnegie. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Why a name<br>matters:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🔊 It's the first word that's ours",
+        "color": "gold"
+       },
+       {
+        "l": "🙈 Forgetting it says \"not important\"",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Carnegie: to a person, their own name is the sweetest sound →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Make an <g>effort</g>."
+     },
+     {
+      "type": "sub",
+      "html": "Carnegie's point: most of us forget names because we don't take the time to focus and fix them in our minds. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "3 SIMPLE TRICKS",
+      "color": "gold"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "REPEAT",
+        "text": "Say it back when you hear it",
+        "color": "green"
+       },
+       {
+        "tag": "PICTURE",
+        "text": "Link the name to the face",
+        "color": "green"
+       },
+       {
+        "tag": "WRITE",
+        "text": "Jot it down afterwards",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Our wording of the book's tips. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 86,
+      "html": "Use <g>one</g> name:"
+     },
+     {
+      "type": "quote",
+      "size": 56,
+      "html": "\"Nice to meet you, <g>Sarah</g>.\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "top": 180,
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "A name is a<br><g>small gift</g>.<br>Use it."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Whose name will you remember?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "You Forgot Their Name Again 🧠 Dale Carnegie #shorts",
+  "short": "You forgot their name again. 🧠\n\nIn How to Win Friends and Influence People, Dale Carnegie says a person's name is the sweetest sound to them, and suggests simple habits: repeat it, picture it, write it down. (A lesson from a book, not professional advice.)\n\n💬 Whose name will you remember today?\n🧠 Follow Lobe Lessons for one book lesson every day.\n\n#dalecarnegie #howtowinfriends #communication #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "You forgot their name again. 🧠\n\nIn How to Win Friends and Influence People, Dale Carnegie says a person's name is the sweetest sound to them. His suggestions: repeat it, picture it, write it down. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 Whose name will you remember today?\n🔖 Save this for your next introduction.\n\n#dalecarnegie #howtowinfriends #communication #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "dale carnegie",
+   "how to win friends and influence people",
+   "remember names",
+   "communication",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
