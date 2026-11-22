@@ -1,0 +1,382 @@
+{
+ "day": 35,
+ "date": "2026-11-23",
+ "book": "How to Win Friends and Influence People",
+ "lesson": "Become genuinely interested in other people",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "COMMUNICATION · POV",
+  "cover": {
+   "html": "POV: you're talking,<br><r>they stopped</r><br><y>listening</y>.",
+   "pose": "shock",
+   "textSize": 100
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "POV: you're talking, they stopped listening."
+   },
+   {
+    "id": "why",
+    "text": "Because the whole chat was about you."
+   },
+   {
+    "id": "book",
+    "text": "In How to Win Friends and Influence People, Dale Carnegie says to become genuinely interested in other people."
+   },
+   {
+    "id": "idea",
+    "text": "His point: you make friends by showing interest in them, not by trying to impress."
+   },
+   {
+    "id": "do",
+    "text": "So ask a question, then actually listen to the answer."
+   },
+   {
+    "id": "loop",
+    "text": "POV: you're talking, they stopped listening."
+   }
+  ],
+  "scenes": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "COMMUNICATION · POV",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "POV: you're talking,<br><r>they stopped</r><br><y>listening</y>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "hook",
+    "top": 260
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 100,
+      "html": "The whole chat<br>was about <r>you</r>.",
+      "at": "+0.1"
+     },
+     {
+      "type": "stamp",
+      "text": "ME ME ME",
+      "color": "red",
+      "size": 80,
+      "at": "about"
+     }
+    ],
+    "line": "why",
+    "top": 230
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "side": "left"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "PRINCIPLE",
+        "text": "👀 Be genuinely interested in other people",
+        "color": "green",
+        "at": "genuinely"
+       }
+      ]
+     }
+    ],
+    "line": "book"
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "CARNEGIE'S POINT",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Impress",
+       "Show interest"
+      ],
+      "rows": [
+       {
+        "l": "Talk about me",
+        "r": "Ask about you",
+        "color": "gold",
+        "at": "friends"
+       },
+       {
+        "l": "Seen as trying",
+        "r": "Seen as caring",
+        "color": "green",
+        "at": "impress"
+       }
+      ]
+     }
+    ],
+    "line": "idea"
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "<g>Ask</g> a question.<br><g>Listen</g> to the answer.",
+      "at": "question"
+     },
+     {
+      "type": "sub",
+      "html": "Try it in your next conversation.",
+      "center": true,
+      "at": "+1.5"
+     }
+    ],
+    "line": "do"
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "COMMUNICATION · POV",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "POV: you're talking,<br><r>they stopped</r><br><y>listening</y>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "loop",
+    "top": 260
+   }
+  ]
+ },
+ "carousel": {
+  "label": "COMMUNICATION · DALE CARNEGIE",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "top": 200,
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "POV: you're talking,<br><r>they stopped</r><br><y>listening</y>."
+     },
+     {
+      "type": "sub",
+      "html": "Dale Carnegie's fix. How to Win Friends and Influence People. Swipe →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "Why they<br>tuned out:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🎤 It was all about you",
+        "color": "red"
+       },
+       {
+        "l": "😶 They never got a turn",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Sound familiar? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 80,
+      "html": "Be <g>genuinely</g><br>interested."
+     },
+     {
+      "type": "sub",
+      "html": "Carnegie's principle: show real interest in other people, instead of trying to get them interested in you. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT SOUNDS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Self-focused",
+       "Interested"
+      ],
+      "rows": [
+       {
+        "l": "\"Let me tell you about my week\"",
+        "r": "\"How was your week?\"",
+        "color": "gold"
+       },
+       {
+        "l": "Wait for your turn to talk",
+        "r": "Listen to the answer",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example: same chat, a different focus. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Ask <g>one</g> question:"
+     },
+     {
+      "type": "quote",
+      "size": 54,
+      "html": "\"What's been the <g>best</g> part of your day?\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "top": 180,
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Be <g>interested</g>,<br>not just<br><y>interesting</y>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Who needs to hear this?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ]
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "POV: You're Talking, They Stopped Listening 🧠 Dale Carnegie #shorts",
+  "short": "POV: you're talking, they stopped listening. 🧠\n\nIn How to Win Friends and Influence People, Dale Carnegie says to become genuinely interested in other people: show interest in them rather than trying to impress. Ask a question, then really listen. (A lesson from a book, not professional advice.)\n\n💬 Who needs to hear this?\n🧠 Follow Lobe Lessons for one book lesson every day.\n\n#dalecarnegie #howtowinfriends #communication #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "POV: you're talking, they stopped listening. 🧠\n\nIn How to Win Friends and Influence People, Dale Carnegie's principle: become genuinely interested in other people. Ask, then listen. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What will you ask today?\n🔖 Save this for your next conversation.\n\n#dalecarnegie #howtowinfriends #communication #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "dale carnegie",
+   "how to win friends and influence people",
+   "communication",
+   "listening",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
