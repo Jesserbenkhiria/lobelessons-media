@@ -1,0 +1,382 @@
+{
+ "day": 36,
+ "date": "2026-11-24",
+ "book": "How to Win Friends and Influence People",
+ "lesson": "Don't criticize, condemn or complain",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "COMMUNICATION · PEOPLE",
+  "cover": {
+   "html": "<r>Criticism</r><br>never changes<br><y>minds</y>.",
+   "pose": "shock",
+   "textSize": 110
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Criticism never changes minds."
+   },
+   {
+    "id": "why",
+    "text": "Tell someone they're wrong, and they defend themselves instead of listening."
+   },
+   {
+    "id": "book",
+    "text": "In How to Win Friends and Influence People, Dale Carnegie's first principle is: don't criticize, condemn or complain."
+   },
+   {
+    "id": "idea",
+    "text": "His point: criticism puts people on the defensive, and it rarely makes them change."
+   },
+   {
+    "id": "do",
+    "text": "So skip the blame. Ask a question, or name one thing they did well."
+   },
+   {
+    "id": "loop",
+    "text": "Criticism never changes minds."
+   }
+  ],
+  "scenes": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "COMMUNICATION · PEOPLE",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "<r>Criticism</r><br>never changes<br><y>minds</y>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "hook",
+    "top": 260
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Called out?<br>They get <r>defensive</r>.",
+      "at": "+0.1"
+     },
+     {
+      "type": "stamp",
+      "text": "WALLS UP",
+      "color": "red",
+      "size": 80,
+      "at": "defend"
+     }
+    ],
+    "line": "why",
+    "top": 230
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "side": "left"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "PRINCIPLE 1",
+        "text": "🚫 Don't criticize, condemn or complain",
+        "color": "red",
+        "at": "criticize"
+       }
+      ]
+     }
+    ],
+    "line": "book"
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "CARNEGIE'S POINT",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Criticism",
+       "Better"
+      ],
+      "rows": [
+       {
+        "l": "Puts them on defense",
+        "r": "Keeps them open",
+        "color": "gold",
+        "at": "defensive"
+       },
+       {
+        "l": "Rarely changes them",
+        "r": "Makes change likelier",
+        "color": "green",
+        "at": "rarely"
+       }
+      ]
+     }
+    ],
+    "line": "idea"
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "<g>Ask</g> a question.<br><g>Praise</g> one thing.",
+      "at": "question"
+     },
+     {
+      "type": "sub",
+      "html": "Try it before your next \"you always...\"",
+      "center": true,
+      "at": "+1.5"
+     }
+    ],
+    "line": "do"
+   },
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "COMMUNICATION · PEOPLE",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 110,
+      "html": "<r>Criticism</r><br>never changes<br><y>minds</y>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "loop",
+    "top": 260
+   }
+  ]
+ },
+ "carousel": {
+  "label": "COMMUNICATION · DALE CARNEGIE",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "<r>Criticism</r><br>never changes<br><y>minds</y>."
+     },
+     {
+      "type": "sub",
+      "html": "Dale Carnegie on why. How to Win Friends and Influence People. Swipe →"
+     }
+    ],
+    "top": 200
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "What happens<br>when you criticize:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🛡️ They defend themselves",
+        "color": "red"
+       },
+       {
+        "l": "🔒 They stop listening",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Sound familiar? →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 78,
+      "html": "Don't <r>criticize</r>,<br><r>condemn</r> or <r>complain</r>."
+     },
+     {
+      "type": "sub",
+      "html": "Carnegie's first principle for handling people. His reasoning: criticism puts people on the defensive. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT SOUNDS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Criticize",
+       "Redirect"
+      ],
+      "rows": [
+       {
+        "l": "\"You always do this!\"",
+        "r": "\"Can we try it another way?\"",
+        "color": "gold"
+       },
+       {
+        "l": "Point out the flaw",
+        "r": "Name what went well",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example: same problem, a different approach. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Swap <g>one</g> complaint:"
+     },
+     {
+      "type": "quote",
+      "size": 52,
+      "html": "\"What's <g>one thing</g> that went well?\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Be <g>curious</g>,<br>not <y>critical</y>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 Who needs this today?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ],
+    "top": 180
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Criticism Never Changes Minds 🧠 Dale Carnegie #shorts",
+  "short": "Criticism never changes minds. 🧠\n\nIn How to Win Friends and Influence People, Dale Carnegie's first principle is: don't criticize, condemn or complain. His point: criticism puts people on the defensive. (A lesson from a book, not professional advice.)\n\n💬 What will you say instead?\n🧠 Follow Lobe Lessons for one book lesson every day.\n\n#dalecarnegie #howtowinfriends #communication #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "Criticism never changes minds. 🧠\n\nIn How to Win Friends and Influence People, Dale Carnegie's first principle: don't criticize, condemn or complain. It puts people on the defensive. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What will you say instead?\n🔖 Save this for your next tough talk.\n\n#dalecarnegie #howtowinfriends #communication #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "dale carnegie",
+   "how to win friends and influence people",
+   "communication",
+   "criticism",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
