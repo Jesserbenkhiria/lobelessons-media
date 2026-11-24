@@ -1,0 +1,469 @@
+{
+ "day": 37,
+ "date": "2026-11-25",
+ "book": "Essentialism",
+ "lesson": "Less, but better",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "format": "sketch",
+  "clean": true,
+  "label": "PRODUCTIVITY · SKETCH",
+  "cover": {
+   "html": "BUSY ISN'T<br><r>PRODUCTIVE</r>.",
+   "pose": "shock"
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "Busy isn't the same as productive."
+   },
+   {
+    "id": "yes",
+    "text": "But I said yes to everything today!",
+    "voice": 5
+   },
+   {
+    "id": "book",
+    "text": "Greg McKeown's Essentialism says: do less, but better."
+   },
+   {
+    "id": "less",
+    "text": "Less? But everything feels important!",
+    "voice": 5
+   },
+   {
+    "id": "pick",
+    "text": "Pick the few things that matter. Let the rest go."
+   },
+   {
+    "id": "scary",
+    "text": "But saying no feels scary!",
+    "voice": 5
+   },
+   {
+    "id": "rule",
+    "text": "If it isn't a clear yes, it's a no."
+   },
+   {
+    "id": "loop",
+    "text": "Busy isn't the same as productive."
+   }
+  ],
+  "scenes": [
+   {
+    "line": "hook",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "📅",
+     "📱",
+     "😵"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "BUSY ISN'T<br><r>PRODUCTIVE</r>.",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "yes",
+    "mood": "gold",
+    "lobe": {
+     "pose": "approve",
+     "who": "broke"
+    },
+    "props": [
+     "✅",
+     "✅",
+     "✅"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "\"Yes to <y>everything</y>!\"",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📧 Every email",
+        "color": "gold",
+        "at": "everything"
+       },
+       {
+        "l": "🤝 Every favor",
+        "color": "gold",
+        "at": "+1.4"
+       },
+       {
+        "l": "📅 Every meeting",
+        "color": "gold",
+        "at": "+1.9"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "book",
+    "mood": "good",
+    "lobe": {
+     "pose": "idea",
+     "who": "rich"
+    },
+    "props": [
+     "📖",
+     "🎯",
+     "✨"
+    ],
+    "els": [
+     {
+      "type": "book",
+      "title": "Essentialism",
+      "author": "Greg McKeown"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "THE IDEA",
+        "text": "🎯 Less, but better",
+        "color": "green",
+        "at": "less"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "less",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke",
+     "react": "think"
+    },
+    "props": [
+     "😰",
+     "📚",
+     "💥"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 80,
+      "html": "\"But it ALL<br>feels <r>important</r>!\"",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "OVERLOADED",
+      "color": "red",
+      "size": 66,
+      "at": "important"
+     }
+    ],
+    "top": 340
+   },
+   {
+    "line": "pick",
+    "mood": "good",
+    "lobe": {
+     "pose": "idea",
+     "who": "rich"
+    },
+    "props": [
+     "🎯",
+     "✨",
+     "📖"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Pick the <g>few</g>.<br>Drop the rest.",
+      "at": "+0.05"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "🎯 What truly matters",
+        "color": "green",
+        "at": "matter"
+       },
+       {
+        "l": "🗑️ Everything else",
+        "color": "muted",
+        "at": "rest"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "line": "scary",
+    "mood": "bad",
+    "lobe": {
+     "pose": "shock",
+     "who": "broke",
+     "react": "think"
+    },
+    "props": [
+     "😬",
+     "🙈",
+     "💦"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "\"Saying no<br>feels <r>scary</r>!\"",
+      "at": "+0.05"
+     }
+    ]
+   },
+   {
+    "line": "rule",
+    "mood": "good",
+    "lobe": {
+     "pose": "approve",
+     "who": "rich"
+    },
+    "props": [
+     "✅",
+     "🚫",
+     "🎯"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Not a clear <g>YES</g>?",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "THEN NO.",
+      "color": "green",
+      "size": 90,
+      "at": "no"
+     }
+    ],
+    "top": 300
+   },
+   {
+    "line": "loop",
+    "mood": "bad",
+    "lobe": {
+     "pose": "explain",
+     "who": "rich"
+    },
+    "props": [
+     "📅",
+     "📱",
+     "😵"
+    ],
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "BUSY ISN'T<br><r>PRODUCTIVE</r>.",
+      "at": "+0.05"
+     }
+    ]
+   }
+  ]
+ },
+ "carousel": {
+  "label": "PRODUCTIVITY · ESSENTIALISM",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "shock",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 108,
+      "html": "Busy isn't<br>the same as<br><r>productive</r>."
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from Essentialism by Greg McKeown. Swipe →"
+     }
+    ],
+    "top": 200
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "The trap of<br>saying <r>yes</r> to all:"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📅 A full calendar",
+        "color": "red"
+       },
+       {
+        "l": "😵 Little that truly matters",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "But here's the catch →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Do <g>less</g>,<br>but <g>better</g>."
+     },
+     {
+      "type": "sub",
+      "html": "McKeown's core idea: focus on what is truly essential and let the rest go. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 220
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT SOUNDS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Busy",
+       "Essential"
+      ],
+      "rows": [
+       {
+        "l": "\"Sure, I'll do it!\"",
+        "r": "\"Not right now.\"",
+        "color": "gold"
+       },
+       {
+        "l": "Everything is a priority",
+        "r": "A few things matter most",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example: same request, a different answer. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Before you say <g>yes</g>, ask:"
+     },
+     {
+      "type": "quote",
+      "size": 52,
+      "html": "\"Is this a <g>clear yes</g>?\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Not a clear <g>yes</g>?<br>Then <y>no</y>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What will you say no to?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ],
+    "top": 180
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "Busy Isn't the Same as Productive 🧠 Essentialism #shorts",
+  "short": "Busy isn't the same as productive. 🧠\n\nIn Essentialism, Greg McKeown makes the case for doing less, but better: if it isn't a clear yes, make it a no. (A lesson from a book, not professional advice.)\n\n💬 What will you say no to today?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#essentialism #gregmckeown #productivity #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "Busy isn't the same as productive. 🧠\n\nIn Essentialism, Greg McKeown's core idea: do less, but better. Focus on what's truly essential. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What will you say no to today?\n🔖 Save this for your next busy week.\n\n#essentialism #gregmckeown #productivity #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "essentialism",
+   "greg mckeown",
+   "productivity",
+   "less but better",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
