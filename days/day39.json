@@ -1,0 +1,381 @@
+{
+ "day": 39,
+ "date": "2026-11-27",
+ "book": "Essentialism",
+ "lesson": "Every yes is a trade-off",
+ "voice": 6,
+ "speed": 1.05,
+ "short": {
+  "style": "stage",
+  "label": "PRODUCTIVITY · MINDSET",
+  "cover": {
+   "html": "You can have <g>anything</g>.<br>Just not <r>everything</r>.",
+   "pose": "explain",
+   "textSize": 104
+  },
+  "lines": [
+   {
+    "id": "hook",
+    "text": "You can have anything. Just not everything."
+   },
+   {
+    "id": "why",
+    "text": "Every time you say yes, something else quietly gets a no."
+   },
+   {
+    "id": "book",
+    "text": "In Essentialism, Greg McKeown says to stop asking how to do it all."
+   },
+   {
+    "id": "idea",
+    "text": "Ask a better question: what am I willing to give up?"
+   },
+   {
+    "id": "do",
+    "text": "Name the trade-off before you say yes."
+   },
+   {
+    "id": "loop",
+    "text": "You can have anything. Just not everything."
+   }
+  ],
+  "scenes": [
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "PRODUCTIVITY · MINDSET",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You can have <g>anything</g>.<br>Just not <r>everything</r>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "hook",
+    "top": 260
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "Every <g>yes</g><br>is a <r>no</r><br>to something else.",
+      "at": "+0.05"
+     },
+     {
+      "type": "stamp",
+      "text": "TRADE-OFF",
+      "color": "red",
+      "size": 80,
+      "at": "quietly"
+     }
+    ],
+    "line": "why",
+    "top": 230
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 420
+    },
+    "els": [
+     {
+      "type": "book",
+      "title": "Essentialism",
+      "author": "Greg McKeown"
+     },
+     {
+      "type": "flow",
+      "rows": [
+       {
+        "tag": "STOP ASKING",
+        "text": "❌ How can I do it all?",
+        "color": "red",
+        "at": "do it all"
+       }
+      ]
+     }
+    ],
+    "line": "book"
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "THE BETTER QUESTION",
+      "color": "green",
+      "at": "+0.05"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Old question",
+       "Better question"
+      ],
+      "rows": [
+       {
+        "l": "How do I do it all?",
+        "r": "What will I give up?",
+        "color": "gold",
+        "at": "better"
+       },
+       {
+        "l": "Overbooked, tired",
+        "r": "Room for what matters",
+        "color": "green",
+        "at": "give"
+       }
+      ]
+     }
+    ],
+    "line": "idea"
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 400
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 96,
+      "html": "<g>Name</g> the trade-off.<br>Then <g>choose</g>.",
+      "at": "Name"
+     },
+     {
+      "type": "sub",
+      "html": "Before your next yes.",
+      "center": true,
+      "at": "+1.2"
+     }
+    ],
+    "line": "do"
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 480
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "PRODUCTIVITY · MINDSET",
+      "color": "muted",
+      "at": "+0.05"
+     },
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You can have <g>anything</g>.<br>Just not <r>everything</r>.",
+      "at": "+0.05"
+     }
+    ],
+    "line": "loop",
+    "top": 260
+   }
+  ]
+ },
+ "carousel": {
+  "label": "PRODUCTIVITY · ESSENTIALISM",
+  "slides": [
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 520
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 104,
+      "html": "You can have <g>anything</g>.<br>Just not <r>everything</r>."
+     },
+     {
+      "type": "sub",
+      "html": "Essentialism by Greg McKeown on trade-offs. Swipe →"
+     }
+    ],
+    "top": 200
+   },
+   {
+    "lobe": {
+     "pose": "think",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 88,
+      "html": "The trap:<br><r>do it all</r>"
+     },
+     {
+      "type": "list",
+      "rows": [
+       {
+        "l": "📅 Say yes to every request",
+        "color": "red"
+       },
+       {
+        "l": "😮‍💨 Spread thin, finish little",
+        "color": "red"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "But there's a catch →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "idea",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "IDEA FROM THE BOOK",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 80,
+      "html": "Every <g>yes</g><br>is a trade-off."
+     },
+     {
+      "type": "sub",
+      "html": "McKeown's point: you can't do everything, so ask what you're willing to give up. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "explain",
+     "pos": "br",
+     "size": 200
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "HOW IT SOUNDS",
+      "color": "gold"
+     },
+     {
+      "type": "rows",
+      "header": [
+       "Old question",
+       "Better question"
+      ],
+      "rows": [
+       {
+        "l": "\"How can I fit this in?\"",
+        "r": "\"What will I give up?\"",
+        "color": "gold"
+       },
+       {
+        "l": "Everything, badly",
+        "r": "Fewer things, better",
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "sub",
+      "html": "Example phrasing, not a script. →"
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 380
+    },
+    "els": [
+     {
+      "type": "pill",
+      "text": "TRY THIS TODAY",
+      "color": "gold"
+     },
+     {
+      "type": "headline",
+      "size": 84,
+      "html": "Before you say yes, <g>name</g> it:"
+     },
+     {
+      "type": "quote",
+      "size": 54,
+      "html": "\"If I say yes to this, what am I <g>saying no to</g>?\""
+     }
+    ]
+   },
+   {
+    "lobe": {
+     "pose": "approve",
+     "pos": "br",
+     "size": 500
+    },
+    "els": [
+     {
+      "type": "headline",
+      "size": 92,
+      "html": "Pick your<br><g>trade-offs</g><br>or <r>others will</r>."
+     },
+     {
+      "type": "pill",
+      "text": "🔖 Save this",
+      "color": "dark"
+     },
+     {
+      "type": "pill",
+      "text": "💬 What will you give up?",
+      "color": "muted"
+     },
+     {
+      "type": "sub",
+      "html": "A lesson from a book, not professional advice."
+     }
+    ],
+    "top": 180
+   }
+  ]
+ },
+ "captions": {
+  "youtube_title": "You Can Have Anything. Just Not Everything. 🧠 Essentialism #shorts",
+  "short": "You can have anything. Just not everything. 🧠\n\nIn Essentialism, Greg McKeown argues that every yes is a trade-off: instead of asking how to do it all, ask what you're willing to give up. (A lesson from a book, not professional advice.)\n\n💬 What will you give up this week?\n🧠 Follow @lobelessons for one book lesson every day.\n\n#essentialism #gregmckeown #productivity #booklessons #selfgrowth #booksummary #lobelessons",
+  "carousel": "You can have anything. Just not everything. 🧠\n\nIn Essentialism, Greg McKeown's idea: every yes is a trade-off, so ask what you're willing to give up. A lesson from a book, not professional advice.\n\nSwipe for the idea 👉\n\n💬 What will you give up?\n🔖 Save this for your next busy week.\n\n#essentialism #gregmckeown #productivity #booklessons #selfgrowth #booksummary #lobelessons",
+  "youtube_tags": [
+   "essentialism",
+   "greg mckeown",
+   "productivity",
+   "trade-offs",
+   "book summary",
+   "book lessons"
+  ]
+ }
+}
